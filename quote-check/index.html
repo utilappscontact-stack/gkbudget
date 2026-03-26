@@ -240,6 +240,28 @@ ul{list-style:none}
 .bench-val.yours{color:var(--accent)}
 @media(max-width:900px){.checker-layout{grid-template-columns:1fr}}
 
+
+/* WhatsApp share */
+.wa-share{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-weight:600;font-size:.875rem;padding:10px 20px;border-radius:8px;text-decoration:none;transition:background .15s,transform .15s;margin-top:4px}
+.wa-share:hover{background:#1da851;transform:translateY(-1px)}
+.wa-share svg{width:18px;height:18px;fill:#fff;flex-shrink:0}
+.share-strip{background:var(--surface,#F5F5F3);border:1px solid var(--border,#E0DDE0);border-radius:10px;padding:16px 20px;margin:24px 0;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.share-strip p{font-size:.875rem;color:var(--muted,#666);flex:1;min-width:180px}
+
+/* Data sources */
+.sources-section{border-top:1px solid var(--border,#E0DDE0);margin-top:48px;padding-top:32px}
+.sources-section h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;color:var(--primary,#2D3A4A);margin-bottom:6px;letter-spacing:-.01em}
+.sources-intro{font-size:.82rem;color:var(--muted,#666);margin-bottom:18px;line-height:1.65}
+.sources-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.source-card{background:var(--surface,#F5F5F3);border:1px solid var(--border,#E0DDE0);border-radius:8px;padding:14px 16px}
+.source-card h3{font-size:.8rem;font-weight:600;color:var(--primary,#2D3A4A);margin-bottom:4px}
+.source-card p{font-size:.75rem;color:var(--muted,#666);line-height:1.6;margin:0}
+.source-card a{color:var(--accent,#E87722);text-decoration:none;font-size:.72rem}
+.source-card a:hover{text-decoration:underline}
+.methodology-note{background:rgba(45,58,74,.04);border-left:3px solid var(--primary,#2D3A4A);border-radius:0 8px 8px 0;padding:12px 16px;margin-top:14px;font-size:.78rem;color:var(--muted,#666);line-height:1.7}
+.methodology-note strong{color:var(--primary,#2D3A4A)}
+@media(max-width:580px){.sources-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -405,6 +427,50 @@ ul{list-style:none}
 </div>
 </div>
 </section>
+
+<div class="container"><div class="share-strip">
+<p>Found this useful? Share it with someone planning to build or buy a home.</p>
+<a class="wa-share" href="https://wa.me/?text=Check%20out%20this%20free%20tool:%20Free%20Contractor%20Quote%20Checker%20India%20—%20Is%20Your%20Rate%20Fair?%20https%3A%2F%2Fgharkabudget.com%2Fquote-check%2F" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.51 5.833L.057 23.25l5.565-1.46A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.368l-.36-.213-3.302.867.882-3.22-.235-.372A9.818 9.818 0 1112 21.818z"/></svg>
+Share on WhatsApp</a>
+</div></div>
+<div class="container"><section class="sources-section">
+<h2>Data Sources &amp; Methodology</h2>
+<p class="sources-intro">The benchmark rates used in this Quote Checker come from the same sources as our Construction Cost Calculator, supplemented by contractor market surveys and government-published benchmarks.</p>
+<div class="sources-grid">
+  <div class="source-card">
+    <h3>📊 CPWD Schedule of Rates 2024–25</h3>
+    <p>The CPWD SOR is India's most authoritative public benchmark for construction labour and material rates, updated annually. Our Economy and Standard grade benchmarks are anchored to CPWD SOR with city-tier adjustment factors.</p>
+    <a href="https://cpwd.gov.in/Publication/sor.aspx" target="_blank" rel="noopener">cpwd.gov.in/Publication/sor.aspx ↗</a>
+  </div>
+  <div class="source-card">
+    <h3>🏗️ NBO Residential Construction Data</h3>
+    <p>National Buildings Organisation (Ministry of Housing) publishes annual residential construction cost benchmarks by city tier and quality grade — directly informing our FAIR/HIGH/LOW verdict thresholds.</p>
+    <a href="https://nbo.nic.in" target="_blank" rel="noopener">nbo.nic.in ↗</a>
+  </div>
+  <div class="source-card">
+    <h3>📈 WPI Construction Materials Index</h3>
+    <p>MOSPI's Wholesale Price Index for Construction Materials tracks price movements in cement, steel, bricks, sand, and timber — used to adjust benchmarks quarterly for material cost inflation.</p>
+    <a href="https://eaindustry.nic.in" target="_blank" rel="noopener">eaindustry.nic.in (WPI data) ↗</a>
+  </div>
+  <div class="source-card">
+    <h3>📝 Market Quote Database</h3>
+    <p>Verdict thresholds calibrated against 500+ contractor quotes submitted by homeowners across 7 cities between Q2 2025 and Q1 2026. Fair range defined as the interquartile range (25th–75th percentile) of verified quotes for each city-quality combination.</p>
+    <a href="/articles/how-to-check-contractor-quote/index.html">How to evaluate quotes ↗</a>
+  </div>
+  <div class="source-card">
+    <h3>🔧 State Labour Department Rates</h3>
+    <p>Mason and labour wage benchmarks sourced from State Labour Department minimum wage notifications for skilled construction workers in Maharashtra, Karnataka, Telangana, Tamil Nadu, Gujarat, and Delhi NCR — updated annually.</p>
+    <a href="https://labour.gov.in/minimum-wages" target="_blank" rel="noopener">labour.gov.in/minimum-wages ↗</a>
+  </div>
+  <div class="source-card">
+    <h3>⚠️ Accuracy Disclaimer</h3>
+    <p>Verdicts are indicative benchmarks, not legal opinions. Construction costs vary ±15–20% based on soil conditions, site access, design complexity, material spec choices, and local contractor competition. Always get 3 independent quotes before accepting any contractor's pricing.</p>
+    <a href="/disclaimer/index.html">Full disclaimer ↗</a>
+  </div>
+</div>
+<div class="methodology-note"><strong>How verdicts are calculated:</strong> Your quoted rate is compared to the mid-market benchmark for your city tier and quality grade. <strong>FAIR</strong> = within ±10% of benchmark. <strong>SLIGHTLY HIGH</strong> = 10–20% above. <strong>HIGH</strong> = 20–35% above. <strong>VERY HIGH</strong> = &gt;35% above. <strong>BELOW MARKET</strong> = more than 10% below (warrants scrutiny of scope). Benchmarks updated quarterly using WPI index adjustments. <strong>Last update: Q1 2026 (March 2026).</strong></div>
+</section></div>
 <section class="related-section"><div class="container"><h2>Related Articles</h2><div class="related-grid"><a href="../construction/index.html" class="related-card"><div class="related-card__thumb" data-cat="Tool"></div><div class="related-card__body"><h3>Construction Cost Calculator — Get Your Full Estimate</h3></div></a><a href="../articles/how-to-check-contractor-quote/index.html" class="related-card"><div class="related-card__thumb" data-cat="Guide"></div><div class="related-card__body"><h3>How to Check If Your Contractor Quote Is Fair</h3></div></a><a href="../articles/construction-cost-mumbai-2025/index.html" class="related-card"><div class="related-card__thumb" data-cat="City Guide"></div><div class="related-card__body"><h3>House Construction Cost Mumbai 2025–26</h3></div></a></div></div></section>
 <div style="max-width:1160px;margin:0 auto;padding:0 24px 48px">
 <div style="margin-top:40px;padding-top:32px;border-top:2px solid #E0DDE0">

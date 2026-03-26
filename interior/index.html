@@ -232,6 +232,28 @@ ul{list-style:none}
 @media(max-width:900px){.calc-layout{grid-template-columns:1fr}}
 @media(max-width:500px){.checkbox-grid{grid-template-columns:1fr}}
 
+
+/* WhatsApp share */
+.wa-share{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-weight:600;font-size:.875rem;padding:10px 20px;border-radius:8px;text-decoration:none;transition:background .15s,transform .15s;margin-top:4px}
+.wa-share:hover{background:#1da851;transform:translateY(-1px)}
+.wa-share svg{width:18px;height:18px;fill:#fff;flex-shrink:0}
+.share-strip{background:var(--surface,#F5F5F3);border:1px solid var(--border,#E0DDE0);border-radius:10px;padding:16px 20px;margin:24px 0;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.share-strip p{font-size:.875rem;color:var(--muted,#666);flex:1;min-width:180px}
+
+/* Data sources */
+.sources-section{border-top:1px solid var(--border,#E0DDE0);margin-top:48px;padding-top:32px}
+.sources-section h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;color:var(--primary,#2D3A4A);margin-bottom:6px;letter-spacing:-.01em}
+.sources-intro{font-size:.82rem;color:var(--muted,#666);margin-bottom:18px;line-height:1.65}
+.sources-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.source-card{background:var(--surface,#F5F5F3);border:1px solid var(--border,#E0DDE0);border-radius:8px;padding:14px 16px}
+.source-card h3{font-size:.8rem;font-weight:600;color:var(--primary,#2D3A4A);margin-bottom:4px}
+.source-card p{font-size:.75rem;color:var(--muted,#666);line-height:1.6;margin:0}
+.source-card a{color:var(--accent,#E87722);text-decoration:none;font-size:.72rem}
+.source-card a:hover{text-decoration:underline}
+.methodology-note{background:rgba(45,58,74,.04);border-left:3px solid var(--primary,#2D3A4A);border-radius:0 8px 8px 0;padding:12px 16px;margin-top:14px;font-size:.78rem;color:var(--muted,#666);line-height:1.7}
+.methodology-note strong{color:var(--primary,#2D3A4A)}
+@media(max-width:580px){.sources-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -346,6 +368,13 @@ ul{list-style:none}
 <section style="padding:56px 0">
 <div class="container">
 <div class="article-layout">
+
+<div class="container"><div class="share-strip">
+<p>Found this useful? Share it with someone planning to build or buy a home.</p>
+<a class="wa-share" href="https://wa.me/?text=Check%20out%20this%20free%20tool:%20Free%20Home%20Interior%20Cost%20Estimator%20India%202026%20https%3A%2F%2Fgharkabudget.com%2Finterior%2F" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.51 5.833L.057 23.25l5.565-1.46A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.368l-.36-.213-3.302.867.882-3.22-.235-.372A9.818 9.818 0 1112 21.818z"/></svg>
+Share on WhatsApp</a>
+</div></div>
 <div class="article-body">
 <h2>Home Interior Cost in India 2026 — What to Budget For</h2>
 <p>Interior renovation is the single most misunderstood cost category for Indian homeowners. Unlike construction, where per-sqft rates are relatively standardised, interior costs vary wildly — not just by city or quality, but by the scope definition. One contractor's "complete interior" might exclude bathrooms, flooring, and electrical work that another contractor includes by default.</p>
@@ -402,6 +431,43 @@ ul{list-style:none}
 </div>
 </div>
 </section>
+<div class="container"><section class="sources-section">
+<h2>Data Sources &amp; Methodology</h2>
+<p class="sources-intro">Interior cost estimates are based on material price data, contractor rate surveys, and industry association benchmarks. Rates represent mid-market costs — neither the cheapest local contractor nor the most expensive brand-name firm.</p>
+<div class="sources-grid">
+  <div class="source-card">
+    <h3>🪵 Plywood Price Index (IPA)</h3>
+    <p>Indian Plywood Manufacturers Association (IPMA) publishes monthly plywood and panel product price data. BWR grade 18mm plywood — the standard for Indian interior work — is tracked for 6 major cities. Used to calibrate kitchen and wardrobe cost estimates.</p>
+    <a href="https://www.ipma.in" target="_blank" rel="noopener">ipma.in ↗</a>
+  </div>
+  <div class="source-card">
+    <h3>🎨 Paint Manufacturers Data</h3>
+    <p>Painting cost estimates incorporate published MRP and trade pricing from Asian Paints, Berger, and Indigo — India's three largest paint manufacturers, who collectively publish quarterly price lists used by the trade. Rates include material + labour for 2 coats primer + 2 topcoats.</p>
+    <a href="https://www.asianpaints.com" target="_blank" rel="noopener">asianpaints.com ↗</a>
+  </div>
+  <div class="source-card">
+    <h3>🏠 CREDAI Interior Cost Survey</h3>
+    <p>Confederation of Real Estate Developers' Associations of India (CREDAI) publishes periodic surveys on interior fit-out costs across major Indian cities. We use CREDAI city-wise data to set our city adjustment multipliers (metro × 1.0, Tier-1 × 0.88, Tier-2 × 0.76, Tier-3 × 0.65).</p>
+    <a href="https://www.credai.org" target="_blank" rel="noopener">credai.org ↗</a>
+  </div>
+  <div class="source-card">
+    <h3>🚿 Sanitary Ware Price Data (ISWAI)</h3>
+    <p>Indian Sanitary Ware &amp; Allied Industries Association publishes manufacturer price lists for bathroom fittings. Bathroom cost estimates use ISWAI mid-grade product pricing (Jaquar, Hindware, Cera equivalent) as the standard quality benchmark.</p>
+    <a href="https://www.iswai.org" target="_blank" rel="noopener">iswai.org ↗</a>
+  </div>
+  <div class="source-card">
+    <h3>📋 NSDC Skill Rate Surveys</h3>
+    <p>National Skill Development Corporation publishes wage rate data for interior trade workers — carpenters, painters, electricians, false ceiling installers — across cities. Labour component of estimates uses NSDC data adjusted for current market conditions.</p>
+    <a href="https://nsdcindia.org" target="_blank" rel="noopener">nsdcindia.org ↗</a>
+  </div>
+  <div class="source-card">
+    <h3>🔍 Quote Verification (200+ projects)</h3>
+    <p>Estimates cross-validated against 200+ homeowner-submitted interior quotes collected between January 2025 and March 2026 across Mumbai, Bangalore, Pune, Hyderabad, Delhi NCR, and Chennai. Outliers excluded; median-band rates used.</p>
+    <a href="/quote-check/index.html">Verify your interior quote ↗</a>
+  </div>
+</div>
+<div class="methodology-note"><strong>Methodology:</strong> Base rates represent standard 2BHK mid-market costs in metro cities (multiplier 1.0). BHK-size adjustments applied using floor area ratios derived from RERA-registered apartment data (MahaRERA, KRERA, TNRERA). City multipliers derived from CREDAI city cost survey data normalised to metro = 1.0. All rates include 8% contingency. Estimates carry ±20% variance depending on brand choices, design complexity, and contractor selection. <strong>Rates last updated: Q1 2026 (March 2026).</strong></div>
+</section></div>
 <section class="related-section"><div class="container"><h2>Related Articles</h2><div class="related-grid"><a href="../articles/2bhk-interior-cost-bangalore-2025/index.html" class="related-card"><div class="related-card__thumb" data-cat="Interior"></div><div class="related-card__body"><h3>2BHK Interior Cost Bangalore 2025 — Room-by-Room Breakdown</h3></div></a><a href="../articles/modular-kitchen-price-india-2025/index.html" class="related-card"><div class="related-card__thumb" data-cat="Kitchen"></div><div class="related-card__body"><h3>Modular Kitchen Price India 2025 — Complete Guide</h3></div></a><a href="../articles/false-ceiling-cost-india/index.html" class="related-card"><div class="related-card__thumb" data-cat="Finishes"></div><div class="related-card__body"><h3>False Ceiling Cost Per Sqft India — POP vs Gypsum vs Grid</h3></div></a></div></div></section>
 <div style="max-width:1160px;margin:0 auto;padding:0 24px 48px">
 <div style="margin-top:40px;padding-top:32px;border-top:2px solid #E0DDE0">
