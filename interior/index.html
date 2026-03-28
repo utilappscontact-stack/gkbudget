@@ -263,6 +263,33 @@ ul{list-style:none}
   .ad-desktop { display: none !important; }
   .ad-mobile  { display: block !important; }
 }
+
+/* ===== AFFILIATE PRODUCT SECTIONS ===== */
+.aff-section{background:#fff;border:1px solid var(--border,#E0DDE0);border-radius:12px;padding:28px 28px 24px;margin:36px 0}
+.aff-header{margin-bottom:20px}
+.aff-header h3{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.15rem;color:var(--primary,#2D3A4A);margin-bottom:6px}
+.aff-header p{font-size:.85rem;color:var(--muted,#666);max-width:600px;line-height:1.6}
+.aff-saving{display:inline-flex;align-items:center;gap:6px;background:rgba(26,122,74,.1);border:1px solid rgba(26,122,74,.2);color:#1a7a4a;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:99px;margin-bottom:14px}
+.aff-grid{display:grid;gap:14px;margin-top:16px}
+.aff-grid.g2{grid-template-columns:repeat(2,1fr)}
+.aff-grid.g3{grid-template-columns:repeat(3,1fr)}
+.aff-grid.g4{grid-template-columns:repeat(4,1fr)}
+.aff-card{border:1px solid var(--border,#E0DDE0);border-radius:10px;overflow:hidden;background:var(--surface,#F5F5F3);transition:box-shadow .2s,transform .2s;display:flex;flex-direction:column}
+.aff-card:hover{box-shadow:0 6px 24px rgba(0,0,0,.1);transform:translateY(-2px)}
+.aff-img-wrap{width:100%;height:130px;background:#fff;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border,#E0DDE0);padding:10px}
+.aff-img-wrap img{max-width:100%;max-height:110px;object-fit:contain}
+.aff-img-emoji{font-size:2.8rem}
+.aff-body{padding:13px 14px;flex:1;display:flex;flex-direction:column;gap:4px}
+.aff-brand{font-size:.62rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted,#666)}
+.aff-name{font-size:.83rem;font-weight:600;color:var(--primary,#2D3A4A);line-height:1.4;flex:1}
+.aff-why{font-size:.73rem;color:var(--muted,#666);line-height:1.55;margin:2px 0 6px}
+.aff-price-range{font-size:.78rem;font-weight:600;color:var(--accent,#E87722)}
+.aff-btn{display:block;text-align:center;padding:9px 12px;background:var(--accent,#E87722);color:#fff;font-weight:600;font-size:.78rem;border-radius:7px;transition:background .15s;text-decoration:none;margin-top:8px}
+.aff-btn:hover{background:#d4691a;color:#fff}
+.aff-footer{font-size:.68rem;color:var(--muted,#666);margin-top:16px;padding-top:12px;border-top:1px solid var(--border,#E0DDE0);line-height:1.6}
+.aff-footer a{color:var(--accent,#E87722)}
+@media(max-width:900px){.aff-grid.g4{grid-template-columns:repeat(2,1fr)}.aff-grid.g3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.aff-grid.g2,.aff-grid.g3,.aff-grid.g4{grid-template-columns:1fr}}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E02EQTPXKE"></script>
@@ -496,7 +523,58 @@ Share on WhatsApp</a>
 </div>
 </div>
 </section>
-<div class="container"><section class="sources-section">
+<div class="container">
+<!-- AFFILIATE: Order Before Contractor Starts -->
+<div class="aff-section" id="order-before-start" style="margin:32px 0">
+  <div class="aff-header">
+    <div class="aff-saving">&#128204; Order 3&ndash;4 weeks before work starts</div>
+    <h3>Things to Order Before Your Interior Contractor Arrives</h3>
+    <p>Many interior items need 15&ndash;28 days lead time. Ordering these yourself (rather than through the contractor) saves 25&ndash;40% and means you&rsquo;re not dependent on what&rsquo;s in stock at their vendor&rsquo;s store.</p>
+  </div>
+  <div class="aff-grid g3">
+    <div class="aff-card">
+      <div class="aff-img-wrap">
+        <img src="https://m.media-amazon.com/images/I/61xyJeN5OYL._SL160_.jpg" alt="Bosch GLM 40 Laser Measure" loading="lazy" onerror="this.parentElement.innerHTML='<span class=aff-img-emoji>&#128207;</span>'"/>
+      </div>
+      <div class="aff-body">
+        <div class="aff-brand">Bosch</div>
+        <div class="aff-name">GLM 40 Laser Distance Measurer &mdash; Professional</div>
+        <div class="aff-why">Measure every room yourself before the estimator visits. Verify carpet area. Once work is done, check the floor area actually tiled &mdash; you&rsquo;re charged per sqft. One of the best investments for any home project.</div>
+        <div class="aff-price-range">~&#8377;2,500&ndash;3,200</div>
+        <a href="https://www.amazon.in/dp/B0D54FT8QK?tag=gharkabudge-21" target="_blank" rel="noopener sponsored" class="aff-btn">Check price on Amazon &rarr;</a>
+      </div>
+    </div>
+    <div class="aff-card">
+      <div class="aff-img-wrap">
+        <img src="https://m.media-amazon.com/images/I/41VCqBXcz5L._SL160_.jpg" alt="Vernier Caliper" loading="lazy" onerror="this.parentElement.innerHTML='<span class=aff-img-emoji>&#128207;</span>'"/>
+      </div>
+      <div class="aff-body">
+        <div class="aff-brand">Precision Tool</div>
+        <div class="aff-name">Stainless Steel Vernier Caliper 150mm</div>
+        <div class="aff-why">Verify plywood thickness before it goes into your wardrobes and kitchen. Contractor charging for 18mm BWR plywood but installing 12mm is one of the most common material substitutions. This &#8377;300 tool catches it instantly.</div>
+        <div class="aff-price-range">~&#8377;280&ndash;500</div>
+        <a href="https://www.amazon.in/dp/B0GT2MJ2MH?tag=gharkabudge-21" target="_blank" rel="noopener sponsored" class="aff-btn">Check price on Amazon &rarr;</a>
+      </div>
+    </div>
+    <div class="aff-card">
+      <div class="aff-img-wrap">
+        <img src="https://m.media-amazon.com/images/I/51VvPbRMJRL._SL160_.jpg" alt="Hettich Sensys Hinges" loading="lazy" onerror="this.parentElement.innerHTML='<span class=aff-img-emoji>&#128279;</span>'"/>
+      </div>
+      <div class="aff-body">
+        <div class="aff-brand">Hettich</div>
+        <div class="aff-name">Sensys Soft Close Cabinet Hinges &mdash; Pack of 4 Pairs</div>
+        <div class="aff-why">A 2BHK interior uses 20&ndash;30 hinges across wardrobes and kitchen. Specify Hettich to your contractor and buy direct &mdash; saving &#8377;4,000&ndash;8,000 vs contractor-supplied price for a full home.</div>
+        <div class="aff-price-range">~&#8377;900&ndash;1,400 / 4 pairs</div>
+        <a href="https://www.amazon.in/dp/B07MQ233NJ?tag=gharkabudge-21" target="_blank" rel="noopener sponsored" class="aff-btn">Check price on Amazon &rarr;</a>
+      </div>
+    </div>
+  </div>
+  <div class="aff-footer">
+    &#128712; <strong>Affiliate disclosure:</strong> Links go to Amazon India. Ghar Ka Budget earns a small commission on purchases at no extra cost to you &mdash; it helps fund this free tool. <a href="../disclaimer/index.html">Full disclosure &rarr;</a>
+  </div>
+</div>
+<!-- END AFFILIATE -->
+<section class="sources-section">
 <h2>Data Sources &amp; Methodology</h2>
 <p class="sources-intro">Interior cost estimates are based on material price data, contractor rate surveys, and industry association benchmarks. Rates represent mid-market costs — neither the cheapest local contractor nor the most expensive brand-name firm.</p>
 <div class="sources-grid">

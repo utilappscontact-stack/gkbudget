@@ -230,6 +230,33 @@ ul{list-style:none}
   .ad-desktop { display: none !important; }
   .ad-mobile  { display: block !important; }
 }
+
+/* ===== AFFILIATE PRODUCT SECTIONS ===== */
+.aff-section{background:#fff;border:1px solid var(--border,#E0DDE0);border-radius:12px;padding:28px 28px 24px;margin:36px 0}
+.aff-header{margin-bottom:20px}
+.aff-header h3{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.15rem;color:var(--primary,#2D3A4A);margin-bottom:6px}
+.aff-header p{font-size:.85rem;color:var(--muted,#666);max-width:600px;line-height:1.6}
+.aff-saving{display:inline-flex;align-items:center;gap:6px;background:rgba(26,122,74,.1);border:1px solid rgba(26,122,74,.2);color:#1a7a4a;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:99px;margin-bottom:14px}
+.aff-grid{display:grid;gap:14px;margin-top:16px}
+.aff-grid.g2{grid-template-columns:repeat(2,1fr)}
+.aff-grid.g3{grid-template-columns:repeat(3,1fr)}
+.aff-grid.g4{grid-template-columns:repeat(4,1fr)}
+.aff-card{border:1px solid var(--border,#E0DDE0);border-radius:10px;overflow:hidden;background:var(--surface,#F5F5F3);transition:box-shadow .2s,transform .2s;display:flex;flex-direction:column}
+.aff-card:hover{box-shadow:0 6px 24px rgba(0,0,0,.1);transform:translateY(-2px)}
+.aff-img-wrap{width:100%;height:130px;background:#fff;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border,#E0DDE0);padding:10px}
+.aff-img-wrap img{max-width:100%;max-height:110px;object-fit:contain}
+.aff-img-emoji{font-size:2.8rem}
+.aff-body{padding:13px 14px;flex:1;display:flex;flex-direction:column;gap:4px}
+.aff-brand{font-size:.62rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted,#666)}
+.aff-name{font-size:.83rem;font-weight:600;color:var(--primary,#2D3A4A);line-height:1.4;flex:1}
+.aff-why{font-size:.73rem;color:var(--muted,#666);line-height:1.55;margin:2px 0 6px}
+.aff-price-range{font-size:.78rem;font-weight:600;color:var(--accent,#E87722)}
+.aff-btn{display:block;text-align:center;padding:9px 12px;background:var(--accent,#E87722);color:#fff;font-weight:600;font-size:.78rem;border-radius:7px;transition:background .15s;text-decoration:none;margin-top:8px}
+.aff-btn:hover{background:#d4691a;color:#fff}
+.aff-footer{font-size:.68rem;color:var(--muted,#666);margin-top:16px;padding-top:12px;border-top:1px solid var(--border,#E0DDE0);line-height:1.6}
+.aff-footer a{color:var(--accent,#E87722)}
+@media(max-width:900px){.aff-grid.g4{grid-template-columns:repeat(2,1fr)}.aff-grid.g3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.aff-grid.g2,.aff-grid.g3,.aff-grid.g4{grid-template-columns:1fr}}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E02EQTPXKE"></script>
@@ -373,6 +400,74 @@ ul{list-style:none}
   </ul>
 </div>
 <div class="cta-box"><div class="cta-box__text"><strong>Use our Interior Estimator to include false ceiling in your budget</strong><span>Room-by-room breakdown with current 2026 rates</span></div><a href="../../interior/index.html">Calculate now →</a></div>
+
+<!-- AFFILIATE: Cove Lighting Products -->
+<div class="aff-section" id="lighting-products" style="margin:40px 0">
+  <div class="aff-header">
+    <div class="aff-saving">&#128161; Don&rsquo;t let contractor pick the lights</div>
+    <h3>What&rsquo;s Inside a Cove Lighting Setup &mdash; Buy These Yourself</h3>
+    <p>Cove lighting adds &#8377;20,000&ndash;40,000 to a false ceiling project. Half that cost is the LED strips and drivers &mdash; where contractors routinely buy no-name products with short lifespans and mark them up 60&ndash;100%. Specify these brands and buy direct.</p>
+  </div>
+  <div class="aff-grid g4">
+
+    <div class="aff-card">
+      <div class="aff-img-wrap">
+        <img src="https://m.media-amazon.com/images/I/61a0mVpHgmL._SL160_.jpg" alt="Havells Flexion Neo LED Strip Warm White" loading="lazy" onerror="this.parentElement.innerHTML='<span class=aff-img-emoji>&#128162;</span>'"/>
+      </div>
+      <div class="aff-body">
+        <div class="aff-brand">Havells</div>
+        <div class="aff-name">Flexion Neo LED Strip 24W Warm White 3000K &mdash; 5 Metres</div>
+        <div class="aff-why">Warm white 3000K is the right colour temperature for cove lighting &mdash; gives a warm amber glow, not harsh white. CRI &gt;70. Comes with adhesive tape. 5m covers a typical 12&times;12 ft living room cove perimeter.</div>
+        <div class="aff-price-range">~&#8377;700&ndash;1,000 for 5m</div>
+        <a href="https://www.amazon.in/dp/B0B7WZPRLB?tag=gharkabudge-21" target="_blank" rel="noopener sponsored" class="aff-btn">Check price on Amazon &rarr;</a>
+      </div>
+    </div>
+
+    <div class="aff-card">
+      <div class="aff-img-wrap">
+        <img src="https://m.media-amazon.com/images/I/51vDf4xbOoL._SL160_.jpg" alt="Havells Flexion 22W LED Strip" loading="lazy" onerror="this.parentElement.innerHTML='<span class=aff-img-emoji>&#128162;</span>'"/>
+      </div>
+      <div class="aff-body">
+        <div class="aff-brand">Havells</div>
+        <div class="aff-name">Flexion 22W LED Strip Warm White &mdash; 5 Metres</div>
+        <div class="aff-why">Alternative at slightly lower output. The driver (power supply) is included separately. Suitable for bedroom coves where you want softer ambient light rather than brighter living room illumination.</div>
+        <div class="aff-price-range">~&#8377;600&ndash;900 for 5m</div>
+        <a href="https://www.amazon.in/dp/B07MJGY8LK?tag=gharkabudge-21" target="_blank" rel="noopener sponsored" class="aff-btn">Check price on Amazon &rarr;</a>
+      </div>
+    </div>
+
+    <div class="aff-card">
+      <div class="aff-img-wrap">
+        <div class="aff-img-emoji">&#128161;</div>
+      </div>
+      <div class="aff-body">
+        <div class="aff-brand">Syska / Havells</div>
+        <div class="aff-name">Recessed LED Downlights 6W&ndash;12W (Warm White)</div>
+        <div class="aff-why">For the main ceiling downlights (not cove). Buy warm white (3000K) for bedrooms, neutral white (4000K) for kitchen and study. Contractors often buy the cheapest no-brand option &mdash; Syska and Havells have 2-year warranties.</div>
+        <div class="aff-price-range">&#8377;150&ndash;400 per downlight</div>
+        <a href="https://www.amazon.in/s?k=syska+havells+led+downlight+recessed+warm+white+6w&tag=gharkabudge-21" target="_blank" rel="noopener sponsored" class="aff-btn">Search on Amazon &rarr;</a>
+      </div>
+    </div>
+
+    <div class="aff-card">
+      <div class="aff-img-wrap">
+        <img src="https://m.media-amazon.com/images/I/51Oi4cJm3RL._SL160_.jpg" alt="Bosch GLM 40 Laser Measure" loading="lazy" onerror="this.parentElement.innerHTML='<span class=aff-img-emoji>&#128207;</span>'"/>
+      </div>
+      <div class="aff-body">
+        <div class="aff-brand">Bosch</div>
+        <div class="aff-name">GLM 40 Laser Distance Measurer</div>
+        <div class="aff-why">Measure room dimensions accurately before your ceiling contractor quotes. Verify final ceiling height after installation &mdash; contractors sometimes drop the ceiling lower than agreed. One tool, every project.</div>
+        <div class="aff-price-range">~&#8377;2,500&ndash;3,200</div>
+        <a href="https://www.amazon.in/dp/B0D54FT8QK?tag=gharkabudge-21" target="_blank" rel="noopener sponsored" class="aff-btn">Check price on Amazon &rarr;</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="aff-footer">
+    &#128712; <strong>Affiliate disclosure:</strong> Links above go to Amazon India. Ghar Ka Budget earns a small commission if you purchase &mdash; at no extra cost to you. We link only to products we&rsquo;d recommend based on brand quality and availability. <a href="../../disclaimer/index.html">Full disclosure &rarr;</a>
+  </div>
+</div>
+<!-- END AFFILIATE: Cove Lighting -->
 <div class="faq-section"><h2>Frequently Asked Questions</h2><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the cost of false ceiling per sqft in India?<span class="faq-icon">+</span></div><div class="faq-a"><p>False ceiling costs in India range from ₹55–80/sqft for POP, ₹75–110/sqft for gypsum board (Saint-Gobain/USG), and ₹65–95/sqft for grid (Armstrong T-bar) ceilings. Adding cove lighting and LED profiles adds ₹30–55/sqft. For a 200 sqft living room, expect ₹15,000–45,000 for a basic ceiling and ₹35,000–80,000 with lighting design.</p></div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Which is better — POP or gypsum false ceiling?<span class="faq-icon">+</span></div><div class="faq-a"><p>Gypsum board ceilings (Saint-Gobain Gyproc, USG Boral) are superior to POP for most applications. Gypsum is dimensionally stable, fire-resistant, and does not crack over time. POP is cheaper but prone to cracking from building settlement or thermal expansion, especially in coastal cities. For long-term durability, always choose gypsum board.</p></div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can false ceiling be done in bathrooms?<span class="faq-icon">+</span></div><div class="faq-a"><p>Yes. For bathrooms, use moisture-resistant (MR) gypsum boards or PVC ceiling panels (₹45–70/sqft). Standard gypsum and POP are not suitable for wet areas as they absorb moisture and lose strength. PVC ceiling panels are the most practical and economical choice for Indian bathrooms.</p></div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How long does false ceiling installation take?<span class="faq-icon">+</span></div><div class="faq-a"><p>A false ceiling for a 2BHK (typically 400–600 sqft of coverage area) takes 3–5 working days for a 2-person team. This includes the MS frame structure, gypsum board fixing, jointing compound, and final putty finish. Painting of the ceiling adds 2–3 more days after the compound cures.</p></div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Does false ceiling reduce room height?<span class="faq-icon">+</span></div><div class="faq-a"><p>Yes. A standard false ceiling reduces height by 6–12 inches (15–30 cm). For rooms with a typical Indian builder ceiling height of 10 feet, the finished false ceiling will be at 9–9.5 feet, which is still comfortable. Avoid false ceilings in rooms with ceilings below 9.5 feet, as it can feel claustrophobic.</p></div></div></div>
 </div>
 

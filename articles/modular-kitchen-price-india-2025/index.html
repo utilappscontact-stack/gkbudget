@@ -230,6 +230,33 @@ ul{list-style:none}
   .ad-desktop { display: none !important; }
   .ad-mobile  { display: block !important; }
 }
+
+/* ===== AFFILIATE PRODUCT SECTIONS ===== */
+.aff-section{background:#fff;border:1px solid var(--border,#E0DDE0);border-radius:12px;padding:28px 28px 24px;margin:36px 0}
+.aff-header{margin-bottom:20px}
+.aff-header h3{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.15rem;color:var(--primary,#2D3A4A);margin-bottom:6px}
+.aff-header p{font-size:.85rem;color:var(--muted,#666);max-width:600px;line-height:1.6}
+.aff-saving{display:inline-flex;align-items:center;gap:6px;background:rgba(26,122,74,.1);border:1px solid rgba(26,122,74,.2);color:#1a7a4a;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:99px;margin-bottom:14px}
+.aff-grid{display:grid;gap:14px;margin-top:16px}
+.aff-grid.g2{grid-template-columns:repeat(2,1fr)}
+.aff-grid.g3{grid-template-columns:repeat(3,1fr)}
+.aff-grid.g4{grid-template-columns:repeat(4,1fr)}
+.aff-card{border:1px solid var(--border,#E0DDE0);border-radius:10px;overflow:hidden;background:var(--surface,#F5F5F3);transition:box-shadow .2s,transform .2s;display:flex;flex-direction:column}
+.aff-card:hover{box-shadow:0 6px 24px rgba(0,0,0,.1);transform:translateY(-2px)}
+.aff-img-wrap{width:100%;height:130px;background:#fff;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border,#E0DDE0);padding:10px}
+.aff-img-wrap img{max-width:100%;max-height:110px;object-fit:contain}
+.aff-img-emoji{font-size:2.8rem}
+.aff-body{padding:13px 14px;flex:1;display:flex;flex-direction:column;gap:4px}
+.aff-brand{font-size:.62rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted,#666)}
+.aff-name{font-size:.83rem;font-weight:600;color:var(--primary,#2D3A4A);line-height:1.4;flex:1}
+.aff-why{font-size:.73rem;color:var(--muted,#666);line-height:1.55;margin:2px 0 6px}
+.aff-price-range{font-size:.78rem;font-weight:600;color:var(--accent,#E87722)}
+.aff-btn{display:block;text-align:center;padding:9px 12px;background:var(--accent,#E87722);color:#fff;font-weight:600;font-size:.78rem;border-radius:7px;transition:background .15s;text-decoration:none;margin-top:8px}
+.aff-btn:hover{background:#d4691a;color:#fff}
+.aff-footer{font-size:.68rem;color:var(--muted,#666);margin-top:16px;padding-top:12px;border-top:1px solid var(--border,#E0DDE0);line-height:1.6}
+.aff-footer a{color:var(--accent,#E87722)}
+@media(max-width:900px){.aff-grid.g4{grid-template-columns:repeat(2,1fr)}.aff-grid.g3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.aff-grid.g2,.aff-grid.g3,.aff-grid.g4{grid-template-columns:1fr}}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E02EQTPXKE"></script>
@@ -386,6 +413,74 @@ ul{list-style:none}
   </ul>
 </div>
 <div class="cta-box"><div class="cta-box__text"><strong>Calculate your complete interior cost including kitchen</strong><span>Use our free Interior Estimator for a full breakdown</span></div><a href="../../interior/index.html">Calculate now →</a></div>
+
+<!-- AFFILIATE: Kitchen Hardware Section -->
+<div class="aff-section" id="buy-yourself" style="margin:40px 0">
+  <div class="aff-header">
+    <div class="aff-saving">&#128176; Save &#8377;15,000&ndash;30,000</div>
+    <h3>Buy These Yourself &mdash; Don&rsquo;t Let Your Contractor Pick Them</h3>
+    <p>Contractors mark up hardware 40&ndash;80%. The strategy: specify the exact brand and model to your contractor upfront, order it on Amazon yourself, and hand it to them on Day 1. You pay dealer price. They install it. Zero markup.</p>
+  </div>
+  <div class="aff-grid g4">
+
+    <div class="aff-card">
+      <div class="aff-img-wrap">
+        <img src="https://m.media-amazon.com/images/I/51VvPbRMJRL._SL160_.jpg" alt="Hettich Soft Close Hinges" loading="lazy" onerror="this.parentElement.innerHTML='<span class=aff-img-emoji>&#128279;</span>'"/>
+      </div>
+      <div class="aff-body">
+        <div class="aff-brand">Hettich</div>
+        <div class="aff-name">Sensys Soft Close Hinges &mdash; Pack of 4 Pairs</div>
+        <div class="aff-why">Industry benchmark for kitchen cabinets. Specify these to your contractor &mdash; don&rsquo;t let them substitute a cheap Chinese hinge that fails in 6 months.</div>
+        <div class="aff-price-range">~&#8377;900&ndash;1,400 for 4 pairs</div>
+        <a href="https://www.amazon.in/dp/B07MQ233NJ?tag=gharkabudge-21" target="_blank" rel="noopener sponsored" class="aff-btn">Check price on Amazon &rarr;</a>
+      </div>
+    </div>
+
+    <div class="aff-card">
+      <div class="aff-img-wrap">
+        <img src="https://m.media-amazon.com/images/I/41FgFp3IQPL._SL160_.jpg" alt="EBCO Soft Close Drawer Channels" loading="lazy" onerror="this.parentElement.innerHTML='<span class=aff-img-emoji>&#128281;</span>'"/>
+      </div>
+      <div class="aff-body">
+        <div class="aff-brand">EBCO</div>
+        <div class="aff-name">Sleek Soft Close Drawer Channels &mdash; 450mm (1 pair)</div>
+        <div class="aff-why">Full extension with soft close. Your kitchen needs one pair per drawer &mdash; a 10 RFT kitchen typically has 6&ndash;8 drawers. Buy all pairs at once, save 20%+ vs contractor supply.</div>
+        <div class="aff-price-range">~&#8377;600&ndash;900 per pair</div>
+        <a href="https://www.amazon.in/dp/B0BLNM4TJY?tag=gharkabudge-21" target="_blank" rel="noopener sponsored" class="aff-btn">Check price on Amazon &rarr;</a>
+      </div>
+    </div>
+
+    <div class="aff-card">
+      <div class="aff-img-wrap">
+        <img src="https://m.media-amazon.com/images/I/51JrjkOMtZL._SL160_.jpg" alt="Hettich Telescopic Drawer Channel" loading="lazy" onerror="this.parentElement.innerHTML='<span class=aff-img-emoji>&#128281;</span>'"/>
+      </div>
+      <div class="aff-body">
+        <div class="aff-brand">Hettich</div>
+        <div class="aff-name">Telescopic Ball Bearing Drawer Channel 400mm &mdash; Soft Close</div>
+        <div class="aff-why">If your contractor specifies Hettich channels, buy these directly. 45kg load capacity, full extension. Contractor markup on these is typically &#8377;200&ndash;400 per pair.</div>
+        <div class="aff-price-range">~&#8377;700&ndash;1,000 per pair</div>
+        <a href="https://www.amazon.in/dp/B0797QYJT5?tag=gharkabudge-21" target="_blank" rel="noopener sponsored" class="aff-btn">Check price on Amazon &rarr;</a>
+      </div>
+    </div>
+
+    <div class="aff-card">
+      <div class="aff-img-wrap">
+        <img src="https://m.media-amazon.com/images/I/61xyJeN5OYL._SL160_.jpg" alt="Bosch GLM 40 Laser Measure" loading="lazy" onerror="this.parentElement.innerHTML='<span class=aff-img-emoji>&#128207;</span>'"/>
+      </div>
+      <div class="aff-body">
+        <div class="aff-brand">Bosch</div>
+        <div class="aff-name">GLM 40 Professional Laser Distance Measurer</div>
+        <div class="aff-why">Measure your kitchen space yourself before the carpenter visits. Verify every dimension once installation is done. IP54 rated, 40m range. One of the best &#8377;2,500 you&rsquo;ll spend on a kitchen project.</div>
+        <div class="aff-price-range">~&#8377;2,500&ndash;3,200</div>
+        <a href="https://www.amazon.in/dp/B0D54FT8QK?tag=gharkabudge-21" target="_blank" rel="noopener sponsored" class="aff-btn">Check price on Amazon &rarr;</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="aff-footer">
+    &#128712; <strong>How this works:</strong> These are affiliate links to Amazon India. If you buy through them, Ghar Ka Budget earns a small commission at no extra cost to you &mdash; it helps keep this site free and independent. We only recommend products we&rsquo;d genuinely specify to a contractor. <a href="../../disclaimer/index.html">Full disclosure &rarr;</a>
+  </div>
+</div>
+<!-- END AFFILIATE: Kitchen Hardware -->
 <div class="faq-section"><h2>Frequently Asked Questions</h2><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How much does a modular kitchen cost in India in 2026?<span class="faq-icon">+</span></div><div class="faq-a"><p>A modular kitchen in India costs ₹60,000–4 lakh+ depending on size, material, and city. A standard 10 running feet kitchen with BWR plywood carcass and laminate shutters costs ₹95,000–1,40,000 in metro cities. Acrylic shutters cost 50–70% more; premium PU or glass options start at ₹1,80,000 for the same size.</p></div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the best material for modular kitchen shutters in India?<span class="faq-icon">+</span></div><div class="faq-a"><p>Laminate on 18mm BWR plywood offers the best value for most Indian homes — durable, moisture-resistant, easy to maintain, and available in hundreds of finishes. Acrylic looks better initially but can scratch and yellow over time. PU finish is the best premium option. For high-budget kitchens, lacquered glass or handleless aluminium profiles offer a contemporary look.</p></div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is a running foot in kitchen measurement?<span class="faq-icon">+</span></div><div class="faq-a"><p>A running foot (RFT) is a linear measurement of kitchen cabinets. It refers to one foot of cabinet width. A typical 10 RFT kitchen includes both base (below countertop) and wall cabinets over 10 linear feet. Most 2BHK kitchens in India are 8–14 running feet; 3BHK kitchens run 12–20 feet.</p></div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is it better to buy a modular kitchen from a brand or a local carpenter?<span class="faq-icon">+</span></div><div class="faq-a"><p>Factory-made modular kitchens from brands (Häfele, HomeLane, Livspace) offer better finish quality, warranty, and precise manufacturing. Local carpenters can be 20–35% cheaper but quality depends heavily on the individual carpenter's skill. For kitchens above ₹1.5 lakh, a factory-made modular unit is usually worth the premium.</p></div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How long does modular kitchen installation take?<span class="faq-icon">+</span></div><div class="faq-a"><p>A factory-made modular kitchen takes 21–28 days to manufacture after design approval, plus 1–2 days for installation. On-site carpenter-built kitchens take 15–25 days for a 10 RFT kitchen. Add 3–5 days for electrical work (exhaust, chimney point) and plumbing adjustments if needed.</p></div></div></div>
 </div>
 
