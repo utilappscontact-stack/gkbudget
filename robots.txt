@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://gharkabudget.com/sitemap.xml
+
+# Block git directory if accidentally served
+Disallow: /.git/
