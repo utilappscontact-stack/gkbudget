@@ -35,7 +35,7 @@ html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;color:var(--text);background:var(--surface);-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 ul{list-style:none}
-.container{width:100%;max-width:1160px;margin:0 auto;padding:0 24px}
+.container{width:100%;max-width:1160px;margin:0 auto;padding:0 24px;box-sizing:border-box}
 
 /* NAV */
 .nav{position:sticky;top:0;z-index:100;background:var(--card);border-bottom:1px solid var(--border);height:var(--nav-h);display:flex;align-items:center}
@@ -185,12 +185,45 @@ ul{list-style:none}
   .sidebar-sticky{position:static}
 }
 @media(max-width:680px){
-  .nav__links{display:none}
+  .nav__links{display:none
+  /* ===== GLOBAL MOBILE OVERFLOW FIXES ===== */
+  html,body{overflow-x:hidden;max-width:100vw}
+  *{min-width:0}
+  table{overflow-x:auto;display:block;max-width:100%}
+  .tw,table{-webkit-overflow-scrolling:touch}
+  .white-space-nowrap-fix,.trust-item,.tk{white-space:normal!important}
+  .aff-section{padding:16px 14px!important;margin:20px 0!important}
+  .aff-grid.g4{grid-template-columns:repeat(2,1fr)!important}
+  .aff-header h3{font-size:.95rem}
+  .aff-saving{font-size:.65rem;flex-wrap:wrap}
+  .wa-share{width:100%;justify-content:center;box-sizing:border-box}
+  .share-strip{flex-direction:column!important;padding:12px 14px!important}
+  .share-strip p{min-width:unset!important;width:100%}
+  .kni{border-right:none!important;border-bottom:1px solid var(--b,#E0DDE0)!important;min-width:100%!important}
+  .kni:last-child{border-bottom:none!important}
+  .cb{flex-direction:column}
+}
   .nav__hamburger{display:flex}
   .trust-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.1);width:100%;padding:10px 0}
   .trust-item:last-child{border-bottom:none}
   .footer__inner{flex-direction:column;align-items:center;text-align:center}
   .cta-row{flex-direction:column}
+  /* Mobile overflow fixes */
+  body{overflow-x:hidden}
+  .comp-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+  .comp-table{min-width:340px;font-size:.78rem}
+  .comp-table th,.comp-table td{padding:8px 10px}
+  .breakdown-table{font-size:.78rem}
+  .breakdown-table th,.breakdown-table td{padding:8px 10px}
+  .share-strip{flex-direction:column;align-items:flex-start;gap:10px;padding:14px 16px}
+  .share-strip p{min-width:unset;width:100%}
+  .wa-share{width:100%;justify-content:center}
+  .aff-section{padding:18px 16px 16px;margin:24px 0}
+  .aff-header h3{font-size:1rem}
+  .aff-saving{font-size:.65rem}
+  .sources-grid{grid-template-columns:1fr}
+  .result-total{padding:20px 16px}
+  .faq-q{font-size:.875rem;padding:14px 16px}
 }
 
 /* WhatsApp share */
@@ -573,7 +606,8 @@ Share on WhatsApp</a>
                 Contractor ka quote sahi hai ya nahi — kaise pata karein?
                 <span class="faq-icon">+</span>
               </div>
-              <div class="faq-a"><p>Sabse aasan tarika: apne city aur quality grade ke hisaab se per sqft rate compare karein. Metro city mein standard quality ke liye ₹1,900–2,100/sqft fair rate hai. Isse zyada 20% se upar quote aa raha hai toh 2–3 aur quotes lein. Hamare <a href="../quote-check/index.html" style="color:#E87722;font-weight:600">Quote Checker tool</a> se seedha check kar sakte hain.</p></div>
+              <div class="faq-a"><p>Sabse aasan tarika: apne city aur quality grade ke hisaab se per sqft rate compare karein. Metro city mein standard quality ke liye ₹1,900–2,100/sqft fair rate hai. Isse zyada 20% se upar quote aa raha hai toh 2–3 aur quotes lein. Hamare <a href="../get-quotes/index.html" style="font-size:.82rem;color:var(--accent,#E87722);font-weight:500;display:block;margin-bottom:8px">How to Get Contractor Quotes &rarr;</a>
+    <a href="../quote-check/index.html" style="color:#E87722;font-weight:600">Quote Checker tool</a> se seedha check kar sakte hain.</p></div>
             </div>
 
             <div class="faq-item">
@@ -595,7 +629,8 @@ Share on WhatsApp</a>
             <br><br>
             <a href="../emi/index.html" class="btn-secondary" style="font-size:.85rem;padding:9px">Home Loan EMI →</a>
             <br><br>
-            <a href="../quote-check/index.html" class="btn-secondary" style="font-size:.85rem;padding:9px">Quote Checker →</a>
+            <a href="../get-quotes/index.html" style="font-size:.82rem;color:var(--accent,#E87722);font-weight:500;display:block;margin-bottom:8px">How to Get Contractor Quotes &rarr;</a>
+    <a href="../quote-check/index.html" class="btn-secondary" style="font-size:.85rem;padding:9px">Quote Checker →</a>
           </div>
           <div class="sidebar-card">
             <h3>City Cost Guides</h3>
@@ -621,11 +656,11 @@ Share on WhatsApp</a>
     <h3>Your Construction Site Supervisor Kit</h3>
     <p>If you&rsquo;re overseeing your own construction, you&rsquo;ll visit the site 2&ndash;3 times a week. These are what experienced owner-builders carry. A safety helmet alone can save your life &mdash; and shows your contractor you&rsquo;re serious.</p>
   </div>
-  <div class="aff-grid g4">
+  <div class="aff-grid g2">
 
     <div class="aff-card">
-      <div class="aff-img-wrap">
-        <img src="https://m.media-amazon.com/images/I/41P7dWW0xkL._SL160_.jpg" alt="Karam ISI Safety Helmet" loading="lazy" onerror="this.parentElement.innerHTML='<span class=aff-img-emoji>&#9935;</span>'"/>
+      <div class="aff-img-wrap" style="background:#f5f5f3">
+        <span class="aff-img-emoji" style="font-size:3rem">&#9935;</span>
       </div>
       <div class="aff-body">
         <div class="aff-brand">Karam</div>
@@ -638,7 +673,7 @@ Share on WhatsApp</a>
 
     <div class="aff-card">
       <div class="aff-img-wrap">
-        <div class="aff-img-emoji">&#128268;</div>
+        <div class="aff-img-emoji" style="font-size:3rem">&#128567;</div>
       </div>
       <div class="aff-body">
         <div class="aff-brand">3M</div>
@@ -650,8 +685,8 @@ Share on WhatsApp</a>
     </div>
 
     <div class="aff-card">
-      <div class="aff-img-wrap">
-        <img src="https://m.media-amazon.com/images/I/41VCqBXcz5L._SL160_.jpg" alt="Vernier Caliper" loading="lazy" onerror="this.parentElement.innerHTML='<span class=aff-img-emoji>&#128207;</span>'"/>
+      <div class="aff-img-wrap" style="background:#f5f5f3">
+        <span class="aff-img-emoji" style="font-size:3rem">&#128207;</span>
       </div>
       <div class="aff-body">
         <div class="aff-brand">Generic / Mitutoyo</div>
@@ -663,8 +698,8 @@ Share on WhatsApp</a>
     </div>
 
     <div class="aff-card">
-      <div class="aff-img-wrap">
-        <img src="https://m.media-amazon.com/images/I/51Oi4cJm3RL._SL160_.jpg" alt="Bosch GLM 40 Laser Measure" loading="lazy" onerror="this.parentElement.innerHTML='<span class=aff-img-emoji>&#128207;</span>'"/>
+      <div class="aff-img-wrap" style="background:#f5f5f3">
+        <span class="aff-img-emoji" style="font-size:3rem">&#128207;</span>
       </div>
       <div class="aff-body">
         <div class="aff-brand">Bosch</div>

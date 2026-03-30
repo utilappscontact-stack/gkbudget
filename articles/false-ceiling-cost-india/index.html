@@ -210,7 +210,19 @@ ul{list-style:none}
   .key-numbers{flex-wrap:wrap}
 }
 @media(max-width:680px){
-  .nav__links{display:none}
+  .nav__links{display:none  /* Mobile overflow fixes */
+  html,body{overflow-x:hidden;max-width:100vw}
+  *{min-width:0}
+  table{overflow-x:auto;display:block;max-width:100%}
+  .comp-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+  .share-strip{flex-direction:column;align-items:flex-start;gap:10px;padding:14px 16px}
+  .share-strip p{min-width:unset;width:100%}
+  .wa-share{width:100%;justify-content:center}
+  .aff-section{padding:18px 16px 16px;margin:24px 0}
+  .aff-header h3{font-size:1rem}
+  .aff-saving{font-size:.65rem}
+  .sources-grid{grid-template-columns:1fr}
+}
   .nav__hamburger{display:flex}
   .trust-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.1);width:100%;padding:10px 0}
   .trust-item:last-child{border-bottom:none}
@@ -296,8 +308,8 @@ ul{list-style:none}
 <p>False ceilings have become standard in Indian urban homes over the last decade — not just for aesthetics, but for hiding wiring, improving acoustics, and creating lighting zones. But costs vary dramatically, and most homeowners overpay by choosing features they don't need or being quoted inflated rates.</p>
 <p>This guide gives you the real per-sqft cost of every false ceiling type available in India, with city-specific data and a clear explanation of where the money actually goes.</p>
 <div class="aff-card">
-      <div class="aff-img-wrap">
-        <img src="https://m.media-amazon.com/images/I/51vDf4xbOoL._SL160_.jpg" alt="Havells Flexion 22W LED Strip" loading="lazy" onerror="this.parentElement.innerHTML='<span class=aff-img-emoji>&#128162;</span>'"/>
+      <div class="aff-img-wrap" style="background:#f5f5f3">
+        <span class="aff-img-emoji" style="font-size:3rem">&#128162;</span>
       </div>
       <div class="aff-body">
         <div class="aff-brand">Havells</div>
@@ -322,8 +334,8 @@ ul{list-style:none}
     </div>
 
     <div class="aff-card">
-      <div class="aff-img-wrap">
-        <img src="https://m.media-amazon.com/images/I/51Oi4cJm3RL._SL160_.jpg" alt="Bosch GLM 40 Laser Measure" loading="lazy" onerror="this.parentElement.innerHTML='<span class=aff-img-emoji>&#128207;</span>'"/>
+      <div class="aff-img-wrap" style="background:#f5f5f3">
+        <span class="aff-img-emoji" style="font-size:3rem">&#128207;</span>
       </div>
       <div class="aff-body">
         <div class="aff-brand">Bosch</div>

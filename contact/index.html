@@ -23,6 +23,26 @@ a{color:#E87722}
 .note{font-size:.82rem;color:#888;margin-top:12px;line-height:1.6}
 
 
+
+@media(max-width:680px){
+
+  /* ===== GLOBAL MOBILE OVERFLOW FIXES ===== */
+  html,body{overflow-x:hidden;max-width:100vw}
+  *{min-width:0}
+  table{overflow-x:auto;display:block;max-width:100%}
+  .tw,table{-webkit-overflow-scrolling:touch}
+  .white-space-nowrap-fix,.trust-item,.tk{white-space:normal!important}
+  .aff-section{padding:16px 14px!important;margin:20px 0!important}
+  .aff-grid.g4{grid-template-columns:repeat(2,1fr)!important}
+  .aff-header h3{font-size:.95rem}
+  .aff-saving{font-size:.65rem;flex-wrap:wrap}
+  .wa-share{width:100%;justify-content:center;box-sizing:border-box}
+  .share-strip{flex-direction:column!important;padding:12px 14px!important}
+  .share-strip p{min-width:unset!important;width:100%}
+  .kni{border-right:none!important;border-bottom:1px solid var(--b,#E0DDE0)!important;min-width:100%!important}
+  .kni:last-child{border-bottom:none!important}
+  .cb{flex-direction:column}
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E02EQTPXKE"></script>
@@ -49,7 +69,7 @@ a{color:#E87722}
   <h1>Contact Us</h1>
   <p>Questions, data corrections, partnership enquiries, or just feedback on our tools &mdash; we read every message.</p>
   <p style="font-size:.875rem;color:var(--m,#666);margin-bottom:24px">You can also email us directly at <a href="mailto:utilapps.contact@gmail.com" style="color:var(--a,#E87722)">utilapps.contact@gmail.com</a></p>
-  <form action="https://formspree.io/f/mnjopljg" method="POST">
+  <form action="https://formspree.io/f/FORMSPREE_ID" method="POST">
     <input type="hidden" name="_subject" value="Ghar Ka Budget - Contact Form"/>
     <input type="text" name="_gotcha" style="display:none"/>
     <div class="fg"><label for="name">Your name</label><input type="text" id="name" placeholder="e.g. Rahul Sharma" required/></div>

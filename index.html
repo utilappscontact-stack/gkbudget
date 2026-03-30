@@ -113,7 +113,24 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
 .fl a{font-size:.8rem;color:var(--m);transition:color .15s}.fl a:hover{color:var(--p)}
 /* RESPONSIVE */
 @media(max-width:900px){.agrid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:680px){#hfaq-grid{grid-template-columns:1fr!important}
+@media(max-width:680px){#hfaq-grid{grid-template-columns:1fr!important  /* Mobile overflow fixes */
+  html,body{overflow-x:hidden;max-width:100vw}
+  *{min-width:0}
+  table{overflow-x:auto;display:block;max-width:100%}
+  .si{border-right:none!important;border-bottom:1px solid var(--b)!important}
+  .si:last-child{border-bottom:none!important}
+  .tk{white-space:normal!important;border-right:none;border-bottom:1px solid rgba(255,255,255,.1);width:100%;padding:10px 0}
+  .tk:last-child{border-bottom:none}
+  .cp{font-size:.75rem}
+  .comp-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+  .share-strip{flex-direction:column;align-items:flex-start;gap:10px;padding:14px 16px}
+  .share-strip p{min-width:unset;width:100%}
+  .wa-share{width:100%;justify-content:center}
+  .aff-section{padding:18px 16px 16px;margin:24px 0}
+  .aff-header h3{font-size:1rem}
+  .aff-saving{font-size:.65rem}
+  .sources-grid{grid-template-columns:1fr}
+}
 .nl{display:none}.hbg{display:flex}
 .cgrid{grid-template-columns:1fr}
 .agrid{grid-template-columns:1fr}
@@ -154,6 +171,7 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
   <a href="quote-check/index.html">Quote Checker</a>
   <a href="#cities">City Guides</a>
   <a href="articles/index.html">All Articles</a>
+  <a href="get-quotes/index.html">How to Get Quotes</a>
 </div>
 
 <section class="hero">
