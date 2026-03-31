@@ -1,48 +1,236 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>All Articles | Ghar Ka Budget</title>
-<meta name="description" content="Browse all Ghar Ka Budget articles on construction cost, interiors, contractor quotes, city rates, and home planning."/>
-<link rel="canonical" href="https://gharkabudget.com/articles/index"/>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>All Articles — Construction &amp; Interior Cost Guides | Ghar Ka Budget</title>
+<meta name="description" content="In-depth guides on home construction costs, interior budgets, flooring, modular kitchens, and budgeting tips for Indian homeowners. Updated March 2026."/>
+<link rel="canonical" href="https://gharkabudget.com/articles/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Ghar Ka Budget"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
-:root{--bg:#f7f5ef;--surface:#f3efe6;--card:#fff;--primary:#2d3a4a;--text:#28313c;--muted:#66717e;--border:#ded8cc;--accent:#e87722;--radius:16px;--shadow:0 12px 32px rgba(32,41,52,.08)}
-*{box-sizing:border-box}body{margin:0;font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}a{text-decoration:none;color:inherit}.container{width:min(1120px,calc(100% - 32px));margin:0 auto}
-.nav{position:sticky;top:0;background:rgba(247,245,239,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(45,58,74,.08);z-index:50}.nav__inner{display:flex;align-items:center;justify-content:space-between;height:72px}.nav__logo{display:flex;align-items:center;gap:12px;font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--primary)}.nav__logo-icon{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#f4a261);display:grid;place-items:center}.nav__logo-icon span{width:14px;height:14px;border-radius:4px;background:#fff;display:block}.nav__links{display:flex;gap:20px;list-style:none;padding:0;margin:0}.nav__links a{font-size:.92rem;color:var(--muted);font-weight:500}.page-header{padding:56px 0 24px}.eyebrow{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(232,119,34,.1);color:var(--accent);font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}.page-header h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;color:var(--primary);margin:14px 0 12px}.page-header p{max-width:760px;color:var(--muted);font-size:1rem}.section{padding:18px 0 10px}.section h2{font-family:'Space Grotesk',sans-serif;color:var(--primary);font-size:1.45rem;margin:24px 0 14px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}.thumb{height:92px;background:linear-gradient(135deg,#2d3a4a,#556476);position:relative}.thumb::after{content:attr(data-cat);position:absolute;left:16px;bottom:14px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);color:#fff;font-size:.72rem;font-weight:700;padding:6px 10px;border-radius:999px;letter-spacing:.05em;text-transform:uppercase}.card__body{padding:18px}.card__body h3{font-size:1.04rem;line-height:1.35;color:var(--primary);margin:0 0 8px}.card__body p{font-size:.9rem;color:var(--muted);margin:0 0 14px}.read{color:var(--accent);font-weight:700;font-size:.88rem}.intro-box{background:linear-gradient(135deg,var(--primary),#46586b);color:#fff;border-radius:22px;padding:28px 30px;margin:22px 0 8px}.intro-box h3{margin:0 0 10px;font-family:'Space Grotesk',sans-serif;color:#fff}.intro-box p{margin:0;color:rgba(255,255,255,.88)}.footer{margin-top:44px;padding:28px 0;border-top:1px solid var(--border)}.footer__inner{display:flex;justify-content:space-between;gap:18px;align-items:center}.footer__links{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:.88rem}
-@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}@media(max-width:640px){.nav__links{display:none}.grid{grid-template-columns:1fr}.footer__inner{flex-direction:column;text-align:center}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#2D3A4A;--accent:#E87722;--surface:#F5F5F3;--card:#FFFFFF;--text:#1C1C1A;--muted:#666666;--border:#E0DDE0;--radius:10px;--nav-h:64px;--shadow-sm:0 1px 3px rgba(0,0,0,.07);--shadow-md:0 4px 16px rgba(0,0,0,.09);}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;color:var(--text);background:var(--surface);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}ul{list-style:none}
+.container{width:100%;max-width:1160px;margin:0 auto;padding:0 24px}
+.nav{position:sticky;top:0;z-index:100;background:var(--card);border-bottom:1px solid var(--border);height:var(--nav-h);display:flex;align-items:center}
+.nav__inner{display:flex;align-items:center;justify-content:space-between;width:100%}
+.nav__logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:var(--primary);letter-spacing:-.02em;display:flex;align-items:center;gap:8px}
+.nav__logo-icon{width:28px;height:28px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nav__logo-icon span{display:block;width:14px;height:2px;background:#fff;position:relative;border-radius:2px}
+.nav__logo-icon span::before,.nav__logo-icon span::after{content:'';position:absolute;left:0;width:14px;height:2px;background:#fff;border-radius:2px}
+.nav__logo-icon span::before{top:-5px;width:10px}.nav__logo-icon span::after{top:5px;width:12px}
+.nav__links{display:flex;align-items:center;gap:6px}
+.nav__links a{font-size:.875rem;font-weight:500;color:var(--muted);padding:6px 14px;border-radius:6px;transition:color .18s,background .18s}
+.nav__links a:hover,.nav__links a.active{color:var(--primary);background:var(--surface)}
+.nav__hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:none}
+.nav__hamburger span{display:block;width:22px;height:2px;background:var(--primary);border-radius:2px}
+.nav__mobile{display:none;position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;background:var(--card);padding:24px;z-index:99;flex-direction:column;gap:4px;border-top:1px solid var(--border)}
+.nav__mobile a{font-size:1.1rem;font-weight:500;color:var(--primary);padding:14px 16px;border-radius:8px}
+.nav__mobile a:hover{background:var(--surface)}.nav__mobile.open{display:flex}
+.page-header{background:var(--primary);padding:48px 0 40px;color:#fff}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:.8rem;color:rgba(255,255,255,.55);margin-bottom:14px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,.55)}.breadcrumb span{color:rgba(255,255,255,.35)}
+.page-header h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.5rem,3.5vw,2.25rem);letter-spacing:-.03em;line-height:1.2;margin-bottom:10px}
+.page-header p{font-size:.975rem;color:rgba(255,255,255,.7);max-width:580px}
+.filter-bar{background:var(--card);border-bottom:1px solid var(--border);padding:14px 0;position:sticky;top:var(--nav-h);z-index:90}
+.filter-bar__inner{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.filter-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 16px;border:1.5px solid var(--border);border-radius:20px;font-size:.8125rem;font-weight:600;color:var(--muted);background:transparent;cursor:pointer;transition:all .18s}
+.filter-btn:hover{border-color:var(--primary);color:var(--primary)}
+.filter-btn.active{border-color:var(--accent);color:var(--accent);background:rgba(232,119,34,.06)}
+.filter-count{font-size:.7rem;background:var(--surface);color:var(--muted);border-radius:10px;padding:1px 6px;font-weight:700}
+.filter-btn.active .filter-count{background:rgba(232,119,34,.15);color:var(--accent)}
+.articles-section{padding:40px 0 72px}
+.articles-section__header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px}
+.articles-section__title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:var(--primary)}
+.articles-section__count{font-size:.8rem;color:var(--muted)}
+.articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.article-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s;box-shadow:var(--shadow-sm)}
+.article-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.article-card.hidden{display:none}
+.article-card__thumb{height:120px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.article-card__thumb .thumb-icon{font-size:2.5rem;opacity:.9}
+.article-card__thumb .thumb-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.35))}
+.article-card__thumb .thumb-cat{position:absolute;bottom:10px;left:12px;font-size:.68rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.9);background:rgba(0,0,0,.3);padding:2px 8px;border-radius:3px}
+.article-card__body{padding:18px 20px;flex:1;display:flex;flex-direction:column;gap:10px}
+.article-card__tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);background:rgba(232,119,34,.1);padding:2px 8px;border-radius:3px;align-self:flex-start}
+.article-card__title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.9375rem;color:var(--primary);line-height:1.4}
+.article-card__desc{font-size:.8125rem;color:var(--muted);line-height:1.6;flex:1}
+.article-card__meta{display:flex;align-items:center;justify-content:space-between;font-size:.75rem;color:var(--muted);padding-top:10px;border-top:1px solid var(--border);margin-top:auto}
+.article-card__meta a,.article-card__meta span:last-child{font-weight:600;color:var(--accent);font-size:.8rem}
+.article-card--featured{grid-column:span 2}
+.article-card--featured .article-card__thumb{height:180px}
+.article-card--featured .article-card__title{font-size:1.1rem}
+.article-card--featured .article-card__desc{font-size:.875rem}
+.calc-callout{background:linear-gradient(135deg,var(--primary),#3d5166);border-radius:var(--radius);padding:28px 32px;margin:0 0 36px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.calc-callout h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.15rem;margin-bottom:6px}
+.calc-callout p{font-size:.875rem;color:rgba(255,255,255,.75)}
+.calc-callout__btns{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0}
+.btn-accent{display:inline-flex;align-items:center;padding:11px 20px;background:var(--accent);color:#fff;font-weight:600;font-size:.875rem;border-radius:8px;white-space:nowrap;transition:background .15s}
+.btn-accent:hover{background:#d4691a}
+.btn-light{display:inline-flex;align-items:center;padding:11px 20px;background:rgba(255,255,255,.12);color:#fff;font-weight:600;font-size:.875rem;border-radius:8px;white-space:nowrap;border:1px solid rgba(255,255,255,.2);transition:background .15s}
+.btn-light:hover{background:rgba(255,255,255,.2)}
+.trust-strip{background:var(--primary);padding:24px 0}
+.trust-strip__inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:.875rem;font-weight:500;color:rgba(255,255,255,.85);padding:6px 28px;white-space:nowrap}
+.trust-item:not(:last-child){border-right:1px solid rgba(255,255,255,.15)}
+.trust-item::before{content:'\2713';display:flex;align-items:center;justify-content:center;width:18px;height:18px;background:var(--accent);color:#fff;font-size:.65rem;font-weight:700;border-radius:50%;flex-shrink:0}
+.footer{background:var(--card);border-top:1px solid var(--border);padding:32px 0}
+.footer__inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer__links{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.footer__links a{font-size:.8125rem;color:var(--muted);transition:color .15s}
+.footer__links a:hover{color:var(--primary)}
+@media(max-width:900px){.articles-grid{grid-template-columns:1fr 1fr}.article-card--featured{grid-column:span 2}}
+@media(max-width:680px){.nav__links{display:none}.nav__hamburger{display:flex}.articles-grid{grid-template-columns:1fr}.article-card--featured{grid-column:span 1}.article-card--featured .article-card__thumb{height:140px}.trust-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.1);width:100%;padding:10px 0}.trust-item:last-child{border-bottom:none}.footer__inner{flex-direction:column;align-items:center;text-align:center}.calc-callout{flex-direction:column}}
 </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E02EQTPXKE"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-E02EQTPXKE');</script>
-</head><body>
-<nav class="nav"><div class="container"><div class="nav__inner"><a href="../index.html" class="nav__logo"><div class="nav__logo-icon"><span></span></div>Ghar Ka Budget</a><ul class="nav__links"><li><a href="../index.html#calc">Calculators</a></li><li><a href="../construction/index.html">Construction</a></li><li><a href="../interior/index.html">Interior</a></li><li><a href="../index.html#cities">City Guides</a></li></ul></div></div></nav>
-<header class="page-header"><div class="container"><span class="eyebrow">Guides</span><h1>All Ghar Ka Budget Articles</h1><p>Browse practical guides on construction cost, interior budgeting, contractor quote checks, material choices, city-wise rates, and home planning decisions. We focus on decision-useful content that helps homeowners compare scope, control budgets, and avoid expensive surprises.</p><div class="intro-box"><h3>How to use this section</h3><p>Start with a calculator if you need a number fast. Then use the related article to benchmark rates, understand exclusions, and prepare better questions before you speak to a contractor or vendor.</p></div></div></header>
-<main class="container">
-<section class="section"><h2>Start here</h2><div class="grid">
-<a class="card" href="how-to-check-contractor-quote/index.html"><div class="thumb" data-cat="Contractor Tips"></div><div class="card__body"><h3>How to Check If Your Contractor Quote Is Fair</h3><p>A practical framework for comparing rates, scope, exclusions, and payment milestones before you sign.</p><span class="read">Read guide →</span></div></a>
-<a class="card" href="house-construction-hidden-costs-india/index.html"><div class="thumb" data-cat="Planning"></div><div class="card__body"><h3>Hidden Costs of Building a House in India</h3><p>The costs most homeowners miss when they budget only from the contractor’s base rate.</p><span class="read">Read guide →</span></div></a>
-<a class="card" href="new-fy-2026-27-construction-costs/index.html"><div class="thumb" data-cat="FY 2026-27"></div><div class="card__body"><h3>New FY 2026–27 Home Construction Cost Outlook</h3><p>How yearly price resets, labour expectations, and planning decisions affect your total budget.</p><span class="read">Read guide →</span></div></a>
-</div></section>
-<section class="section"><h2>Construction cost by city</h2><div class="grid">
-<a class="card" href="construction-cost-mumbai-2025/index.html"><div class="thumb" data-cat="Mumbai"></div><div class="card__body"><h3>House Construction Cost Per Sqft Mumbai</h3><p>Area-wise thinking for Mumbai, Thane, and Navi Mumbai projects.</p><span class="read">Read guide →</span></div></a>
-<a class="card" href="construction-cost-bangalore-2025/index.html"><div class="thumb" data-cat="Bangalore"></div><div class="card__body"><h3>Construction Cost Bangalore</h3><p>Current rate ranges and the major cost drivers for Bengaluru builds.</p><span class="read">Read guide →</span></div></a>
-<a class="card" href="construction-cost-delhi-ncr-2025/index.html"><div class="thumb" data-cat="Delhi NCR"></div><div class="card__body"><h3>Construction Cost Delhi NCR</h3><p>Use this guide to compare Delhi, Gurgaon, Noida, and nearby rate patterns.</p><span class="read">Read guide →</span></div></a>
-<a class="card" href="construction-cost-pune-2025/index.html"><div class="thumb" data-cat="Pune"></div><div class="card__body"><h3>Construction Cost Pune</h3><p>Budget benchmarks for self-build and standard urban residential work.</p><span class="read">Read guide →</span></div></a>
-<a class="card" href="construction-cost-hyderabad-2025/index.html"><div class="thumb" data-cat="Hyderabad"></div><div class="card__body"><h3>Construction Cost Hyderabad</h3><p>Understand what moves rates across standard and premium quality homes.</p><span class="read">Read guide →</span></div></a>
-<a class="card" href="construction-cost-chennai-2025/index.html"><div class="thumb" data-cat="Chennai"></div><div class="card__body"><h3>Construction Cost Chennai</h3><p>Rate guidance with practical context for city conditions and build complexity.</p><span class="read">Read guide →</span></div></a>
-</div></section>
-<section class="section"><h2>Interiors and finish decisions</h2><div class="grid">
-<a class="card" href="modular-kitchen-price-india-2025/index.html"><div class="thumb" data-cat="Kitchen"></div><div class="card__body"><h3>Modular Kitchen Price India</h3><p>Understand material, shutter, hardware, accessory, and appliance cost drivers.</p><span class="read">Read guide →</span></div></a>
-<a class="card" href="false-ceiling-cost-india/index.html"><div class="thumb" data-cat="Ceiling"></div><div class="card__body"><h3>False Ceiling Cost India</h3><p>POP vs gypsum vs grid, and how lighting detail changes ceiling pricing.</p><span class="read">Read guide →</span></div></a>
-<a class="card" href="vitrified-tiles-vs-marble/index.html"><div class="thumb" data-cat="Flooring"></div><div class="card__body"><h3>Vitrified Tiles vs Marble</h3><p>A practical comparison of installed cost, upkeep, and room-wise suitability.</p><span class="read">Read guide →</span></div></a>
-<a class="card" href="2bhk-interior-cost-bangalore-2025/index.html"><div class="thumb" data-cat="2BHK"></div><div class="card__body"><h3>2BHK Interior Cost Bangalore</h3><p>See how room count, storage, and finish level change total apartment interior cost.</p><span class="read">Read guide →</span></div></a>
-</div></section>
-<section class="section"><h2>Budget, policy, and planning</h2><div class="grid">
-<a class="card" href="union-budget-2026-home-construction/index.html"><div class="thumb" data-cat="Budget"></div><div class="card__body"><h3>Union Budget 2026–27 Impact on Home Construction</h3><p>What policy themes may influence your project, and what still depends on execution.</p><span class="read">Read guide →</span></div></a>
-<a class="card" href="gst-on-construction-materials-2026/index.html"><div class="thumb" data-cat="GST"></div><div class="card__body"><h3>GST on Construction Materials 2026</h3><p>A guide to understanding how tax treatment affects material budgeting.</p><span class="read">Read guide →</span></div></a>
-<a class="card" href="labour-code-impact-construction-cost-2026/index.html"><div class="thumb" data-cat="Labour"></div><div class="card__body"><h3>Labour Code Impact on Construction Cost 2026</h3><p>See how wage pressure and compliance can change local project economics.</p><span class="read">Read guide →</span></div></a>
-</div></section>
-</main>
-<footer class="footer"><div class="container"><div class="footer__inner"><div style="display:flex;flex-direction:column;gap:6px"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--primary)">Ghar Ka Budget</span><span style="font-size:.8125rem;color:var(--accent);font-weight:500">gharkabudget.com</span><span style="font-size:.8rem;color:var(--muted)">© 2026 Ghar Ka Budget. For informational purposes only.</span></div><nav class="footer__links"><a href="../about/index.html">About</a><a href="../editorial-policy/index.html">Editorial Policy</a><a href="../disclaimer/index.html">Disclaimer</a><a href="../privacy/index.html">Privacy Policy</a><a href="../contact/index.html">Contact</a></nav></div></div></footer>
-</body></html>
+</head>
+<body>
+<nav class="nav">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo"><div class="nav__logo-icon"><span></span></div>Ghar Ka Budget</a>
+      <ul class="nav__links">
+        <li><a href="/#calculators">Calculators</a></li>
+        <li><a href="/construction/">Construction</a></li>
+        <li><a href="/interior/">Interior</a></li>
+        <li><a href="/articles/" class="active">Guides</a></li>
+      </ul>
+      <button class="nav__hamburger" onclick="toggleMenu(this)"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="nav__mobile" id="mobile-nav">
+  <a href="/#calculators">Calculators</a><a href="/construction/">Construction</a><a href="/interior/">Interior</a><a href="/articles/">Guides</a>
+</div>
+<header class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Home</a><span>&#x203A;</span><span>All Guides</span></div>
+    <h1>Construction &amp; Interior Cost Guides</h1>
+    <p>In-depth, number-first guides for Indian homeowners &#8212; updated quarterly with real market rates.</p>
+  </div>
+</header>
+<div class="filter-bar">
+  <div class="container">
+    <div class="filter-bar__inner">
+      <button class="filter-btn active" data-cat="all" onclick="filterCat(this,'all')">All <span class="filter-count">18</span></button>
+      <button class="filter-btn" data-cat="construction" onclick="filterCat(this,'construction')">Construction <span class="filter-count">8</span></button>
+      <button class="filter-btn" data-cat="interior" onclick="filterCat(this,'interior')">Interior <span class="filter-count">5</span></button>
+      <button class="filter-btn" data-cat="planning" onclick="filterCat(this,'planning')">Planning &amp; Costs <span class="filter-count">5</span></button>
+    </div>
+  </div>
+</div>
+<div class="articles-section">
+  <div class="container">
+    <div class="calc-callout">
+      <div><h2>Need a quick cost estimate?</h2><p>Skip the reading &#8212; plug in your details and get instant city-specific figures.</p></div>
+      <div class="calc-callout__btns"><a href="/construction/" class="btn-accent">Construction Cost &#8594;</a><a href="/interior/" class="btn-light">Interior Cost &#8594;</a></div>
+    </div>
+    <div class="articles-section__header">
+      <div class="articles-section__title">Latest Guides</div>
+      <div class="articles-section__count" id="art-count">18 articles</div>
+    </div>
+    <div class="articles-grid" id="articles-grid">
+      <a href="/articles/new-fy-2026-27-construction-costs/" class="article-card article-card--featured" data-cat="planning">
+        <div class="article-card__thumb" style="background:linear-gradient(135deg,#1a2a3a,#2d5a7a)"><span class="thumb-icon">&#128197;</span><div class="thumb-overlay"></div><div class="thumb-cat">Hot &#183; April 2026</div></div>
+        <div class="article-card__body"><span class="article-card__tag">Planning</span><div class="article-card__title">New FY 2026-27 Home Construction Cost Outlook &#8212; What Changes From April</div><div class="article-card__desc">Cement up 5&#8211;8%, steel up 7&#8211;10%, labour wages rising. Delaying a 1,200 sqft project 6 months now costs &#8377;1.6&#8211;1.9 lakh extra. Updated city-by-city rates and 4 actions to take before April 30.</div><div class="article-card__meta"><span>Updated April 2026 &#183; 8 min read</span><span>Read guide &#8594;</span></div></div>
+      </a>
+      <a href="/articles/union-budget-2026-home-construction/" class="article-card" data-cat="planning">
+        <div class="article-card__thumb" style="background:linear-gradient(135deg,#2a3a2a,#3a5a3a)"><span class="thumb-icon">&#127963;</span><div class="thumb-overlay"></div><div class="thumb-cat">Policy</div></div>
+        <div class="article-card__body"><span class="article-card__tag">Planning</span><div class="article-card__title">Union Budget 2026-27 Impact on Home Construction Costs in India</div><div class="article-card__desc">PMAY-Urban 2.0 subsidies, &#8377;11.11L cr infrastructure capex effects on material prices, GST structure, and income tax changes for homebuyers.</div><div class="article-card__meta"><span>Updated March 2026 &#183; 9 min read</span><span>Read guide &#8594;</span></div></div>
+      </a>
+      <a href="/articles/how-to-check-contractor-quote/" class="article-card" data-cat="planning">
+        <div class="article-card__thumb" style="background:linear-gradient(135deg,#3a2a1a,#6a4a2a)"><span class="thumb-icon">&#128203;</span><div class="thumb-overlay"></div><div class="thumb-cat">Must Read</div></div>
+        <div class="article-card__body"><span class="article-card__tag">Planning</span><div class="article-card__title">How to Check If Your Contractor Quote Is Fair &#8212; A Homeowner&#x27;s Guide</div><div class="article-card__desc">Benchmark rates for all metro cities, material spec red flags, payment schedule structures, and a 30-minute audit checklist to run on any quote.</div><div class="article-card__meta"><span>Updated March 2026 &#183; 10 min read</span><span>Read guide &#8594;</span></div></div>
+      </a>
+      <a href="/articles/construction-cost-mumbai-2025/" class="article-card" data-cat="construction">
+        <div class="article-card__thumb" style="background:linear-gradient(135deg,#1a2a4a,#2a4a7a)"><span class="thumb-icon">&#127961;</span><div class="thumb-overlay"></div><div class="thumb-cat">Construction &#183; Mumbai</div></div>
+        <div class="article-card__body"><span class="article-card__tag">Construction</span><div class="article-card__title">House Construction Cost Per Sqft Mumbai 2026 &#8212; Area-wise Rates</div><div class="article-card__desc">From &#8377;1,300/sqft in Vasai&#8211;Virar to &#8377;2,700/sqft in South Mumbai &#8212; area-wise breakdown, BMC approval costs, and current steel/cement prices in MMR.</div><div class="article-card__meta"><span>Updated April 2026 &#183; 9 min read</span><span>Read guide &#8594;</span></div></div>
+      </a>
+      <a href="/articles/construction-cost-bangalore-2026/" class="article-card" data-cat="construction">
+        <div class="article-card__thumb" style="background:linear-gradient(135deg,#2a1a4a,#4a2a7a)"><span class="thumb-icon">&#127959;</span><div class="thumb-overlay"></div><div class="thumb-cat">Construction &#183; Bangalore</div></div>
+        <div class="article-card__body"><span class="article-card__tag">Construction</span><div class="article-card__title">House Construction Cost Per Sqft Bangalore 2026</div><div class="article-card__desc">Current construction cost benchmarks for Bangalore: Economy &#8377;1,400 to Premium &#8377;3,300/sqft. Zone-wise variation across North, South, East and West Bangalore.</div><div class="article-card__meta"><span>Updated March 2026 &#183; 8 min read</span><span>Read guide &#8594;</span></div></div>
+      </a>
+      <a href="/articles/construction-cost-delhi-ncr-2026/" class="article-card" data-cat="construction">
+        <div class="article-card__thumb" style="background:linear-gradient(135deg,#3a1a1a,#7a2a2a)"><span class="thumb-icon">&#127963;</span><div class="thumb-overlay"></div><div class="thumb-cat">Construction &#183; Delhi NCR</div></div>
+        <div class="article-card__body"><span class="article-card__tag">Construction</span><div class="article-card__title">House Construction Cost Per Sqft Delhi NCR 2026</div><div class="article-card__desc">Construction rates across Delhi, Gurgaon, Noida, Faridabad &#8212; with floor-count adjustments and a breakdown of material costs in the NCR market.</div><div class="article-card__meta"><span>Updated March 2026 &#183; 8 min read</span><span>Read guide &#8594;</span></div></div>
+      </a>
+      <a href="/articles/construction-cost-hyderabad-2026/" class="article-card" data-cat="construction">
+        <div class="article-card__thumb" style="background:linear-gradient(135deg,#1a3a2a,#2a6a4a)"><span class="thumb-icon">&#127960;</span><div class="thumb-overlay"></div><div class="thumb-cat">Construction &#183; Hyderabad</div></div>
+        <div class="article-card__body"><span class="article-card__tag">Construction</span><div class="article-card__title">House Construction Cost Per Sqft Hyderabad 2026</div><div class="article-card__desc">Hyderabad&#x27;s fastest-growing construction market: current per-sqft rates, GHMC approval process, and zone-wise cost differences across the city.</div><div class="article-card__meta"><span>Updated March 2026 &#183; 8 min read</span><span>Read guide &#8594;</span></div></div>
+      </a>
+      <a href="/articles/construction-cost-chennai-2026/" class="article-card" data-cat="construction">
+        <div class="article-card__thumb" style="background:linear-gradient(135deg,#2a2a1a,#5a5a2a)"><span class="thumb-icon">&#127754;</span><div class="thumb-overlay"></div><div class="thumb-cat">Construction &#183; Chennai</div></div>
+        <div class="article-card__body"><span class="article-card__tag">Construction</span><div class="article-card__title">House Construction Cost Per Sqft Chennai 2026</div><div class="article-card__desc">Construction rates in Chennai for 2026, coastal zone considerations, CMDA approval process, and sand supply dynamics in Tamil Nadu.</div><div class="article-card__meta"><span>Updated March 2026 &#183; 8 min read</span><span>Read guide &#8594;</span></div></div>
+      </a>
+      <a href="/articles/construction-cost-ahmedabad-2026/" class="article-card" data-cat="construction">
+        <div class="article-card__thumb" style="background:linear-gradient(135deg,#3a2a1a,#5a4a2a)"><span class="thumb-icon">&#127968;</span><div class="thumb-overlay"></div><div class="thumb-cat">Construction &#183; Ahmedabad</div></div>
+        <div class="article-card__body"><span class="article-card__tag">Construction</span><div class="article-card__title">House Construction Cost Per Sqft Ahmedabad 2026</div><div class="article-card__desc">Gujarat&#x27;s most affordable metro for construction: Economy &#8377;1,150 to Premium &#8377;2,700/sqft. AMC approval guide and city-specific labour rates.</div><div class="article-card__meta"><span>Updated March 2026 &#183; 7 min read</span><span>Read guide &#8594;</span></div></div>
+      </a>
+      <a href="/articles/2bhk-interior-cost-bangalore-2025/" class="article-card" data-cat="interior">
+        <div class="article-card__thumb" style="background:linear-gradient(135deg,#2a1a3a,#5a2a6a)"><span class="thumb-icon">&#128715;</span><div class="thumb-overlay"></div><div class="thumb-cat">Interior &#183; Bangalore</div></div>
+        <div class="article-card__body"><span class="article-card__tag">Interior</span><div class="article-card__title">2BHK Interior Cost Bangalore 2025 &#8212; Room-by-Room Breakdown</div><div class="article-card__desc">Complete 2BHK interior estimate: kitchen &#8377;95K&#8211;1.4L, wardrobes &#8377;90K&#8211;1.4L, false ceiling, painting &#8212; with contractor negotiation tips.</div><div class="article-card__meta"><span>Updated March 2026 &#183; 7 min read</span><span>Read guide &#8594;</span></div></div>
+      </a>
+      <a href="/articles/modular-kitchen-price-india-2025/" class="article-card" data-cat="interior">
+        <div class="article-card__thumb" style="background:linear-gradient(135deg,#1a2a1a,#2a4a2a)"><span class="thumb-icon">&#127859;</span><div class="thumb-overlay"></div><div class="thumb-cat">Interior &#183; Kitchen</div></div>
+        <div class="article-card__body"><span class="article-card__tag">Interior</span><div class="article-card__title">Modular Kitchen Price India 2025 &#8212; Per Running Foot Rates &amp; Guide</div><div class="article-card__desc">Per-running-foot costs for laminate, acrylic, PU, glass kitchens. Countertop comparison, hardware brands, and brand vs local carpenter verdict.</div><div class="article-card__meta"><span>Updated March 2026 &#183; 10 min read</span><span>Read guide &#8594;</span></div></div>
+      </a>
+      <a href="/articles/false-ceiling-cost-india/" class="article-card" data-cat="interior">
+        <div class="article-card__thumb" style="background:linear-gradient(135deg,#1a1a3a,#2a2a6a)"><span class="thumb-icon">&#10024;</span><div class="thumb-overlay"></div><div class="thumb-cat">Interior &#183; Ceiling</div></div>
+        <div class="article-card__body"><span class="article-card__tag">Interior</span><div class="article-card__title">False Ceiling Cost Per Sqft India &#8212; POP vs Gypsum vs Grid 2026</div><div class="article-card__desc">Every false ceiling type compared: POP (&#8377;45&#8211;70/sqft) to WPC wood (&#8377;150&#8211;280/sqft). City rates, brand recs, and room-by-room 2BHK cost estimate.</div><div class="article-card__meta"><span>Updated March 2026 &#183; 9 min read</span><span>Read guide &#8594;</span></div></div>
+      </a>
+      <a href="/articles/vitrified-tiles-vs-marble/" class="article-card" data-cat="interior">
+        <div class="article-card__thumb" style="background:linear-gradient(135deg,#2a2a2a,#5a5a5a)"><span class="thumb-icon">&#129704;</span><div class="thumb-overlay"></div><div class="thumb-cat">Interior &#183; Flooring</div></div>
+        <div class="article-card__body"><span class="article-card__tag">Interior</span><div class="article-card__title">Vitrified Tiles vs Marble Flooring India 2026 &#8212; Real Cost Comparison</div><div class="article-card__desc">10-year total cost including polishing cycles, room-by-room recommendations, Indian marble varieties, and the resale value truth.</div><div class="article-card__meta"><span>Updated March 2026 &#183; 8 min read</span><span>Read guide &#8594;</span></div></div>
+      </a>
+      <a href="/articles/house-construction-hidden-costs-india/" class="article-card" data-cat="planning">
+        <div class="article-card__thumb" style="background:linear-gradient(135deg,#3a1a1a,#6a2a2a)"><span class="thumb-icon">&#9888;&#65039;</span><div class="thumb-overlay"></div><div class="thumb-cat">Planning</div></div>
+        <div class="article-card__body"><span class="article-card__tag">Planning</span><div class="article-card__title">Hidden Costs in House Construction India &#8212; The &#8377;5&#8211;15L Nobody Tells You</div><div class="article-card__desc">Approval fees, soil testing, water/electricity connections, scaffolding, and extras that routinely inflate construction budgets by 20&#8211;30%.</div><div class="article-card__meta"><span>Updated March 2026 &#183; 8 min read</span><span>Read guide &#8594;</span></div></div>
+      </a>
+      <a href="/articles/gst-on-construction-materials-2026/" class="article-card" data-cat="planning">
+        <div class="article-card__thumb" style="background:linear-gradient(135deg,#1a3a3a,#2a5a5a)"><span class="thumb-icon">&#128202;</span><div class="thumb-overlay"></div><div class="thumb-cat">Planning &#183; Tax</div></div>
+        <div class="article-card__body"><span class="article-card__tag">Planning</span><div class="article-card__title">GST on Construction Materials 2026 &#8212; Complete Rate List</div><div class="article-card__desc">GST rates for cement (28%), steel (18%), tiles (18%), paints (18%), and every other construction material &#8212; with practical budget impact.</div><div class="article-card__meta"><span>Updated March 2026 &#183; 6 min read</span><span>Read guide &#8594;</span></div></div>
+      </a>
+      <a href="/articles/labour-code-impact-construction-cost-2026/" class="article-card" data-cat="planning">
+        <div class="article-card__thumb" style="background:linear-gradient(135deg,#2a1a2a,#4a2a4a)"><span class="thumb-icon">&#128119;</span><div class="thumb-overlay"></div><div class="thumb-cat">Planning &#183; Labour</div></div>
+        <div class="article-card__body"><span class="article-card__tag">Planning</span><div class="article-card__title">Labour Code Impact on Construction Costs 2026</div><div class="article-card__desc">The four new Labour Codes, which states are implementing, and the 6&#8211;8% wage increase impact on residential construction costs in FY 2026-27.</div><div class="article-card__meta"><span>Updated March 2026 &#183; 7 min read</span><span>Read guide &#8594;</span></div></div>
+      </a>
+      <a href="/articles/construction-cost-pune-2026/" class="article-card" data-cat="construction">
+        <div class="article-card__thumb" style="background:linear-gradient(135deg,#1a2a3a,#2a4a5a)"><span class="thumb-icon">&#127959;</span><div class="thumb-overlay"></div><div class="thumb-cat">Construction &#183; Pune</div></div>
+        <div class="article-card__body"><span class="article-card__tag">Construction</span><div class="article-card__title">House Construction Cost Per Sqft Pune 2026</div><div class="article-card__desc">Pune&#x27;s construction market as of April 2026: Economy &#8377;1,300 to Premium &#8377;2,900/sqft. PMC vs PCMC zone differences and current material rates.</div><div class="article-card__meta"><span>Updated March 2026 &#183; 7 min read</span><span>Read guide &#8594;</span></div></div>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="trust-strip"><div class="container"><div class="trust-strip__inner"><div class="trust-item">No brand bias</div><div class="trust-item">Neutral estimates</div><div class="trust-item">Updated quarterly</div><div class="trust-item">50,000+ homeowners</div></div></div></div>
+<footer class="footer"><div class="container"><div class="footer__inner">
+  <div style="display:flex;flex-direction:column;gap:6px">
+    <span style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--primary)">Ghar Ka Budget</span>
+    <span style="font-size:.8125rem;color:var(--accent);font-weight:500">gharkabudget.com</span>
+    <span style="font-size:.8rem;color:var(--muted)">&#169; 2026 Ghar Ka Budget. For informational purposes only.</span>
+  </div>
+  <nav class="footer__links">
+    <a href="../about/index.html">About</a><span style="color:var(--border)">&#183;</span>
+    <a href="../disclaimer/index.html">Disclaimer</a><span style="color:var(--border)">&#183;</span>
+    <a href="../privacy/index.html">Privacy</a><span style="color:var(--border)">&#183;</span>
+    <a href="../contact/index.html">Contact</a>
+  </nav>
+</div></div></footer>
+<script>
+function toggleMenu(btn){var m=document.getElementById('mobile-nav');var o=m.classList.toggle('open');btn.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';}
+document.addEventListener('click',function(e){var m=document.getElementById('mobile-nav');var b=document.querySelector('.nav__hamburger');if(m&&b&&m.classList.contains('open')&&!m.contains(e.target)&&!b.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.style.overflow='';}});
+function filterCat(btn,cat){
+  document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active')});
+  btn.classList.add('active');
+  var cards=document.querySelectorAll('#articles-grid .article-card');
+  var shown=0;
+  cards.forEach(function(c){if(cat==='all'||c.dataset.cat===cat){c.classList.remove('hidden');shown++;}else{c.classList.add('hidden');}});
+  document.getElementById('art-count').textContent=shown+' article'+(shown!==1?'s':'');
+}
+</script>
+</body>
+</html>
