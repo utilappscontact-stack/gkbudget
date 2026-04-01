@@ -156,6 +156,49 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
 .ec-row button:hover{background:#d4691a}
 .ec-note{font-size:.7rem;color:rgba(255,255,255,.45);margin-top:8px}
 @media(max-width:560px){.ec-wrap{padding:18px 16px}.ec-row{flex-direction:column}.ec-row input[type=email]{min-width:unset;width:100%;box-sizing:border-box}.ec-row button{width:100%}}
+
+/* ===== PDF PROMO BLOCK ===== */
+.pdf-promo{display:flex;gap:24px;background:#fff;border:1.5px solid #E87722;border-radius:12px;padding:24px 28px;margin:28px 0;align-items:center;flex-wrap:wrap}
+.pdf-promo-left{flex:1;min-width:220px}
+.pdf-promo-tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#E87722;background:rgba(232,119,34,.1);border:1px solid rgba(232,119,34,.25);padding:2px 10px;border-radius:4px;margin-bottom:10px}
+.pdf-promo-title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;color:#2D3A4A;margin-bottom:6px;line-height:1.3}
+.pdf-promo-desc{font-size:.82rem;color:#666;line-height:1.6;margin-bottom:10px}
+.pdf-promo-items{display:flex;flex-wrap:wrap;gap:6px 16px}
+.pdf-promo-items span{font-size:.78rem;color:#2D3A4A;font-weight:500}
+.pdf-promo-right{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:160px}
+.pdf-promo-price{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.5rem;color:#E87722;line-height:1}
+.pdf-promo-price span{font-size:.75rem;font-weight:500;color:#888;display:block;text-align:center;margin-top:2px}
+.pdf-promo-note{font-size:.7rem;color:#888;text-align:center}
+/* Inline article version */
+.pdf-promo-inline{display:flex;gap:20px;background:rgba(232,119,34,.05);border:1px solid rgba(232,119,34,.25);border-radius:10px;padding:16px 20px;margin:28px 0;align-items:center;flex-wrap:wrap}
+.pdf-promo-inline-left{flex:1;min-width:200px}
+.pdf-promo-inline-title{font-size:.875rem;font-weight:600;color:#2D3A4A;line-height:1.5;margin-top:4px}
+.pdf-promo-inline-right{display:flex;flex-direction:column;align-items:center;gap:6px}
+@media(max-width:560px){.pdf-promo{flex-direction:column;padding:18px 16px}.pdf-promo-right{width:100%}.pdf-promo-inline{flex-direction:column}.pdf-promo-inline-right{width:100%}}
+
+/* ===== AFFILIATE SECTIONS (updated) ===== */
+.aff-section{background:#fff;border:1px solid var(--border,#E0DDE0);border-radius:12px;padding:24px 24px 20px;margin:36px 0}
+.aff-header{margin-bottom:18px}
+.aff-saving{display:inline-flex;align-items:center;gap:6px;background:rgba(26,122,74,.1);border:1px solid rgba(26,122,74,.2);color:#1a7a4a;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:99px;margin-bottom:10px}
+.aff-header h3{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;color:var(--primary,#2D3A4A);margin-bottom:4px}
+.aff-header p{font-size:.83rem;color:var(--muted,#666);max-width:600px;line-height:1.6}
+.aff-grid{display:grid;gap:12px;margin-top:14px}
+.aff-grid.g2{grid-template-columns:repeat(2,1fr)}
+.aff-grid.g3{grid-template-columns:repeat(3,1fr)}
+.aff-grid.g4{grid-template-columns:repeat(2,1fr)}
+.aff-card{border:1px solid var(--border,#E0DDE0);border-radius:10px;background:var(--surface,#F5F5F3);display:flex;flex-direction:column;overflow:hidden;transition:box-shadow .2s,transform .2s}
+.aff-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.09);transform:translateY(-2px)}
+.aff-img-wrap{width:100%;height:110px;background:#fff;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border,#E0DDE0);font-size:2.8rem}
+.aff-body{padding:12px 13px;flex:1;display:flex;flex-direction:column;gap:3px}
+.aff-brand{font-size:.6rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted,#666)}
+.aff-name{font-size:.8rem;font-weight:600;color:var(--primary,#2D3A4A);line-height:1.4;flex:1}
+.aff-why{font-size:.72rem;color:var(--muted,#666);line-height:1.55;margin:3px 0 5px}
+.aff-price-range{font-size:.78rem;font-weight:600;color:var(--accent,#E87722)}
+.aff-btn{display:block;text-align:center;padding:8px 10px;background:var(--accent,#E87722);color:#fff;font-weight:600;font-size:.75rem;border-radius:7px;margin-top:8px;text-decoration:none;transition:background .15s}
+.aff-btn:hover{background:#d4691a;color:#fff}
+.aff-footer{font-size:.67rem;color:var(--muted,#666);margin-top:14px;padding-top:10px;border-top:1px solid var(--border,#E0DDE0);line-height:1.6}
+.aff-footer a{color:var(--accent,#E87722)}
+@media(max-width:680px){.aff-section{padding:16px 14px!important;margin:20px 0!important}.aff-grid.g2,.aff-grid.g3,.aff-grid.g4{grid-template-columns:1fr!important}}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E02EQTPXKE"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-E02EQTPXKE');</script>
@@ -386,6 +429,47 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
   <div class="tk">Neutral &amp; independent</div><div class="tk">Updated quarterly</div>
 </div></div></div>
 
+<!-- Affiliate section -->
+<div class="aff-section" id="quote-tools" style="margin:36px 0">
+  <div class="aff-header">
+    <div class="aff-saving">📐 Walk into contractor meetings prepared</div>
+    <h3>Measure and Verify Before You Sign</h3>
+    <p>Independent measurement capability changes contractor negotiations. When you can verify area claims yourself, inflated sqft quotes don't stick.</p>
+  </div>
+  <div class="aff-grid g3">
+    <div class="aff-card">
+      <div class="aff-img-wrap">📏</div>
+      <div class="aff-body">
+        <div class="aff-brand">Bosch</div>
+        <div class="aff-name">Bosch GLM 40 Professional Laser Distance Measurer</div>
+        <div class="aff-why">Measure room dimensions, verify sqft area claims, check slab thickness independently. ±1.5mm accuracy.</div>
+        <div class="aff-price-range">~₹3,500–4,500</div>
+        <a href="https://www.amazon.in/dp/B0D54FT8QK?tag=gharkabuget-21" target="_blank" rel="noopener sponsored" class="aff-btn" onclick="gtag('event','affiliate_click',{link:'B0D54FT8QK'})">Check price on Amazon &rarr;</a>
+      </div>
+    </div>
+    <div class="aff-card">
+      <div class="aff-img-wrap">📐</div>
+      <div class="aff-body">
+        <div class="aff-brand">Generic Steel</div>
+        <div class="aff-name">Stainless Steel Vernier Caliper 150mm — 0.02mm Precision</div>
+        <div class="aff-why">Verify tile thickness, steel bar diameter, pipe dimensions on site. Catches substandard materials instantly.</div>
+        <div class="aff-price-range">~₹350–600</div>
+        <a href="https://www.amazon.in/dp/B0GT2MJ2MH?tag=gharkabuget-21" target="_blank" rel="noopener sponsored" class="aff-btn" onclick="gtag('event','affiliate_click',{link:'B0GT2MJ2MH'})">Check price on Amazon &rarr;</a>
+      </div>
+    </div>
+    <div class="aff-card">
+      <div class="aff-img-wrap">⛑️</div>
+      <div class="aff-body">
+        <div class="aff-brand">Karam</div>
+        <div class="aff-name">Karam ISI Safety Helmet PN545 — Slider Adjustment</div>
+        <div class="aff-why">IS:2925 certified. Used by large construction companies. One-size-fits-most. Don't buy uncertified helmets.</div>
+        <div class="aff-price-range">~₹350–550</div>
+        <a href="https://www.amazon.in/dp/B07YYJGH5T?tag=gharkabuget-21" target="_blank" rel="noopener sponsored" class="aff-btn" onclick="gtag('event','affiliate_click',{link:'B07YYJGH5T'})">Check price on Amazon &rarr;</a>
+      </div>
+    </div>
+  </div>
+  <div class="aff-footer">Affiliate disclosure: Links go to Amazon India. If you purchase, we earn a small commission at no extra cost to you. Our tag: <strong>gharkabuget-21</strong>. We only link to products we would genuinely recommend. <a href="../disclaimer/index.html">Full disclosure</a>.</div>
+</div>
 <footer><div class="w"><div class="fi2">
   <div><div style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--p)">Ghar Ka Budget</div>
   <div style="font-size:.8rem;color:var(--a);font-weight:500">gharkabudget.com</div>

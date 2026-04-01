@@ -150,32 +150,30 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
 
 
 
-/* ===== AFFILIATE PRODUCT SECTIONS ===== */
-.aff-section{background:#fff;border:1px solid var(--border,#E0DDE0);border-radius:12px;padding:28px 28px 24px;margin:36px 0}
-.aff-header{margin-bottom:20px}
-.aff-header h3{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.15rem;color:var(--primary,#2D3A4A);margin-bottom:6px}
-.aff-header p{font-size:.85rem;color:var(--muted,#666);max-width:600px;line-height:1.6}
-.aff-saving{display:inline-flex;align-items:center;gap:6px;background:rgba(26,122,74,.1);border:1px solid rgba(26,122,74,.2);color:#1a7a4a;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:99px;margin-bottom:14px}
-.aff-grid{display:grid;gap:14px;margin-top:16px}
+
+/* ===== AFFILIATE SECTIONS (updated) ===== */
+.aff-section{background:#fff;border:1px solid var(--border,#E0DDE0);border-radius:12px;padding:24px 24px 20px;margin:36px 0}
+.aff-header{margin-bottom:18px}
+.aff-saving{display:inline-flex;align-items:center;gap:6px;background:rgba(26,122,74,.1);border:1px solid rgba(26,122,74,.2);color:#1a7a4a;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:99px;margin-bottom:10px}
+.aff-header h3{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;color:var(--primary,#2D3A4A);margin-bottom:4px}
+.aff-header p{font-size:.83rem;color:var(--muted,#666);max-width:600px;line-height:1.6}
+.aff-grid{display:grid;gap:12px;margin-top:14px}
 .aff-grid.g2{grid-template-columns:repeat(2,1fr)}
 .aff-grid.g3{grid-template-columns:repeat(3,1fr)}
-.aff-grid.g4{grid-template-columns:repeat(4,1fr)}
-.aff-card{border:1px solid var(--border,#E0DDE0);border-radius:10px;overflow:hidden;background:var(--surface,#F5F5F3);transition:box-shadow .2s,transform .2s;display:flex;flex-direction:column}
-.aff-card:hover{box-shadow:0 6px 24px rgba(0,0,0,.1);transform:translateY(-2px)}
-.aff-img-wrap{width:100%;height:130px;background:#fff;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border,#E0DDE0);padding:10px}
-.aff-img-wrap img{max-width:100%;max-height:110px;object-fit:contain}
-.aff-img-emoji{font-size:2.8rem}
-.aff-body{padding:13px 14px;flex:1;display:flex;flex-direction:column;gap:4px}
-.aff-brand{font-size:.62rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted,#666)}
-.aff-name{font-size:.83rem;font-weight:600;color:var(--primary,#2D3A4A);line-height:1.4;flex:1}
-.aff-why{font-size:.73rem;color:var(--muted,#666);line-height:1.55;margin:2px 0 6px}
+.aff-grid.g4{grid-template-columns:repeat(2,1fr)}
+.aff-card{border:1px solid var(--border,#E0DDE0);border-radius:10px;background:var(--surface,#F5F5F3);display:flex;flex-direction:column;overflow:hidden;transition:box-shadow .2s,transform .2s}
+.aff-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.09);transform:translateY(-2px)}
+.aff-img-wrap{width:100%;height:110px;background:#fff;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border,#E0DDE0);font-size:2.8rem}
+.aff-body{padding:12px 13px;flex:1;display:flex;flex-direction:column;gap:3px}
+.aff-brand{font-size:.6rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted,#666)}
+.aff-name{font-size:.8rem;font-weight:600;color:var(--primary,#2D3A4A);line-height:1.4;flex:1}
+.aff-why{font-size:.72rem;color:var(--muted,#666);line-height:1.55;margin:3px 0 5px}
 .aff-price-range{font-size:.78rem;font-weight:600;color:var(--accent,#E87722)}
-.aff-btn{display:block;text-align:center;padding:9px 12px;background:var(--accent,#E87722);color:#fff;font-weight:600;font-size:.78rem;border-radius:7px;transition:background .15s;text-decoration:none;margin-top:8px}
+.aff-btn{display:block;text-align:center;padding:8px 10px;background:var(--accent,#E87722);color:#fff;font-weight:600;font-size:.75rem;border-radius:7px;margin-top:8px;text-decoration:none;transition:background .15s}
 .aff-btn:hover{background:#d4691a;color:#fff}
-.aff-footer{font-size:.68rem;color:var(--muted,#666);margin-top:16px;padding-top:12px;border-top:1px solid var(--border,#E0DDE0);line-height:1.6}
+.aff-footer{font-size:.67rem;color:var(--muted,#666);margin-top:14px;padding-top:10px;border-top:1px solid var(--border,#E0DDE0);line-height:1.6}
 .aff-footer a{color:var(--accent,#E87722)}
-@media(max-width:900px){.aff-grid.g4{grid-template-columns:repeat(2,1fr)}.aff-grid.g3{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.aff-grid.g2,.aff-grid.g3,.aff-grid.g4{grid-template-columns:1fr}}
+@media(max-width:680px){.aff-section{padding:16px 14px!important;margin:20px 0!important}.aff-grid.g2,.aff-grid.g3,.aff-grid.g4{grid-template-columns:1fr!important}}
 
 /* ===== EMAIL CAPTURE ===== */
 .ec-wrap{background:linear-gradient(135deg,#2D3A4A 0%,#3d5166 100%);border-radius:12px;padding:24px 28px;margin:32px 0;color:#fff}
@@ -188,6 +186,25 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
 .ec-row button:hover{background:#d4691a}
 .ec-note{font-size:.7rem;color:rgba(255,255,255,.45);margin-top:8px}
 @media(max-width:560px){.ec-wrap{padding:18px 16px}.ec-row{flex-direction:column}.ec-row input[type=email]{min-width:unset;width:100%;box-sizing:border-box}.ec-row button{width:100%}}
+
+/* ===== PDF PROMO BLOCK ===== */
+.pdf-promo{display:flex;gap:24px;background:#fff;border:1.5px solid #E87722;border-radius:12px;padding:24px 28px;margin:28px 0;align-items:center;flex-wrap:wrap}
+.pdf-promo-left{flex:1;min-width:220px}
+.pdf-promo-tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#E87722;background:rgba(232,119,34,.1);border:1px solid rgba(232,119,34,.25);padding:2px 10px;border-radius:4px;margin-bottom:10px}
+.pdf-promo-title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;color:#2D3A4A;margin-bottom:6px;line-height:1.3}
+.pdf-promo-desc{font-size:.82rem;color:#666;line-height:1.6;margin-bottom:10px}
+.pdf-promo-items{display:flex;flex-wrap:wrap;gap:6px 16px}
+.pdf-promo-items span{font-size:.78rem;color:#2D3A4A;font-weight:500}
+.pdf-promo-right{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:160px}
+.pdf-promo-price{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.5rem;color:#E87722;line-height:1}
+.pdf-promo-price span{font-size:.75rem;font-weight:500;color:#888;display:block;text-align:center;margin-top:2px}
+.pdf-promo-note{font-size:.7rem;color:#888;text-align:center}
+/* Inline article version */
+.pdf-promo-inline{display:flex;gap:20px;background:rgba(232,119,34,.05);border:1px solid rgba(232,119,34,.25);border-radius:10px;padding:16px 20px;margin:28px 0;align-items:center;flex-wrap:wrap}
+.pdf-promo-inline-left{flex:1;min-width:200px}
+.pdf-promo-inline-title{font-size:.875rem;font-weight:600;color:#2D3A4A;line-height:1.5;margin-top:4px}
+.pdf-promo-inline-right{display:flex;flex-direction:column;align-items:center;gap:6px}
+@media(max-width:560px){.pdf-promo{flex-direction:column;padding:18px 16px}.pdf-promo-right{width:100%}.pdf-promo-inline{flex-direction:column}.pdf-promo-inline-right{width:100%}}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E02EQTPXKE"></script>
@@ -308,6 +325,31 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
   </div>
 </div>
 <!-- END AFFILIATE: Safety Kit -->
+<!-- PDF promo -->
+<div class="pdf-promo-inline">
+  <div class="pdf-promo-inline-left">
+    <div class="pdf-promo-tag">&#128196; Construction Budget Planner 2026</div>
+    <div class="pdf-promo-inline-title">BOQ template, contractor scorecard, payment schedule &amp; more &mdash; all in one PDF</div>
+  </div>
+  <div class="pdf-promo-inline-right">
+    <div class="pdf-promo-price">&#8377;199</div>
+    <a href="https://gharkabudget.myinstamojo.com/product/construction-budget-planner-gharkabudget-202/" data-store-name="gharkabudget" data-domain="https://gharkabudget.myinstamojo.com" data-id="7036715" rel="im-new-checkout" data-text="Download Planner — ₹199" data-css-style="background:#e87722; color:#ffffff; width:300px; border-radius:30px" data-layout="vertical"></a>
+<script src="https://manage.instamojo.com/assets/js/pay_button/button.min.js"></script>
+  </div>
+</div>
+<!-- Email capture -->
+<div class="ec-wrap">
+  <h3>&#128204; Get free quarterly rate updates</h3>
+  <p>Construction rates change every quarter. We&rsquo;ll send you updated city rates, new guides and tips &mdash; free.</p>
+  <form action="https://gharkabudget.us7.list-manage.com/subscribe/post?u=3410d09f6b5ec6ce6b7d0ca67&amp;id=02bdbc42d4&amp;f_id=000441e4f0" method="post" target="_blank" novalidate>
+    <div class="ec-row">
+      <input type="email" name="EMAIL" placeholder="your@email.com" required/>
+      <div style="position:absolute;left:-5000px" aria-hidden="true"><input type="text" name="b_3410d09f6b5ec6ce6b7d0ca67_02bdbc42d4" tabindex="-1" value=""/></div>
+      <button type="submit">Get updates &rarr;</button>
+    </div>
+    <div class="ec-note">Quarterly emails only &nbsp;&middot;&nbsp; No spam &nbsp;&middot;&nbsp; Unsubscribe anytime</div>
+  </form>
+</div>
 <section class="sources-section">
 <h2>Data Sources &amp; Methodology</h2>
 <p class="sources-intro">All rates on this page are derived from official government benchmarks, commodity price indices, and verified contractor market data for Hyderabad. Updated Q1 2026.</p>
