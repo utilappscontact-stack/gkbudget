@@ -44,13 +44,9 @@ a{color:#E87722}
   .cb{flex-direction:column}
 }
 </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E02EQTPXKE"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E02EQTPXKE');
+window.dataLayer = window.dataLayer || [];
+function gtag(){ return true; }
 </script>
 </head><body>
 <nav style="position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #E0DDE0;height:64px;display:flex;align-items:center">
@@ -69,32 +65,7 @@ a{color:#E87722}
   <h1>Contact Us</h1>
   <p>Questions, data corrections, partnership enquiries, or just feedback on our tools &mdash; we read every message.</p>
   <p style="font-size:.875rem;color:var(--m,#666);margin-bottom:24px">You can also email us directly at <a href="mailto:utilapps.contact@gmail.com" style="color:var(--a,#E87722)">utilapps.contact@gmail.com</a></p>
-  <form action="https://formspree.io/f/FORMSPREE_ID" method="POST">
-    <input type="hidden" name="_subject" value="Ghar Ka Budget - Contact Form"/>
-    <input type="text" name="_gotcha" style="display:none"/>
-    <div class="fg"><label for="name">Your name</label><input type="text" id="name" placeholder="e.g. Rahul Sharma" required/></div>
-    <div class="fg"><label for="email">Email address</label><input type="email" id="email" placeholder="you@example.com" required/></div>
-    <div class="fg">
-      <label for="subject">Subject</label>
-      <select id="subject">
-        <option value="">Select a topic</option>
-        <option>Data correction / outdated rate</option>
-        <option>Calculator bug / issue</option>
-        <option>Partnership / advertising</option>
-        <option>Content collaboration</option>
-        <option>General feedback</option>
-        <option>Other</option>
-      </select>
-    </div>
-    <div class="fg"><label for="msg">Message</label><textarea id="msg" placeholder="Tell us more..." required></textarea></div>
-    <button class="btn" type="submit">Send message &rarr;</button>
-    <p class="note">We typically respond within 2 business days. For urgent rate corrections, please mention the specific page and data point in your message.</p>
-  </form>
-  <div id="thanks" style="display:none;background:#fff;border:1.5px solid #E87722;border-radius:10px;padding:28px;text-align:center;margin-top:20px">
-    <div style="font-size:2rem;margin-bottom:10px">&#10003;</div>
-    <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:#2D3A4A;font-size:1.1rem;margin-bottom:6px">Message sent!</div>
-    <div style="font-size:.9rem;color:#666">We'll get back to you within 2 business days.</div>
-  </div>
+  <div style="background:#fff;border:1px solid #E0DDE0;border-radius:12px;padding:24px;margin-top:20px"><h2 style="font-size:1.05rem;color:#2D3A4A;margin:0 0 10px">Fastest way to reach us</h2><p style="font-size:.95rem;color:#666;line-height:1.7;margin:0 0 12px">Please email <a href="mailto:utilapps.contact@gmail.com" style="color:#E87722">utilapps.contact@gmail.com</a> with your page URL, city, and question. For data corrections, include the exact number or section that looks wrong.</p><p style="font-size:.875rem;color:#666;line-height:1.7;margin:0">We typically reply within 2 business days.</p></div>
 </div>
 <footer style="background:#fff;border-top:1px solid #E0DDE0;padding:28px 0;margin-top:64px">
   <div style="max-width:1160px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
@@ -106,7 +77,4 @@ a{color:#E87722}
     </div>
   </div>
 </footer>
-<script>
-/* Form handled by Formspree - replace FORMSPREE_ID with your actual ID from formspree.io */
-</script>
 </body></html>

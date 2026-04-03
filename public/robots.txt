@@ -11,5 +11,8 @@ User-agent: *
 Allow: /
 
 Disallow: /.git/
+Disallow: /.env
+Disallow: /config/
+Disallow: /backup/
 
 Sitemap: https://gharkabudget.com/sitemap.xml
