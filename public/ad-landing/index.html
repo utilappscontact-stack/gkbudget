@@ -11,13 +11,40 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
 :root{--p:#2D3A4A;--a:#E87722;--s:#F5F5F3;--b:#E0DDE0;--t:#1C1C1A;--m:#666}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--s);color:var(--t)}
-a{text-decoration:none;color:inherit}.wrap{max-width:1080px;margin:0 auto;padding:0 20px}.top{background:#fff;border-bottom:1px solid var(--b)}.top .wrap{display:flex;align-items:center;justify-content:space-between;padding:18px 20px}.brand{font-weight:800;color:var(--p);letter-spacing:-.02em}.nav{display:flex;gap:16px;flex-wrap:wrap}.nav a{font-size:.92rem;color:var(--m)}.hero{padding:56px 0 24px}.pill{display:inline-block;background:rgba(232,119,34,.1);color:var(--a);border:1px solid rgba(232,119,34,.25);border-radius:999px;padding:6px 12px;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}.hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.12;color:var(--p);max-width:760px;margin:16px 0 12px;letter-spacing:-.03em}.hero p{font-size:1.05rem;line-height:1.65;color:var(--m);max-width:700px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;padding:22px 0 34px}.card{background:#fff;border:1px solid var(--b);border-radius:14px;padding:22px;box-shadow:0 1px 3px rgba(0,0,0,.06)}.card h2{font-size:1.1rem;color:var(--p);margin:0 0 8px}.card p{font-size:.95rem;color:var(--m);line-height:1.6;min-height:78px}.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--a);color:#fff;padding:12px 18px;border-radius:10px;font-weight:700}.sub{padding:8px 0 40px;color:var(--m);font-size:.92rem}.trust{background:#fff;border-top:1px solid var(--b);border-bottom:1px solid var(--b)}.trust .wrap{display:flex;gap:18px;flex-wrap:wrap;padding:18px 20px}.trust span{font-size:.92rem;color:var(--p)}.footer{padding:28px 0 42px;font-size:.86rem;color:var(--m)}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;color:var(--t);background:var(--s);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.top{background:#fff;border-bottom:1px solid var(--b)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;padding:18px 20px}
+.logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:var(--p);display:flex;align-items:center;gap:8px;letter-spacing:-.02em}
+.logo-i{width:28px;height:28px;background:var(--a);border-radius:6px;display:flex;align-items:center;justify-content:center;flex:0 0 28px}
+.logo-i span{display:block;width:14px;height:2px;background:#fff;position:relative;border-radius:2px}
+.logo-i span::before,.logo-i span::after{content:'';position:absolute;left:0;height:2px;background:#fff;border-radius:2px}
+.logo-i span::before{top:-5px;width:10px}
+.logo-i span::after{top:5px;width:14px}
+.nav{display:flex;gap:16px;flex-wrap:wrap}
+.nav a{font-size:.92rem;font-weight:500;color:var(--m)}
+.hero{padding:56px 0 24px}
+.pill{display:inline-block;background:rgba(232,119,34,.1);color:var(--a);border:1px solid rgba(232,119,34,.25);border-radius:999px;padding:6px 12px;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(2rem,5vw,3.2rem);line-height:1.12;color:var(--p);max-width:760px;margin:16px 0 12px;letter-spacing:-.03em}
+.hero p{font-size:1.05rem;line-height:1.65;color:var(--m);max-width:700px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;padding:22px 0 34px}
+.card{background:#fff;border:1px solid var(--b);border-radius:14px;padding:22px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.card h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;color:var(--p);margin:0 0 8px}
+.card p{font-size:.95rem;color:var(--m);line-height:1.6;min-height:78px}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--a);color:#fff;padding:12px 18px;border-radius:10px;font-weight:700}
+.sub{padding:8px 0 40px;color:var(--m);font-size:.92rem}
+.trust{background:#fff;border-top:1px solid var(--b);border-bottom:1px solid var(--b)}
+.trust .wrap{display:flex;gap:18px;flex-wrap:wrap;padding:18px 20px}
+.trust span{font-size:.92rem;color:var(--p)}
+.footer{padding:28px 0 42px;font-size:.86rem;color:var(--m)}
+@media (max-width:700px){.top .wrap{align-items:flex-start;gap:14px;flex-direction:column}.nav{gap:12px}}
 </style>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){return true;}</script>
 </head>
 <body>
-<header class="top"><div class="wrap"><div class="brand">Ghar Ka Budget</div><nav class="nav"><a href="/about/">About</a><a href="/articles/">Articles</a><a href="/contact/">Contact</a></nav></div></header>
+<header class="top"><div class="wrap"><a href="/" class="logo"><div class="logo-i"><span></span></div>Ghar Ka Budget</a><nav class="nav"><a href="/about/">About</a><a href="/articles/">Articles</a><a href="/contact/">Contact</a></nav></div></header>
 <section class="hero"><div class="wrap"><span class="pill">Free tools • no login</span><h1>Know what your home should actually cost</h1><p>Use simple, free calculators for construction cost, interiors, quote checking and home loan EMI. This page is intentionally lightweight and keeps all key tools accessible without popups, embedded checkout widgets or third-party form handlers.</p></div></section>
 <section><div class="wrap"><div class="cards">
 <div class="card"><h2>Construction cost</h2><p>Estimate house construction budget by city, area and finish level before you speak to contractors.</p><a class="btn" href="/construction/">Open tool &rarr;</a></div>
