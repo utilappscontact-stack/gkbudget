@@ -1,8 +1,15 @@
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://gharkabudget.com/sitemap.xml
-
-# Block git directory if accidentally served
 Disallow: /.git/
+
+Sitemap: https://gharkabudget.com/sitemap.xml
