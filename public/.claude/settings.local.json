@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python _patch.py)",
+      "Bash(python _patch2.py)",
+      "Bash(python _patch3.py)"
+    ]
+  }
+}
