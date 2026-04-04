@@ -55,6 +55,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://gharkabudget.com/contact/</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://gharkabudget.com/editorial-policy/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>yearly</changefreq>
@@ -108,6 +114,12 @@
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://gharkabudget.com/articles/false-ceiling-cost-india/</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
   </url>
 
   <url>
