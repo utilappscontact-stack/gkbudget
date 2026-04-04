@@ -299,6 +299,7 @@ ul{list-style:none}
 window.dataLayer = window.dataLayer || [];
 function gtag(){ return true; }
 </script>
+<link rel="stylesheet" href="../../site-consistency.css"/>
 </head>
 <body>
 <nav class="nav">
@@ -455,12 +456,12 @@ function gtag(){ return true; }
     <div class="sidebar-card">
       <h3>City Cost Guides</h3>
       <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px">
-        <a href="../../articles/construction-cost-mumbai-2025/index.html" style="font-size:.82rem;color:var(--accent);font-weight:500">Mumbai →</a>
+        <a href="../../articles/construction-cost-mumbai-2026/index.html" style="font-size:.82rem;color:var(--accent);font-weight:500">Mumbai →</a>
         <a href="../../articles/construction-cost-bangalore-2026/index.html" style="font-size:.82rem;color:var(--accent);font-weight:500">Bangalore →</a>
-        <a href="../../articles/construction-cost-delhi-ncr-2025/index.html" style="font-size:.82rem;color:var(--accent);font-weight:500">Delhi NCR →</a>
-        <a href="../../articles/construction-cost-pune-2025/index.html" style="font-size:.82rem;color:var(--accent);font-weight:500">Pune →</a>
-        <a href="../../articles/construction-cost-hyderabad-2025/index.html" style="font-size:.82rem;color:var(--accent);font-weight:500">Hyderabad →</a>
-        <a href="../../articles/construction-cost-chennai-2025/index.html" style="font-size:.82rem;color:var(--accent);font-weight:500">Chennai →</a>
+        <a href="../../articles/construction-cost-delhi-ncr-2026/index.html" style="font-size:.82rem;color:var(--accent);font-weight:500">Delhi NCR →</a>
+        <a href="../../articles/construction-cost-pune-2026/index.html" style="font-size:.82rem;color:var(--accent);font-weight:500">Pune →</a>
+        <a href="../../articles/construction-cost-hyderabad-2026/index.html" style="font-size:.82rem;color:var(--accent);font-weight:500">Hyderabad →</a>
+        <a href="../../articles/construction-cost-chennai-2026/index.html" style="font-size:.82rem;color:var(--accent);font-weight:500">Chennai →</a>
       </div>
     </div>
   </div>
@@ -565,4 +566,5 @@ document.addEventListener('click',function(e){var m=document.getElementById('mob
 function toggleFaq(el){var item=el.parentElement;var ans=item.querySelector('.faq-a');var already=item.classList.contains('active');document.querySelectorAll('.faq-item').forEach(function(f){f.classList.remove('active');f.querySelector('.faq-a').classList.remove('open')});if(!already){item.classList.add('active');ans.classList.add('open')}}
 function formatINR(n){var s=Math.round(n).toString();var last3=s.slice(-3);var rest=s.slice(0,-3);if(rest.length>0){last3=','+last3}return '₹'+rest.replace(/\B(?=(\d{2})+(?!\d))/g,',')+last3;}
 function drawPie(canvas,data,colors){var ctx=canvas.getContext('2d');var W=canvas.width,H=canvas.height,cx=W/2,cy=H/2,r=Math.min(W,H)/2-8;ctx.clearRect(0,0,W,H);var total=data.reduce(function(a,b){return a+b},0);var start=-Math.PI/2;for(var i=0;i<data.length;i++){var slice=(data[i]/total)*2*Math.PI;ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,r,start,start+slice);ctx.closePath();ctx.fillStyle=colors[i];ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=3;ctx.stroke();start+=slice;}ctx.beginPath();ctx.arc(cx,cy,r*0.5,0,2*Math.PI);ctx.fillStyle='#fff';ctx.fill();}
-</script></body></html>
+</script><script defer src="../../site-consistency.js"></script>
+</body></html>

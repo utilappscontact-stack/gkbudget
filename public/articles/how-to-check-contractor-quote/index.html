@@ -274,6 +274,7 @@ ul{list-style:none}
 window.dataLayer = window.dataLayer || [];
 function gtag(){ return true; }
 </script>
+<link rel="stylesheet" href="../../site-consistency.css"/>
 </head>
 <body>
 <nav class="nav">
@@ -489,7 +490,7 @@ function gtag(){ return true; }
 </aside>
 </div>
 </div>
-<section class="related-section"><div class="container"><h2>Related Articles</h2><div class="related-grid"><a href="../../quote-check/index.html" class="related-card"><div class="related-card__thumb" data-cat="Tool"></div><div class="related-card__body"><h3>Contractor Quote Checker — Is Your Rate Fair?</h3></div></a><a href="../../construction/index.html" class="related-card"><div class="related-card__thumb" data-cat="Tool"></div><div class="related-card__body"><h3>Construction Cost Calculator India 2026</h3></div></a><a href="../../articles/construction-cost-mumbai-2025/index.html" class="related-card"><div class="related-card__thumb" data-cat="City Guide"></div><div class="related-card__body"><h3>House Construction Cost Mumbai 2026</h3></div></a></div></div></section>
+<section class="related-section"><div class="container"><h2>Related Articles</h2><div class="related-grid"><a href="../../quote-check/index.html" class="related-card"><div class="related-card__thumb" data-cat="Tool"></div><div class="related-card__body"><h3>Contractor Quote Checker — Is Your Rate Fair?</h3></div></a><a href="../../construction/index.html" class="related-card"><div class="related-card__thumb" data-cat="Tool"></div><div class="related-card__body"><h3>Construction Cost Calculator India 2026</h3></div></a><a href="../../articles/construction-cost-mumbai-2026/index.html" class="related-card"><div class="related-card__thumb" data-cat="City Guide"></div><div class="related-card__body"><h3>House Construction Cost Mumbai 2026</h3></div></a></div></div></section>
 <div class="trust-strip">
   <div class="container">
     <div class="trust-strip__inner">
@@ -577,4 +578,5 @@ document.addEventListener('click',function(e){var m=document.getElementById('mob
 function toggleFaq(el){var item=el.parentElement;var ans=item.querySelector('.faq-a');var already=item.classList.contains('active');document.querySelectorAll('.faq-item').forEach(function(f){f.classList.remove('active');f.querySelector('.faq-a').classList.remove('open')});if(!already){item.classList.add('active');ans.classList.add('open')}}
 function formatINR(n){var s=Math.round(n).toString();var last3=s.slice(-3);var rest=s.slice(0,-3);if(rest.length>0){last3=','+last3}return '₹'+rest.replace(/\B(?=(\d{2})+(?!\d))/g,',')+last3;}
 function drawPie(canvas,data,colors){var ctx=canvas.getContext('2d');var W=canvas.width,H=canvas.height,cx=W/2,cy=H/2,r=Math.min(W,H)/2-8;ctx.clearRect(0,0,W,H);var total=data.reduce(function(a,b){return a+b},0);var start=-Math.PI/2;for(var i=0;i<data.length;i++){var slice=(data[i]/total)*2*Math.PI;ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,r,start,start+slice);ctx.closePath();ctx.fillStyle=colors[i];ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=3;ctx.stroke();start+=slice;}ctx.beginPath();ctx.arc(cx,cy,r*0.5,0,2*Math.PI);ctx.fillStyle='#fff';ctx.fill();}
-</script></body></html>
+</script><script defer src="../../site-consistency.js"></script>
+</body></html>
