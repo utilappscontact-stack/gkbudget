@@ -87,9 +87,11 @@ nav.bar{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px soli
 .agrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .ac{background:#fff;border:1px solid var(--b);border-radius:var(--r);overflow:hidden;transition:box-shadow .2s,transform .2s;box-shadow:0 1px 3px rgba(0,0,0,.07);display:flex;flex-direction:column}
 .ac:hover{box-shadow:0 4px 16px rgba(0,0,0,.09);transform:translateY(-2px)}
-.at{height:120px;position:relative;flex-shrink:0}
+.at{height:120px;position:relative;flex-shrink:0;overflow:hidden}
 .at::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.04) 0,rgba(255,255,255,.04) 1px,transparent 0,transparent 50%);background-size:16px 16px}
 .at::after{content:attr(data-c);position:absolute;bottom:8px;left:12px;font-size:.65rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.8);background:rgba(0,0,0,.3);padding:2px 8px;border-radius:3px}
+.at-ic{position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);font-size:2.4rem;opacity:.22;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4));pointer-events:none;line-height:1}
+.at-line{position:absolute;bottom:0;left:0;right:0;height:3px;background:rgba(232,119,34,.55)}
 .c1{background:linear-gradient(135deg,#1a2a4a,#2a4a6a)}
 .c2{background:linear-gradient(135deg,#1e3a1e,#2d5a2d)}
 .c3{background:linear-gradient(135deg,#4A3A2D,#7a6050)}
@@ -250,28 +252,75 @@ function gtag(){ return true; }
     <a href="articles/construction-cost-hyderabad-2026/index.html" class="cp">&#128205; Hyderabad</a>
     <a href="articles/construction-cost-chennai-2026/index.html" class="cp">&#128205; Chennai</a>
     <a href="articles/construction-cost-ahmedabad-2026/index.html" class="cp">&#128205; Ahmedabad</a>
+    <a href="articles/construction-cost-kolkata-2026/index.html" class="cp">&#128205; Kolkata</a>
+    <a href="articles/construction-cost-jaipur-2026/index.html" class="cp">&#128205; Jaipur</a>
+    <a href="articles/construction-cost-kochi-2026/index.html" class="cp">&#128205; Kochi</a>
   </div></div>
 </div>
+
+<section class="city-guides-sec">
+  <div class="w">
+    <div class="sec-row"><h2>City Construction Guides 2026</h2><a href="articles/index.html">All city guides &rarr;</a></div>
+    <div class="city-guides-grid">
+      <a href="articles/construction-cost-mumbai-2026/index.html" class="city-guide-card"><span class="city-guide-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><rect x="6" y="22" width="28" height="14" rx="1"/><rect x="10" y="16" width="6" height="6"/><rect x="24" y="16" width="6" height="6"/><path d="M4 36h32"/><path d="M20 8v8"/><path d="M15 12l5-6 5 6"/><rect x="17" y="26" width="6" height="10"/><rect x="11" y="25" width="4" height="4"/><rect x="25" y="25" width="4" height="4"/></svg></span><div><div class="city-guide-name">Mumbai</div><div class="city-guide-rate">&#8377;1,400&ndash;3,200/sqft</div></div></a>
+      <a href="articles/construction-cost-bangalore-2026/index.html" class="city-guide-card"><span class="city-guide-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><circle cx="20" cy="14" r="5"/><path d="M20 19v17M14 28h12M20 9V6M15 11l-4-4M25 11l4-4"/><path d="M8 24c0-6.6 5.4-12 12-12s12 5.4 12 12"/><path d="M12 36c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></span><div><div class="city-guide-name">Bangalore</div><div class="city-guide-rate">&#8377;1,500&ndash;3,000/sqft</div></div></a>
+      <a href="articles/construction-cost-delhi-ncr-2026/index.html" class="city-guide-card"><span class="city-guide-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M20 4l3 7h7l-5.5 4 2 7L20 18l-6.5 4 2-7L10 11h7z"/><path d="M8 36h24M12 36V26M28 36V26M12 26h16M16 26v-4M24 26v-4M16 22h8"/></svg></span><div><div class="city-guide-name">Delhi NCR</div><div class="city-guide-rate">&#8377;1,600&ndash;3,200/sqft</div></div></a>
+      <a href="articles/construction-cost-pune-2026/index.html" class="city-guide-card"><span class="city-guide-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M6 36V20l14-14 14 14v16M4 36h32"/><rect x="15" y="26" width="10" height="10"/><rect x="11" y="20" width="6" height="6"/><rect x="23" y="20" width="6" height="6"/><path d="M20 6v4"/></svg></span><div><div class="city-guide-name">Pune</div><div class="city-guide-rate">&#8377;1,400&ndash;2,800/sqft</div></div></a>
+      <a href="articles/construction-cost-hyderabad-2026/index.html" class="city-guide-card"><span class="city-guide-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M20 4c0 0-10 8-10 18a10 10 0 0020 0C30 12 20 4 20 4z"/><path d="M20 4v32M10 22h20M12 30h16"/><circle cx="20" cy="16" r="2"/><path d="M14 36h12"/></svg></span><div><div class="city-guide-name">Hyderabad</div><div class="city-guide-rate">&#8377;1,350&ndash;2,600/sqft</div></div></a>
+      <a href="articles/construction-cost-chennai-2026/index.html" class="city-guide-card"><span class="city-guide-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M8 36c2-8 4-14 12-18 8 4 10 10 12 18M4 36h32M20 18v-8"/><path d="M20 10c0 0-4-4-4-7M20 10c0 0 4-4 4-7M16 28h8M14 32h12M18 24h4"/></svg></span><div><div class="city-guide-name">Chennai</div><div class="city-guide-rate">&#8377;1,300&ndash;2,500/sqft</div></div></a>
+      <a href="articles/construction-cost-kolkata-2026/index.html" class="city-guide-card"><span class="city-guide-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><rect x="6" y="20" width="28" height="16" rx="1"/><path d="M6 20l14-14 14 14M4 36h32M12 36V28h6v8M22 36V28h6v8"/><circle cx="20" cy="14" r="2"/><path d="M18 20h4"/></svg></span><div><div class="city-guide-name">Kolkata</div><div class="city-guide-rate">&#8377;1,300&ndash;2,800/sqft</div></div></a>
+      <a href="articles/construction-cost-ahmedabad-2026/index.html" class="city-guide-card"><span class="city-guide-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M4 36h32M8 36V24M32 36V24"/><path d="M8 24c0-8 5-16 12-18 7 2 12 10 12 18M16 36v-6h8v6M14 24h12M12 28h16"/><circle cx="20" cy="12" r="3"/></svg></span><div><div class="city-guide-name">Ahmedabad</div><div class="city-guide-rate">&#8377;1,100&ndash;2,400/sqft</div></div></a>
+      <a href="articles/construction-cost-jaipur-2026/index.html" class="city-guide-card"><span class="city-guide-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M4 36h32"/><rect x="8" y="22" width="24" height="14"/><path d="M8 22l3-6h18l3 6M11 16V10M29 16V10"/><path d="M11 10c0-2 2-4 4-4h10c2 0 4 2 4 4M17 36v-8h6v8"/><rect x="11" y="24" width="4" height="4"/><rect x="25" y="24" width="4" height="4"/></svg></span><div><div class="city-guide-name">Jaipur</div><div class="city-guide-rate">&#8377;1,100&ndash;2,600/sqft</div></div></a>
+      <a href="articles/construction-cost-kochi-2026/index.html" class="city-guide-card"><span class="city-guide-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M4 28c4 0 6-4 8-4s4 4 8 4 4-4 8-4 4 4 8 4M4 32c4 0 6-4 8-4s4 4 8 4 4-4 8-4 4 4 8 4M20 4v18M20 4l-8 10h16zM4 36h32M14 22h12"/></svg></span><div><div class="city-guide-name">Kochi</div><div class="city-guide-rate">&#8377;1,600&ndash;3,200/sqft</div></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="city-guides-sec" style="padding-top:32px">
+  <div class="w">
+    <div class="sec-row"><h2>Interior Cost Guides</h2><a href="articles/index.html">All interior guides &rarr;</a></div>
+    <div class="city-guides-grid">
+      <a href="articles/2bhk-interior-cost-bangalore-2026/index.html" class="city-guide-card"><span class="city-guide-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M6 26v-6a4 4 0 014-4h20a4 4 0 014 4v6"/><rect x="4" y="26" width="32" height="6" rx="2"/><path d="M4 32v4M36 32v4M10 26v-4M30 26v-4"/></svg></span><div><div class="city-guide-name">Bangalore</div><div class="city-guide-rate">&#8377;4.5&ndash;18 lakh</div></div></a>
+      <a href="articles/2bhk-interior-cost-mumbai-2026/index.html" class="city-guide-card"><span class="city-guide-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M6 26v-6a4 4 0 014-4h20a4 4 0 014 4v6"/><rect x="4" y="26" width="32" height="6" rx="2"/><path d="M4 32v4M36 32v4M10 26v-4M30 26v-4"/></svg></span><div><div class="city-guide-name">Mumbai</div><div class="city-guide-rate">&#8377;4.5&ndash;28 lakh</div></div></a>
+      <a href="articles/2bhk-interior-cost-pune-2026/index.html" class="city-guide-card"><span class="city-guide-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M6 26v-6a4 4 0 014-4h20a4 4 0 014 4v6"/><rect x="4" y="26" width="32" height="6" rx="2"/><path d="M4 32v4M36 32v4M10 26v-4M30 26v-4"/></svg></span><div><div class="city-guide-name">Pune</div><div class="city-guide-rate">&#8377;3.5&ndash;24 lakh</div></div></a>
+      <a href="articles/modular-kitchen-price-india-2026/index.html" class="city-guide-card"><span class="city-guide-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><rect x="4" y="18" width="32" height="14" rx="1"/><rect x="4" y="8" width="32" height="10" rx="1"/><path d="M4 32h32M10 32v4M30 32v4M14 18v10M22 18v10"/><circle cx="28" cy="13" r="2"/></svg></span><div><div class="city-guide-name">Modular Kitchen</div><div class="city-guide-rate">India 2026</div></div></a>
+      <a href="articles/false-ceiling-cost-india/index.html" class="city-guide-card"><span class="city-guide-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M4 10h32M4 10l4 4h24l4-4"/><path d="M8 14v22M32 14v22M4 36h32"/><path d="M16 14v8M24 14v8M16 22h8"/><circle cx="20" cy="28" r="3"/></svg></span><div><div class="city-guide-name">False Ceiling</div><div class="city-guide-rate">POP vs Gypsum</div></div></a>
+      <a href="articles/vitrified-tiles-vs-marble/index.html" class="city-guide-card"><span class="city-guide-ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><rect x="4" y="4" width="15" height="15" rx="1"/><rect x="21" y="4" width="15" height="15" rx="1"/><rect x="4" y="21" width="15" height="15" rx="1"/><rect x="21" y="21" width="15" height="15" rx="1"/></svg></span><div><div class="city-guide-name">Tiles vs Marble</div><div class="city-guide-rate">Cost comparison</div></div></a>
+    </div>
+  </div>
+</section>
+
+<style>
+.city-guides-sec{padding:64px 0 0}
+.city-guides-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.city-guide-card{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--b);border-radius:var(--r);padding:14px 16px;transition:box-shadow .2s,transform .2s,border-color .2s;box-shadow:0 1px 3px rgba(0,0,0,.05);text-decoration:none}
+.city-guide-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.10);transform:translateY(-2px);border-color:var(--a)}
+.city-guide-ic{width:36px;height:36px;flex-shrink:0;color:var(--a);display:flex;align-items:center;justify-content:center}
+.city-guide-name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.875rem;color:var(--p);line-height:1.2}
+.city-guide-rate{font-size:.72rem;color:var(--m);margin-top:2px}
+@media(max-width:1000px){.city-guides-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:720px){.city-guides-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){.city-guides-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
 
 <section class="art-sec">
   <div class="w">
     <div class="sec-row"><h2>Cost Guides &amp; Breakdowns</h2><a href="articles/index.html">All articles &rarr;</a></div>
     <div class="agrid">
-      <a href="articles/new-fy-2026-27-construction-costs/index.html" class="ac"><div class="at c1" data-c="FY 2026-27"></div><div class="ab"><span class="ntag">New</span><h3>New FY 2026-27 Construction Cost Outlook &mdash; What Changes From April</h3><div class="am">Budget &middot; 7 min</div></div></a>
-      <a href="articles/union-budget-2026-home-construction/index.html" class="ac"><div class="at c2" data-c="Policy"></div><div class="ab"><span class="ntag">New</span><h3>Union Budget 2026-27 Impact on Home Construction Costs in India</h3><div class="am">Policy &middot; 8 min</div></div></a>
-      <a href="articles/2bhk-interior-cost-bangalore-2026/index.html" class="ac"><div class="at c3" data-c="Interior"></div><div class="ab"><h3>2BHK Interior Cost Bangalore 2026 &mdash; Room-by-Room Breakdown</h3><div class="am">Interior &middot; 8 min</div></div></a>
-      <a href="articles/construction-cost-mumbai-2026/index.html" class="ac"><div class="at c4" data-c="Construction"></div><div class="ab"><h3>House Construction Cost Per Sqft Mumbai 2026 &mdash; Area-wise Rates</h3><div class="am">Construction &middot; 6 min</div></div></a>
-      <a href="articles/modular-kitchen-price-india-2026/index.html" class="ac"><div class="at c5" data-c="Kitchen"></div><div class="ab"><h3>Modular Kitchen Price India 2026 &mdash; Cost by Material, Size &amp; City</h3><div class="am">Kitchen &middot; 10 min</div></div></a>
-      <a href="articles/false-ceiling-cost-india/index.html" class="ac"><div class="at c6" data-c="Finishes"></div><div class="ab"><h3>False Ceiling Cost Per Sqft India &mdash; POP vs Gypsum vs Grid</h3><div class="am">Finishes &middot; 7 min</div></div></a>
-      <a href="articles/vitrified-tiles-vs-marble/index.html" class="ac"><div class="at c7" data-c="Flooring"></div><div class="ab"><h3>Vitrified Tiles vs Marble Flooring &mdash; Real Cost Comparison India</h3><div class="am">Flooring &middot; 6 min</div></div></a>
-      <a href="articles/how-to-check-contractor-quote/index.html" class="ac"><div class="at c8" data-c="Tips"></div><div class="ab"><h3>How to Check If Your Contractor Quote Is Fair &mdash; A Homeowner&rsquo;s Guide</h3><div class="am">Tips &middot; 5 min</div></div></a>
-      <a href="articles/gst-on-construction-materials-2026/index.html" class="ac"><div class="at c2" data-c="Tax"></div><div class="ab"><span class="ntag">New</span><h3>GST on Construction Materials 2026 &mdash; Cement 18%, Full Rate List</h3><div class="am">Tax &middot; 8 min</div></div></a>
-      <a href="articles/labour-code-impact-construction-cost-2026/index.html" class="ac"><div class="at c4" data-c="Labour"></div><div class="ab"><span class="ntag">New</span><h3>New Labour Code: How It Pushes Your Construction Cost Up in 2026</h3><div class="am">Policy &middot; 7 min</div></div></a>
-      <a href="articles/house-construction-hidden-costs-india/index.html" class="ac"><div class="at c5" data-c="Planning"></div><div class="ab"><span class="ntag">New</span><h3>Hidden Costs of Building a House in India &mdash; 12 Expenses Nobody Tells You</h3><div class="am">Planning &middot; 9 min</div></div></a>
-            <a href="articles/index.html" class="ac" style="background:var(--s);border-style:dashed;align-items:center;justify-content:center;min-height:180px"><div style="text-align:center;padding:24px"><div style="font-size:1.5rem;margin-bottom:8px">&#128218;</div><div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.9rem;color:var(--p);margin-bottom:4px">View All Guides</div><div style="font-size:.78rem;color:var(--m)">City guides, cost breakdowns &amp; more</div></div></a>
+      <a href="articles/new-fy-2026-27-construction-costs/index.html" class="ac"><div class="at c1" data-c="FY 2026-27"><span class="at-ic">📅</span><div class="at-line"></div></div><div class="ab"><span class="ntag">New</span><h3>New FY 2026-27 Construction Cost Outlook &mdash; What Changes From April</h3><div class="am">Budget &middot; 7 min</div></div></a>
+      <a href="articles/construction-cost-mumbai-2026/index.html" class="ac"><div class="at c4" data-c="Construction"><span class="at-ic">🏗️</span><div class="at-line"></div></div><div class="ab"><h3>House Construction Cost Per Sqft Mumbai 2026 &mdash; Area-wise Rates</h3><div class="am">Construction &middot; 6 min</div></div></a>
+      <a href="articles/construction-cost-kolkata-2026/index.html" class="ac"><div class="at c1" data-c="Construction"><span class="at-ic">🏗️</span><div class="at-line"></div></div><div class="ab"><span class="ntag">New</span><h3>House Construction Cost Per Sqft Kolkata 2026 &mdash; KMC &amp; New Town</h3><div class="am">Construction &middot; 8 min</div></div></a>
+      <a href="articles/how-to-check-contractor-quote/index.html" class="ac"><div class="at c8" data-c="Tips"><span class="at-ic">🔍</span><div class="at-line"></div></div><div class="ab"><h3>How to Check If Your Contractor Quote Is Fair &mdash; A Homeowner&rsquo;s Guide</h3><div class="am">Tips &middot; 5 min</div></div></a>
+      <a href="articles/house-construction-hidden-costs-india/index.html" class="ac"><div class="at c5" data-c="Planning"><span class="at-ic">💡</span><div class="at-line"></div></div><div class="ab"><span class="ntag">New</span><h3>Hidden Costs of Building a House in India &mdash; 12 Expenses Nobody Tells You</h3><div class="am">Planning &middot; 9 min</div></div></a>
+      <a href="articles/gst-on-construction-materials-2026/index.html" class="ac"><div class="at c2" data-c="Tax"><span class="at-ic">📊</span><div class="at-line"></div></div><div class="ab"><span class="ntag">New</span><h3>GST on Construction Materials 2026 &mdash; Cement 18%, Full Rate List</h3><div class="am">Tax &middot; 8 min</div></div></a>
+      <a href="articles/union-budget-2026-home-construction/index.html" class="ac"><div class="at c2" data-c="Policy"><span class="at-ic">🏛️</span><div class="at-line"></div></div><div class="ab"><span class="ntag">New</span><h3>Union Budget 2026-27 Impact on Home Construction Costs in India</h3><div class="am">Policy &middot; 8 min</div></div></a>
+      <a href="articles/labour-code-impact-construction-cost-2026/index.html" class="ac"><div class="at c4" data-c="Labour"><span class="at-ic">👷</span><div class="at-line"></div></div><div class="ab"><span class="ntag">New</span><h3>New Labour Code: How It Pushes Your Construction Cost Up in 2026</h3><div class="am">Policy &middot; 7 min</div></div></a>
+      <a href="articles/index.html" class="ac" style="background:var(--s);border-style:dashed;align-items:center;justify-content:center;min-height:180px"><div style="text-align:center;padding:24px"><div style="font-size:1.5rem;margin-bottom:8px">&#128218;</div><div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.9rem;color:var(--p);margin-bottom:4px">View All Guides</div><div style="font-size:.78rem;color:var(--m)">City guides, cost breakdowns &amp; more</div></div></a>
     </div>
   </div>
 </section>
+
+
 
 <div class="trust">
   <div class="w"><div class="ti">
