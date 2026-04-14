@@ -117,7 +117,6 @@ ul{list-style:none}
 .cta-box__text span{font-size:.85rem;color:var(--muted)}
 .cta-box a{display:inline-flex;align-items:center;padding:12px 22px;background:var(--accent);color:#fff;font-weight:600;font-size:.9rem;border-radius:8px;white-space:nowrap;transition:background .15s}
 .cta-box a:hover{background:#d4691a}
-.affiliate-inline{border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;margin:24px 0;background:#fff;display:flex;align-items:center;gap:14px}
 .affiliate-inline__icon{width:36px;height:36px;background:rgba(232,119,34,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
 .affiliate-inline__text{flex:1}
 .affiliate-inline__text strong{display:block;font-size:.875rem;font-weight:600;color:var(--primary)}
@@ -225,9 +224,7 @@ ul{list-style:none}
   .share-strip{flex-direction:column;align-items:flex-start;gap:10px;padding:14px 16px}
   .share-strip p{min-width:unset;width:100%}
   .wa-share{width:100%;justify-content:center}
-  .aff-section{padding:18px 16px 16px;margin:24px 0}
   .aff-header h3{font-size:1rem}
-  .aff-saving{font-size:.65rem}
   .sources-grid{grid-template-columns:1fr}
 }
   .nav__hamburger{display:flex}
@@ -246,28 +243,12 @@ ul{list-style:none}
 
 
 /* ===== AFFILIATE SECTIONS (updated) ===== */
-.aff-section{background:#fff;border:1px solid var(--border,#E0DDE0);border-radius:12px;padding:24px 24px 20px;margin:36px 0}
-.aff-header{margin-bottom:18px}
-.aff-saving{display:inline-flex;align-items:center;gap:6px;background:rgba(26,122,74,.1);border:1px solid rgba(26,122,74,.2);color:#1a7a4a;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:99px;margin-bottom:10px}
 .aff-header h3{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;color:var(--primary,#2D3A4A);margin-bottom:4px}
 .aff-header p{font-size:.83rem;color:var(--muted,#666);max-width:600px;line-height:1.6}
-.aff-grid{display:grid;gap:12px;margin-top:14px}
-.aff-grid.g2{grid-template-columns:repeat(2,1fr)}
-.aff-grid.g3{grid-template-columns:repeat(3,1fr)}
-.aff-grid.g4{grid-template-columns:repeat(2,1fr)}
-.aff-card{border:1px solid var(--border,#E0DDE0);border-radius:10px;background:var(--surface,#F5F5F3);display:flex;flex-direction:column;overflow:hidden;transition:box-shadow .2s,transform .2s}
 .aff-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.09);transform:translateY(-2px)}
-.aff-img-wrap{width:100%;height:110px;background:#fff;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border,#E0DDE0);font-size:2.8rem}
-.aff-body{padding:12px 13px;flex:1;display:flex;flex-direction:column;gap:3px}
-.aff-brand{font-size:.6rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted,#666)}
-.aff-name{font-size:.8rem;font-weight:600;color:var(--primary,#2D3A4A);line-height:1.4;flex:1}
-.aff-why{font-size:.72rem;color:var(--muted,#666);line-height:1.55;margin:3px 0 5px}
-.aff-price-range{font-size:.78rem;font-weight:600;color:var(--accent,#E87722)}
-.aff-btn{display:block;text-align:center;padding:8px 10px;background:var(--accent,#E87722);color:#fff;font-weight:600;font-size:.75rem;border-radius:7px;margin-top:8px;text-decoration:none;transition:background .15s}
 .aff-btn:hover{background:#d4691a;color:#fff}
-.aff-footer{font-size:.67rem;color:var(--muted,#666);margin-top:14px;padding-top:10px;border-top:1px solid var(--border,#E0DDE0);line-height:1.6}
 .aff-footer a{color:var(--accent,#E87722)}
-@media(max-width:680px){.aff-section{padding:16px 14px!important;margin:20px 0!important}.aff-grid.g2,.aff-grid.g3,.aff-grid.g4{grid-template-columns:1fr!important}}
+@media(max-width:680px){.aff-grid.g2,.aff-grid.g3,}
 
 /* ===== EMAIL CAPTURE ===== */
 .ec-wrap{background:linear-gradient(135deg,#2D3A4A 0%,#3d5166 100%);border-radius:12px;padding:24px 28px;margin:32px 0;color:#fff}
@@ -300,10 +281,6 @@ ul{list-style:none}
 .pdf-promo-inline-right{display:flex;flex-direction:column;align-items:center;gap:6px}
 @media(max-width:560px){.pdf-promo{flex-direction:column;padding:18px 16px}.pdf-promo-right{width:100%}.pdf-promo-inline{flex-direction:column}.pdf-promo-inline-right{width:100%}}
 </style>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){ return true; }
-</script>
 <link rel="stylesheet" href="../../site-consistency.css"/>
 </head>
 <body>
@@ -429,17 +406,6 @@ function gtag(){ return true; }
   <li><strong>Skip the loft shutters:</strong> Open shelves for the top 12 inches of wall cabinets look contemporary and save ₹5,000–10,000 vs full loft shutters.</li>
 </ul>
 
-<div class="affiliate-inline">
-  <div class="affiliate-inline__icon">🛠️</div>
-  <div class="affiliate-inline__text">
-    <strong>Buy kitchen hardware directly and save 20–30% vs contractor supply</strong>
-    <span>Hinges, drawer channels, and baskets — specify the brand, buy yourself</span>
-  </div>
-  <a href="/interior/">View interior calculator →</a>
-</div>
-
-<!-- END AFFILIATE: Kitchen Hardware -->
-<div class="faq-section"><h2>Frequently Asked Questions</h2><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How much does a modular kitchen cost in India in 2026?<span class="faq-icon">+</span></div><div class="faq-a"><p>A modular kitchen in India costs ₹60,000–4 lakh+ depending on size, material, and city. A standard 10 running feet kitchen with BWR plywood carcass and laminate shutters costs ₹95,000–1,40,000 in metro cities. Acrylic shutters cost 50–70% more; premium PU or glass options start at ₹1,80,000 for the same size.</p></div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the best material for modular kitchen shutters in India?<span class="faq-icon">+</span></div><div class="faq-a"><p>Laminate on 18mm BWR plywood offers the best value for most Indian homes — durable, moisture-resistant, easy to maintain, and available in hundreds of finishes. Acrylic looks better initially but can scratch and yellow over time. PU finish is the best premium option. For high-budget kitchens, lacquered glass or handleless aluminium profiles offer a contemporary look.</p></div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is a running foot in kitchen measurement?<span class="faq-icon">+</span></div><div class="faq-a"><p>A running foot (RFT) is a linear measurement of kitchen cabinets. It refers to one foot of cabinet width. A typical 10 RFT kitchen includes both base (below countertop) and wall cabinets over 10 linear feet. Most 2BHK kitchens in India are 8–14 running feet; 3BHK kitchens run 12–20 feet.</p></div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is it better to buy a modular kitchen from a brand or a local carpenter?<span class="faq-icon">+</span></div><div class="faq-a"><p>Factory-made modular kitchens from brands (Häfele, HomeLane, Livspace) offer better finish quality, warranty, and precise manufacturing. Local carpenters can be 20–35% cheaper but quality depends heavily on the individual carpenter's skill. For kitchens above ₹1.5 lakh, a factory-made modular unit is usually worth the premium.</p></div></div><div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How long does modular kitchen installation take?<span class="faq-icon">+</span></div><div class="faq-a"><p>A factory-made modular kitchen takes 21–28 days to manufacture after design approval, plus 1–2 days for installation. On-site carpenter-built kitchens take 15–25 days for a 10 RFT kitchen. Add 3–5 days for electrical work (exhaust, chimney point) and plumbing adjustments if needed.</p></div></div></div>
 
 <aside>
   <div class="sb">
@@ -485,46 +451,6 @@ function gtag(){ return true; }
   </div>
 </div>
 <div class="container">
-<!-- Affiliate section -->
-<div class="aff-section" id="kitchen-hardware" style="margin:36px 0">
-  <div class="aff-header">
-    <div class="aff-saving">🍳 Specify brands before signing your kitchen contract</div>
-    <h3>Modular Kitchen Hardware Worth Specifying</h3>
-    <p>The difference between a ₹2L and ₹4L modular kitchen is often just the hardware brand. These components affect longevity most — specify them by name.</p>
-  </div>
-  <div class="aff-grid g3">
-    <div class="aff-card">
-      <div class="aff-img-wrap">🔧</div>
-      <div class="aff-body">
-        <div class="aff-brand">Hettich</div>
-        <div class="aff-name">Hettich Sensys Soft Close Cabinet Hinges — Pack of 4 Pairs</div>
-        <div class="aff-why">European standard hinges used in premium modular kitchens. 165° opening. Ask contractor to specify these.</div>
-        <div class="aff-price-range">~₹1,200–1,800</div>
-        <a href="https://www.amazon.in/dp/B07MQ233NJ?tag=gharkabuget-21" target="_blank" rel="noopener sponsored" class="aff-btn" onclick="gtag('event','affiliate_click',{link:'B07MQ233NJ'})">Check price on Amazon &rarr;</a>
-      </div>
-    </div>
-    <div class="aff-card">
-      <div class="aff-img-wrap">🗄️</div>
-      <div class="aff-body">
-        <div class="aff-brand">EBCO</div>
-        <div class="aff-name">EBCO Soft Close Drawer Channels — 450mm Full Extension, 1 Pair</div>
-        <div class="aff-why">Indian brand, ISI-marked, widely available. Full extension so you can access the back of drawers. Specify by name.</div>
-        <div class="aff-price-range">~₹800–1,200</div>
-        <a href="https://www.amazon.in/dp/B0BLNM4TJY?tag=gharkabuget-21" target="_blank" rel="noopener sponsored" class="aff-btn" onclick="gtag('event','affiliate_click',{link:'B0BLNM4TJY'})">Check price on Amazon &rarr;</a>
-      </div>
-    </div>
-    <div class="aff-card">
-      <div class="aff-img-wrap">📏</div>
-      <div class="aff-body">
-        <div class="aff-brand">Bosch</div>
-        <div class="aff-name">Bosch GLM 40 Professional Laser Distance Measurer</div>
-        <div class="aff-why">Measure room dimensions, verify sqft area claims, check slab thickness independently. ±1.5mm accuracy.</div>
-        <div class="aff-price-range">~₹3,500–4,500</div>
-        <a href="https://www.amazon.in/dp/B0D54FT8QK?tag=gharkabuget-21" target="_blank" rel="noopener sponsored" class="aff-btn" onclick="gtag('event','affiliate_click',{link:'B0D54FT8QK'})">Check price on Amazon &rarr;</a>
-      </div>
-    </div>
-  </div>
-  <div class="aff-footer">Affiliate disclosure: Links go to Amazon India. If you purchase, we earn a small commission at no extra cost to you. Our tag: <strong>gharkabuget-21</strong>. We only link to products we would genuinely recommend. <a href="../../disclaimer/index.html">Full disclosure</a>.</div>
 </div>
 <!-- PDF promo -->
 <div class="pdf-promo-inline">

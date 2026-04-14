@@ -1,1 +1,2 @@
-google.com, pub-4596200913535557, DIRECT, f08c47fec0942fa0
+# ads.txt — No programmatic advertising is currently active on this domain.
+# This file will be updated if and when display advertising is enabled.
