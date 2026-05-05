@@ -1,3 +1,8 @@
+# Sticker / guerrilla campaign QR redirects (UTM-tracked)
+/q/h    /?utm_source=sticker&utm_medium=qr&utm_campaign=mum_pilot&utm_content=hoarding   302
+/q/s    /?utm_source=sticker&utm_medium=qr&utm_campaign=mum_pilot&utm_content=site       302
+/q/n    /?utm_source=sticker&utm_medium=qr&utm_campaign=mum_pilot&utm_content=notice     302
+
 /articles/construction-cost-ahmedabad-2025/   /articles/construction-cost-ahmedabad-2026/   301
 /articles/construction-cost-bangalore-2025/   /articles/construction-cost-bangalore-2026/   301
 /articles/construction-cost-chennai-2025/     /articles/construction-cost-chennai-2026/     301
