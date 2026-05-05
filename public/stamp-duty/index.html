@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E02EQTPXKE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E02EQTPXKE');
+</script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Stamp Duty &amp; Registration Calculator India 2026 — All States, Female Discount</title>
@@ -103,7 +111,7 @@ nav.bar{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px soli
 .related h3{font-family:'Space Grotesk',sans-serif;font-size:1rem;color:var(--p);margin-bottom:10px}
 .related a{display:block;color:var(--a);font-weight:600;font-size:.9rem;padding:6px 0}
 .footer{background:var(--p);color:rgba(255,255,255,.7);padding:32px 0;font-size:.85rem}
-.footer__inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer__inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;max-width:1160px;margin:0 auto;padding:0 24px}
 .footer__links{display:flex;gap:14px;flex-wrap:wrap}
 .footer a{color:rgba(255,255,255,.85)}
 
@@ -276,6 +284,31 @@ nav.bar{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px soli
   </div>
 </div>
 
+<h2 style="margin-top:40px">Log Yeh Bhi Poochte Hain <span style="font-size:.85rem;font-weight:400;color:var(--m);font-family:'Inter',sans-serif">(People Also Ask)</span></h2>
+<p style="font-size:.82rem;color:var(--m);margin-bottom:14px">Jis tarah se log search karte hain &mdash; unke liye jawab</p>
+<div class="faq">
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Stamp duty Maharashtra mein kitni lagti hai?</div>
+    <div class="faq-a">Maharashtra mein male buyer ke liye 6% stamp duty hai (5% basic + 1% Metro Cess) Mumbai, Pune, Thane, Nashik, Nagpur ke metro areas mein. Female buyer ke liye 1% concession hai &mdash; total 5% lagta hai. Iske alawa 1% registration fee hai jo maximum &#8377;30,000 par capped hai. Non-metro areas mein Metro Cess nahi lagta toh effective rate 1% kam ho jata hai.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Mahila ke naam se property registration mein kitni bachat hoti hai?</div>
+    <div class="faq-a">Bachat state ke hisaab se alag hai. Maharashtra mein 1%, Delhi mein 2%, UP/Haryana/Rajasthan/Punjab mein 1&ndash;2% tak ki concession milti hai female-only ya joint registration (with female owner) par. Karnataka, Tamil Nadu, Gujarat, Telangana, Madhya Pradesh, Kerala mein gender ke basis par koi concession nahi hai. &#8377;75 lakh ki property par Delhi mein 2% concession matlab seedha &#8377;1.5 lakh ki bachat.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Stamp duty home loan mein cover hoti hai kya?</div>
+    <div class="faq-a">Nahi. Bank typically property value ka maximum 90% loan deta hai, aur woh bhi sirf "property + stamp duty + registration" ke combined cost ka 75&ndash;80%. Matlab agar &#8377;75 lakh ka flat hai Mumbai mein, toh stamp duty (&#8377;3.75 lakh) + registration (&#8377;30K) + 10&ndash;25% down payment &mdash; sab cash mein arrange karna padega. Total roughly &#8377;15&ndash;20 lakh out of pocket lagta hai before loan starts.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Under-construction property par GST aur stamp duty dono lagti hain?</div>
+    <div class="faq-a">Haan. Under-construction property par 5% GST (1% affordable housing ke liye) + state ki full stamp duty &mdash; dono lagti hain. Ready-to-move property jisko Occupancy Certificate (OC) mil chuki hai, usme GST exempt hai &mdash; sirf stamp duty + registration lagta hai. Isliye OC-received ready property roughly 5% sasti padti hai overall tax burden mein, even if listing price same hai.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Agreement cancel ho jaye toh stamp duty wapas milti hai?</div>
+    <div class="faq-a">Partially. Agar document register nahi hua hai aur 6 mahine ke andar refund apply karte hain, toh state IGR office se 90&ndash;95% stamp duty wapas mil sakti hai. Registration ke baad refund bahut difficult hai &mdash; sirf cancelled allotment jaise specific cases mein milta hai. Process state ke hisaab se alag hai &mdash; Maharashtra mein igrmaharashtra.gov.in par online apply kar sakte hain.</div>
+  </div>
+</div>
+
 <div class="related">
   <h3>Related tools and guides</h3>
   <a href="/emi/">Home Loan EMI Calculator — monthly payment + amortisation →</a>
@@ -387,6 +420,18 @@ function calcStampDuty(){
   document.getElementById('rRGPct').textContent='('+(r.registration*100).toFixed(2)+'%'+(r.regCap>0?', capped ₹'+(r.regCap/1000)+'K':'')+')';
   document.getElementById('rTotal').textContent=formatINR(total);
   document.getElementById('resultNote').innerHTML='<strong>Note:</strong> '+r.note;
+
+  // GA4 event
+  if(typeof gtag==='function'){
+    gtag('event','calc_completed',{
+      calculator:'stamp_duty',
+      state:st,
+      buyer:bu,
+      area_type:ar,
+      property_value:pv,
+      total_payable:Math.round(total)
+    });
+  }
 
   var p=document.getElementById('resultPanel');
   p.classList.add('show');

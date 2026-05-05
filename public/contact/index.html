@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"><head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E02EQTPXKE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E02EQTPXKE');
+</script>
 
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Contact — Ghar Ka Budget</title>
@@ -48,6 +56,17 @@ a{color:#E87722}
   .kni{border-right:none!important;border-bottom:1px solid var(--b,#E0DDE0)!important;min-width:100%!important}
   .kni:last-child{border-bottom:none!important}
   .cb{flex-direction:column}
+}
+
+.share-strip{background:#F5F5F3;border:1px solid #E0DDE0;border-radius:10px;padding:16px 20px;margin:24px 0;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.share-strip p{font-size:.875rem;color:#666;flex:1;min-width:180px;margin:0}
+.wa-share{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-weight:600;font-size:.875rem;padding:10px 20px;border-radius:8px;text-decoration:none;transition:background .15s,transform .15s}
+.wa-share:hover{background:#1da851;transform:translateY(-1px)}
+.wa-share svg{width:18px;height:18px;fill:#fff;flex-shrink:0}
+@media(max-width:680px){
+.share-strip{flex-direction:column;align-items:flex-start;gap:10px;padding:14px 16px}
+.share-strip p{min-width:unset;width:100%}
+.wa-share{width:100%;justify-content:center}
 }
 </style>
 <link rel="stylesheet" href="../site-consistency.css"/>

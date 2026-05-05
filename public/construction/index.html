@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E02EQTPXKE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E02EQTPXKE');
+</script>
 
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -184,7 +192,7 @@ ul{list-style:none}
 
 /* FOOTER */
 .footer{background:var(--card);border-top:1px solid var(--border);padding:32px 0}
-.footer__inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer__inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;max-width:1160px;margin:0 auto;padding:0 24px}
 .footer__brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;color:var(--primary)}
 .footer__domain{font-size:.8125rem;color:var(--accent);font-weight:500}
 .footer__copy{font-size:.8rem;color:var(--muted)}
@@ -920,6 +928,17 @@ function calculateCost(){
   // Pie — uses the same split as the breakdown so values match
   var canvas=document.getElementById('pieChart');
   drawPie(canvas,[split.materials*100, split.labour*100, split.other*100],['#2D3A4A','#E87722','#888888']);
+
+  // GA4 event
+  if(typeof gtag==='function'){
+    gtag('event','calc_completed',{
+      calculator:'construction',
+      city_tier:cityTier,
+      quality:quality.value,
+      total_inr:Math.round(totalWithContingency),
+      sqft_rate:sqftRate
+    });
+  }
 
   setTimeout(function(){
     panel.scrollIntoView({behavior:'smooth',block:'nearest'});

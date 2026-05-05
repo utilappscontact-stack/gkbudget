@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E02EQTPXKE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E02EQTPXKE');
+</script>
 
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -175,7 +183,7 @@ ul{list-style:none}
 
 /* FOOTER */
 .footer{background:var(--card);border-top:1px solid var(--border);padding:32px 0}
-.footer__inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer__inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;max-width:1160px;margin:0 auto;padding:0 24px}
 .footer__links{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
 .footer__links a{font-size:.8125rem;color:var(--muted);transition:color .15s}
 .footer__links a:hover{color:var(--primary)}
@@ -694,6 +702,17 @@ function checkQuote(){
   document.getElementById('benchDiff').textContent=diffText;
   document.getElementById('nextSteps').textContent=NEXT_STEPS[stepKey];
   document.getElementById('verdictPanel').classList.add('show');
+  if(typeof gtag==='function'){
+    gtag('event','calc_completed',{
+      calculator:'quote_check',
+      city:city,
+      quality:quality,
+      quoted_rate:Math.round(rate),
+      benchmark_mid:bench.mid,
+      verdict:cls,
+      pct_diff:Math.round(pct)
+    });
+  }
   setTimeout(function(){document.getElementById('verdictPanel').scrollIntoView({behavior:'smooth',block:'nearest'})},100);
 }
 </script>
