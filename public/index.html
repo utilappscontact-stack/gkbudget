@@ -191,6 +191,8 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
 .share-strip{flex-direction:column;align-items:flex-start;gap:10px;padding:14px 16px}
 .share-strip p{min-width:unset;width:100%}
 .wa-share{width:100%;justify-content:center}
+.diff-grid{grid-template-columns:1fr !important;gap:24px !important}
+.diff-sec{padding:36px 0 !important}
 }
 </style>
 <link rel="stylesheet" href="site-consistency.css"/>
@@ -204,6 +206,7 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
       <li><a href="construction/">Construction</a></li>
       <li><a href="interior/">Interior</a></li>
       <li><a href="#cities">City Guides</a></li>
+      <li><a href="methodology/">Methodology</a></li>
     </ul>
     <button class="hbg" onclick="tmenu(this)"><span></span><span></span><span></span></button>
   </div></div>
@@ -223,6 +226,7 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
   <a href="waterproofing/">Waterproofing</a>
   <a href="#cities">City Guides</a>
   <a href="articles/">All Articles</a>
+  <a href="methodology/">Methodology &amp; Sources</a>
   <a href="get-quotes/">How to Get Quotes</a>
 </div>
 
@@ -265,6 +269,42 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
       <a href="modular-kitchen/" class="cc"><div class="ci">&#127859;</div><h3>Modular Kitchen Cost</h3><p>Per running foot rates by finish, layout and hardware tier. L-shape, U-shape, parallel, island.</p><span>Estimate kitchen &rarr;</span></a>
       <a href="bathroom-renovation/" class="cc"><div class="ci">&#128705;</div><h3>Bathroom Renovation Cost</h3><p>Tile, sanitary, plumbing, waterproofing, glass partition. Includes the line items quotes hide.</p><span>Estimate renovation &rarr;</span></a>
       <a href="waterproofing/" class="cc"><div class="ci">&#128167;</div><h3>Waterproofing Cost</h3><p>Terrace, bathroom, basement. 6 methods compared (acrylic to PMMA) with cost vs lifespan.</p><span>Estimate now &rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="diff-sec" style="background:#fff;border-top:1px solid var(--b);border-bottom:1px solid var(--b);padding:48px 0">
+  <div class="w">
+    <div class="diff-grid" style="display:grid;grid-template-columns:1.1fr 1.5fr;gap:40px;align-items:start">
+      <div>
+        <div style="font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--a);margin-bottom:10px">Why this and not ChatGPT?</div>
+        <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.5rem;color:var(--p);line-height:1.25;letter-spacing:-.02em;margin-bottom:14px">AI gives you a paragraph. We give you a number you can act on.</h2>
+        <p style="font-size:.9rem;color:var(--m);line-height:1.65;margin-bottom:14px">Ask any chatbot &ldquo;should I buy this 50L plot in Lucknow?&rdquo; and you get four paragraphs of &lsquo;it depends&rsquo;. Our calculators give you the all-in cost, the break-even number, and a verdict. Plus the sources, plus a PDF for your spouse, plus a shareable link.</p>
+        <a href="methodology/" style="display:inline-flex;align-items:center;gap:6px;font-size:.85rem;font-weight:600;color:var(--a)">Read the methodology &rarr;</a>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr;gap:14px">
+        <div style="display:flex;gap:14px;background:var(--s);border:1px solid var(--b);border-radius:10px;padding:16px 18px">
+          <div style="flex-shrink:0;width:36px;height:36px;background:#fff;border:1px solid rgba(232,119,34,.3);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--a);font-weight:700">1</div>
+          <div>
+            <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--p);font-size:.95rem;margin-bottom:3px">A verdict, not a hedge</div>
+            <div style="font-size:.85rem;color:var(--m);line-height:1.55">Plot Viability gives green / amber / red on your specific deal. Quote Checker gives fair / high / very high. We compute the break-even number; we don't tell you to &lsquo;consult a financial advisor&rsquo;.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;background:var(--s);border:1px solid var(--b);border-radius:10px;padding:16px 18px">
+          <div style="flex-shrink:0;width:36px;height:36px;background:#fff;border:1px solid rgba(232,119,34,.3);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--a);font-weight:700">2</div>
+          <div>
+            <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--p);font-size:.95rem;margin-bottom:3px">Sourced &amp; dated, not memorised</div>
+            <div style="font-size:.85rem;color:var(--m);line-height:1.55">Every rate cites CPWD SOR, MOSPI WPI, state IGR portals, RBI lender disclosures &mdash; with the date last verified. Chatbots can't tell you whether their UP stamp duty number is from 2022 or last week.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;background:var(--s);border:1px solid var(--b);border-radius:10px;padding:16px 18px">
+          <div style="flex-shrink:0;width:36px;height:36px;background:#fff;border:1px solid rgba(232,119,34,.3);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--a);font-weight:700">3</div>
+          <div>
+            <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--p);font-size:.95rem;margin-bottom:3px">PDF + share link on every calc</div>
+            <div style="font-size:.85rem;color:var(--m);line-height:1.55">One tap downloads a PDF report you can email to your spouse, contractor, or banker. Or copy a link that pre-fills your inputs &mdash; send it to your family WhatsApp group and everyone runs the same numbers.</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -411,7 +451,7 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
       <div style="font-size:.75rem;color:var(--m);margin-top:4px">&copy; 2026 Ghar Ka Budget. For informational purposes only.</div>
     </div>
     <nav class="fl">
-      <a href="construction/">Construction</a><a href="interior/">Interior</a><a href="emi/">EMI</a><a href="quote-check/">Quotes</a><a href="stamp-duty/">Stamp Duty</a><a href="home-loan-eligibility/">Eligibility</a><a href="painting-cost/">Painting</a><a href="plot-viability/">Plot Check</a><a href="modular-kitchen/">Modular Kitchen</a><a href="bathroom-renovation/">Bathroom</a><a href="waterproofing/">Waterproofing</a><a href="articles/">Articles</a><a href="about/">About</a><a href="editorial-policy/">Editorial Policy</a><a href="disclaimer/">Disclaimer</a><a href="privacy/">Privacy</a><a href="contact/">Contact</a>
+      <a href="construction/">Construction</a><a href="interior/">Interior</a><a href="emi/">EMI</a><a href="quote-check/">Quotes</a><a href="stamp-duty/">Stamp Duty</a><a href="home-loan-eligibility/">Eligibility</a><a href="painting-cost/">Painting</a><a href="plot-viability/">Plot Check</a><a href="modular-kitchen/">Modular Kitchen</a><a href="bathroom-renovation/">Bathroom</a><a href="waterproofing/">Waterproofing</a><a href="articles/">Articles</a><a href="methodology/">Methodology</a><a href="about/">About</a><a href="editorial-policy/">Editorial Policy</a><a href="disclaimer/">Disclaimer</a><a href="privacy/">Privacy</a><a href="contact/">Contact</a>
     </nav>
   </div></div>
 </footer>

@@ -1,0 +1,355 @@
+/* Ghar Ka Budget — calc-enhance.css
+ * Styles for the action bar (Share / PDF / Methodology) injected into result panels,
+ * the toast notification, and the print stylesheet that produces a clean PDF.
+ *
+ * Loaded on every calculator page.
+ */
+
+/* ─── Action bar (sits at top of result panel) ───────────── */
+.gkb-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  padding:10px 14px;
+  margin:0 0 18px;
+  background:#FFF7EE;
+  border:1px solid rgba(232,119,34,.25);
+  border-radius:10px;
+}
+.gkb-act{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:8px 12px;
+  background:#fff;
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:8px;
+  font-family:'Inter',sans-serif;
+  font-size:.82rem;
+  font-weight:600;
+  color:#2D3A4A;
+  cursor:pointer;
+  text-decoration:none;
+  line-height:1;
+  transition:border-color .15s, background .15s, transform .08s, box-shadow .15s;
+  box-shadow:0 1px 0 rgba(0,0,0,.02);
+}
+.gkb-act:hover{
+  border-color:#E87722;
+  background:#fff;
+  box-shadow:0 2px 6px rgba(232,119,34,.18);
+}
+.gkb-act:active{ transform:translateY(1px); }
+.gkb-act svg{ flex-shrink:0; color:#E87722; }
+.gkb-act-method{ background:#fff; }
+.gkb-act-method svg{ color:#2D3A4A; }
+@media (max-width:520px){
+  .gkb-actions{ padding:8px 10px; gap:6px; }
+  .gkb-act{ padding:8px 10px; font-size:.78rem; flex:1 1 calc(50% - 4px); justify-content:center; }
+  .gkb-act-method{ flex:1 1 100%; }
+}
+
+/* ─── Toast (used by Share button) ─────────────────────── */
+.gkb-toast{
+  position:fixed;
+  left:50%;
+  bottom:24px;
+  transform:translate(-50%, 12px);
+  background:#1C1C1A;
+  color:#fff;
+  padding:11px 18px;
+  border-radius:8px;
+  font-family:'Inter',sans-serif;
+  font-size:.85rem;
+  font-weight:500;
+  box-shadow:0 8px 24px rgba(0,0,0,.25);
+  opacity:0;
+  pointer-events:none;
+  z-index:2000;
+  transition:opacity .25s, transform .25s;
+  max-width:90vw;
+  text-align:center;
+}
+.gkb-toast--show{
+  opacity:1;
+  transform:translate(-50%, 0);
+}
+.gkb-toast--ok{ background:#22A06B; }
+
+/* ─── Print container (hidden on screen, visible in print) ─ */
+#gkb-print{ display:none; }
+
+/* ─── Print stylesheet ─────────────────────────────────── */
+@media print {
+  /* General page setup */
+  @page{ margin:14mm 12mm 14mm 12mm; size:A4; }
+
+  /* When body has gkb-printing class, hide all original content and show only the print layout */
+  body.gkb-printing{
+    background:#fff !important;
+    color:#1C1C1A !important;
+    font-family:'Inter','Helvetica Neue',Arial,sans-serif;
+    font-size:10.5pt;
+    line-height:1.5;
+  }
+  body.gkb-printing > *:not(#gkb-print){ display:none !important; }
+  body.gkb-printing #gkb-print{
+    display:block !important;
+    max-width:100%;
+    color:#1C1C1A;
+  }
+
+  /* Header */
+  #gkb-print .gp-head{
+    border-bottom:2px solid #2D3A4A;
+    padding-bottom:10px;
+    margin-bottom:18px;
+  }
+  #gkb-print .gp-brand-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:14px;
+  }
+  #gkb-print .gp-brand{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+    font-weight:700;
+    color:#2D3A4A;
+    font-size:13pt;
+  }
+  #gkb-print .gp-logo{
+    display:inline-block;
+    width:18pt;
+    height:18pt;
+    background:#E87722;
+    border-radius:3pt;
+    position:relative;
+  }
+  #gkb-print .gp-logo span{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:9pt;
+    height:1.3pt;
+    background:#fff;
+    transform:translate(-50%,-50%);
+  }
+  #gkb-print .gp-meta{
+    text-align:right;
+    font-size:8.5pt;
+    color:#666;
+    line-height:1.4;
+  }
+  #gkb-print .gp-meta .gp-url{ color:#E87722; font-weight:600; margin-top:2pt; }
+  #gkb-print .gp-title{
+    font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+    font-weight:700;
+    font-size:18pt;
+    color:#2D3A4A;
+    line-height:1.25;
+    letter-spacing:-.02em;
+    margin:6pt 0 0;
+  }
+
+  /* Section headings */
+  #gkb-print .gp-section{ margin-bottom:18pt; }
+  #gkb-print .gp-h2{
+    font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+    font-weight:700;
+    font-size:11pt;
+    color:#E87722;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    margin:0 0 8pt;
+    padding-bottom:4pt;
+    border-bottom:1px solid #E0DDE0;
+  }
+
+  /* Inputs table */
+  #gkb-print .gp-tbl{
+    width:100%;
+    border-collapse:collapse;
+    font-size:9.5pt;
+  }
+  #gkb-print .gp-tbl thead th{
+    background:#F5F5F3;
+    color:#2D3A4A;
+    font-weight:700;
+    font-size:8.5pt;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    text-align:left;
+    padding:6pt 8pt;
+    border-bottom:1.5pt solid #E0DDE0;
+  }
+  #gkb-print .gp-tbl tbody td{
+    padding:5pt 8pt;
+    border-bottom:.5pt solid #E0DDE0;
+    color:#1C1C1A;
+    vertical-align:top;
+  }
+  #gkb-print .gp-tbl tbody td:first-child{
+    color:#666;
+    width:46%;
+    font-size:9pt;
+  }
+  #gkb-print .gp-tbl tbody td:last-child{
+    color:#2D3A4A;
+    font-weight:600;
+  }
+
+  /* Result host — preserve much of the calculator's own result styling */
+  #gkb-print .gp-result-host{ font-size:10pt; }
+  #gkb-print .gp-result-host *{ color:#1C1C1A !important; }
+
+  /* Common result patterns across all 11 calcs */
+  #gkb-print .gp-result-host .verdict,
+  #gkb-print .gp-result-host .vd{
+    background:#F5F5F3 !important;
+    border:1px solid #E0DDE0 !important;
+    border-left:3pt solid #2D3A4A !important;
+    padding:9pt 12pt !important;
+    border-radius:0 4pt 4pt 0 !important;
+    margin-bottom:10pt !important;
+  }
+  #gkb-print .gp-result-host .verdict.viable,
+  #gkb-print .gp-result-host .vd.fair{ border-left-color:#22A06B !important; }
+  #gkb-print .gp-result-host .verdict.marginal,
+  #gkb-print .gp-result-host .vd.high{ border-left-color:#D97706 !important; }
+  #gkb-print .gp-result-host .verdict.poor,
+  #gkb-print .gp-result-host .vd.veryhigh{ border-left-color:#cc1f1a !important; }
+  #gkb-print .gp-result-host .verdict-h,
+  #gkb-print .gp-result-host .vd .lab{
+    font-weight:700; font-size:11pt; margin-bottom:3pt;
+    font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+  }
+  #gkb-print .gp-result-host .verdict-d,
+  #gkb-print .gp-result-host .vd .ds{ font-size:9.5pt; line-height:1.5; }
+
+  /* Headline totals */
+  #gkb-print .gp-result-host .tot,
+  #gkb-print .gp-result-host .result-total__amount,
+  #gkb-print .gp-result-host #totalCost,
+  #gkb-print .gp-result-host #intTotal{
+    font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+    font-weight:700;
+    font-size:18pt;
+    color:#2D3A4A !important;
+    margin:6pt 0 2pt !important;
+  }
+  #gkb-print .gp-result-host .tot-sub,
+  #gkb-print .gp-result-host .result-sqft,
+  #gkb-print .gp-result-host .result-total__label,
+  #gkb-print .gp-result-host #intNote{ font-size:9pt; color:#666 !important; margin-bottom:8pt !important; }
+
+  /* Breakdown rows */
+  #gkb-print .gp-result-host .row{
+    display:flex;
+    justify-content:space-between;
+    padding:4pt 0;
+    border-bottom:.5pt solid #E0DDE0;
+    font-size:9.5pt;
+  }
+  #gkb-print .gp-result-host .row:last-child{ border-bottom:none; }
+  #gkb-print .gp-result-host .row .lbl{ color:#666; }
+  #gkb-print .gp-result-host .row .val{ font-weight:600; color:#2D3A4A; }
+  #gkb-print .gp-result-host .row.total{
+    border-top:1.5pt solid #2D3A4A;
+    border-bottom:1.5pt solid #2D3A4A;
+    margin-top:4pt;
+    padding:6pt 0;
+  }
+  #gkb-print .gp-result-host .row.total .lbl,
+  #gkb-print .gp-result-host .row.total .val{
+    font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+    font-weight:700; font-size:10.5pt; color:#2D3A4A;
+  }
+
+  /* Sub-headers, notes, comparison panels */
+  #gkb-print .gp-result-host .subhead,
+  #gkb-print .gp-result-host h3,
+  #gkb-print .gp-result-host .result-total__label{
+    font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+    font-weight:700;
+    font-size:10pt;
+    color:#2D3A4A !important;
+    margin:10pt 0 4pt;
+  }
+  #gkb-print .gp-result-host .note,
+  #gkb-print .gp-result-host .nt,
+  #gkb-print .gp-result-host .resultNote{
+    background:#F5F5F3 !important;
+    border:1px solid #E0DDE0;
+    border-radius:4pt;
+    padding:8pt 10pt;
+    font-size:9pt;
+    line-height:1.55;
+    margin-top:8pt;
+  }
+  #gkb-print .gp-result-host .cmp{
+    background:#F5F5F3 !important;
+    border:1px solid #E0DDE0;
+    border-radius:4pt;
+    padding:8pt 10pt;
+    font-size:9pt;
+    line-height:1.55;
+    margin-top:8pt;
+  }
+
+  /* Tables inside results (e.g. EMI amortisation) */
+  #gkb-print .gp-result-host table{
+    width:100%; border-collapse:collapse; font-size:8.5pt; margin:6pt 0;
+    page-break-inside:auto;
+  }
+  #gkb-print .gp-result-host table th{
+    background:#F5F5F3 !important;
+    text-align:left; padding:4pt 6pt;
+    font-weight:700; font-size:8pt;
+    border-bottom:1pt solid #E0DDE0;
+  }
+  #gkb-print .gp-result-host table td{
+    padding:3pt 6pt;
+    border-bottom:.5pt solid #E0DDE0;
+  }
+  #gkb-print .gp-result-host tr{ page-break-inside:avoid; }
+
+  /* Chart elements (canvas, svg) — let them render at intrinsic size */
+  #gkb-print .gp-result-host canvas,
+  #gkb-print .gp-result-host svg{
+    max-width:100% !important; height:auto !important;
+  }
+
+  /* Hide internal interactive bits that don't make sense on paper */
+  #gkb-print .gp-result-host #gkb-actions,
+  #gkb-print .gp-result-host .show-all-btn,
+  #gkb-print .gp-result-host button{ display:none !important; }
+
+  /* Footer */
+  #gkb-print .gp-foot{
+    margin-top:18pt;
+    padding-top:10pt;
+    border-top:1px solid #E0DDE0;
+    font-size:8pt;
+    color:#666;
+    line-height:1.55;
+  }
+  #gkb-print .gp-foot-row{ margin-bottom:4pt; }
+  #gkb-print .gp-foot-row strong{ color:#2D3A4A; font-weight:700; }
+  #gkb-print .gp-share-url{ word-break:break-all; color:#E87722; }
+  #gkb-print .gp-foot-disclaimer{
+    margin-top:8pt;
+    padding-top:6pt;
+    border-top:.5pt dashed #E0DDE0;
+    font-size:7.5pt;
+    color:#888;
+    line-height:1.5;
+  }
+
+  /* Page break hints */
+  #gkb-print .gp-section{ page-break-inside:avoid; }
+  #gkb-print .gp-results{ page-break-inside:auto; }
+  #gkb-print .gp-foot{ page-break-inside:avoid; }
+}
