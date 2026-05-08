@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E02EQTPXKE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E02EQTPXKE');
+</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>EMI vs Rent Break-Even Calculator India 2026 — Buy or Keep Renting?</title>
+<meta name="description" content="Free EMI vs rent calculator India. Computes year-by-year wealth in BUY vs RENT scenarios — accounts for down payment opportunity cost, rent escalation, property appreciation, maintenance and stamp duty. Tells you the break-even year."/>
+<link rel="canonical" href="https://gharkabudget.com/emi-vs-rent/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://gharkabudget.com/emi-vs-rent/"/>
+<meta property="og:title" content="EMI vs Rent Break-Even Calculator India 2026"/>
+<meta property="og:description" content="Stop comparing monthly EMI vs monthly rent — that math is wrong. This calculator simulates wealth year-by-year in both scenarios and tells you the break-even year."/>
+<meta property="og:image" content="https://gharkabudget.com/og-image.jpg"/>
+<meta property="og:site_name" content="Ghar Ka Budget"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"EMI vs Rent Break-Even Calculator India","url":"https://gharkabudget.com/emi-vs-rent/","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Free calculator that simulates wealth year-by-year in BUY vs RENT scenarios for Indian residential property purchase. Identifies the break-even year and compares net wealth at horizon.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is comparing monthly EMI to monthly rent the wrong way to decide?","acceptedAnswer":{"@type":"Answer","text":"It ignores three big factors. First, the opportunity cost of your down payment — if you didn't lock that money in property, it could be earning 10–12% in equity mutual funds. Second, rent escalation — your rent will roughly double in 12 years at 6% annual escalation. Third, property appreciation — your property's value also compounds. A proper rent vs buy decision requires simulating wealth year-by-year in both scenarios with the same monthly cash budget. That's what this calculator does."}},{"@type":"Question","name":"What is the break-even year and how is it calculated?","acceptedAnswer":{"@type":"Answer","text":"The break-even year is the year at which your net wealth in the BUY scenario (property equity = property value minus remaining loan balance) first equals or exceeds your net wealth in the RENT scenario (compounded value of your invested down payment plus the monthly EMI-vs-rent differential). Before that year, renting and investing wins; after that year, buying wins. The calculator computes this month-by-month and reports the first year buying overtakes."}},{"@type":"Question","name":"What property appreciation rate should I assume for India?","acceptedAnswer":{"@type":"Answer","text":"For Tier-1 cities (Mumbai, Bangalore, Delhi NCR, Pune, Hyderabad, Chennai), assume 5–8% annual appreciation in established neighbourhoods over a 7-year+ horizon. Peripheral and Outer Ring Road corridors have outpaced 8–10% in many cases. Tier-2 cities range 4–7%. Cap the assumption at 8% for a base-case scenario; anything above 10% is optimistic and the deal becomes very sensitive to that assumption. The calculator lets you stress-test by changing the appreciation rate."}},{"@type":"Question","name":"Should I include rental yield in the buying scenario?","acceptedAnswer":{"@type":"Answer","text":"This calculator assumes you live in the property if you buy — so no rental income. If you intend to buy and rent it out (i.e. it's an investment property, not a primary residence), the analysis changes: you would add 2.5–3.5% gross rental yield (typical Indian metro yields) minus 30–35% costs (vacancy, repairs, society dues, taxes) to the BUY scenario's wealth growth. For a primary-residence decision, the calculator's current setup is correct."}},{"@type":"Question","name":"What is a realistic alternative investment return to assume?","acceptedAnswer":{"@type":"Answer","text":"For a 7–15 year horizon: equity mutual funds (Nifty 50 / Sensex SIP) have delivered 11–13% CAGR over rolling 10-year windows. Hybrid funds: 9–10%. Pure debt or FD: 7–7.5%. Use 10–11% if you would actually invest in equity, 7–8% if you're risk-averse. The calculator's verdict is sensitive to this — try both endpoints to see how much your assumption matters."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gharkabudget.com/"},{"@type":"ListItem","position":2,"name":"EMI vs Rent Calculator","item":"https://gharkabudget.com/emi-vs-rent/"}]}</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--p:#2D3A4A;--a:#E87722;--s:#F5F5F3;--c:#fff;--t:#1C1C1A;--m:#666;--b:#E0DDE0;--r:10px;--nh:64px;--ok:#22A06B;--warn:#D97706;--bad:#cc1f1a}
+html,body{overflow-x:hidden;max-width:100vw;scroll-behavior:smooth}
+*{min-width:0}
+body{font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;color:var(--t);background:var(--s);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.w{width:100%;max-width:1160px;margin:0 auto;padding:0 24px}
+
+nav.bar{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--b);height:var(--nh);display:flex;align-items:center}
+.ni{display:flex;align-items:center;justify-content:space-between;width:100%}
+.logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:var(--p);display:flex;align-items:center;gap:8px}
+.logo-i{width:28px;height:28px;background:var(--a);border-radius:6px;display:flex;align-items:center;justify-content:center}
+.logo-i span{display:block;width:14px;height:2px;background:#fff;position:relative;border-radius:2px}
+.logo-i span::before,.logo-i span::after{content:'';position:absolute;left:0;height:2px;background:#fff;border-radius:2px}
+.logo-i span::before{top:-5px;width:10px}.logo-i span::after{top:5px;width:14px}
+.nl{display:flex;gap:6px}
+.nl a{font-size:.875rem;font-weight:500;color:var(--m);padding:6px 14px;border-radius:6px}
+.nl a:hover{color:var(--p);background:var(--s)}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:none}
+.hbg span{display:block;width:22px;height:2px;background:var(--p);border-radius:2px}
+.mob{display:none;position:fixed;top:var(--nh);left:0;right:0;bottom:0;background:#fff;padding:24px;z-index:99;flex-direction:column;gap:4px;border-top:1px solid var(--b);overflow-y:auto}
+.mob a{font-size:1.05rem;font-weight:500;color:var(--p);padding:14px 16px;border-radius:8px}
+.mob.open{display:flex}
+
+.ah{background:var(--p);padding:48px 0 36px;color:#fff}
+.bc{display:flex;align-items:center;gap:8px;font-size:.8rem;color:rgba(255,255,255,.55);margin-bottom:14px}
+.bc a{color:rgba(255,255,255,.55)}.bc span{color:rgba(255,255,255,.35)}
+.ctag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--a);background:rgba(232,119,34,.15);border:1px solid rgba(232,119,34,.3);padding:3px 10px;border-radius:4px;margin-bottom:14px}
+.ah h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.7rem,3.5vw,2.2rem);letter-spacing:-.03em;line-height:1.2;margin-bottom:10px;max-width:760px}
+.ah p{font-size:.95rem;color:rgba(255,255,255,.72);max-width:680px;line-height:1.65}
+
+.calc-wrap{padding:32px 0 48px}
+.calc-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:start}
+.calc-card{background:#fff;border:1px solid var(--b);border-radius:12px;padding:28px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.calc-card h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:var(--p);margin-bottom:6px}
+.calc-card .sub{font-size:.88rem;color:var(--m);margin-bottom:22px}
+.fset{margin-bottom:22px;padding-bottom:18px;border-bottom:1px dashed var(--b)}
+.fset:last-of-type{border-bottom:none;padding-bottom:0;margin-bottom:8px}
+.fset-h{font-size:.78rem;font-weight:700;color:var(--a);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+.field{margin-bottom:16px}
+.field:last-child{margin-bottom:0}
+.field label{display:block;font-weight:600;font-size:.88rem;color:var(--p);margin-bottom:6px}
+.field .help{font-size:.76rem;color:var(--m);margin-top:4px}
+.field input,.field select{width:100%;padding:11px 14px;border:1.5px solid var(--b);border-radius:8px;font-size:1rem;font-family:inherit;background:#fff;color:var(--t)}
+.field input:focus,.field select:focus{outline:none;border-color:var(--a)}
+.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.radios{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.radio-opt{cursor:pointer;padding:11px 8px;border:1.5px solid var(--b);border-radius:8px;text-align:center;font-size:.85rem;font-weight:500;background:#fff;transition:border-color .15s,background .15s,color .15s}
+.radio-opt input{display:none}
+.radio-opt.selected{border-color:var(--a);background:rgba(232,119,34,.08);color:var(--p);font-weight:600}
+.calc-btn{width:100%;padding:14px;background:var(--a);color:#fff;font-weight:700;font-size:1rem;border:none;border-radius:8px;cursor:pointer;margin-top:14px}
+.calc-btn:hover{background:#d4691a}
+.err{color:#cc1f1a;font-size:.78rem;margin-top:4px;display:none}
+.err.show{display:block}
+.field input.error,.field select.error{border-color:#cc1f1a}
+
+.result{background:linear-gradient(135deg,#fff 0%,#fafaf8 100%);border:1px solid var(--b);border-radius:12px;padding:28px;display:none;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.result.show{display:block}
+.result h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:var(--p);margin-bottom:14px}
+.verdict{padding:16px 18px;border-radius:10px;margin-bottom:20px;border-left:4px solid}
+.verdict.buy{background:rgba(34,160,107,.08);border-color:var(--ok)}
+.verdict.marginal{background:rgba(217,119,6,.08);border-color:var(--warn)}
+.verdict.rent{background:rgba(204,31,26,.08);border-color:var(--bad)}
+.verdict-h{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:4px}
+.verdict.buy .verdict-h{color:var(--ok)}
+.verdict.marginal .verdict-h{color:var(--warn)}
+.verdict.rent .verdict-h{color:var(--bad)}
+.verdict-d{font-size:.85rem;color:var(--p);line-height:1.55}
+.tot{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:2.1rem;color:var(--p);line-height:1;margin-bottom:4px}
+.tot-sub{font-size:.85rem;color:var(--m);margin-bottom:20px}
+.row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--b);font-size:.92rem;gap:12px}
+.row:last-of-type{border-bottom:none}
+.row .lbl{color:var(--m)}.row .val{font-weight:600;color:var(--p);text-align:right;flex-shrink:0}
+.row.total{border-top:2px solid var(--p);margin-top:6px;padding-top:14px;font-size:1rem}
+.row.total .val{color:var(--a)}
+.subhead{font-size:.78rem;font-weight:700;color:var(--p);text-transform:uppercase;letter-spacing:.06em;margin:18px 0 4px}
+.note{margin-top:16px;background:rgba(232,119,34,.08);border-left:3px solid var(--a);padding:12px 14px;border-radius:4px;font-size:.85rem;color:var(--p)}
+.note strong{color:var(--a)}
+
+.year-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.82rem;background:#fff;border:1px solid var(--b);border-radius:8px;overflow:hidden}
+.year-table th{background:var(--p);color:#fff;text-align:left;padding:8px 10px;font-weight:600;font-size:.75rem}
+.year-table td{padding:7px 10px;border-bottom:1px solid var(--b)}
+.year-table tr:last-child td{border-bottom:none}
+.year-table tr.cross td{background:rgba(34,160,107,.10);font-weight:600}
+.year-table .num{text-align:right;font-variant-numeric:tabular-nums}
+
+.chart-wrap{margin:14px 0;background:#fff;border:1px solid var(--b);border-radius:8px;padding:16px}
+.chart-title{font-size:.78rem;font-weight:700;color:var(--p);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.chart-svg{width:100%;height:200px;display:block}
+.chart-legend{display:flex;gap:18px;font-size:.78rem;margin-top:6px;flex-wrap:wrap}
+.chart-legend span{display:flex;align-items:center;gap:6px}
+.chart-legend i{display:inline-block;width:14px;height:3px;border-radius:2px}
+
+.content{padding:24px 0 64px}
+.content h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.35rem;color:var(--p);margin:36px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--b)}
+.content p{margin-bottom:14px;font-size:.95rem}
+.content ul{list-style:disc inside;margin:8px 0 14px;padding-left:8px}
+.content ul li{margin-bottom:6px;font-size:.95rem}
+.faq{margin-top:32px}
+.faq-item{background:#fff;border:1px solid var(--b);border-radius:8px;margin-bottom:8px;overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;color:var(--p);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:.95rem}
+.faq-q::after{content:'+';color:var(--a);font-size:1.2rem;font-weight:400}
+.faq-q.open::after{content:'−'}
+.faq-a{padding:0 18px 14px;font-size:.92rem;color:var(--p);line-height:1.7;display:none}
+.faq-a.open{display:block}
+
+.related{margin:32px 0;padding:22px;background:#fff;border:1px solid var(--b);border-radius:10px}
+.related h3{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;color:var(--p);margin-bottom:12px}
+.related a{display:block;color:var(--a);font-weight:500;font-size:.92rem;padding:6px 0;border-bottom:1px solid rgba(0,0,0,.04)}
+.related a:last-child{border-bottom:none}
+.related a:hover{text-decoration:underline}
+
+.footer{background:#fff;border-top:1px solid var(--b);padding:32px 0;color:var(--m);font-size:.85rem}
+.footer__inner{max-width:1160px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+.footer__links{display:flex;gap:18px;flex-wrap:wrap}
+.footer__links a:hover{color:var(--p)}
+
+@media (max-width:880px){
+  .nl{display:none}
+  .hbg{display:flex}
+  .calc-grid{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .ah{padding:32px 0 24px}
+  .calc-wrap{padding:24px 0 36px}
+  .calc-card{padding:20px}
+  .field-grid{grid-template-columns:1fr}
+  .radios{grid-template-columns:1fr 1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="bar">
+<div class="w ni">
+<a href="/" class="logo"><span class="logo-i"><span></span></span>Ghar Ka Budget</a>
+<div class="nl">
+<a href="/construction/">Construction</a>
+<a href="/interior/">Interior</a>
+<a href="/emi/">EMI</a>
+<a href="/quote-check/">Quote Check</a>
+<a href="/articles/">Articles</a>
+</div>
+<button class="hbg" aria-label="Menu" id="hbg" onclick="document.getElementById('mob').classList.toggle('open')"><span></span><span></span><span></span></button>
+</div>
+</nav>
+<div class="mob" id="mob">
+<a href="/construction/">Construction Cost</a>
+<a href="/interior/">Interior Cost</a>
+<a href="/emi/">EMI Calculator</a>
+<a href="/emi-vs-rent/">EMI vs Rent</a>
+<a href="/home-loan-eligibility/">Loan Eligibility</a>
+<a href="/quote-check/">Quote Check</a>
+<a href="/stamp-duty/">Stamp Duty</a>
+<a href="/plot-viability/">Plot Viability</a>
+<a href="/painting-cost/">Painting Cost</a>
+<a href="/modular-kitchen/">Modular Kitchen</a>
+<a href="/bathroom-renovation/">Bathroom Renovation</a>
+<a href="/waterproofing/">Waterproofing</a>
+<a href="/articles/">Articles</a>
+<a href="/methodology/">Methodology</a>
+</div>
+
+<header class="ah"><div class="w">
+<div class="bc"><a href="/">Home</a><span>/</span><span>EMI vs Rent Calculator</span></div>
+<span class="ctag">May 2026 · India</span>
+<h1>EMI vs Rent — Should You Buy or Keep Renting?</h1>
+<p>The honest math behind the buy-vs-rent decision. Most online calculators just compare monthly EMI to monthly rent — that's wrong. This calculator simulates your wealth year-by-year in both scenarios — accounting for down-payment opportunity cost, rent escalation, property appreciation, maintenance, and stamp duty — and tells you the break-even year.</p>
+</div></header>
+
+<section class="calc-wrap"><div class="w">
+<div class="calc-grid">
+
+<!-- LEFT: Form -->
+<div class="calc-card">
+<h2>Your scenario</h2>
+<p class="sub">Enter the same details a banker, broker, or your own spreadsheet would need.</p>
+
+<!-- BUY scenario -->
+<div class="fset">
+<div class="fset-h">If you BUY</div>
+<div class="field">
+<label for="price">Property price (₹)</label>
+<input type="number" id="price" min="500000" step="100000" placeholder="e.g. 8000000"/>
+<div class="help">Agreement value of the property you're considering</div>
+<div class="err" id="err-price">Enter a valid property price (minimum ₹5L)</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<label for="downPct">Down payment (%)</label>
+<input type="number" id="downPct" min="10" max="100" step="1" value="20"/>
+<div class="help">Banks require minimum 20%; higher is better</div>
+</div>
+<div class="field">
+<label for="state">State</label>
+<select id="state">
+<option value="">Select state…</option>
+<option value="MH">Maharashtra</option>
+<option value="KA">Karnataka</option>
+<option value="DL">Delhi</option>
+<option value="UP">Uttar Pradesh</option>
+<option value="TN">Tamil Nadu</option>
+<option value="GJ">Gujarat</option>
+<option value="TG">Telangana</option>
+<option value="HR">Haryana</option>
+<option value="WB">West Bengal</option>
+<option value="RJ">Rajasthan</option>
+<option value="MP">Madhya Pradesh</option>
+<option value="KL">Kerala</option>
+<option value="PB">Punjab</option>
+</select>
+<div class="err" id="err-state">Choose a state for stamp duty calculation</div>
+</div>
+</div>
+<div class="field">
+<label>Buyer profile (for stamp duty concession)</label>
+<div class="radios">
+<label class="radio-opt selected"><input type="radio" name="buyer" value="male" checked/>Male</label>
+<label class="radio-opt"><input type="radio" name="buyer" value="female"/>Female</label>
+<label class="radio-opt"><input type="radio" name="buyer" value="joint"/>Joint (M+F)</label>
+</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<label for="tenure">Loan tenure (years)</label>
+<input type="number" id="tenure" min="5" max="30" step="1" value="20"/>
+</div>
+<div class="field">
+<label for="rate">Loan interest rate (% p.a.)</label>
+<input type="number" id="rate" min="6" max="14" step="0.05" value="8.50"/>
+<div class="help">Typical 2026 range: 8.10–9.25%</div>
+</div>
+</div>
+</div>
+
+<!-- RENT scenario -->
+<div class="fset">
+<div class="fset-h">If you keep RENTING</div>
+<div class="field">
+<label for="rent">Current monthly rent (₹) for an equivalent property</label>
+<input type="number" id="rent" min="3000" step="500" placeholder="e.g. 32000"/>
+<div class="help">What you'd pay to rent a property similar to the one you're considering buying</div>
+<div class="err" id="err-rent">Enter a valid monthly rent (minimum ₹3,000)</div>
+</div>
+<div class="field">
+<label for="rentEsc">Annual rent escalation (%)</label>
+<input type="number" id="rentEsc" min="0" max="15" step="0.5" value="6"/>
+<div class="help">Indian metro typical: 5–8% p.a.; standard rental agreement clause is 10%</div>
+</div>
+</div>
+
+<!-- Common assumptions -->
+<div class="fset">
+<div class="fset-h">Market assumptions</div>
+<div class="field-grid">
+<div class="field">
+<label for="appreciation">Property appreciation (% p.a.)</label>
+<input type="number" id="appreciation" min="0" max="15" step="0.5" value="6"/>
+<div class="help">India base case: 5–7%; growing corridors: 7–10%</div>
+</div>
+<div class="field">
+<label for="altReturn">Alternative investment return (% p.a.)</label>
+<input type="number" id="altReturn" min="4" max="20" step="0.5" value="11"/>
+<div class="help">Equity SIP: 10–12%; FD/debt: 7–7.5%</div>
+</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<label for="maintPct">Maintenance + property tax (% p.a.)</label>
+<input type="number" id="maintPct" min="0.2" max="3" step="0.1" value="1.0"/>
+<div class="help">Society dues + tax + repairs: 0.8–1.5% of price annually</div>
+</div>
+<div class="field">
+<label for="horizon">How long will you stay? (years)</label>
+<input type="number" id="horizon" min="3" max="30" step="1" value="10"/>
+<div class="help">Critical input: short stays favour rent, long stays favour buy</div>
+</div>
+</div>
+</div>
+
+<button class="calc-btn" onclick="calcEvR()">Compare BUY vs RENT</button>
+</div>
+
+<!-- RIGHT: Result panel -->
+<div class="result" id="resultPanel">
+<h2>Your verdict</h2>
+
+<div class="verdict" id="verdictBox">
+<div class="verdict-h" id="verdictH">—</div>
+<div class="verdict-d" id="verdictD">—</div>
+</div>
+
+<div class="subhead">At end of your <span id="rHorizon">—</span> year horizon</div>
+<div class="row"><span class="lbl">Net wealth if you BUY</span><span class="val" id="rBuyWealth">—</span></div>
+<div class="row"><span class="lbl">Net wealth if you RENT &amp; invest the difference</span><span class="val" id="rRentWealth">—</span></div>
+<div class="row total"><span class="lbl">BUY advantage</span><span class="val" id="rAdvantage">—</span></div>
+
+<div class="subhead">Break-even</div>
+<div class="row"><span class="lbl">Year buying overtakes renting</span><span class="val" id="rBreakeven">—</span></div>
+
+<div class="subhead">Upfront if you buy</div>
+<div class="row"><span class="lbl">Down payment</span><span class="val" id="rDownPmt">—</span></div>
+<div class="row"><span class="lbl">Stamp duty</span><span class="val" id="rStamp">—</span></div>
+<div class="row"><span class="lbl">Registration</span><span class="val" id="rReg">—</span></div>
+<div class="row"><span class="lbl">Brokerage + legal</span><span class="val" id="rOther">—</span></div>
+<div class="row total"><span class="lbl">Total upfront cost</span><span class="val" id="rUpfront">—</span></div>
+
+<div class="subhead">Monthly numbers</div>
+<div class="row"><span class="lbl">Your EMI</span><span class="val" id="rEMI">—</span></div>
+<div class="row"><span class="lbl">Maintenance + property tax</span><span class="val" id="rMaint">—</span></div>
+<div class="row"><span class="lbl">Total monthly outflow if BUY</span><span class="val" id="rBuyMonthly">—</span></div>
+<div class="row"><span class="lbl">Current monthly rent</span><span class="val" id="rRent">—</span></div>
+<div class="row total"><span class="lbl">BUY costs more per month by</span><span class="val" id="rDiff">—</span></div>
+
+<div class="chart-wrap">
+<div class="chart-title">Year-by-year wealth comparison</div>
+<svg class="chart-svg" id="wealthChart" viewBox="0 0 600 200" preserveAspectRatio="none"></svg>
+<div class="chart-legend">
+<span><i style="background:var(--a)"></i>BUY (property equity)</span>
+<span><i style="background:var(--p)"></i>RENT (invested difference)</span>
+</div>
+</div>
+
+<div class="subhead">Year-by-year breakdown</div>
+<table class="year-table" id="yearTable">
+<thead><tr><th>Year</th><th class="num">Property value</th><th class="num">Loan balance</th><th class="num">BUY equity</th><th class="num">RENT investment</th><th class="num">BUY edge</th></tr></thead>
+<tbody></tbody>
+</table>
+
+<div class="note" id="resultNote"><strong>Reminder:</strong> This is a financial filter, not the only decision input. Stability of stay, family preference, locality fit, and rental availability matter equally. The calculator helps you avoid the most common mistake — buying because EMI ≈ rent and ignoring everything else.</div>
+</div>
+
+</div>
+</div></section>
+
+<section class="content"><div class="w">
+<h2>Why monthly EMI vs monthly rent is the wrong comparison</h2>
+<p>The most common buying-decision mistake in India is "my EMI will be ₹50,000 and my rent is ₹40,000 — only ₹10,000 more, basically the same, let me buy." This framing hides three large effects.</p>
+<p><strong>Effect 1: Down-payment opportunity cost.</strong> Your ₹16 lakh down payment, if invested at 11% in equity, becomes ₹45 lakh in 10 years and ₹76 lakh in 15 years. That's not a small number to leave on the table. Locking it in property equity makes sense only if property appreciation plus rent saved together beat that.</p>
+<p><strong>Effect 2: Rent escalation.</strong> A ₹40,000 rent today becomes ₹71,500 in 10 years at 6% annual escalation. By year 12 it crosses your fixed EMI. By year 20 it's at ₹128,000 — far above EMI. So while EMI looks "more expensive" today, by year 12 the comparison flips and renting starts to feel expensive.</p>
+<p><strong>Effect 3: Property appreciation.</strong> The property you bought for ₹80 lakh might be worth ₹1.43 cr in 10 years at 6% appreciation. That value is partly funded by your loan and partly by your equity, but the upside compounds.</p>
+<p>This calculator nets out all three effects month-by-month and tells you the break-even year — the year buying first overtakes renting on net wealth.</p>
+
+<h2>What inputs matter most</h2>
+<p>The verdict is highly sensitive to four assumptions:</p>
+<ul>
+<li><strong>Property appreciation rate</strong> — moving from 5% to 7% can flip a "rent" verdict to "buy" over 10 years.</li>
+<li><strong>Alternative investment return</strong> — at 7% (FD assumption), buying often wins; at 12% (equity SIP assumption), buying wins only over longer horizons.</li>
+<li><strong>Holding period</strong> — under 5 years, renting almost always wins because of stamp duty + closing costs amortisation. Over 12+ years, buying almost always wins. The 7–10 year zone is where careful analysis matters.</li>
+<li><strong>Rent escalation</strong> — 0% vs 8% changes the answer dramatically. Use your actual lease's escalation clause if known.</li>
+</ul>
+<p>Run the calculator at your base-case assumption and then at a stress case (lower appreciation, higher alt-return) to see if the verdict holds.</p>
+
+<h2>What this calculator does NOT account for</h2>
+<ul>
+<li>Tax benefits — section 80C principal repayment, section 24 interest deduction (₹2 lakh cap), HRA tax benefit on rent. These can shift the math by ₹3–8 lakh over a 20-year tenure.</li>
+<li>Forced savings effect — many people don't actually invest the EMI-vs-rent differential consistently; the buy scenario "forces" saving via principal repayment. Behavioural finance is real.</li>
+<li>Liquidity differences — property is illiquid (3–6 months to sell, with discounts); investments are liquid in days.</li>
+<li>Rental availability — in some markets you simply cannot find an equivalent rental at any price, removing the choice.</li>
+<li>Family / spousal preferences and the value of "owning your home" emotionally. The number is one input, not the input.</li>
+</ul>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Why is comparing monthly EMI to monthly rent the wrong way to decide?</div>
+<div class="faq-a">It ignores three big factors. First, the opportunity cost of your down payment — if you didn't lock that money in property, it could be earning 10–12% in equity mutual funds. Second, rent escalation — your rent will roughly double in 12 years at 6% annual escalation. Third, property appreciation — your property's value also compounds. A proper rent-vs-buy decision requires simulating wealth year-by-year in both scenarios with the same monthly cash budget. That's what this calculator does.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">What is the break-even year and how is it calculated?</div>
+<div class="faq-a">The break-even year is the year at which your net wealth in the BUY scenario (property equity = property value minus remaining loan balance) first equals or exceeds your net wealth in the RENT scenario (compounded value of your invested down payment plus the monthly EMI-vs-rent differential). Before that year, renting and investing wins; after that year, buying wins. Most Indian metro buy-vs-rent decisions break even between year 7 and year 12.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">What property appreciation rate should I assume for India?</div>
+<div class="faq-a">For Tier-1 cities (Mumbai, Bangalore, Delhi NCR, Pune, Hyderabad, Chennai), assume 5–8% annual appreciation in established neighbourhoods over a 7+ year horizon. Peripheral and Outer Ring Road corridors have outpaced 8–10% in many cases. Tier-2 cities range 4–7%. Cap the assumption at 8% for a base-case scenario; anything above 10% is optimistic. The calculator lets you stress-test by changing the appreciation rate.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Should I include rental yield in the buying scenario?</div>
+<div class="faq-a">This calculator assumes you live in the property if you buy — so no rental income on the BUY side. If you intend to buy and rent it out (it's an investment property, not a primary residence), the analysis changes: add 2.5–3.5% gross rental yield (typical Indian metro yields) minus 30–35% costs (vacancy, repairs, society dues, taxes) to the BUY scenario's wealth growth. For a primary-residence decision, the calculator's current setup is correct.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">What is a realistic alternative investment return to assume?</div>
+<div class="faq-a">For a 7–15 year horizon: equity mutual funds (Nifty 50 / Sensex SIP) have delivered 11–13% CAGR over rolling 10-year windows. Hybrid funds: 9–10%. Pure debt or FD: 7–7.5%. Use 10–11% if you would actually invest in equity, 7–8% if you're risk-averse. The calculator's verdict is sensitive to this — try both endpoints to see how much your assumption matters.</div>
+</div>
+</div>
+
+<h2>Log yeh bhi poochte hain (Hinglish FAQs)</h2>
+<div class="faq">
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">EMI vs rent — kya kharidna sahi hai ya rent par rehna?</div>
+<div class="faq-a">Sahi answer aapke holding period par depend karta hai. Agar aap us flat mein 12+ saal rehne wale ho, toh buying generally jeet jaata hai — kyunki rent escalate hota rehta hai aur property bhi appreciate karti hai. Agar 5 saal se kam rehne ka plan hai, toh stamp duty aur closing costs hi itne lag jaate hain ki break-even hi nahi hota — rent karna better hai. 7–10 saal ka zone wahi hai jahan careful analysis chahiye.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Mera EMI ₹50K hai aur rent ₹40K — toh sirf ₹10K extra na?</div>
+<div class="faq-a">Yeh galat soch hai. ₹10K monthly difference toh chhota lagta hai, lekin aap forget kar rahe ho ke aapne property mein down payment ke ₹15-20 lakh lock kar diye — woh paisa equity mein 11% return de sakta tha. Aur 5 saal baad jab rent ₹52K ho jaayega aur EMI fixed ₹50K rahega, toh kya hoga? Yeh calculator yehi math karta hai. Sirf monthly EMI vs rent dekhne se decision galat ho sakta hai.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Property appreciation kitna realistic maan ke chalna chahiye?</div>
+<div class="faq-a">Tier-1 cities (Mumbai, Bangalore, Delhi NCR, Pune, Hyderabad, Chennai) ke established areas mein 5-7% per year safe assumption hai. Outer Ring Road aur peripheral corridors mein 8-10% bhi historical hua hai, par predictable nahi. Tier-2 cities mein 4-6%. Brokers aapko 12-15% bolenge — yeh inflated marketing pitch hai. Aap 6% maan ke chalo aur uske baad apna decision lo. 10%+ assume karo toh deal sirf isi assumption se sahi lag raha hoga — risky.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Tax benefit (Section 24 + 80C) ka kya impact hai?</div>
+<div class="faq-a">Tax benefit important hai par aapki tax slab par depend karta hai. 30% slab mein, ₹2L interest deduction (Sec 24) approx ₹60K saalana save karaata hai. ₹1.5L principal (Sec 80C) approx ₹45K save karaata hai. 20-year loan ke pure tenure mein yeh kareeb ₹15-20 lakh tax saving ban sakta hai. Iss calculator mein tax abhi include nahi hai — apne actual tax slab ke hisaab se BUY verdict 5-15% strong samjhna chahiye. Renting wale HRA exemption claim kar sakte hain — woh bhi consider kar lo.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Behavioural reality — kya log actually mein difference invest karte hain?</div>
+<div class="faq-a">Honestly bolen toh nahi. Buy karne ka ek hidden benefit hai "forced saving" — har month EMI ka principal portion automatically equity build karta hai. Rent karne wale theoretically extra paisa invest kar sakte hain par practically zyaada log lifestyle expenses pe spend kar dete hain. Agar aap discipline-wise SIP run kar sakte ho, toh calculator ka math sahi hai. Agar nahi, toh BUY scenario aapke liye 5-10% strong hai because of forced saving discipline. Yeh apne aap ko pata karna hota hai.</div>
+</div>
+</div>
+
+</div></section>
+
+<div class="w">
+<div class="related">
+<h3>Related tools and guides</h3>
+<a href="/emi/">Home Loan EMI Calculator — full amortisation schedule &rarr;</a>
+<a href="/home-loan-eligibility/">Home Loan Eligibility — what loan size will banks approve? &rarr;</a>
+<a href="/stamp-duty/">Stamp Duty &amp; Registration Calculator — state-wise rates &rarr;</a>
+<a href="/plot-viability/">Plot Purchase Viability — buying land instead? &rarr;</a>
+<a href="/articles/contractor-quote-red-flags/">5 red flags in contractor quotes &rarr;</a>
+</div>
+</div>
+
+<footer class="footer"><div class="w"><div class="footer__inner">
+<div>© 2026 Ghar Ka Budget · gharkabudget.com</div>
+<nav class="footer__links">
+<a href="/about/">About</a>
+<a href="/methodology/">Methodology</a>
+<a href="/editorial-policy/">Editorial Policy</a>
+<a href="/disclaimer/">Disclaimer</a>
+<a href="/privacy/">Privacy</a>
+<a href="/contact/">Contact</a>
+</nav>
+</div></div></footer>
+
+<link rel="stylesheet" href="/calc-enhance.css"/>
+<script>
+// ── Stamp duty rates by state (2026) — same source as /stamp-duty/ and /plot-viability/ ──
+var STAMP = {
+  MH: {male:0.06, female:0.05, joint:0.05, registration:0.01, regCap:30000},
+  KA: {male:0.05, female:0.05, joint:0.05, registration:0.01, regCap:0},
+  DL: {male:0.06, female:0.04, joint:0.04, registration:0.01, regCap:0},
+  UP: {male:0.07, female:0.06, joint:0.06, registration:0.01, regCap:0},
+  TN: {male:0.07, female:0.07, joint:0.07, registration:0.04, regCap:0},
+  GJ: {male:0.049,female:0.049,joint:0.049,registration:0.01, regCap:0},
+  TG: {male:0.04, female:0.04, joint:0.04, registration:0.005,regCap:0},
+  HR: {male:0.07, female:0.05, joint:0.05, registration:0.01, regCap:0},
+  WB: {male:0.06, female:0.06, joint:0.06, registration:0.01, regCap:0},
+  RJ: {male:0.06, female:0.05, joint:0.05, registration:0.01, regCap:0},
+  MP: {male:0.075,female:0.075,joint:0.075,registration:0.03, regCap:0},
+  KL: {male:0.08, female:0.08, joint:0.08, registration:0.02, regCap:0},
+  PB: {male:0.07, female:0.05, joint:0.05, registration:0.01, regCap:0}
+};
+
+function formatINR(n){
+  if(!isFinite(n)) return '—';
+  var sign = n < 0 ? '-' : '';
+  n = Math.abs(Math.round(n));
+  var s = n.toString();
+  var lastThree = s.substring(s.length-3);
+  var otherNumbers = s.substring(0, s.length-3);
+  if(otherNumbers !== '') lastThree = ',' + lastThree;
+  var formatted = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+  return sign + '₹' + formatted;
+}
+
+function formatINRshort(n){
+  if(!isFinite(n)) return '—';
+  var sign = n < 0 ? '-' : '';
+  n = Math.abs(n);
+  if(n >= 10000000) return sign + '₹' + (n/10000000).toFixed(2) + ' Cr';
+  if(n >= 100000)   return sign + '₹' + (n/100000).toFixed(2) + ' L';
+  if(n >= 1000)     return sign + '₹' + (n/1000).toFixed(0) + 'K';
+  return sign + '₹' + Math.round(n);
+}
+
+// Radio button click — visual update
+document.querySelectorAll('input[type=radio]').forEach(function(r){
+  r.addEventListener('change', function(){
+    var name = r.name;
+    document.querySelectorAll('input[name="'+name+'"]').forEach(function(o){
+      o.closest('.radio-opt').classList.remove('selected');
+    });
+    r.closest('.radio-opt').classList.add('selected');
+  });
+});
+
+function showError(id, msg){
+  var e = document.getElementById('err-'+id);
+  if(!e) return;
+  if(msg) e.textContent = msg;
+  e.classList.add('show');
+  var inp = document.getElementById(id);
+  if(inp) inp.classList.add('error');
+}
+function clearErrors(){
+  document.querySelectorAll('.err').forEach(function(e){ e.classList.remove('show'); });
+  document.querySelectorAll('input,select').forEach(function(i){ i.classList.remove('error'); });
+}
+
+function calcEvR(){
+  clearErrors();
+  var price = parseFloat(document.getElementById('price').value);
+  var downPct = parseFloat(document.getElementById('downPct').value);
+  var state = document.getElementById('state').value;
+  var tenure = parseFloat(document.getElementById('tenure').value);
+  var rate = parseFloat(document.getElementById('rate').value);
+  var rent = parseFloat(document.getElementById('rent').value);
+  var rentEsc = parseFloat(document.getElementById('rentEsc').value);
+  var appreciation = parseFloat(document.getElementById('appreciation').value);
+  var altReturn = parseFloat(document.getElementById('altReturn').value);
+  var maintPct = parseFloat(document.getElementById('maintPct').value);
+  var horizon = parseFloat(document.getElementById('horizon').value);
+  var buyer = document.querySelector('input[name=buyer]:checked').value;
+
+  // Validate
+  var ok = true;
+  if(!isFinite(price) || price < 500000){ showError('price'); ok = false; }
+  if(!state){ showError('state'); ok = false; }
+  if(!isFinite(rent) || rent < 3000){ showError('rent'); ok = false; }
+  if(!ok) return;
+
+  // Closing costs
+  var st = STAMP[state];
+  var stampDuty = price * st[buyer];
+  var regFee = price * st.registration;
+  if(st.regCap > 0) regFee = Math.min(regFee, st.regCap);
+  var brokerage = price * 0.005;  // typical 0.5% buyer-side
+  var legal = 25000;              // title search + registration assistance
+  var closingCosts = stampDuty + regFee + brokerage + legal;
+
+  // Loan
+  var downPmt = price * downPct / 100;
+  var principal = price - downPmt;
+  var monthlyRate = rate / 12 / 100;
+  var totalLoanMonths = tenure * 12;
+  var emi = principal * monthlyRate * Math.pow(1+monthlyRate, totalLoanMonths) / (Math.pow(1+monthlyRate, totalLoanMonths) - 1);
+
+  // Simulation: month-by-month for the horizon
+  var altMonthlyRate = altReturn / 12 / 100;
+  var horizonMonths = horizon * 12;
+
+  var loanBalance = principal;
+  var rentMonth = rent;
+  // RENT scenario: invest down payment + closing costs at month 0
+  var investValue = downPmt + closingCosts;
+  var maintMonth = price * (maintPct/100) / 12;
+
+  var years = [];
+  var cumRentPaid = 0;
+  var cumBuyMonthly = 0;
+
+  for(var m = 1; m <= horizonMonths; m++){
+    // BUY: pay EMI (only if loan still active), maintenance + property tax
+    var buyMonthOutflow = maintMonth;
+    if(m <= totalLoanMonths){
+      var interest = loanBalance * monthlyRate;
+      var principalPaid = emi - interest;
+      loanBalance = Math.max(0, loanBalance - principalPaid);
+      buyMonthOutflow += emi;
+    }
+    cumBuyMonthly += buyMonthOutflow;
+
+    // RENT: pay rent (escalates yearly)
+    cumRentPaid += rentMonth;
+
+    // Investment: grows at altMonthlyRate, then add the differential (could be negative)
+    var diff = buyMonthOutflow - rentMonth;
+    investValue = investValue * (1 + altMonthlyRate) + diff;
+
+    // Annual escalation of rent at end of each 12-month block
+    if(m % 12 === 0){
+      rentMonth = rentMonth * (1 + rentEsc/100);
+    }
+
+    // Year-end snapshot
+    if(m % 12 === 0){
+      var y = m / 12;
+      var propertyValue = price * Math.pow(1 + appreciation/100, y);
+      var equity = propertyValue - loanBalance;
+      years.push({
+        year: y,
+        propertyValue: propertyValue,
+        loanBalance: loanBalance,
+        buyEquity: equity,
+        rentInvest: investValue,
+        edge: equity - investValue
+      });
+    }
+  }
+
+  // Find break-even year
+  var breakEven = null;
+  for(var i = 0; i < years.length; i++){
+    if(years[i].edge >= 0){ breakEven = years[i].year; break; }
+  }
+
+  // Verdict
+  var endY = years[years.length - 1];
+  var verdict, verdictH, verdictD, vClass;
+  var edgePct = endY.rentInvest > 0 ? (endY.edge / endY.rentInvest) * 100 : 0;
+
+  if(endY.edge > endY.rentInvest * 0.10){
+    vClass = 'buy'; verdictH = '✓ BUY';
+    verdictD = 'At year ' + horizon + ', buying leaves you ' + formatINRshort(endY.edge) + ' wealthier than renting. The break-even is at year ' + (breakEven || 'never within horizon') + '. The math favours ownership for your stay-length and assumptions.';
+  } else if(endY.edge > -endY.rentInvest * 0.05){
+    vClass = 'marginal'; verdictH = '⚠ MARGINAL — re-check assumptions';
+    verdictD = 'BUY and RENT scenarios are within 5–10% of each other at year ' + horizon + '. The decision is sensitive to your appreciation rate and alt-return assumption. Stress-test by lowering appreciation to 4% or raising alt-return to 12% — if the verdict still flips, the deal is genuinely close.';
+  } else {
+    vClass = 'rent'; verdictH = '✗ RENT and INVEST';
+    var altMinusApp = altReturn - appreciation;
+    var rentalYield = (rent * 12 / price) * 100;
+    var explainer;
+    if(horizon < 7){
+      explainer = 'Stamp duty + closing costs (' + formatINRshort(closingCosts) + ') don\'t amortise over a ' + horizon + '-year stay. Plan to stay 8+ years before buying.';
+    } else if(altMinusApp > 4){
+      explainer = 'Your alt-return assumption (' + altReturn + '%) is ' + altMinusApp.toFixed(1) + ' percentage points higher than property appreciation (' + appreciation + '%). The opportunity cost of locking your down payment dominates over a ' + horizon + '-year horizon. Buying becomes attractive only if you actually expect property to appreciate at within 2–3 pts of your alt-return.';
+    } else if(rentalYield < 3){
+      explainer = 'Rental yield is just ' + rentalYield.toFixed(1) + '% (rent ÷ price). Indian metros typically run 2.5–3.5% — at this level, renting and investing wins on math alone unless you stay 12+ years.';
+    } else {
+      explainer = 'The combination of high alt-return assumption, modest appreciation, and your horizon means renting and investing the differential outpaces ownership. Try lowering alt-return to 8% or extending horizon to 15 years to see if the verdict flips.';
+    }
+    verdictD = 'At year ' + horizon + ', renting and investing the difference leaves you ' + formatINRshort(-endY.edge) + ' wealthier than buying. ' + explainer;
+  }
+
+  // Render
+  document.getElementById('verdictBox').className = 'verdict ' + vClass;
+  document.getElementById('verdictH').textContent = verdictH;
+  document.getElementById('verdictD').textContent = verdictD;
+
+  document.getElementById('rHorizon').textContent = horizon;
+  document.getElementById('rBuyWealth').textContent = formatINRshort(endY.buyEquity);
+  document.getElementById('rRentWealth').textContent = formatINRshort(endY.rentInvest);
+  var advText = (endY.edge >= 0 ? '+' : '') + formatINRshort(endY.edge);
+  document.getElementById('rAdvantage').textContent = advText;
+
+  document.getElementById('rBreakeven').textContent = breakEven ? ('Year ' + breakEven) : 'Beyond horizon';
+  document.getElementById('rDownPmt').textContent = formatINR(downPmt);
+  document.getElementById('rStamp').textContent = formatINR(stampDuty);
+  document.getElementById('rReg').textContent = formatINR(regFee);
+  document.getElementById('rOther').textContent = formatINR(brokerage + legal);
+  document.getElementById('rUpfront').textContent = formatINR(downPmt + closingCosts);
+
+  document.getElementById('rEMI').textContent = formatINR(emi);
+  document.getElementById('rMaint').textContent = formatINR(maintMonth);
+  document.getElementById('rBuyMonthly').textContent = formatINR(emi + maintMonth);
+  document.getElementById('rRent').textContent = formatINR(rent);
+  var monthDiff = (emi + maintMonth) - rent;
+  document.getElementById('rDiff').textContent = (monthDiff >= 0 ? '+' : '') + formatINR(monthDiff);
+
+  // Year-by-year table
+  var tbody = document.querySelector('#yearTable tbody');
+  tbody.innerHTML = '';
+  years.forEach(function(yr){
+    var tr = document.createElement('tr');
+    if(breakEven && yr.year === breakEven) tr.className = 'cross';
+    tr.innerHTML =
+      '<td>' + yr.year + '</td>' +
+      '<td class="num">' + formatINRshort(yr.propertyValue) + '</td>' +
+      '<td class="num">' + formatINRshort(yr.loanBalance) + '</td>' +
+      '<td class="num">' + formatINRshort(yr.buyEquity) + '</td>' +
+      '<td class="num">' + formatINRshort(yr.rentInvest) + '</td>' +
+      '<td class="num">' + (yr.edge >= 0 ? '+' : '') + formatINRshort(yr.edge) + '</td>';
+    tbody.appendChild(tr);
+  });
+
+  // Render SVG chart
+  drawChart(years);
+
+  // Show panel
+  var p = document.getElementById('resultPanel');
+  p.classList.add('show');
+  try { p.scrollIntoView({behavior:'smooth', block:'start'}); } catch(e){}
+
+  // GA4 event
+  if(typeof gtag === 'function'){
+    gtag('event','calc_completed',{
+      calculator: 'emi-vs-rent',
+      state: state,
+      buyer: buyer,
+      price: price,
+      tenure: tenure,
+      rate: rate,
+      horizon: horizon,
+      appreciation: appreciation,
+      alt_return: altReturn,
+      verdict: vClass,
+      breakeven_year: breakEven || 0,
+      buy_advantage: Math.round(endY.edge)
+    });
+  }
+}
+
+function drawChart(years){
+  var svg = document.getElementById('wealthChart');
+  if(!svg || years.length === 0) return;
+  var W = 600, H = 200, padL = 8, padR = 8, padT = 14, padB = 22;
+
+  var maxV = 0;
+  years.forEach(function(y){
+    if(y.buyEquity > maxV) maxV = y.buyEquity;
+    if(y.rentInvest > maxV) maxV = y.rentInvest;
+  });
+  if(maxV <= 0) maxV = 1;
+
+  var stepX = (W - padL - padR) / (years.length - 1 || 1);
+  var scaleY = (H - padT - padB) / maxV;
+
+  function pathFor(key, color){
+    var d = '';
+    years.forEach(function(y, i){
+      var x = padL + i * stepX;
+      var yp = H - padB - Math.max(0, y[key]) * scaleY;
+      d += (i === 0 ? 'M' : 'L') + x.toFixed(1) + ',' + yp.toFixed(1) + ' ';
+    });
+    return '<path d="' + d + '" fill="none" stroke="' + color + '" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>';
+  }
+
+  var g = '<line x1="' + padL + '" y1="' + (H-padB) + '" x2="' + (W-padR) + '" y2="' + (H-padB) + '" stroke="#E0DDE0" stroke-width="1"/>';
+  // Year labels (subset)
+  var labelEvery = years.length > 12 ? 2 : 1;
+  years.forEach(function(y, i){
+    if(i % labelEvery !== 0 && i !== years.length - 1) return;
+    var x = padL + i * stepX;
+    g += '<text x="' + x + '" y="' + (H - 6) + '" text-anchor="middle" font-size="10" fill="#666">Y' + y.year + '</text>';
+  });
+
+  // Lines (BUY orange, RENT navy)
+  g += pathFor('rentInvest', '#2D3A4A');
+  g += pathFor('buyEquity', '#E87722');
+
+  svg.innerHTML = g;
+}
+</script>
+<script defer src="/calc-enhance.js"></script>
+</body>
+</html>

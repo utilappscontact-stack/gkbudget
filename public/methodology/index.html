@@ -253,6 +253,8 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0;margin-top:4
 
 <p>Each calculator below carries its specific formula, input ranges, rate sources, and known limitations. If you copied a calculation share-link or downloaded a PDF, the methodology section it references is here, anchor-linked.</p>
 
+<p style="background:rgba(232,119,34,.06);border-left:3px solid var(--a);padding:12px 16px;border-radius:4px;margin:14px 0 18px;font-size:.92rem"><strong>Want a second opinion on your calculator result?</strong> Every calculator has a "Verify with AI" button that opens a curated prompt for ChatGPT, Claude, or Gemini. The full catalogue of 12 prompts (one per calculator) is published openly at <a href="/ai-prompts/" style="color:var(--a);font-weight:600">/ai-prompts/</a>. Use them with or without our calculator — they're free.</p>
+
 <!-- ====================== CONSTRUCTION ====================== -->
 <div class="calc-block" id="construction">
 <h3>Construction Cost Calculator <span class="pill">Q2 2026</span></h3>
@@ -268,18 +270,11 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0;margin-top:4
 <h4>Core formula</h4>
 <div class="formula">total_cost = built_up_area_sqft &times; per_sqft_rate(quality) &times; city_tier_multiplier &times; floors_factor
 
-per_sqft_rate (Q2 2026 base):
-  economy:  &#8377;1,200&ndash;1,500
-  standard: &#8377;1,650&ndash;2,100
-  premium:  &#8377;2,200&ndash;2,800
-  luxury:   &#8377;2,900&ndash;4,200
+per_sqft_rate is calibrated for 4 quality tiers (economy / standard / premium / luxury)
+city_tier_multiplier maps cities to one of 3 tiers based on CPWD region weighting + RERA project data
+floors_factor adjusts for G+1, G+2, G+3 (additional structural cost above ground floor)
 
-city_tier_multiplier:
-  Tier 1 (Mumbai/Bangalore/Delhi NCR/Pune/Hyderabad/Chennai): 1.00&ndash;1.18
-  Tier 2 (Kolkata/Jaipur/Lucknow/Indore/Surat/Nagpur/Coimbatore/Kochi): 0.92&ndash;1.05
-  Tier 3 (smaller cities): 0.82&ndash;0.95
-
-floors_factor (G+1 = 1.0; G+2 adds ~3% per extra floor, G+3 adds ~5%)</div>
+The specific rate bands are visible in the calculator output for each scenario.</div>
 
 <h4>Rate sources</h4>
 <ul class="src-list">
@@ -313,16 +308,8 @@ floors_factor (G+1 = 1.0; G+2 adds ~3% per extra floor, G+3 adds ~5%)</div>
 <h4>What it computes</h4>
 <p>Room-by-room interior fit-out estimate covering modular kitchen, wardrobes, false ceiling, painting, flooring, electricals, soft furnishings, and decor. Inputs: BHK type, finish tier, city.</p>
 
-<h4>Core rates (Q2 2026, per BHK)</h4>
-<table class="rate-table">
-<thead><tr><th>Tier</th><th>1BHK</th><th>2BHK</th><th>3BHK</th><th>4BHK</th></tr></thead>
-<tbody>
-<tr><td>Basic</td><td>&#8377;3.0&ndash;4.5L</td><td>&#8377;4.5&ndash;7L</td><td>&#8377;6&ndash;9L</td><td>&#8377;8&ndash;12L</td></tr>
-<tr><td>Mid</td><td>&#8377;5&ndash;8L</td><td>&#8377;7.5&ndash;12L</td><td>&#8377;10&ndash;16L</td><td>&#8377;14&ndash;22L</td></tr>
-<tr><td>Premium</td><td>&#8377;8&ndash;14L</td><td>&#8377;12&ndash;22L</td><td>&#8377;16&ndash;28L</td><td>&#8377;22&ndash;40L</td></tr>
-<tr><td>Luxury</td><td>&#8377;14&ndash;25L+</td><td>&#8377;22&ndash;40L+</td><td>&#8377;28&ndash;55L+</td><td>&#8377;40&ndash;90L+</td></tr>
-</tbody>
-</table>
+<h4>Rate model</h4>
+<p>4 finish tiers (basic / mid / premium / luxury) calibrated against local-carpenter market quotes, with city adjustment factors and a separate uplift band for branded design houses. The specific rupee bands for your BHK + tier + city combination appear in the calculator output.</p>
 
 <h4>Rate sources</h4>
 <ul class="src-list">
@@ -389,7 +376,53 @@ Total interest = (EMI &times; n) &minus; P</div>
 <a class="calc-link" href="/emi/">Open calculator &rarr;</a>
 </div>
 
-<!-- ====================== QUOTE CHECK ====================== -->
+<!-- ====================== EMI vs RENT ====================== -->
+<div class="calc-block" id="emi-vs-rent">
+<h3>EMI vs Rent Break-Even Calculator <span class="pill">May 2026</span></h3>
+<div class="meta-row">
+<span><strong>Calculator:</strong> <a href="/emi-vs-rent/">/emi-vs-rent/</a></span>
+<span><strong>Output:</strong> Verdict + break-even year + year-by-year wealth</span>
+<span><strong>Last rate review:</strong> 7 May 2026</span>
+</div>
+
+<h4>What it computes</h4>
+<p>For a given property + loan + rent + market-assumption set, simulates wealth in BUY and RENT scenarios month-by-month over the user's stated horizon. Reports the break-even year (the year buying first overtakes renting on net wealth) and a verdict.</p>
+
+<h4>Core method</h4>
+<div class="formula">For each month from 1 to horizon:
+  BUY:  amortise loan one month forward (interest + principal split via standard formula)
+        accrue maintenance + property tax (1/12 of annual %)
+        property_value(end_year) = price &times; (1 + appreciation)^year
+        BUY_equity = property_value &minus; remaining_loan_balance
+
+  RENT: pay this month's rent (escalates yearly by user input)
+        invest the BUY-vs-RENT cash differential at alt-return
+        compounds month-by-month at alt-return / 12
+
+Verdict at end-of-horizon:
+  BUY_equity &gt; RENT_invested &times; 1.10  &rarr; BUY
+  within &plusmn;5%                          &rarr; MARGINAL (re-check assumptions)
+  RENT_invested &gt; BUY_equity            &rarr; RENT</div>
+
+<h4>Closing cost calibration</h4>
+<ul class="src-list">
+<li>Stamp duty: same 13-state IGR-portal sourced rates as <a href="#stamp-duty">/stamp-duty/</a></li>
+<li>Registration: state-specific; capped at &#8377;30K for Maharashtra (per IGR Maharashtra notification)</li>
+<li>Brokerage: 0.5% buyer-side typical for Indian primary market in 2026 (resale market typically 1%)</li>
+<li>Legal + title search: &#8377;25,000 fixed cost (urban Tier-1; Tier-2/3 typically &#8377;15&ndash;20K)</li>
+</ul>
+
+<h4>Known limitations</h4>
+<ul class="src-list">
+<li>Tax benefits (Section 24 interest deduction up to &#8377;2L; Section 80C principal up to &#8377;1.5L; HRA exemption for renters) are NOT modelled. Including them typically strengthens the BUY case by 5&ndash;15% over a 20-year tenure for users in the 30% tax slab.</li>
+<li>Behavioural reality: many people don't actually invest the EMI&ndash;rent differential. The BUY scenario provides "forced saving" via principal repayment; the RENT scenario assumes perfect investment discipline.</li>
+<li>Rental availability and locality fit are not modelled &mdash; in some areas an equivalent rental simply doesn't exist.</li>
+<li>Liquidity asymmetry: property is illiquid (3&ndash;6 months to sell with discounts); investments are liquid in days. The calculator's wealth comparison ignores this.</li>
+<li>Assumes you live in the property if you buy &mdash; no rental income on the BUY side. For investment-property analysis, add 2.5&ndash;3.5% gross yield minus 30&ndash;35% costs to BUY scenario.</li>
+</ul>
+
+<a class="calc-link" href="/emi-vs-rent/">Open calculator &rarr;</a>
+</div>
 <div class="calc-block" id="quote-check">
 <h3>Contractor Quote Checker <span class="pill">Q2 2026</span></h3>
 <div class="meta-row">
@@ -401,14 +434,10 @@ Total interest = (EMI &times; n) &minus; P</div>
 <h4>What it computes</h4>
 <p>Compares your contractor's per-sqft quoted rate against the Ghar Ka Budget benchmark for your city, build quality, and project type. Returns a verdict (Fair / Slightly High / Very High) plus the indicative gap in rupees.</p>
 
-<h4>Verdict bands</h4>
-<div class="formula">benchmark = construction-calc-rate(city, quality)
+<h4>Verdict logic</h4>
+<p>The calculator compares your contractor's per-sqft rate against our city + quality benchmark and assigns one of three bands &mdash; <strong>Fair</strong> (within market variance), <strong>Slightly High</strong> (a measurable premium that often reflects contractor margin or genuine spec upgrades), or <strong>Very High</strong> (a premium large enough that you should ask the contractor to justify it line-by-line). The exact threshold percentages are tuned per quality tier and refreshed each quarter; they're visible in the verdict text the calculator returns.</p>
 
-if quoted_rate &lt; benchmark &times; 1.05:  Fair
-if quoted_rate &lt; benchmark &times; 1.20:  Slightly High (5&ndash;20% premium)
-else:                                  Very High (&gt;20% premium)</div>
-
-<p>A 5% premium is normal market variance. A 5&ndash;20% premium typically reflects either contractor margin or genuine spec upgrades not captured in the benchmark. Above 20% generally indicates either an untrained contractor padding the quote, or a custom design loaded with non-standard items (cantilevered slabs, double-height ceilings, imported facades) which need a separate spec-by-spec review.</p>
+<p>Real-world reading: a small premium over the benchmark is normal market variance. A larger premium typically reflects either contractor margin or genuine spec upgrades not captured in the benchmark. A very large premium generally indicates either an untrained contractor padding the quote, or a custom design loaded with non-standard items (cantilevered slabs, double-height ceilings, imported facades) which need a separate spec-by-spec review.</p>
 
 <h4>Rate sources</h4>
 <ul class="src-list">
@@ -534,18 +563,8 @@ Effective tenure cap = min(user_input, 60 &minus; current_age)
 <h4>What it computes</h4>
 <p>Total painting cost for interior or exterior, by carpet area, paint tier (economy / standard / premium / luxury), and condition (fresh paint vs repaint with putty).</p>
 
-<h4>Core rates (Q2 2026, all-in including labour, per sqft of paintable wall area)</h4>
-<table class="rate-table">
-<thead><tr><th>Tier</th><th>Brand examples</th><th>Per sqft</th><th>Coverage</th></tr></thead>
-<tbody>
-<tr><td>Economy</td><td>Asian Paints Tractor, Berger Bison</td><td>&#8377;14&ndash;22</td><td>1 coat primer + 2 coats</td></tr>
-<tr><td>Standard</td><td>Asian Paints Apcolite, Berger Easy Clean</td><td>&#8377;22&ndash;32</td><td>1 coat primer + 2 coats</td></tr>
-<tr><td>Premium</td><td>Asian Paints Royale, Berger Silk</td><td>&#8377;32&ndash;48</td><td>Putty + primer + 2 coats</td></tr>
-<tr><td>Luxury</td><td>Royale Luxury Emulsion, Dulux Velvet Touch</td><td>&#8377;48&ndash;75</td><td>Putty + primer + 2&ndash;3 coats</td></tr>
-</tbody>
-</table>
-
-<p>Wall area is auto-computed from carpet area as <code>carpet_area &times; 3.5</code> (typical for 9&prime; ceilings, accounting for openings).</p>
+<h4>Rate model</h4>
+<p>4 paint tiers (economy / standard / premium / luxury) calibrated against dealer pricing for the major Indian paint brands (Asian Paints, Berger, Nerolac, Dulux) plus painting-contractor labour rates from state minimum-wage notifications. Coverage assumptions: economy and standard get primer + 2 coats; premium and luxury add full putty preparation. Wall area is auto-computed from carpet area as <code>carpet_area &times; 3.5</code> (typical for 9&prime; ceilings, accounting for openings).</p>
 
 <h4>Rate sources</h4>
 <ul class="src-list">
@@ -588,11 +607,14 @@ alt_FV   = all_in_cost &times; (1 + alt_return_pct)^years
 break_even_rate = ((alt_FV / plot_price)^(1/years) &minus; 1) + holding_cost_pct
 (the appreciation rate at which plot matches alt-investment return)
 
-Verdict:
-  break_even &lt; 6%:    Viable, comfortable margin
-  break_even &lt; 9%:    Viable if location genuinely growing
-  break_even &lt; 12%:   Marginal: plot must outperform
-  break_even &gt;= 12%:  Poor: hard to justify financially</div>
+Verdict bands (broad framing):
+  Low break-even rate:    Viable &mdash; deal has comfortable margin
+  Moderate break-even:    Viable only if location is genuinely growing; verify with registered transactions
+  High break-even:        Marginal &mdash; plot must outperform broad market
+  Very high break-even:   Poor &mdash; financially hard to justify
+
+Specific cut-off percentages are tuned per buyer plan (hold / build-later / build-now)
+and refreshed each quarter against ANAROCK Land Index. Visible in the verdict text.</div>
 
 <h4>Rate sources</h4>
 <ul class="src-list">
@@ -624,19 +646,8 @@ Verdict:
 <h4>What it computes</h4>
 <p>Per-running-foot kitchen cost based on layout, shutter finish, carcass material, hardware tier, countertop, and accessories. Output includes branded-showroom equivalent range.</p>
 
-<h4>Core rates (per running foot, all-in cabinet rate, Q2 2026)</h4>
-<table class="rate-table">
-<thead><tr><th>Shutter finish</th><th>Per rft (BWP carcass + Indian hardware)</th></tr></thead>
-<tbody>
-<tr><td>Laminate</td><td>&#8377;9,500&ndash;14,000</td></tr>
-<tr><td>Membrane</td><td>&#8377;11,000&ndash;15,500</td></tr>
-<tr><td>Acrylic</td><td>&#8377;15,000&ndash;22,000</td></tr>
-<tr><td>PU (polyurethane)</td><td>&#8377;18,000&ndash;28,000</td></tr>
-<tr><td>Glass / lacquered</td><td>&#8377;22,000&ndash;32,000</td></tr>
-</tbody>
-</table>
-
-<p>Hardware uplift: midbrand (Ebco, Soft Closing) +7%; premium (Hettich Quadro, Blum Tandembox) +17%.</p>
+<h4>Rate model</h4>
+<p>5 shutter-finish tiers (laminate / membrane / acrylic / PU / glass) priced per running foot, with carcass material (BWP / BWR / HDHMR / MR / MDF / particle), hardware tier (Indian / midbrand / premium), city, countertop, and accessories layered on top. Branded showroom pricing (Sleek, Hettich Studio, Hafele Aspekt, Godrej Interio, Livspace) is also estimated as an upper-bound multiplier &mdash; visible in the comparison panel of the calculator.</p>
 
 <h4>Rate sources</h4>
 <ul class="src-list">
@@ -668,12 +679,12 @@ Verdict:
 <h4>What it computes</h4>
 <p>Total bathroom renovation cost for area type (compact / standard / master / large) or custom sqft, with per-line-item breakdown: tiles, sanitary, counter, shower, ceiling, plumbing, waterproofing, demolition.</p>
 
-<h4>Core rates (Q2 2026)</h4>
+<h4>Rate model</h4>
 <ul class="src-list">
-<li><strong>Tile per sqft of tile coverage</strong> (auto-computed as 4&times; floor area for standard wall tile coverage): economy &#8377;80&ndash;150, mid &#8377;150&ndash;280, premium &#8377;280&ndash;550, luxury &#8377;600&ndash;1,500</li>
-<li><strong>Sanitary bundle per bathroom</strong> (closet + basin + faucets + diverter + shower set): economy &#8377;18,000&ndash;38,000, mid &#8377;40,000&ndash;90,000, premium &#8377;90,000&ndash;200,000, luxury &#8377;200,000&ndash;600,000</li>
-<li><strong>Counter</strong> (granite / quartz / marble), <strong>shower</strong> (curtain / glass partition / walk-in / steam), <strong>ceiling</strong> (none / PVC / gypsum) tiered separately</li>
-<li><strong>Waterproofing</strong> &#8377;70&ndash;150/sqft, <strong>demolition</strong> &#8377;35&ndash;75/sqft, <strong>plumbing rework</strong> &#8377;200&ndash;400/sqft</li>
+<li><strong>Tile</strong>: priced per sqft of tile coverage (auto-computed as 4&times; floor area for standard wall tile coverage), in 4 quality tiers (economy / mid / premium / luxury) calibrated against major Indian tile brands.</li>
+<li><strong>Sanitary bundle per bathroom</strong>: closet + basin + faucets + diverter + shower set, in 4 brand tiers calibrated against Hindware, Jaquar, Cera, Kohler, Toto public catalogue pricing.</li>
+<li><strong>Counter</strong> (granite / quartz / marble), <strong>shower</strong> (curtain / glass partition / walk-in / steam), <strong>ceiling</strong> (none / PVC / gypsum) tiered separately.</li>
+<li><strong>Waterproofing, demolition, and plumbing rework</strong> priced per sqft of bathroom floor area &mdash; values shown in calculator output.</li>
 </ul>
 
 <h4>Rate sources</h4>
@@ -705,20 +716,10 @@ Verdict:
 <h4>What it computes</h4>
 <p>Total waterproofing cost by area type (terrace / bathroom / basement / water tank / external walls), method (cementitious / acrylic / PU / APP membrane / EPDM / PMMA), surface condition, and add-ons (pressure wash, screed slope correction, crack chasing).</p>
 
-<h4>Core rates (Q2 2026, per sqft, all-in including material and labour)</h4>
-<table class="rate-table">
-<thead><tr><th>Method</th><th>Per sqft</th><th>Lifespan</th><th>Best for</th></tr></thead>
-<tbody>
-<tr><td>Cementitious</td><td>&#8377;40&ndash;80</td><td>5&ndash;7 years</td><td>Bathrooms, water tanks (NOT terrace)</td></tr>
-<tr><td>Acrylic</td><td>&#8377;70&ndash;120</td><td>5&ndash;8 years</td><td>Mild conditions, budget projects</td></tr>
-<tr><td>Polyurethane (PU)</td><td>&#8377;120&ndash;220</td><td>8&ndash;12 years</td><td>Crack-prone surfaces, balconies</td></tr>
-<tr><td>APP membrane</td><td>&#8377;140&ndash;260</td><td>10&ndash;15 years</td><td>Indian terraces (recommended default)</td></tr>
-<tr><td>EPDM</td><td>&#8377;220&ndash;380</td><td>15&ndash;20 years</td><td>Premium villas, large flat roofs</td></tr>
-<tr><td>PMMA</td><td>&#8377;280&ndash;500</td><td>15+ years</td><td>Specialty applications, fast cure</td></tr>
-</tbody>
-</table>
+<h4>Rate model</h4>
+<p>6 waterproofing methods modelled (cementitious, acrylic, polyurethane, APP membrane, EPDM, PMMA), each with its own per-sqft cost band and lifespan range. The calculator shows side-by-side comparison so users can weigh upfront cost vs years-of-coverage. Surface-condition adjustments (new / existing / leaking) and add-ons (pressure wash, screed slope correction, crack chasing) are layered on top.</p>
 
-<p>Surface-condition multiplier: new 1.0&times;, existing 1.15&times;, leaking 1.40&times; (40% prep premium for active leaks).</p>
+<p>Method selection guidance built into the calculator: cementitious for bathrooms and water tanks (NOT terraces); APP membrane as the default for most Indian terraces; EPDM and PMMA for premium villas and specialty applications.</p>
 
 <h4>Rate sources</h4>
 <ul class="src-list">
