@@ -18,6 +18,9 @@
     'interior':              {name:'Interior Cost Estimate',              short:'Interior',         methodSec:'interior',              resultSel:'#intResults',    resultHeadline:'#intTotal',                     aiRole:'an Indian interior designer working in 2026'},
     'emi':                   {name:'Home Loan EMI Calculation',           short:'EMI',              methodSec:'emi',                   resultSel:'#resultsPanel',  resultHeadline:'#emiAmount,#emiTotal,#monthlyEMI', aiRole:'an Indian banking advisor familiar with home loans in 2026'},
     'emi-vs-rent':           {name:'EMI vs Rent Break-even Analysis',     short:'EMI vs Rent',      methodSec:'emi-vs-rent',           resultSel:'#resultPanel',   resultHeadline:'#verdictH,#rBuyWealth',         aiRole:'an Indian financial advisor specialising in home buying decisions in 2026'},
+    'prepay-vs-sip':         {name:'Home Loan Prepay vs SIP Analysis',    short:'Prepay vs SIP',    methodSec:'prepay-vs-sip',         resultSel:'#resultPanel',   resultHeadline:'#verdictH,#rDelta',             aiRole:'an Indian personal finance advisor specialising in home loans, tax planning and equity SIP decisions in 2026'},
+    'balance-transfer':      {name:'Home Loan Balance Transfer Analysis', short:'Balance Transfer', methodSec:'balance-transfer',      resultSel:'#resultPanel',   resultHeadline:'#verdictH,#rNetSavings,#rBreakeven', aiRole:'an Indian personal finance advisor specialising in home loans and refinancing decisions in 2026'},
+    'pmay-eligibility':      {name:'PMAY 2.0 Eligibility Report',         short:'PMAY 2.0',         methodSec:'pmay-eligibility',      resultSel:'#resultPanel',   resultHeadline:'#verdictH,#rPayout,#rNPV',           aiRole:'an Indian banking advisor and PMAY-U 2.0 scheme expert familiar with all six eligibility filters and PLI claim procedures in 2026'},
     'quote-check':           {name:'Contractor Quote Check',              short:'Quote Check',      methodSec:'quote-check',           resultSel:'#verdictPanel',  resultHeadline:'#verdictTitle',                 aiRole:'a construction project manager working in India in 2026'},
     'stamp-duty':            {name:'Stamp Duty & Registration Estimate',  short:'Stamp Duty',       methodSec:'stamp-duty',            resultSel:'#resultPanel',   resultHeadline:'.tot,#totDuty',                 aiRole:'a property lawyer practising in India in 2026'},
     'home-loan-eligibility': {name:'Home Loan Eligibility Estimate',      short:'Loan Eligibility', methodSec:'home-loan-eligibility', resultSel:'#resultPanel',   resultHeadline:'.tot,#maxLoan',                 aiRole:'an Indian banking advisor specialising in home loan eligibility'},
@@ -71,6 +74,36 @@
       + "3. What 3 non-financial factors (lifestyle stability, neighbourhood quality, family circumstances, job mobility) should weigh on this decision but are not in the model?\n"
       + "4. Given the verdict and my inputs, what 2-3 questions should I sit with for a week before committing either way?\n\n"
       + "Be specific to Indian residential real estate and personal finance practice in 2026. Concise.",
+
+    'prepay-vs-sip':
+      "I used Ghar Ka Budget's Home Loan Prepay vs SIP calculator to decide whether to use my monthly surplus to prepay my home loan or invest it in equity SIP instead.\n\n"
+      + "MY INPUTS:\n{INPUTS}\n\nCALCULATED VERDICT:\n{RESULT}\n\n"
+      + "Acting as {ROLE}, please:\n"
+      + "1. Is the verdict appropriate given my tax setup? Specifically, did the calculator handle the new tax regime (no Section 24 deduction on self-occupied home) vs old regime (₹2L cap) vs let-out (uncapped) correctly for someone in my situation?\n"
+      + "2. The model assumes I would actually invest the monthly surplus consistently in SIP. Realistically, what fraction of Indian households maintain SIP discipline through a 2-3 year market drawdown? How should that change my decision?\n"
+      + "3. Beyond the corpus comparison, what 2-3 liquidity, behavioural, or life-stage factors should weigh on this decision but aren't in the math? (e.g. emergency fund readiness, job stability, debt-aversion comfort)\n"
+      + "4. Should I split the surplus — say 50% prepay + 50% SIP — instead of going all-in on either path? When does a hybrid actually make sense vs being a hedge against not deciding?\n\n"
+      + "Be specific to Indian banking, tax, and equity-investing practice in 2026. Concise.",
+
+    'balance-transfer':
+      "I used Ghar Ka Budget's Home Loan Balance Transfer calculator to decide whether to refinance my home loan to a lower-rate lender.\n\n"
+      + "MY INPUTS:\n{INPUTS}\n\nCALCULATED VERDICT:\n{RESULT}\n\n"
+      + "Acting as {ROLE}, please:\n"
+      + "1. Given the post-December-2025 repo cut (5.25%) and current Indian home loan rate spread (best 7.10-7.50%, typical 7.75-8.75%), is the new rate I've been offered actually competitive for my profile, or is there room to push for 25-50 bps lower? What lenders are most aggressive in May 2026 for a borrower like me?\n"
+      + "2. Before transferring, what specific negotiation move should I make with my current lender first? Walk me through the exact ask, the conversion fee I should expect, and the rate reduction I can realistically obtain without leaving my bank.\n"
+      + "3. The calculator includes processing fee, foreclosure (zero for floating per RBI), valuation, legal, CERSAI, and fresh stamp duty. What other hidden costs in Indian balance transfers do borrowers commonly miss? (e.g. property re-insurance with new lender, top-up bundling pressure, prepayment lock-in clauses on the new loan)\n"
+      + "4. The 30-45 day transition is the highest-risk window for a CIBIL hit. What 3 specific operational steps should I take during that period to ensure neither bank reports a missed payment, and what's my fallback if the new lender's disbursement is delayed beyond my next EMI date?\n\n"
+      + "Be specific to Indian home loan refinancing practice in 2026. Concise.",
+
+    'pmay-eligibility':
+      "I used Ghar Ka Budget's PMAY 2.0 Eligibility Checker to see if I qualify for the Pradhan Mantri Awas Yojana Urban 2.0 Interest Subsidy Scheme.\n\n"
+      + "MY INPUTS:\n{INPUTS}\n\nELIGIBILITY VERDICT AND SUBSIDY ESTIMATE:\n{RESULT}\n\n"
+      + "Acting as {ROLE}, please:\n"
+      + "1. Did the calculator correctly handle my income category (EWS/LIG/MIG) and the corresponding female-ownership requirement? Specifically: if I'm in LIG (Rs 3-6L income) but the property is only in my name (male), can my spouse be added to the title after disbursement to retain PMAY eligibility, or is the registration window before sanction?\n"
+      + "2. The Rs 35L property cap and Rs 25L loan cap are the most common disqualifiers I'm reading about. In tier-1 cities like Mumbai, Bangalore, Delhi NCR and Pune, are there any builder-affiliated PMAY-approved projects below this cap that I should know about? What's the realistic property type and locality I'd actually find under Rs 35L in those markets in 2026?\n"
+      + "3. PLIs (banks/HFCs) are required to file the subsidy claim within 30 days of disbursement, but many miss this. What 3 specific operational steps should I take during loan processing to ensure my PLI actually files the claim on time, and what's my recourse if they miss the deadline?\n"
+      + "4. Beyond PMAY 2.0 ISS, what other government schemes (state housing boards, MIG-segment subsidies in specific states, women-only schemes, Stamp Duty concessions) should I check that often go untapped for buyers in my profile? Some states have parallel benefits that stack with PMAY.\n\n"
+      + "Be specific to PMAY-U 2.0 (active Sep 2024 - Aug 2029) and current 2026 PLI practice. Concise.",
 
     'quote-check':
       "I used Ghar Ka Budget's contractor quote checker.\n\n"

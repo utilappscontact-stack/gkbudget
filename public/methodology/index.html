@@ -183,6 +183,10 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0;margin-top:4
     <a href="#construction">Construction Cost</a>
     <a href="#interior">Interior Cost</a>
     <a href="#emi">Home Loan EMI</a>
+    <a href="#emi-vs-rent">EMI vs Rent</a>
+    <a href="#prepay-vs-sip">Prepay vs SIP</a>
+    <a href="#balance-transfer">Balance Transfer</a>
+    <a href="#pmay-eligibility">PMAY 2.0 Eligibility</a>
     <a href="#quote-check">Quote Checker</a>
     <a href="#stamp-duty">Stamp Duty</a>
     <a href="#home-loan-eligibility">Loan Eligibility</a>
@@ -353,10 +357,10 @@ Total interest = (EMI &times; n) &minus; P</div>
 
 <h4>Rate range guidance (May 2026)</h4>
 <ul class="src-list">
-<li><strong>Best case</strong> 8.10&ndash;8.40%: top corporate salaried, &#8377;75L+ loan, 750+ CIBIL, premium employer (e.g. SBI, HDFC, ICICI top-bucket)</li>
-<li><strong>Typical salaried</strong> 8.50&ndash;9.25%: standard salaried, &#8377;25&ndash;75L loan, 700+ CIBIL</li>
-<li><strong>Self-employed / lower CIBIL</strong> 9.50&ndash;10.75%: self-employed business owner, or salaried with 650&ndash;700 CIBIL</li>
-<li><strong>Plot loan</strong> 9.50&ndash;11.00%: 0.5&ndash;1.0% above home loan rate, max 15-year tenure</li>
+<li><strong>Best case</strong> 7.10&ndash;7.50%: top corporate salaried, &#8377;75L+ loan, 750+ CIBIL, premium employer (e.g. BoB 7.10%, SBI 7.50%, ICICI pre-approved 7.50%)</li>
+<li><strong>Typical salaried</strong> 7.75&ndash;8.75%: standard salaried, &#8377;25&ndash;75L loan, 700+ CIBIL</li>
+<li><strong>Self-employed / lower CIBIL</strong> 8.75&ndash;10.00%: self-employed business owner, or salaried with 650&ndash;700 CIBIL</li>
+<li><strong>Plot loan</strong> 8.75&ndash;10.50%: 0.5&ndash;1.0% above home loan rate, max 15-year tenure</li>
 </ul>
 
 <h4>Rate sources</h4>
@@ -422,6 +426,189 @@ Verdict at end-of-horizon:
 </ul>
 
 <a class="calc-link" href="/emi-vs-rent/">Open calculator &rarr;</a>
+</div>
+<div class="calc-block" id="prepay-vs-sip">
+<h3>Home Loan Prepay vs SIP Calculator <span class="pill">May 2026</span></h3>
+<div class="meta-row">
+<span><strong>Calculator:</strong> <a href="/prepay-vs-sip/">/prepay-vs-sip/</a></span>
+<span><strong>Output:</strong> Verdict + corpus comparison + year-by-year wealth</span>
+<span><strong>Last rate review:</strong> 8 May 2026</span>
+</div>
+
+<h4>What it computes</h4>
+<p>For an active home loan + monthly surplus + tax setup + alt-return assumption, simulates two paths month-by-month over the loan's remaining tenure: (a) keep paying EMI normally and invest surplus in SIP, vs (b) prepay the surplus into the loan, then redirect freed cashflow to SIP after payoff. Reports net wealth at end-of-tenure for both paths and a verdict.</p>
+
+<h4>Core method</h4>
+<div class="formula">For each month from 1 to remaining_tenure:
+  PATH A (KEEP-INVESTING):
+    amortise loan one month forward (interest + principal split)
+    invest surplus in SIP at alt-return / 12
+    track annual interest paid &rarr; year-end tax credit (Sec 24)
+
+  PATH B (PREPAY):
+    apply (EMI - interest) + surplus to principal until balance = 0
+    after payoff: invest (EMI + surplus) in SIP at alt-return / 12
+    track annual interest paid &rarr; year-end tax credit (Sec 24)
+
+Tax accrual (annual):
+  deductible_interest = min(annual_interest, SEC24_CAP)
+  tax_saved           = deductible_interest &times; tax_slab
+  add tax_saved to corpus (compounds at alt-return going forward)
+
+  SEC24_CAP = &#8377;200000 (self-occupied, old regime)
+            = &infin;       (let-out, either regime)
+            = &#8377;0       (no Sec 24 deduction claimed / new regime self-occ)
+
+Verdict at end-of-tenure:
+  PATH_B_corpus &gt; PATH_A_corpus &times; 1.05  &rarr; PREPAY-LOAN
+  within &plusmn;5%                            &rarr; TOO-CLOSE-TO-CALL
+  PATH_A_corpus &gt; PATH_B_corpus &times; 1.05  &rarr; KEEP-INVESTING</div>
+
+<h4>Tax-mode handling</h4>
+<ul class="src-list">
+<li>Section 24(b) cap of &#8377;2L for self-occupied properties (old regime only) per Income Tax Act &mdash; verified against CBDT clarifications and 2025-26 ITR forms.</li>
+<li>Let-out properties: full annual interest is deductible &mdash; same rule under both old and new regimes per Finance Act 2024.</li>
+<li>New regime self-occupied: no Section 24 deduction available &mdash; the calc's "No deduction" mode covers this.</li>
+<li>Pre-construction interest, Section 80C principal repayment (old regime), and Section 80EE/EEA additional deductions are NOT modelled. They typically tilt the math further toward KEEP-INVESTING for buyers in the old regime.</li>
+</ul>
+
+<h4>Known limitations</h4>
+<ul class="src-list">
+<li>Constant interest rate over remaining tenure &mdash; floating-rate loans actually reset with repo movements. A 100bp drop in rate over the holding period mildly favours KEEP-INVESTING; a 100bp rise favours PREPAY.</li>
+<li>Constant alt-return &mdash; real markets are stochastic. The 11% mean assumption obscures the path-dependent risk of stopping SIP during a market drawdown.</li>
+<li>Equity LTCG taxation (12.5% above &#8377;1.25L per year, post April 2024) is NOT applied to the SIP corpus. For long holding periods this represents a small (typically 5-8%) drag on the KEEP-INVESTING path.</li>
+<li>Prepayment is assumed to reduce tenure (not EMI). For floating-rate loans by individual borrowers, RBI rules prohibit prepayment penalty.</li>
+<li>"Forced saving" behaviour effect &mdash; the calc assumes you actually invest the surplus consistently in PATH A. In practice, many households don't; the prepayment path provides forced discipline that the math doesn't credit.</li>
+<li>Liquidity asymmetry &mdash; SIP corpus is liquid in days; loan prepayment locks money into property equity. The wealth comparison ignores this real-world cost.</li>
+</ul>
+
+<a class="calc-link" href="/prepay-vs-sip/">Open calculator &rarr;</a>
+</div>
+<div class="calc-block" id="balance-transfer">
+<h3>Home Loan Balance Transfer Calculator <span class="pill">May 2026</span></h3>
+<div class="meta-row">
+<span><strong>Calculator:</strong> <a href="/balance-transfer/">/balance-transfer/</a></span>
+<span><strong>Output:</strong> Net lifetime saving + breakeven months + verdict</span>
+<span><strong>Last rate review:</strong> 14 May 2026</span>
+</div>
+
+<h4>What it computes</h4>
+<p>For an active home loan + a new refinance offer from a different lender, computes the EMI under each rate, the total interest payable over the remaining tenure for both, the all-in switching cost (processing fee + GST, foreclosure penalty if applicable, valuation, legal, CERSAI, fresh stamp duty), the net lifetime saving, the breakeven month at which cumulative EMI savings cross total switching costs, and a verdict.</p>
+
+<h4>Core method</h4>
+<div class="formula">EMI = P &times; r &times; (1+r)^n / ((1+r)^n &minus; 1)
+  where r = monthly rate = annual_rate / 12 / 100
+        n = remaining months
+        P = outstanding principal
+
+Lifetime interest = EMI &times; n &minus; P
+
+Switching cost components:
+  processing_fee  = pf_pct &times; outstanding
+  pf_with_gst     = processing_fee &times; 1.18  (18% GST)
+  foreclosure     = fore_pct &times; outstanding
+                    (0% floating-rate per RBI; 2-3% typical fixed)
+  other           = valuation + legal/TIR + CERSAI re-reg
+  stamp           = fresh mortgage stamp duty (state-dependent)
+  total_switching = pf_with_gst + foreclosure + other + stamp
+
+Net lifetime savings = (old_interest &minus; new_interest) &minus; total_switching
+Breakeven months     = total_switching / (old_EMI &minus; new_EMI)
+
+Verdict bands:
+  WORTH-IT      if breakeven &lt; 24 months AND net savings &gt; &#8377;2L
+  MARGINAL      if breakeven 24-48 months OR net savings &#8377;1L-&#8377;2L
+  DON'T-SWITCH  if breakeven &gt; 48 months OR net savings &lt; &#8377;1L
+  DON'T-SWITCH  if new EMI &ge; old EMI (negative monthly saving)</div>
+
+<h4>Rate framework + cost defaults</h4>
+<ul class="src-list">
+<li>Post-RBI repo cut (5.25%, December 2025) rate framework: best 7.10-7.50%, typical 7.75-8.75%, self-employed 8.75-10.0%. Verified against SBI / HDFC / Bajaj Housing Finance / IDFC First / Bank of Baroda / ICICI published card rates, May 2026.</li>
+<li>Foreclosure penalty: zero for floating-rate home loans for individual borrowers per RBI circular RBI/2013-14/582 (effective 2014) and reaffirmed in subsequent RBI Master Directions. Fixed-rate loans may carry 2-3%.</li>
+<li>Processing fee: 0.25-0.50% of outstanding + 18% GST; commonly capped at &#8377;25K-50K per bank schedules.</li>
+<li>Stamp duty on fresh mortgage deed: Maharashtra 0.2-0.3%, Karnataka 0.1%, Delhi typically nil on transfer, Tamil Nadu typically nil. Verified against state stamp acts and bank disclosures.</li>
+</ul>
+
+<h4>Known limitations</h4>
+<ul class="src-list">
+<li>Constant interest rate over remaining tenure on both old and new loans &mdash; in practice both are typically floating and reset with the repo. If both move in parallel the gap stays roughly constant.</li>
+<li>Tax benefit continuity is assumed (Section 24 + 80C work identically across lenders) &mdash; correct in practice.</li>
+<li>Loyalty perks (free locker, premium banking, debit card waivers) at the existing lender are not quantified &mdash; subtract their value mentally if material.</li>
+<li>CIBIL score impact during transition (5-10 point dip, recovers in 6-12 months) is not modelled.</li>
+<li>Top-up loans bundled with the transfer are not modelled &mdash; treat the existing loan only.</li>
+<li>The 30-45 day transition risk (missing an EMI to the old lender by accident) is operational, not financial &mdash; the calc assumes a clean transition.</li>
+</ul>
+
+<a class="calc-link" href="/balance-transfer/">Open calculator &rarr;</a>
+</div>
+<div class="calc-block" id="pmay-eligibility">
+<h3>PMAY 2.0 Eligibility Checker <span class="pill">May 2026</span></h3>
+<div class="meta-row">
+<span><strong>Calculator:</strong> <a href="/pmay-eligibility/">/pmay-eligibility/</a></span>
+<span><strong>Output:</strong> Eligibility verdict + subsidy payout + NPV + EMI saving</span>
+<span><strong>Last rules review:</strong> 14 May 2026 (against pmaymis.gov.in)</span>
+</div>
+
+<h4>What it computes</h4>
+<p>Runs the family situation through all six absolute PMAY-U 2.0 disqualifiers (income, property value, loan size, carpet area, first pucca house, prior beneficiary status), checks the conditional female-ownership requirement for EWS/LIG categories, and — if eligible — computes the exact subsidy payout, NPV, and monthly EMI reduction using the official scheme formula.</p>
+
+<h4>Core method</h4>
+<div class="formula">Step 1: Category determination
+  income &le; &#8377;3,00,000   &rarr; EWS  (female ownership mandatory)
+  &#8377;3,00,001 - &#8377;6,00,000  &rarr; LIG  (female ownership mandatory)
+  &#8377;6,00,001 - &#8377;9,00,000  &rarr; MIG  (female ownership optional)
+  &gt; &#8377;9,00,000               &rarr; not eligible (hard cap)
+
+Step 2: Six absolute disqualifiers
+  income &le; &#8377;9L            (else FAIL)
+  property_value &le; &#8377;35L    (else FAIL)
+  loan_amount &le; &#8377;25L       (else FAIL)
+  carpet_area &le; 120 sqm        (else FAIL)
+  no_existing_pucca_house        (else FAIL)
+  no_prior_govt_scheme_20yr      (else FAIL)
+  loan_sanctioned &ge; 1-Sep-2024 (else FAIL)
+  IF EWS/LIG: female_owner_required
+
+Step 3: Subsidy calculation (only if eligible)
+  eligible_loan      = MIN(loan_amount, &#8377;8,00,000)
+  subsidy_tenure_yrs = MIN(actual_tenure, 12)
+  n_months           = subsidy_tenure_yrs &times; 12
+
+  EMI_full       = EMI(eligible_loan, bank_rate,         n_months)
+  EMI_subsidised = EMI(eligible_loan, bank_rate &minus; 4%, n_months)
+  monthly_saving = EMI_full &minus; EMI_subsidised
+
+  total_subsidy  = monthly_saving &times; n_months
+  capped_payout  = MIN(total_subsidy, &#8377;1,80,000)
+
+Step 4: NPV calculation (per pmaymis.gov.in)
+  yearly_instalment = capped_payout / 5
+  raw_NPV           = &Sigma; (yearly_instalment / 1.085^y) for y = 1..5
+  capped_NPV        = MIN(raw_NPV, &#8377;1,50,000)
+
+Step 5: Effective EMI on full loan
+  effective_principal = loan_amount &minus; capped_NPV
+  effective_EMI       = EMI(effective_principal, bank_rate, actual_tenure &times; 12)
+  monthly_EMI_saving  = original_EMI &minus; effective_EMI</div>
+
+<h4>Rule sources + last verified</h4>
+<ul class="src-list">
+<li>pmaymis.gov.in Interest Subsidy Scheme (ISS) page &mdash; primary source for the six gates, &#8377;1.80L payout cap, &#8377;1.50L NPV cap, 8.5% discount rate, 5-instalment release schedule, 120 sqm carpet area cap. Last verified 14 May 2026.</li>
+<li>ICICI Bank PMAY-U 2.0 page, HDFC Bank PMAY 2.0 page, Tata Capital, IIFL Home Loan, Bajaj Housing Finance, Mahindra Home Finance &mdash; cross-checked PLI implementation. All consistent on the &#8377;35L property value cap, &#8377;25L loan cap, 4% subsidy on first &#8377;8L, 12-year subsidy tenure.</li>
+<li>Female-ownership rule for EWS/LIG only &mdash; confirmed against scheme guidelines and PLI FAQs.</li>
+<li>30-day PLI claim filing window through Unified Web Portal &mdash; per IDBI Bank PMAY-U 2.0 ISS FAQ (official source).</li>
+</ul>
+
+<h4>Known limitations</h4>
+<ul class="src-list">
+<li>Subsidy release in 5 yearly instalments is conditional &mdash; the loan must be active AND have &gt;50% principal outstanding at each release. Aggressive prepayment forfeits later instalments. The calc shows the maximum theoretical payout.</li>
+<li>The 30-day PLI claim window is operational, not financial &mdash; the calc cannot warn about a specific PLI's track record on filing claims.</li>
+<li>Self-attested income certificate is accepted by the scheme, but specific PLIs may still demand 2 years ITR (especially for self-employed buyers). The calc doesn't model PLI-specific stringency.</li>
+<li>Resale within the 5-year subsidy disbursement window cancels remaining instalments &mdash; not modelled.</li>
+<li>Tax treatment: Section 24 deduction is calculated on the post-NPV reduced principal, so the home loan interest deduction is slightly lower. Calc doesn't compute the small net tax effect.</li>
+</ul>
+
+<a class="calc-link" href="/pmay-eligibility/">Open calculator &rarr;</a>
 </div>
 <div class="calc-block" id="quote-check">
 <h3>Contractor Quote Checker <span class="pill">Q2 2026</span></h3>

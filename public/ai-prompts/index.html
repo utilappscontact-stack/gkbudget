@@ -287,8 +287,89 @@ Be specific to Indian residential real estate and personal finance practice in 2
   <a class="ap-cta" href="/emi-vs-rent/">Run the EMI vs Rent Decision Verifier calculator &rarr;</a>
 </article>
 
-<article class="ap-card" id="p-home-loan-eligibility">
+<article class="ap-card" id="p-prepay-vs-sip">
   <div class="ap-num">05</div>
+  <h2 class="ap-h">Prepay vs SIP Decision Verifier</h2>
+  <div class="ap-role"><span class="ap-role-label">AI persona:</span> an Indian personal finance advisor specialising in home loans, tax planning and equity SIP decisions in 2026</div>
+  <div class="ap-catches"><strong>What this catches.</strong> Catches: whether the verdict correctly handled your tax regime (new vs old, self-occupied vs let-out, Section 24 ₹2L cap), realism on whether you would actually maintain SIP discipline through a market drawdown, and whether a hybrid (part-prepay + part-SIP) makes more sense than going all-in on either path for your life stage.</div>
+  <details class="ap-prompt">
+    <summary>Show full prompt template</summary>
+    <pre class="ap-prompt-body">I used Ghar Ka Budget&#x27;s Home Loan Prepay vs SIP calculator to decide whether to use my monthly surplus to prepay my home loan or invest it in equity SIP instead.
+
+MY INPUTS:
+{INPUTS}
+
+CALCULATED VERDICT:
+{RESULT}
+
+Acting as {ROLE}, please:
+1. Is the verdict appropriate given my tax setup? Specifically, did the calculator handle the new tax regime (no Section 24 deduction on self-occupied home) vs old regime (₹2L cap) vs let-out (uncapped) correctly for someone in my situation?
+2. The model assumes I would actually invest the monthly surplus consistently in SIP. Realistically, what fraction of Indian households maintain SIP discipline through a 2-3 year market drawdown? How should that change my decision?
+3. Beyond the corpus comparison, what 2-3 liquidity, behavioural, or life-stage factors should weigh on this decision but aren&#x27;t in the math? (e.g. emergency fund readiness, job stability, debt-aversion comfort)
+4. Should I split the surplus — say 50% prepay + 50% SIP — instead of going all-in on either path? When does a hybrid actually make sense vs being a hedge against not deciding?
+
+Be specific to Indian banking, tax, and equity-investing practice in 2026. Concise.</pre>
+    <div class="ap-prompt-note">Placeholders <code>{INPUTS}</code>, <code>{RESULT}</code>, <code>{ROLE}</code> are filled automatically when you click <em>Verify with AI</em> on the calculator.</div>
+  </details>
+  <a class="ap-cta" href="/prepay-vs-sip/">Run the Prepay vs SIP Decision Verifier calculator &rarr;</a>
+</article>
+
+<article class="ap-card" id="p-balance-transfer">
+  <div class="ap-num">06</div>
+  <h2 class="ap-h">Home Loan Balance Transfer Decision Verifier</h2>
+  <div class="ap-role"><span class="ap-role-label">AI persona:</span> an Indian personal finance advisor specialising in home loans and refinancing decisions in 2026</div>
+  <div class="ap-catches"><strong>What this catches.</strong> Catches: whether the new rate offer is actually competitive against May 2026 market (best 7.10–7.50%, typical 7.75–8.75%), the rate-reset negotiation move you should make with your current lender before transferring, hidden costs (property re-insurance, top-up bundling pressure, prepayment lock-ins on the new loan), and the 30–45 day transition window operational steps to avoid a missed-EMI CIBIL hit.</div>
+  <details class="ap-prompt">
+    <summary>Show full prompt template</summary>
+    <pre class="ap-prompt-body">I used Ghar Ka Budget&#x27;s Home Loan Balance Transfer calculator to decide whether to refinance my home loan to a lower-rate lender.
+
+MY INPUTS:
+{INPUTS}
+
+CALCULATED VERDICT:
+{RESULT}
+
+Acting as {ROLE}, please:
+1. Given the post-December-2025 repo cut (5.25%) and current Indian home loan rate spread (best 7.10-7.50%, typical 7.75-8.75%), is the new rate I&#x27;ve been offered actually competitive for my profile, or is there room to push for 25-50 bps lower? What lenders are most aggressive in May 2026 for a borrower like me?
+2. Before transferring, what specific negotiation move should I make with my current lender first? Walk me through the exact ask, the conversion fee I should expect, and the rate reduction I can realistically obtain without leaving my bank.
+3. The calculator includes processing fee, foreclosure (zero for floating per RBI), valuation, legal, CERSAI, and fresh stamp duty. What other hidden costs in Indian balance transfers do borrowers commonly miss? (e.g. property re-insurance with new lender, top-up bundling pressure, prepayment lock-in clauses on the new loan)
+4. The 30-45 day transition is the highest-risk window for a CIBIL hit. What 3 specific operational steps should I take during that period to ensure neither bank reports a missed payment, and what&#x27;s my fallback if the new lender&#x27;s disbursement is delayed beyond my next EMI date?
+
+Be specific to Indian home loan refinancing practice in 2026. Concise.</pre>
+    <div class="ap-prompt-note">Placeholders <code>{INPUTS}</code>, <code>{RESULT}</code>, <code>{ROLE}</code> are filled automatically when you click <em>Verify with AI</em> on the calculator.</div>
+  </details>
+  <a class="ap-cta" href="/balance-transfer/">Run the Home Loan Balance Transfer Decision Verifier calculator &rarr;</a>
+</article>
+
+<article class="ap-card" id="p-pmay-eligibility">
+  <div class="ap-num">07</div>
+  <h2 class="ap-h">PMAY 2.0 Eligibility & Subsidy Verifier</h2>
+  <div class="ap-role"><span class="ap-role-label">AI persona:</span> an Indian banking advisor and PMAY-U 2.0 scheme expert familiar with all six eligibility filters and PLI claim procedures in 2026</div>
+  <div class="ap-catches"><strong>What this catches.</strong> Catches: whether female-ownership timing is fixable post-sanction in your case (EWS/LIG only), realistic property type and locality you'll find under the ₹35L cap in your specific tier-1 city, the 30-day PLI claim filing risk and how to enforce it, and other state-level / women-specific housing schemes that stack with PMAY but commonly go untapped.</div>
+  <details class="ap-prompt">
+    <summary>Show full prompt template</summary>
+    <pre class="ap-prompt-body">I used Ghar Ka Budget&#x27;s PMAY 2.0 Eligibility Checker to see if I qualify for the Pradhan Mantri Awas Yojana Urban 2.0 Interest Subsidy Scheme.
+
+MY INPUTS:
+{INPUTS}
+
+ELIGIBILITY VERDICT AND SUBSIDY ESTIMATE:
+{RESULT}
+
+Acting as {ROLE}, please:
+1. Did the calculator correctly handle my income category (EWS/LIG/MIG) and the corresponding female-ownership requirement? Specifically: if I&#x27;m in LIG (Rs 3-6L income) but the property is only in my name (male), can my spouse be added to the title after disbursement to retain PMAY eligibility, or is the registration window before sanction?
+2. The Rs 35L property cap and Rs 25L loan cap are the most common disqualifiers I&#x27;m reading about. In tier-1 cities like Mumbai, Bangalore, Delhi NCR and Pune, are there any builder-affiliated PMAY-approved projects below this cap that I should know about? What&#x27;s the realistic property type and locality I&#x27;d actually find under Rs 35L in those markets in 2026?
+3. PLIs (banks/HFCs) are required to file the subsidy claim within 30 days of disbursement, but many miss this. What 3 specific operational steps should I take during loan processing to ensure my PLI actually files the claim on time, and what&#x27;s my recourse if they miss the deadline?
+4. Beyond PMAY 2.0 ISS, what other government schemes (state housing boards, MIG-segment subsidies in specific states, women-only schemes, Stamp Duty concessions) should I check that often go untapped for buyers in my profile? Some states have parallel benefits that stack with PMAY.
+
+Be specific to PMAY-U 2.0 (active Sep 2024 - Aug 2029) and current 2026 PLI practice. Concise.</pre>
+    <div class="ap-prompt-note">Placeholders <code>{INPUTS}</code>, <code>{RESULT}</code>, <code>{ROLE}</code> are filled automatically when you click <em>Verify with AI</em> on the calculator.</div>
+  </details>
+  <a class="ap-cta" href="/pmay-eligibility/">Run the PMAY 2.0 Eligibility & Subsidy Verifier calculator &rarr;</a>
+</article>
+
+<article class="ap-card" id="p-home-loan-eligibility">
+  <div class="ap-num">08</div>
   <h2 class="ap-h">Home Loan Eligibility Verifier</h2>
   <div class="ap-role"><span class="ap-role-label">AI persona:</span> an Indian banking advisor specialising in home loan eligibility</div>
   <div class="ap-catches"><strong>What this catches.</strong> Catches: how FOIR rules differ across PSU/private/NBFC lenders, what the 4 main loan-amount-killers are for someone with your profile, what bumps eligibility 15–25% if relevant (joint application, longer tenure, salary credit account switch).</div>
@@ -315,7 +396,7 @@ Be specific to Indian banking practice in 2026. Concise.</pre>
 </article>
 
 <article class="ap-card" id="p-plot-viability">
-  <div class="ap-num">06</div>
+  <div class="ap-num">09</div>
   <h2 class="ap-h">Plot Purchase Viability Second Opinion</h2>
   <div class="ap-role"><span class="ap-role-label">AI persona:</span> a real estate analyst with experience in Indian land markets in 2026</div>
   <div class="ap-catches"><strong>What this catches.</strong> Catches: red-flag overpayment relative to circle-rate vs market-rate, holding-cost reality check, plot vs apartment comparison for your horizon, and the title/encumbrance checks specific to plot purchases that flat purchases don't face.</div>
@@ -342,7 +423,7 @@ Be specific to Indian land market dynamics in 2026. Concise.</pre>
 </article>
 
 <article class="ap-card" id="p-stamp-duty">
-  <div class="ap-num">07</div>
+  <div class="ap-num">10</div>
   <h2 class="ap-h">Stamp Duty + Registration Verifier</h2>
   <div class="ap-role"><span class="ap-role-label">AI persona:</span> a property lawyer practising in India in 2026</div>
   <div class="ap-catches"><strong>What this catches.</strong> Catches: applicable concessions for women buyers and joint registration, when the circle/ready-reckoner rate matters more than agreement value, and post-2024 state rule changes that might affect your specific state.</div>
@@ -369,7 +450,7 @@ Be specific to the state mentioned. Concise.</pre>
 </article>
 
 <article class="ap-card" id="p-quote-check">
-  <div class="ap-num">08</div>
+  <div class="ap-num">11</div>
   <h2 class="ap-h">Contractor Quote Reality Check</h2>
   <div class="ap-role"><span class="ap-role-label">AI persona:</span> a construction project manager working in India in 2026</div>
   <div class="ap-catches"><strong>What this catches.</strong> Catches: what the 5 most-inflated line items in Indian contractor BOQs look like, escalation clauses to watch for, what an honest payment milestone schedule looks like, and city-specific quote norms for your project size.</div>
@@ -396,7 +477,7 @@ Be specific to Indian residential construction practice. Concise.</pre>
 </article>
 
 <article class="ap-card" id="p-modular-kitchen">
-  <div class="ap-num">09</div>
+  <div class="ap-num">12</div>
   <h2 class="ap-h">Modular Kitchen Quote Sanity Check</h2>
   <div class="ap-role"><span class="ap-role-label">AI persona:</span> an Indian modular kitchen designer</div>
   <div class="ap-catches"><strong>What this catches.</strong> Catches: shutter-finish brand-vs-unbranded substitution risks, hardware (hinges, channels) tier mismatches that show up after 18 months, layout choices that drive cost more than finishes, and what 60K vs 1.5L per running foot really differ in.</div>
@@ -423,7 +504,7 @@ Be Indian-context specific. Concise.</pre>
 </article>
 
 <article class="ap-card" id="p-bathroom-renovation">
-  <div class="ap-num">10</div>
+  <div class="ap-num">13</div>
   <h2 class="ap-h">Bathroom Renovation Quote Verifier</h2>
   <div class="ap-role"><span class="ap-role-label">AI persona:</span> an Indian residential plumber and bathroom contractor in 2026</div>
   <div class="ap-catches"><strong>What this catches.</strong> Catches: waterproofing scope and warranty norms (most contractors skim here), tile-cost-per-sqft vs sanitaryware-cost reality, plumbing rough-in scope often missing from quote, and exhaust-fan/ventilation specs people regret.</div>
@@ -450,7 +531,7 @@ Be Indian-context specific. Concise.</pre>
 </article>
 
 <article class="ap-card" id="p-painting-cost">
-  <div class="ap-num">11</div>
+  <div class="ap-num">14</div>
   <h2 class="ap-h">Painting Cost Estimate Verifier</h2>
   <div class="ap-role"><span class="ap-role-label">AI persona:</span> an Indian painting contractor with 10+ years experience</div>
   <div class="ap-catches"><strong>What this catches.</strong> Catches: putty + primer scope (usually undercharged), distemper vs emulsion vs textured implications for actual lifespan, exterior weatherproofing premium logic, and warranty norms that are realistic vs marketing claims.</div>
@@ -477,7 +558,7 @@ Be Indian-context specific. Concise.</pre>
 </article>
 
 <article class="ap-card" id="p-waterproofing">
-  <div class="ap-num">12</div>
+  <div class="ap-num">15</div>
   <h2 class="ap-h">Waterproofing Cost & Method Verifier</h2>
   <div class="ap-role"><span class="ap-role-label">AI persona:</span> an Indian waterproofing applicator with experience in monsoon zones</div>
   <div class="ap-catches"><strong>What this catches.</strong> Catches: method-mismatch for your specific failure mode (terrace vs bathroom vs basement vs external wall need different chemistry), warranty terms that are realistic for India's monsoon zones, and what realistic 5–10 year revisit cycles look like.</div>

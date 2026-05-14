@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E02EQTPXKE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E02EQTPXKE');
+</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Home Loan Prepay vs SIP Calculator India 2026 — Which Builds More Wealth?</title>
+<meta name="description" content="Free calculator: should you use surplus cash to prepay your home loan or invest it in equity SIP? Models both paths month-by-month with Section 24 tax benefit, alt-return assumption, and gives a clear verdict — PREPAY / KEEP-INVESTING / TOO-CLOSE."/>
+<link rel="canonical" href="https://gharkabudget.com/prepay-vs-sip/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://gharkabudget.com/prepay-vs-sip/"/>
+<meta property="og:title" content="Home Loan Prepay vs SIP Calculator India 2026"/>
+<meta property="og:description" content="Got surplus cash and an active home loan? This calculator simulates both paths — prepaying vs investing in SIP — and tells you which builds more net wealth, with Section 24 tax benefit factored in."/>
+<meta property="og:image" content="https://gharkabudget.com/og-image.jpg"/>
+<meta property="og:site_name" content="Ghar Ka Budget"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Home Loan Prepay vs SIP Calculator India","url":"https://gharkabudget.com/prepay-vs-sip/","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Free calculator that simulates both paths — prepaying home loan principal vs investing the surplus in equity SIP — month-by-month over the loan's remaining tenure. Reports net wealth at horizon for each path and a verdict.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should I prepay my home loan or invest in SIP?","acceptedAnswer":{"@type":"Answer","text":"It depends on the gap between your loan rate and your alternative investment return — adjusted for tax. If your home loan rate (after Section 24 tax benefit) is higher than your expected SIP return, prepay. If your alt-return is meaningfully higher, keep investing. The threshold flips dramatically based on tax regime: under the new tax regime (default since FY24-25) self-occupied home loan interest gets no deduction, so the gross loan rate stands. Under the old regime with Section 24, the effective rate drops by your slab times the deductible portion. The calculator simulates both paths month-by-month and gives you the actual wealth difference at the end of your loan tenure."}},{"@type":"Question","name":"What does Section 24 tax benefit do to the math?","acceptedAnswer":{"@type":"Answer","text":"Section 24(b) of the Income Tax Act allows a deduction of up to Rs 2 lakh per year on home loan interest for self-occupied properties under the old tax regime. For let-out properties the deduction is uncapped. For someone in the 30% slab paying Rs 2L+ interest annually on a self-occupied property, the benefit is Rs 60,000 per year — effectively reducing the loan rate by 1.0–1.5%. This makes 'keep investing' more attractive. Under the new tax regime (the default since FY 2024-25), this deduction is not available for self-occupied properties, so the loan's gross rate is the rate you actually pay — making 'prepay' more attractive in most cases."}},{"@type":"Question","name":"What alt-return rate should I assume?","acceptedAnswer":{"@type":"Answer","text":"For 7-15 year horizons, equity mutual fund SIPs (Nifty 50/Sensex/index funds) have historically delivered 11-13% CAGR over rolling 10-year windows. Hybrid balanced advantage funds: 9-10%. Pure debt or fixed deposits: 7-7.5% pre-tax (less after debt-fund LTCG taxation post-2023). If you are not actually disciplined enough to maintain SIP through a full bear market, your real return will be lower. Use 10-11% if you would actually invest in equity, 7-8% if you prefer FD/debt. The verdict in this calculator is highly sensitive to this number — try both endpoints to see how much it matters."}},{"@type":"Question","name":"Is partial prepayment allowed on Indian home loans?","acceptedAnswer":{"@type":"Answer","text":"Yes. RBI guidelines mandate that floating-rate home loans cannot have a prepayment penalty for individual borrowers. You can prepay any amount, any month, any number of times — most banks allow prepayment online, by cheque, or at the branch. Two options on prepayment: (1) reduce tenure (keep EMI same, finish loan earlier) or (2) reduce EMI (keep tenure same, lower monthly outflow). For maximum interest saving, always choose 'reduce tenure'. Fixed-rate loans may have a 2-3% prepayment penalty — read your loan agreement before assuming."}},{"@type":"Question","name":"What is the break-even calculation in this calculator?","acceptedAnswer":{"@type":"Answer","text":"The calculator simulates two parallel paths over the loan's remaining tenure. Path A (KEEP-INVESTING): pay EMI normally, invest the monthly surplus in SIP at alt-return. Path B (PREPAY): use the surplus as additional monthly principal payment, finishing the loan early; once the loan is paid off, redirect the freed cash flow (full EMI + original surplus) into SIP for the remaining months. Both paths end with a fully paid home and a SIP corpus — the calculator compares the corpus values. The verdict is PREPAY if Path B's corpus exceeds Path A's by more than 5%, KEEP-INVESTING if Path A exceeds Path B by more than 5%, and TOO-CLOSE-TO-CALL otherwise."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gharkabudget.com/"},{"@type":"ListItem","position":2,"name":"Prepay vs SIP Calculator","item":"https://gharkabudget.com/prepay-vs-sip/"}]}</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--p:#2D3A4A;--a:#E87722;--s:#F5F5F3;--c:#fff;--t:#1C1C1A;--m:#666;--b:#E0DDE0;--r:10px;--nh:64px;--ok:#22A06B;--warn:#D97706;--bad:#cc1f1a}
+html,body{overflow-x:hidden;max-width:100vw;scroll-behavior:smooth}
+*{min-width:0}
+body{font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;color:var(--t);background:var(--s);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.w{width:100%;max-width:1160px;margin:0 auto;padding:0 24px}
+
+nav.bar{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--b);height:var(--nh);display:flex;align-items:center}
+.ni{display:flex;align-items:center;justify-content:space-between;width:100%}
+.logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:var(--p);display:flex;align-items:center;gap:8px}
+.logo-i{width:28px;height:28px;background:var(--a);border-radius:6px;display:flex;align-items:center;justify-content:center}
+.logo-i span{display:block;width:14px;height:2px;background:#fff;position:relative;border-radius:2px}
+.logo-i span::before,.logo-i span::after{content:'';position:absolute;left:0;height:2px;background:#fff;border-radius:2px}
+.logo-i span::before{top:-5px;width:10px}.logo-i span::after{top:5px;width:14px}
+.nl{display:flex;gap:6px}
+.nl a{font-size:.875rem;font-weight:500;color:var(--m);padding:6px 14px;border-radius:6px}
+.nl a:hover{color:var(--p);background:var(--s)}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border:none;background:none}
+.hbg span{display:block;width:22px;height:2px;background:var(--p);border-radius:2px}
+.mob{display:none;position:fixed;top:var(--nh);left:0;right:0;bottom:0;background:#fff;padding:24px;z-index:99;flex-direction:column;gap:4px;border-top:1px solid var(--b);overflow-y:auto}
+.mob a{font-size:1.05rem;font-weight:500;color:var(--p);padding:14px 16px;border-radius:8px}
+.mob.open{display:flex}
+
+.ah{background:var(--p);padding:48px 0 36px;color:#fff}
+.bc{display:flex;align-items:center;gap:8px;font-size:.8rem;color:rgba(255,255,255,.55);margin-bottom:14px}
+.bc a{color:rgba(255,255,255,.55)}.bc span{color:rgba(255,255,255,.35)}
+.ctag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--a);background:rgba(232,119,34,.15);border:1px solid rgba(232,119,34,.3);padding:3px 10px;border-radius:4px;margin-bottom:14px}
+.ah h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.7rem,3.5vw,2.2rem);letter-spacing:-.03em;line-height:1.2;margin-bottom:10px;max-width:760px}
+.ah p{font-size:.95rem;color:rgba(255,255,255,.72);max-width:680px;line-height:1.65}
+
+.calc-wrap{padding:32px 0 48px}
+.calc-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:start}
+.calc-card{background:#fff;border:1px solid var(--b);border-radius:12px;padding:28px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.calc-card h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:var(--p);margin-bottom:6px}
+.calc-card .sub{font-size:.88rem;color:var(--m);margin-bottom:22px}
+.fset{margin-bottom:22px;padding-bottom:18px;border-bottom:1px dashed var(--b)}
+.fset:last-of-type{border-bottom:none;padding-bottom:0;margin-bottom:8px}
+.fset-h{font-size:.78rem;font-weight:700;color:var(--a);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+.field{margin-bottom:16px}
+.field:last-child{margin-bottom:0}
+.field label{display:block;font-weight:600;font-size:.88rem;color:var(--p);margin-bottom:6px}
+.field .help{font-size:.76rem;color:var(--m);margin-top:4px}
+.field input,.field select{width:100%;padding:11px 14px;border:1.5px solid var(--b);border-radius:8px;font-size:1rem;font-family:inherit;background:#fff;color:var(--t)}
+.field input:focus,.field select:focus{outline:none;border-color:var(--a)}
+.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.radios{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.radios.r2{grid-template-columns:1fr 1fr}
+.radio-opt{cursor:pointer;padding:11px 8px;border:1.5px solid var(--b);border-radius:8px;text-align:center;font-size:.85rem;font-weight:500;background:#fff;transition:border-color .15s,background .15s,color .15s}
+.radio-opt input{display:none}
+.radio-opt.selected{border-color:var(--a);background:rgba(232,119,34,.08);color:var(--p);font-weight:600}
+.calc-btn{width:100%;padding:14px;background:var(--a);color:#fff;font-weight:700;font-size:1rem;border:none;border-radius:8px;cursor:pointer;margin-top:14px}
+.calc-btn:hover{background:#d4691a}
+.err{color:#cc1f1a;font-size:.78rem;margin-top:4px;display:none}
+.err.show{display:block}
+.field input.error,.field select.error{border-color:#cc1f1a}
+
+.preset-bar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.preset-btn{font-size:.78rem;padding:7px 11px;border:1.5px solid var(--b);background:#fff;border-radius:6px;cursor:pointer;color:var(--p);font-weight:500;font-family:inherit;line-height:1.3;text-align:left}
+.preset-btn:hover{border-color:var(--a);color:var(--a)}
+
+.result{background:linear-gradient(135deg,#fff 0%,#fafaf8 100%);border:1px solid var(--b);border-radius:12px;padding:28px;display:none;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.result.show{display:block}
+.result h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:var(--p);margin-bottom:14px}
+.verdict{padding:16px 18px;border-radius:10px;margin-bottom:20px;border-left:4px solid}
+.verdict.prepay{background:rgba(34,160,107,.08);border-color:var(--ok)}
+.verdict.close{background:rgba(217,119,6,.08);border-color:var(--warn)}
+.verdict.invest{background:rgba(232,119,34,.10);border-color:var(--a)}
+.verdict-h{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:4px}
+.verdict.prepay .verdict-h{color:var(--ok)}
+.verdict.close .verdict-h{color:var(--warn)}
+.verdict.invest .verdict-h{color:var(--a)}
+.verdict-d{font-size:.85rem;color:var(--p);line-height:1.55}
+.tot{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:2.1rem;color:var(--p);line-height:1;margin-bottom:4px}
+.tot-sub{font-size:.85rem;color:var(--m);margin-bottom:20px}
+.row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--b);font-size:.92rem;gap:12px}
+.row:last-of-type{border-bottom:none}
+.row .lbl{color:var(--m)}.row .val{font-weight:600;color:var(--p);text-align:right;flex-shrink:0}
+.row.total{border-top:2px solid var(--p);margin-top:6px;padding-top:14px;font-size:1rem}
+.row.total .val{color:var(--a)}
+.subhead{font-size:.78rem;font-weight:700;color:var(--p);text-transform:uppercase;letter-spacing:.06em;margin:18px 0 4px}
+.note{margin-top:16px;background:rgba(232,119,34,.08);border-left:3px solid var(--a);padding:12px 14px;border-radius:4px;font-size:.85rem;color:var(--p)}
+.note strong{color:var(--a)}
+
+.year-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.82rem;background:#fff;border:1px solid var(--b);border-radius:8px;overflow:hidden}
+.year-table th{background:var(--p);color:#fff;text-align:left;padding:8px 10px;font-weight:600;font-size:.75rem}
+.year-table td{padding:7px 10px;border-bottom:1px solid var(--b)}
+.year-table tr:last-child td{border-bottom:none}
+.year-table tr.payoff td{background:rgba(34,160,107,.10);font-weight:600}
+.year-table .num{text-align:right;font-variant-numeric:tabular-nums}
+
+.chart-wrap{margin:14px 0;background:#fff;border:1px solid var(--b);border-radius:8px;padding:16px}
+.chart-title{font-size:.78rem;font-weight:700;color:var(--p);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.chart-svg{width:100%;height:200px;display:block}
+.chart-legend{display:flex;gap:18px;font-size:.78rem;margin-top:6px;flex-wrap:wrap}
+.chart-legend span{display:flex;align-items:center;gap:6px}
+.chart-legend i{display:inline-block;width:14px;height:3px;border-radius:2px}
+
+.content{padding:24px 0 64px}
+.content h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.35rem;color:var(--p);margin:36px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--b)}
+.content p{margin-bottom:14px;font-size:.95rem}
+.content ul{list-style:disc inside;margin:8px 0 14px;padding-left:8px}
+.content ul li{margin-bottom:6px;font-size:.95rem}
+.faq{margin-top:32px}
+.faq-item{background:#fff;border:1px solid var(--b);border-radius:8px;margin-bottom:8px;overflow:hidden}
+.faq-q{padding:14px 18px;font-weight:600;color:var(--p);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:.95rem}
+.faq-q::after{content:'+';color:var(--a);font-size:1.2rem;font-weight:400}
+.faq-q.open::after{content:'−'}
+.faq-a{padding:0 18px 14px;font-size:.92rem;color:var(--p);line-height:1.7;display:none}
+.faq-a.open{display:block}
+
+.related{margin:32px 0;padding:22px;background:#fff;border:1px solid var(--b);border-radius:10px}
+.related h3{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;color:var(--p);margin-bottom:12px}
+.related a{display:block;color:var(--a);font-weight:500;font-size:.92rem;padding:6px 0;border-bottom:1px solid rgba(0,0,0,.04)}
+.related a:last-child{border-bottom:none}
+.related a:hover{text-decoration:underline}
+
+.footer{background:#fff;border-top:1px solid var(--b);padding:32px 0;color:var(--m);font-size:.85rem}
+.footer__inner{max-width:1160px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+.footer__links{display:flex;gap:18px;flex-wrap:wrap}
+.footer__links a:hover{color:var(--p)}
+
+@media (max-width:880px){
+  .nl{display:none}
+  .hbg{display:flex}
+  .calc-grid{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .ah{padding:32px 0 24px}
+  .calc-wrap{padding:24px 0 36px}
+  .calc-card{padding:20px}
+  .field-grid{grid-template-columns:1fr}
+  .radios{grid-template-columns:1fr 1fr 1fr}
+  .radios.r2{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="bar">
+<div class="w ni">
+<a href="/" class="logo"><span class="logo-i"><span></span></span>Ghar Ka Budget</a>
+<div class="nl">
+<a href="/emi/">EMI</a>
+<a href="/emi-vs-rent/">EMI vs Rent</a>
+<a href="/prepay-vs-sip/" class="active">Prepay vs SIP</a>
+<a href="/articles/">Articles</a>
+</div>
+<button class="hbg" aria-label="Menu" id="hbg" onclick="document.getElementById('mob').classList.toggle('open')"><span></span><span></span><span></span></button>
+</div>
+</nav>
+<div class="mob" id="mob">
+<a href="/construction/">Construction Cost</a>
+<a href="/interior/">Interior Cost</a>
+<a href="/emi/">EMI Calculator</a>
+<a href="/emi-vs-rent/">EMI vs Rent</a>
+<a href="/prepay-vs-sip/">Prepay vs SIP</a>
+<a href="/balance-transfer/">Balance Transfer</a>
+<a href="/pmay-eligibility/">PMAY 2.0 Eligibility</a>
+<a href="/home-loan-eligibility/">Loan Eligibility</a>
+<a href="/quote-check/">Quote Check</a>
+<a href="/stamp-duty/">Stamp Duty</a>
+<a href="/plot-viability/">Plot Viability</a>
+<a href="/painting-cost/">Painting Cost</a>
+<a href="/modular-kitchen/">Modular Kitchen</a>
+<a href="/bathroom-renovation/">Bathroom Renovation</a>
+<a href="/waterproofing/">Waterproofing</a>
+<a href="/articles/">Articles</a>
+<a href="/methodology/">Methodology</a>
+</div>
+
+<header class="ah"><div class="w">
+<div class="bc"><a href="/">Home</a><span>/</span><span>Prepay vs SIP Calculator</span></div>
+<span class="ctag">May 2026 · India</span>
+<h1>Home Loan Prepay vs SIP — Which Builds More Wealth?</h1>
+<p>You have an active home loan and some monthly surplus. Should you use it to prepay the loan faster, or invest in equity SIP instead? This calculator simulates both paths month-by-month — including Section 24 tax benefit at your slab — and tells you which one leaves you with a larger net worth at the end of your loan tenure.</p>
+</div></header>
+
+<section class="calc-wrap"><div class="w">
+<div class="calc-grid">
+
+<!-- LEFT: Form -->
+<div class="calc-card">
+<h2>Your loan + cashflow</h2>
+<p class="sub">Enter the loan you actually have outstanding. The verdict depends heavily on your tax setup — pick carefully.</p>
+
+<div class="preset-bar">
+<button type="button" class="preset-btn" onclick="loadPreset('mid')">Mid-tenure SBI loan</button>
+<button type="button" class="preset-btn" onclick="loadPreset('young')">Just-disbursed loan</button>
+<button type="button" class="preset-btn" onclick="loadPreset('late')">Last 5 years</button>
+<button type="button" class="preset-btn" onclick="loadPreset('letout')">Let-out property</button>
+</div>
+
+<!-- Loan inputs -->
+<div class="fset">
+<div class="fset-h">Your loan</div>
+<div class="field">
+<label for="balance">Outstanding loan principal (₹)</label>
+<input type="number" id="balance" min="100000" step="50000" placeholder="e.g. 4500000"/>
+<div class="help">What you still owe today (not the original loan amount). Check your bank's home loan statement.</div>
+<div class="err" id="err-balance">Enter a valid outstanding balance (minimum ₹1L)</div>
+</div>
+<div class="field-grid">
+<div class="field">
+<label for="rate">Current interest rate (% p.a.)</label>
+<input type="number" id="rate" min="6" max="14" step="0.05" value="8.50"/>
+<div class="help">2026 typical: 7.50–9.25%</div>
+</div>
+<div class="field">
+<label for="tenure">Remaining tenure (years)</label>
+<input type="number" id="tenure" min="1" max="30" step="1" value="15"/>
+<div class="help">Years still left on the loan</div>
+<div class="err" id="err-tenure">Enter remaining tenure in years (1-30)</div>
+</div>
+</div>
+</div>
+
+<!-- Surplus + alt -->
+<div class="fset">
+<div class="fset-h">Your surplus &amp; investment view</div>
+<div class="field">
+<label for="surplus">Monthly surplus available (₹)</label>
+<input type="number" id="surplus" min="500" step="500" placeholder="e.g. 15000"/>
+<div class="help">Extra money you can either prepay or invest, every month</div>
+<div class="err" id="err-surplus">Enter a valid monthly surplus (minimum ₹500)</div>
+</div>
+<div class="field">
+<label for="altReturn">Expected SIP / alt-investment return (% p.a.)</label>
+<input type="number" id="altReturn" min="4" max="20" step="0.5" value="11"/>
+<div class="help">Equity index SIP: 10–12%; balanced fund: 9–10%; FD/debt: 7–7.5%. Be honest — what you'd actually earn, not what's possible.</div>
+</div>
+</div>
+
+<!-- Tax setup -->
+<div class="fset">
+<div class="fset-h">Your tax setup</div>
+<div class="field">
+<label>How are you claiming home loan interest?</label>
+<div class="radios r2" style="grid-template-columns:1fr 1fr 1fr;">
+<label class="radio-opt selected"><input type="radio" name="taxMode" value="none" checked/>No deduction</label>
+<label class="radio-opt"><input type="radio" name="taxMode" value="self"/>Self-occupied (₹2L cap, old regime)</label>
+<label class="radio-opt"><input type="radio" name="taxMode" value="letout"/>Let-out (uncapped, either regime)</label>
+</div>
+<div class="help" style="margin-top:6px">New tax regime is the default since FY24-25 and gives no Section 24 benefit on self-occupied homes — pick "No deduction" if you're on the new regime.</div>
+</div>
+<div class="field" id="slabField">
+<label for="slab">Your tax slab (%)</label>
+<select id="slab">
+<option value="0">No tax (below threshold)</option>
+<option value="5">5% slab</option>
+<option value="10">10% slab</option>
+<option value="15">15% slab</option>
+<option value="20">20% slab</option>
+<option value="25">25% slab</option>
+<option value="30" selected>30% slab</option>
+</select>
+<div class="help">Your marginal income-tax slab — the rate at which the deduction reduces your tax</div>
+</div>
+</div>
+
+<button class="calc-btn" onclick="calcPS()">Compare PREPAY vs SIP</button>
+</div>
+
+<!-- RIGHT: Result panel -->
+<div class="result" id="resultPanel">
+<h2>Your verdict</h2>
+
+<div class="verdict" id="verdictBox">
+<div class="verdict-h" id="verdictH">—</div>
+<div class="verdict-d" id="verdictD">—</div>
+</div>
+
+<div class="subhead">At end of your <span id="rTenure">—</span>-year loan tenure</div>
+<div class="row"><span class="lbl">Net wealth if you PREPAY surplus into loan</span><span class="val" id="rPrepayWealth">—</span></div>
+<div class="row"><span class="lbl">Net wealth if you KEEP investing surplus in SIP</span><span class="val" id="rSipWealth">—</span></div>
+<div class="row total"><span class="lbl">Difference</span><span class="val" id="rDelta">—</span></div>
+
+<div class="subhead">Loan payoff timing</div>
+<div class="row"><span class="lbl">Original tenure (no prepayment)</span><span class="val" id="rOrigTenure">—</span></div>
+<div class="row"><span class="lbl">If you prepay, loan finishes in</span><span class="val" id="rPrepayTenure">—</span></div>
+<div class="row"><span class="lbl">Years saved on loan</span><span class="val" id="rYearsSaved">—</span></div>
+
+<div class="subhead">Interest paid to bank</div>
+<div class="row"><span class="lbl">Without prepayment</span><span class="val" id="rIntNoPrepay">—</span></div>
+<div class="row"><span class="lbl">With prepayment</span><span class="val" id="rIntPrepay">—</span></div>
+<div class="row total"><span class="lbl">Interest saved</span><span class="val" id="rIntSaved">—</span></div>
+
+<div class="subhead">Tax benefit foregone (if any)</div>
+<div class="row"><span class="lbl">Section 24 tax saved (no prepay path)</span><span class="val" id="rTaxA">—</span></div>
+<div class="row"><span class="lbl">Section 24 tax saved (prepay path)</span><span class="val" id="rTaxB">—</span></div>
+<div class="row total"><span class="lbl">Tax benefit foregone by prepaying</span><span class="val" id="rTaxLoss">—</span></div>
+
+<div class="subhead">Monthly numbers</div>
+<div class="row"><span class="lbl">Your current EMI</span><span class="val" id="rEMI">—</span></div>
+<div class="row"><span class="lbl">Your monthly surplus</span><span class="val" id="rSurplus">—</span></div>
+<div class="row"><span class="lbl">PREPAY-path: monthly outflow until payoff</span><span class="val" id="rPrepayMonthly">—</span></div>
+<div class="row"><span class="lbl">After payoff: redirected to SIP</span><span class="val" id="rRedirected">—</span></div>
+
+<div class="chart-wrap">
+<div class="chart-title">Year-by-year wealth comparison</div>
+<svg class="chart-svg" id="wealthChart" viewBox="0 0 600 200" preserveAspectRatio="none"></svg>
+<div class="chart-legend">
+<span><i style="background:var(--ok)"></i>PREPAY path (SIP corpus after payoff)</span>
+<span><i style="background:var(--a)"></i>KEEP-INVESTING path (SIP corpus)</span>
+</div>
+</div>
+
+<div class="subhead">Year-by-year breakdown</div>
+<table class="year-table" id="yearTable">
+<thead><tr><th>Year</th><th class="num">PREPAY balance</th><th class="num">PREPAY corpus</th><th class="num">No-prepay balance</th><th class="num">SIP corpus</th><th class="num">Edge</th></tr></thead>
+<tbody></tbody>
+</table>
+
+<div class="note" id="resultNote"><strong>Reminder:</strong> This is a financial filter. Liquidity matters too — prepayment locks the money into property equity (illiquid). Keep an emergency fund (6 months EMI + expenses) before considering any prepayment, regardless of what the verdict says.</div>
+</div>
+
+</div>
+</div></section>
+
+<section class="content"><div class="w">
+<h2>The prepay vs SIP question — why it matters</h2>
+<p>You finished signing the loan papers. EMI is debiting every month. Now your salary went up, you got a bonus, or you just have ₹15,000 lying around at month-end that you don't need for living expenses. The classic question follows: should you use this surplus to <strong>prepay the loan</strong> (reduce tenure, save interest) or <strong>invest in equity SIP</strong> (chase 11–12% returns)?</p>
+<p>Indian personal finance content gives wildly contradictory answers. Some bloggers say "always prepay, debt is bondage." Others say "never prepay, equity will outperform." Both are wrong as universal advice — the right answer depends on the gap between your <em>after-tax</em> loan rate and your <em>realistic</em> alt-return assumption.</p>
+<p>This calculator runs both paths month-by-month over your remaining loan tenure and tells you which corpus is bigger at the end. No paragraph of "it depends" — a number you can act on.</p>
+
+<h2>How the two paths work</h2>
+<p><strong>PATH A — KEEP-INVESTING:</strong> You pay your EMI normally for the full remaining tenure. Every month you also invest the surplus (₹15,000 in our example) in equity SIP at your assumed alt-return. At the end of the tenure, you have a paid-off home and an SIP corpus. The bigger your alt-return, the bigger the corpus.</p>
+<p><strong>PATH B — PREPAY-LOAN:</strong> Every month, you pay your EMI <em>plus</em> the surplus as additional principal payment to the bank. The loan dies much earlier — possibly 5–10 years earlier than the original tenure. Once the loan is paid off, you redirect the entire freed-up cash flow (your full EMI + the original surplus) into SIP for the remaining months until the original tenure would have ended. At the end, you have a paid-off home and a different SIP corpus — built up from the catch-up phase.</p>
+<p>The verdict is decided by which corpus is larger.</p>
+
+<h2>What tilts the answer toward PREPAY</h2>
+<ul>
+<li><strong>You're on the new tax regime</strong> — Section 24 deduction on self-occupied homes is unavailable, so the gross loan rate is the rate you actually pay. The gap between (say) 8.5% loan and 8% conservative SIP shrinks toward "prepay wins."</li>
+<li><strong>Your alt-return assumption is honest and modest</strong> — if you're a debt/FD investor expecting 7–7.5%, after-tax that's roughly 5–6% — clearly below most home-loan rates. Prepay wins easily.</li>
+<li><strong>You are early in the loan</strong> — interest as a share of EMI is highest in early years (typically 70–85%). Prepayment has its biggest dent on total interest paid when applied early.</li>
+<li><strong>You don't actually maintain SIP discipline</strong> — if every market downturn makes you stop or pull out, your real alt-return is a fraction of the model assumption. Honest self-assessment matters here.</li>
+</ul>
+
+<h2>What tilts the answer toward KEEP-INVESTING</h2>
+<ul>
+<li><strong>You're claiming Section 24 and in the 30% slab on a self-occupied home</strong> — the ₹2L cap means up to ₹60,000 per year of tax saving, effectively reducing your loan rate by 1.0–1.5 percentage points.</li>
+<li><strong>Your property is let out</strong> — interest is deductible without cap, so the effective loan rate drops to (gross rate × (1 − slab)). At 30% slab, an 8.5% gross becomes 5.95% effective. SIP wins comfortably at any reasonable alt-return.</li>
+<li><strong>You expect equity SIP returns of 11%+ over 10–15 years</strong> — historical Nifty 50 rolling 10-year CAGRs support this assumption, but it requires real discipline (don't stop SIP in market crashes).</li>
+<li><strong>You're late in the loan tenure</strong> — interest as a share of EMI is small in the last 5 years (15–25%). Saving "interest" by prepaying matters less here.</li>
+</ul>
+
+<h2>What this calculator does NOT model</h2>
+<ul>
+<li><strong>Behaviour:</strong> the model assumes you actually invest the surplus consistently in the KEEP-INVESTING path. If you tend to spend windfalls, prepayment provides "forced discipline" that the math doesn't credit.</li>
+<li><strong>Liquidity asymmetry:</strong> SIP corpus can be redeemed in 2-3 days. Loan prepayment locks money into property equity — to access it you'd need a top-up loan or to sell the property. Keep at least 6 months of EMI + living costs as an emergency fund before any prepayment.</li>
+<li><strong>Stochastic returns:</strong> 11% alt-return is an average; real markets deliver -25% one year and +30% the next. The variance affects your nerve more than the model.</li>
+<li><strong>Rate changes mid-tenure:</strong> floating-rate loans reset with repo rate movements. The calc holds the rate constant for simplicity. If rates fall by 100 bps, the SIP path becomes slightly more attractive.</li>
+<li><strong>STCG/LTCG on equity SIP:</strong> equity LTCG above ₹1.25L is taxed at 12.5% (post April 2024). For long-term holdings, this is a small drag — model doesn't apply this haircut.</li>
+</ul>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Should I prepay my home loan or invest in SIP?</div>
+<div class="faq-a">It depends on the gap between your effective loan rate (after Section 24 tax benefit) and your honest expected alt-return. If your loan rate (after-tax) is higher than what you'd actually earn on SIP, prepay. If your alt-return is meaningfully higher, invest. The threshold flips dramatically based on tax regime: under the new tax regime (default since FY24-25) you get no Section 24 benefit on self-occupied homes — the full gross rate stands. Under old regime self-occupied with 30% slab and ₹2L cap, the effective rate drops by ~1.0-1.5 percentage points. The calculator runs the actual month-by-month math at your inputs and gives you a number-based verdict instead of generic "it depends" advice.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">What does Section 24 tax benefit do to the math?</div>
+<div class="faq-a">Section 24(b) of the Income Tax Act allows a deduction of up to ₹2 lakh per year on home loan interest for self-occupied properties under the old tax regime. For let-out properties the deduction is uncapped — entire interest is deductible. For someone in the 30% slab paying ₹2L+ interest annually on a self-occupied home, the benefit is ₹60,000 per year — effectively reducing the loan rate by around 1.0-1.5 percentage points. This makes "keep investing" more attractive. Under the new tax regime (the default since FY 2024-25), Section 24 is not available for self-occupied properties — so the loan's gross rate is the rate you actually pay, making "prepay" more attractive in many cases.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">What alt-return rate should I assume?</div>
+<div class="faq-a">For 7-15 year horizons: equity mutual fund SIPs (Nifty 50/Sensex/index funds) have historically delivered 11-13% CAGR over rolling 10-year windows. Hybrid balanced advantage funds: 9-10%. Pure debt or fixed deposits: 7-7.5% pre-tax (less after debt-fund LTCG taxation post-2023). If you are not actually disciplined enough to maintain SIP through a full bear market, your real return will be lower. Use 10-11% if you would actually invest in equity, 7-8% if you prefer FD/debt. The verdict is highly sensitive to this number — try both endpoints to see how much your assumption matters.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Are there prepayment penalties on Indian home loans?</div>
+<div class="faq-a">For floating-rate home loans taken by individual borrowers, RBI rules prohibit prepayment penalty — banks cannot charge for partial or full prepayment. You can prepay any amount, any month, any number of times. Most banks accept prepayment online, by cheque, or at the branch. On prepayment, you have two options: (1) reduce tenure (keep EMI same, finish loan earlier — best for interest saving) or (2) reduce EMI (keep tenure same, lower monthly outflow). For maximum interest saving, always pick "reduce tenure." Fixed-rate home loans may have a 2-3% prepayment penalty — check your loan agreement before assuming.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">What is the verdict logic in this calculator?</div>
+<div class="faq-a">The calculator simulates two parallel paths over the loan's remaining tenure. Path A (KEEP-INVESTING): pay EMI normally, invest the monthly surplus in SIP at alt-return for the full tenure. Path B (PREPAY-LOAN): use surplus as additional monthly principal, finishing the loan early; once paid off, redirect the freed-up cash flow (full EMI + original surplus) into SIP for the remaining months. Both paths end with a fully-paid home and an SIP corpus — the calculator compares the corpus values. Verdict: PREPAY if Path B's corpus exceeds Path A's by more than 5%, KEEP-INVESTING if Path A exceeds Path B by more than 5%, and TOO-CLOSE-TO-CALL if within ±5%. Tax benefit on interest is added back to the wealth column each year (assumed reinvested at alt-return).</div>
+</div>
+</div>
+
+<h2>Log yeh bhi poochte hain (Hinglish FAQs)</h2>
+<div class="faq">
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Home loan prepay karna sahi hai ya SIP mein dalna?</div>
+<div class="faq-a">Sahi answer aapki tax setup aur alt-return par depend karta hai. Agar aap new tax regime mein ho (default since FY24-25) aur self-occupied home hai, toh aapko Section 24 ka tax benefit nahi milta — yaani aapka loan ka full 8.5% rate aapko hi pay karna hai. Iss case mein agar aapko honestly 9-10% se kam SIP return expect hai, toh prepay better hai. Lekin agar aap old regime use karte ho aur 30% slab mein ho, toh ₹2L tak interest deductible hai — effective rate kareeb 7-7.5% ban jaata hai, aur SIP at 11% clearly jeet jaayega. Calculator yeh exact math kar deta hai — apne real numbers daal ke check karo.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Mera loan ka rate 8.5% hai aur SIP se 12% expected hai — toh SIP hi karna chahiye na?</div>
+<div class="faq-a">Theoretically haan, par practically nahi. Pehli baat — 12% return guaranteed nahi hai, woh historical average hai. 2008 ya 2020 jaisi crash situations mein 25-30% giravat aati hai aur log discipline kho dete hain. Doosri baat — aapne 12% maan rakha hai, par after-tax LTCG 12.5% pay karne ke baad effective return ~10.5% rehta hai (post April 2024 rules). Teesri baat — agar aap new tax regime mein ho aur self-occupied home hai, toh loan ka 8.5% gross rate hai (Sec 24 deduction nahi milega). 8.5% gross loan vs 10.5% effective SIP ka gap sirf 2% hai — that's a tight margin where market volatility easily flips the verdict. Calculator iss exact comparison ko model karta hai, including tax setup. Iss ke baad decide karo.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Tenure ghatana achha hai ya EMI ghatana?</div>
+<div class="faq-a">Hamesha tenure ghatana achha hai — yeh 90% cases mein sahi answer hai. Reason: prepayment amount jab principal mein jaata hai, toh future ke saare interest charges automatic kam ho jaate hain. Agar aap "tenure same rakho, EMI ghatao" choose karte ho, toh loan utna hi lamba chalta hai aur compound interest ka effect kam hota hai. Sirf tab "EMI ghatao" choose karo jab aap genuinely cashflow stress mein ho aur monthly bachat se hi life chal rahi ho. Bank usually default tenure-reduction par hi prepayment apply karta hai — par confirm karna important hai. Calculator tenure-reduction ka assumption use karta hai (zyaada interest saving wala scenario).</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Emergency fund pehle banaya, phir prepay ya SIP?</div>
+<div class="faq-a">Bilkul sahi soch hai. Pehle 6 mahine ki EMI + monthly expenses ka emergency fund liquid form mein (savings account / liquid mutual fund) build karo — yeh non-negotiable hai. Bina emergency fund ke prepayment karna khatarnak hai kyunki property equity instantly access nahi hota — aapko top-up loan ya property bechni padegi agar paisa chahiye. Emergency fund ban gaya, phir hi yeh prepay-vs-SIP question relevant ban jaata hai. Calculator yeh assume karta hai ki aapne emergency fund already build kar liya hai aur pure surplus comfortably available hai.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Late tenure mein prepay karna kya useful hai?</div>
+<div class="faq-a">Late tenure mein prepayment ka mathematical benefit kafi kam hai. Jab loan ke last 5 saal bach jaate hain, toh EMI ka maximum portion principal jaata hai aur interest sirf 15-25% hi hota hai. Iss stage par prepay karne se interest savings chhota hai, aur SIP at modest 9-10% return zyaada wealth banaata hai. Loan ke shuru ke 5-10 saal mein prepayment ka assar zyaada hota hai (kyunki tab interest 70-85% EMI ka hota hai). Yeh "early prepayment more powerful than late prepayment" wala principle hai — calculator yeh exact difference quantify kar deta hai.</div>
+</div>
+</div>
+
+</div></section>
+
+<div class="w">
+<div class="related">
+<h3>Related tools and guides</h3>
+<a href="/emi/">Home Loan EMI Calculator — full amortisation schedule &rarr;</a>
+<a href="/emi-vs-rent/">EMI vs Rent — should you buy at all? &rarr;</a>
+<a href="/home-loan-eligibility/">Home Loan Eligibility — what loan size will banks approve? &rarr;</a>
+<a href="/stamp-duty/">Stamp Duty &amp; Registration Calculator &rarr;</a>
+<a href="/methodology/#prepay-vs-sip">How this calculator works (methodology) &rarr;</a>
+</div>
+</div>
+
+<footer class="footer"><div class="w"><div class="footer__inner">
+<div>© 2026 Ghar Ka Budget · gharkabudget.com</div>
+<nav class="footer__links">
+<a href="/about/">About</a>
+<a href="/methodology/">Methodology</a>
+<a href="/editorial-policy/">Editorial Policy</a>
+<a href="/disclaimer/">Disclaimer</a>
+<a href="/privacy/">Privacy</a>
+<a href="/contact/">Contact</a>
+</nav>
+</div></div></footer>
+
+<link rel="stylesheet" href="/calc-enhance.css"/>
+<script>
+// ── Helpers ──
+function formatINR(n){
+  if(!isFinite(n)) return '—';
+  var sign = n < 0 ? '-' : '';
+  n = Math.abs(Math.round(n));
+  var s = n.toString();
+  var lastThree = s.substring(s.length-3);
+  var otherNumbers = s.substring(0, s.length-3);
+  if(otherNumbers !== '') lastThree = ',' + lastThree;
+  var formatted = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+  return sign + '₹' + formatted;
+}
+
+function formatINRshort(n){
+  if(!isFinite(n)) return '—';
+  var sign = n < 0 ? '-' : '';
+  n = Math.abs(n);
+  if(n >= 10000000) return sign + '₹' + (n/10000000).toFixed(2) + ' Cr';
+  if(n >= 100000)   return sign + '₹' + (n/100000).toFixed(2) + ' L';
+  if(n >= 1000)     return sign + '₹' + (n/1000).toFixed(0) + 'K';
+  return sign + '₹' + Math.round(n);
+}
+
+// Radio button visual update + tax-mode → slab field toggle
+document.querySelectorAll('input[type=radio]').forEach(function(r){
+  r.addEventListener('change', function(){
+    var name = r.name;
+    document.querySelectorAll('input[name="'+name+'"]').forEach(function(o){
+      o.closest('.radio-opt').classList.remove('selected');
+    });
+    r.closest('.radio-opt').classList.add('selected');
+    if(name === 'taxMode') updateSlabVisibility();
+  });
+});
+
+function updateSlabVisibility(){
+  var mode = (document.querySelector('input[name=taxMode]:checked')||{}).value;
+  var slabField = document.getElementById('slabField');
+  if(!slabField) return;
+  if(mode === 'none'){
+    slabField.style.display = 'none';
+  } else {
+    slabField.style.display = '';
+  }
+}
+updateSlabVisibility();
+
+function showError(id, msg){
+  var e = document.getElementById('err-'+id);
+  if(!e) return;
+  if(msg) e.textContent = msg;
+  e.classList.add('show');
+  var inp = document.getElementById(id);
+  if(inp) inp.classList.add('error');
+}
+function clearErrors(){
+  document.querySelectorAll('.err').forEach(function(e){ e.classList.remove('show'); });
+  document.querySelectorAll('input,select').forEach(function(i){ i.classList.remove('error'); });
+}
+
+// Presets
+var PRESETS = {
+  mid:    {balance: 4500000, rate: 8.50, tenure: 15, surplus: 15000, altReturn: 11, taxMode: 'none', slab: 30},
+  young:  {balance: 6000000, rate: 7.75, tenure: 20, surplus: 20000, altReturn: 11, taxMode: 'none', slab: 30},
+  late:   {balance: 1500000, rate: 8.50, tenure: 5,  surplus: 15000, altReturn: 11, taxMode: 'none', slab: 30},
+  letout: {balance: 5000000, rate: 8.75, tenure: 18, surplus: 25000, altReturn: 11, taxMode: 'letout', slab: 30}
+};
+
+function loadPreset(key){
+  var p = PRESETS[key];
+  if(!p) return;
+  document.getElementById('balance').value = p.balance;
+  document.getElementById('rate').value = p.rate;
+  document.getElementById('tenure').value = p.tenure;
+  document.getElementById('surplus').value = p.surplus;
+  document.getElementById('altReturn').value = p.altReturn;
+  document.getElementById('slab').value = p.slab;
+  // set radio
+  document.querySelectorAll('input[name=taxMode]').forEach(function(r){
+    var on = r.value === p.taxMode;
+    r.checked = on;
+    r.closest('.radio-opt').classList.toggle('selected', on);
+  });
+  updateSlabVisibility();
+  clearErrors();
+}
+
+// ── Core calc ──
+function calcPS(){
+  clearErrors();
+  var balance = parseFloat(document.getElementById('balance').value);
+  var rate = parseFloat(document.getElementById('rate').value);
+  var tenure = parseFloat(document.getElementById('tenure').value);
+  var surplus = parseFloat(document.getElementById('surplus').value);
+  var altReturn = parseFloat(document.getElementById('altReturn').value);
+  var taxMode = document.querySelector('input[name=taxMode]:checked').value;
+  var slab = parseFloat(document.getElementById('slab').value || 0);
+
+  var ok = true;
+  if(!isFinite(balance) || balance < 100000){ showError('balance'); ok = false; }
+  if(!isFinite(tenure) || tenure < 1 || tenure > 30){ showError('tenure'); ok = false; }
+  if(!isFinite(surplus) || surplus < 500){ showError('surplus'); ok = false; }
+  if(!ok) return;
+
+  // Section 24 cap: ₹2L for self-occupied; uncapped for let-out; 0 for "none"
+  var SEC24_CAP = (taxMode === 'self') ? 200000 : (taxMode === 'letout') ? Infinity : 0;
+  var taxRate = (taxMode === 'none') ? 0 : (slab / 100);
+
+  var monthlyRate = rate / 12 / 100;
+  var altMonthly = altReturn / 12 / 100;
+  var totalMonths = Math.round(tenure * 12);
+  var emi = balance * monthlyRate * Math.pow(1+monthlyRate, totalMonths) / (Math.pow(1+monthlyRate, totalMonths) - 1);
+
+  // ── PATH A: KEEP-INVESTING ──
+  // Pay EMI normally, invest surplus monthly, claim tax benefit annually
+  var balA = balance;
+  var corpusA = 0;
+  var totIntA = 0;
+  var yrIntA = 0;
+  var totTaxSavedA = 0;
+  var snapshotsA = [];
+
+  for(var m = 1; m <= totalMonths; m++){
+    var intM = balA * monthlyRate;
+    var prinM = emi - intM;
+    if(prinM > balA){ prinM = balA; }
+    balA = Math.max(0, balA - prinM);
+    totIntA += intM;
+    yrIntA += intM;
+
+    // Invest surplus
+    corpusA = corpusA * (1 + altMonthly) + surplus;
+
+    // At year-end: apply tax saving for the year (added to corpus, compounded going forward)
+    if(m % 12 === 0 || m === totalMonths){
+      var deductible = Math.min(yrIntA, SEC24_CAP);
+      var taxSaved = deductible * taxRate;
+      corpusA += taxSaved;
+      totTaxSavedA += taxSaved;
+      yrIntA = 0;
+      snapshotsA.push({year: Math.ceil(m/12), balance: balA, corpus: corpusA});
+    }
+  }
+
+  // ── PATH B: PREPAY-LOAN ──
+  // Apply EMI + surplus toward loan until paid off, then redirect (EMI + surplus) to SIP
+  var balB = balance;
+  var corpusB = 0;
+  var totIntB = 0;
+  var yrIntB = 0;
+  var totTaxSavedB = 0;
+  var snapshotsB = [];
+  var payoffMonth = null;
+
+  for(var m = 1; m <= totalMonths; m++){
+    if(balB > 0){
+      var intM = balB * monthlyRate;
+      var prinFromEmi = emi - intM;
+      if(prinFromEmi < 0) prinFromEmi = 0;
+      var prinFromSurplus = surplus;
+      var totPrin = prinFromEmi + prinFromSurplus;
+
+      // Cap at remaining balance
+      var actualPrin = Math.min(totPrin, balB);
+      var leftover = totPrin - actualPrin; // surplus that didn't go to loan because loan paid off mid-month
+      balB = Math.max(0, balB - actualPrin);
+      totIntB += intM;
+      yrIntB += intM;
+
+      // Any leftover goes into corpus this month
+      if(leftover > 0){
+        corpusB = corpusB * (1 + altMonthly) + leftover;
+      }
+
+      if(balB === 0 && payoffMonth === null){
+        payoffMonth = m;
+      }
+    } else {
+      // Loan paid — redirect EMI + surplus to SIP
+      corpusB = corpusB * (1 + altMonthly) + emi + surplus;
+    }
+
+    // Year-end snapshot + tax accrual
+    if(m % 12 === 0 || m === totalMonths){
+      if(yrIntB > 0){
+        var deductibleB = Math.min(yrIntB, SEC24_CAP);
+        var taxSavedB = deductibleB * taxRate;
+        corpusB += taxSavedB;
+        totTaxSavedB += taxSavedB;
+        yrIntB = 0;
+      }
+      snapshotsB.push({year: Math.ceil(m/12), balance: balB, corpus: corpusB});
+    }
+  }
+
+  // ── Verdict ──
+  var endA = corpusA;
+  var endB = corpusB;
+  var deltaPct = endA > 0 ? ((endB - endA) / endA) * 100 : 0;
+  var vClass, verdictH, verdictD;
+  var deltaAbs = endB - endA;
+
+  // Effective loan rate after tax (if any)
+  var effLoanRate;
+  if(taxMode === 'letout'){
+    effLoanRate = rate * (1 - taxRate);
+  } else if(taxMode === 'self'){
+    // crude: cap interaction handled in sim, but for explainer compute approximate
+    // assume early-tenure annual interest > ₹2L → cap binds → effective rate reduction = (200000 × slab) / balance
+    var approxAnnualInt = balance * (rate/100) * 0.85;
+    var cappedInt = Math.min(approxAnnualInt, 200000);
+    var rateReduction = (cappedInt * taxRate) / balance * 100;
+    effLoanRate = rate - rateReduction;
+  } else {
+    effLoanRate = rate;
+  }
+
+  if(deltaPct > 5){
+    vClass = 'prepay'; verdictH = '✓ PREPAY the loan';
+    verdictD = 'Prepaying the loan with your monthly surplus ends up '
+      + formatINRshort(deltaAbs) + ' wealthier ('
+      + deltaPct.toFixed(1) + '% better) than investing in SIP, after the catch-up phase. '
+      + 'Your effective loan rate of ' + effLoanRate.toFixed(2) + '% beats the SIP\'s expected '
+      + altReturn.toFixed(1) + '% net of tax. The loan also dies '
+      + (totalMonths - payoffMonth >= 12 ? Math.floor((totalMonths - payoffMonth)/12) + ' years' : 'a few months')
+      + ' early — interest savings of ' + formatINRshort(totIntA - totIntB) + '.';
+  } else if(deltaPct < -5){
+    vClass = 'invest'; verdictH = '✓ KEEP INVESTING in SIP';
+    verdictD = 'Investing your surplus in SIP at ' + altReturn.toFixed(1) + '% builds '
+      + formatINRshort(-deltaAbs) + ' more ('
+      + Math.abs(deltaPct).toFixed(1) + '% better) than prepaying the loan. '
+      + 'Your effective loan rate of ' + effLoanRate.toFixed(2) + '% is below the alt-return — '
+      + 'opportunity cost of locking surplus into property equity outweighs the interest saved. '
+      + 'But: this assumes you actually invest consistently. If you tend to spend windfalls, prepayment\'s "forced discipline" could still be the better real-world choice.';
+  } else {
+    vClass = 'close'; verdictH = '⚠ TOO CLOSE TO CALL — preferences decide';
+    verdictD = 'The two paths end within ±5% of each other ('
+      + (deltaPct >= 0 ? 'PREPAY +' : 'SIP +') + Math.abs(deltaPct).toFixed(1) + '%). '
+      + 'The verdict is sensitive to your alt-return assumption — try lowering it by 1-2 points to see if PREPAY pulls ahead, or raising it to see SIP pull ahead. '
+      + 'When the math is this close, behavioural and liquidity factors usually decide: keep SIP if you want flexibility, prepay if you want loan-free peace of mind. Both are defensible.';
+  }
+
+  // ── Render ──
+  document.getElementById('verdictBox').className = 'verdict ' + vClass;
+  document.getElementById('verdictH').textContent = verdictH;
+  document.getElementById('verdictD').textContent = verdictD;
+
+  document.getElementById('rTenure').textContent = tenure;
+  document.getElementById('rPrepayWealth').textContent = formatINRshort(endB);
+  document.getElementById('rSipWealth').textContent = formatINRshort(endA);
+  var deltaText = (deltaAbs >= 0 ? '+' : '') + formatINRshort(deltaAbs) + ' (PREPAY ' + (deltaPct >= 0 ? 'wins by ' : 'loses by ') + Math.abs(deltaPct).toFixed(1) + '%)';
+  document.getElementById('rDelta').textContent = deltaText;
+
+  document.getElementById('rOrigTenure').textContent = tenure + ' years';
+  if(payoffMonth){
+    var py = Math.floor(payoffMonth / 12);
+    var pm = payoffMonth % 12;
+    document.getElementById('rPrepayTenure').textContent = py + 'y ' + pm + 'm';
+    var savedMonths = totalMonths - payoffMonth;
+    var sy = Math.floor(savedMonths / 12);
+    var sm = savedMonths % 12;
+    document.getElementById('rYearsSaved').textContent = sy + 'y ' + sm + 'm';
+  } else {
+    document.getElementById('rPrepayTenure').textContent = 'Not within tenure';
+    document.getElementById('rYearsSaved').textContent = '0';
+  }
+
+  document.getElementById('rIntNoPrepay').textContent = formatINR(totIntA);
+  document.getElementById('rIntPrepay').textContent = formatINR(totIntB);
+  document.getElementById('rIntSaved').textContent = formatINR(totIntA - totIntB);
+
+  document.getElementById('rTaxA').textContent = formatINR(totTaxSavedA);
+  document.getElementById('rTaxB').textContent = formatINR(totTaxSavedB);
+  document.getElementById('rTaxLoss').textContent = formatINR(totTaxSavedA - totTaxSavedB);
+
+  document.getElementById('rEMI').textContent = formatINR(emi);
+  document.getElementById('rSurplus').textContent = formatINR(surplus);
+  document.getElementById('rPrepayMonthly').textContent = formatINR(emi + surplus);
+  document.getElementById('rRedirected').textContent = formatINR(emi + surplus);
+
+  // Year table
+  var tbody = document.querySelector('#yearTable tbody');
+  tbody.innerHTML = '';
+  var maxRows = Math.max(snapshotsA.length, snapshotsB.length);
+  var payoffYear = payoffMonth ? Math.ceil(payoffMonth / 12) : null;
+  for(var i = 0; i < maxRows; i++){
+    var a = snapshotsA[i] || {};
+    var b = snapshotsB[i] || {};
+    var year = (a.year !== undefined ? a.year : b.year);
+    var edge = (b.corpus || 0) - (a.corpus || 0);
+    var tr = document.createElement('tr');
+    if(payoffYear && year === payoffYear) tr.className = 'payoff';
+    tr.innerHTML =
+      '<td>' + year + '</td>' +
+      '<td class="num">' + formatINRshort(b.balance || 0) + '</td>' +
+      '<td class="num">' + formatINRshort(b.corpus || 0) + '</td>' +
+      '<td class="num">' + formatINRshort(a.balance || 0) + '</td>' +
+      '<td class="num">' + formatINRshort(a.corpus || 0) + '</td>' +
+      '<td class="num">' + (edge >= 0 ? '+' : '') + formatINRshort(edge) + '</td>';
+    tbody.appendChild(tr);
+  }
+
+  drawChart(snapshotsA, snapshotsB);
+
+  var p = document.getElementById('resultPanel');
+  p.classList.add('show');
+  try { p.scrollIntoView({behavior:'smooth', block:'start'}); } catch(e){}
+
+  if(typeof gtag === 'function'){
+    gtag('event','calc_completed',{
+      calculator: 'prepay-vs-sip',
+      balance: balance,
+      rate: rate,
+      tenure: tenure,
+      surplus: surplus,
+      alt_return: altReturn,
+      tax_mode: taxMode,
+      slab: slab,
+      verdict: vClass,
+      payoff_months_saved: payoffMonth ? (totalMonths - payoffMonth) : 0,
+      delta_pct: Math.round(deltaPct * 10) / 10
+    });
+  }
+}
+
+function drawChart(a, b){
+  var svg = document.getElementById('wealthChart');
+  if(!svg || a.length === 0 || b.length === 0) return;
+  var W = 600, H = 200, padL = 8, padR = 8, padT = 14, padB = 22;
+  var n = Math.max(a.length, b.length);
+
+  var maxV = 0;
+  a.forEach(function(s){ if(s.corpus > maxV) maxV = s.corpus; });
+  b.forEach(function(s){ if(s.corpus > maxV) maxV = s.corpus; });
+  if(maxV <= 0) maxV = 1;
+
+  var stepX = (W - padL - padR) / (n - 1 || 1);
+  var scaleY = (H - padT - padB) / maxV;
+
+  function pathFor(arr, color){
+    var d = '';
+    arr.forEach(function(s, i){
+      var x = padL + i * stepX;
+      var yp = H - padB - Math.max(0, s.corpus) * scaleY;
+      d += (i === 0 ? 'M' : 'L') + x.toFixed(1) + ',' + yp.toFixed(1) + ' ';
+    });
+    return '<path d="' + d + '" fill="none" stroke="' + color + '" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>';
+  }
+
+  var g = '<line x1="' + padL + '" y1="' + (H-padB) + '" x2="' + (W-padR) + '" y2="' + (H-padB) + '" stroke="#E0DDE0" stroke-width="1"/>';
+  var labelEvery = n > 12 ? 2 : 1;
+  for(var i = 0; i < n; i++){
+    if(i % labelEvery !== 0 && i !== n - 1) continue;
+    var x = padL + i * stepX;
+    g += '<text x="' + x + '" y="' + (H - 6) + '" text-anchor="middle" font-size="10" fill="#666">Y' + (i+1) + '</text>';
+  }
+  // SIP path (orange) and PREPAY path (green)
+  g += pathFor(a, '#E87722');
+  g += pathFor(b, '#22A06B');
+  svg.innerHTML = g;
+}
+</script>
+<script defer src="/calc-enhance.js"></script>
+</body>
+</html>

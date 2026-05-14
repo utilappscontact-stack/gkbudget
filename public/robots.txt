@@ -14,5 +14,6 @@ Disallow: /.git/
 Disallow: /.env
 Disallow: /config/
 Disallow: /backup/
+Disallow: /articles/_template.html
 
 Sitemap: https://gharkabudget.com/sitemap.xml
