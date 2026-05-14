@@ -3,6 +3,46 @@
 /q/s    /?utm_source=sticker&utm_medium=qr&utm_campaign=mum_pilot&utm_content=site       302
 /q/n    /?utm_source=sticker&utm_medium=qr&utm_campaign=mum_pilot&utm_content=notice     302
 
+# Explicit single-hop normalisations (eliminates redirect-error class flagged in GSC)
+# Each maps directly to canonical /slug/ form — prevents Cloudflare's default 2-hop chain
+/construction              /construction/              301
+/construction/index.html   /construction/              301
+/interior                  /interior/                  301
+/interior/index.html       /interior/                  301
+/emi                       /emi/                       301
+/emi/index.html            /emi/                       301
+/emi-vs-rent               /emi-vs-rent/               301
+/emi-vs-rent/index.html    /emi-vs-rent/               301
+/prepay-vs-sip             /prepay-vs-sip/             301
+/prepay-vs-sip/index.html  /prepay-vs-sip/             301
+/balance-transfer          /balance-transfer/          301
+/balance-transfer/index.html  /balance-transfer/       301
+/pmay-eligibility          /pmay-eligibility/          301
+/pmay-eligibility/index.html /pmay-eligibility/        301
+/quote-check               /quote-check/               301
+/quote-check/index.html    /quote-check/               301
+/stamp-duty                /stamp-duty/                301
+/stamp-duty/index.html     /stamp-duty/                301
+/home-loan-eligibility     /home-loan-eligibility/     301
+/home-loan-eligibility/index.html /home-loan-eligibility/ 301
+/painting-cost             /painting-cost/             301
+/painting-cost/index.html  /painting-cost/             301
+/plot-viability            /plot-viability/            301
+/plot-viability/index.html /plot-viability/            301
+/modular-kitchen           /modular-kitchen/           301
+/modular-kitchen/index.html /modular-kitchen/          301
+/bathroom-renovation       /bathroom-renovation/       301
+/bathroom-renovation/index.html /bathroom-renovation/  301
+/waterproofing             /waterproofing/             301
+/waterproofing/index.html  /waterproofing/             301
+/methodology               /methodology/               301
+/methodology/index.html    /methodology/               301
+/ai-prompts                /ai-prompts/                301
+/ai-prompts/index.html     /ai-prompts/                301
+/articles                  /articles/                  301
+/articles/index.html       /articles/                  301
+/index.html                /                           301
+
 /articles/construction-cost-ahmedabad-2025/   /articles/construction-cost-ahmedabad-2026/   301
 /articles/construction-cost-bangalore-2025/   /articles/construction-cost-bangalore-2026/   301
 /articles/construction-cost-chennai-2025/     /articles/construction-cost-chennai-2026/     301
