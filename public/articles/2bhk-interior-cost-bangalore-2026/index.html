@@ -233,6 +233,7 @@ a{color:inherit;text-decoration:none}ul{list-style:none}
 }
 </style>
 <link rel="stylesheet" href="../../site-consistency.css"/>
+  <link rel="stylesheet" href="/ask-gkb.css"/>
 </head>
 <body>
 
@@ -527,5 +528,6 @@ document.addEventListener('click',function(e){var m=document.getElementById('mob
 function toggleFaq(el){var item=el.parentElement;var ans=item.querySelector('.faq-a');var already=item.classList.contains('active');document.querySelectorAll('.faq-item').forEach(function(f){f.classList.remove('active');f.querySelector('.faq-a').classList.remove('open')});if(!already){item.classList.add('active');ans.classList.add('open')}}
 </script>
 <script defer src="../../site-consistency.js"></script>
+  <script src="/ask-gkb.js" defer></script>
 </body>
 </html>

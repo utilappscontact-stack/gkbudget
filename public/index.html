@@ -202,6 +202,7 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
 }
 </style>
 <link rel="stylesheet" href="site-consistency.css"/>
+  <link rel="stylesheet" href="/ask-gkb.css"/>
 </head>
 <body>
 <nav class="bar">
@@ -213,6 +214,7 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
       <li><a href="interior/">Interior</a></li>
       <li><a href="#cities">City Guides</a></li>
       <li><a href="methodology/">Methodology</a></li>
+      <li><a href="ask/" style="color:var(--a)">Ask GKB</a></li>
     </ul>
     <button class="hbg" onclick="tmenu(this)"><span></span><span></span><span></span></button>
   </div></div>
@@ -241,6 +243,7 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
   <a href="articles/">All Articles</a>
   <a href="methodology/">Methodology &amp; Sources</a>
   <a href="ai-prompts/">AI Verification Prompts</a>
+  <a href="ask/">Ask GKB</a>
   <a href="get-quotes/">How to Get Quotes</a>
 </div>
 
@@ -351,6 +354,14 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
           </div>
         </div>
       </div>
+    </div>
+    <div style="margin-top:32px;background:linear-gradient(135deg,var(--p) 0%,#1a2533 100%);border-radius:12px;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+      <div style="flex:1 1 320px;color:#fff">
+        <div style="font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--a);margin-bottom:6px">New &middot; Search GKB's data, not the internet</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.2rem;line-height:1.3;margin-bottom:6px">Have a specific question? Ask GKB.</div>
+        <div style="font-size:.88rem;opacity:.85;line-height:1.55">Chat-style search over 290+ vetted Q&amp;A entries. Every answer is sourced and dated, no AI fabrication. Try "stamp duty in Maharashtra for female buyer" or "cost to build 3BHK in Pune".</div>
+      </div>
+      <a href="ask/" style="flex-shrink:0;background:var(--a);color:#fff;border-radius:8px;padding:12px 20px;font-weight:600;font-size:.92rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px">Ask GKB &rarr;</a>
     </div>
   </div>
 </section>
@@ -479,7 +490,7 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
       <div style="font-size:.75rem;color:var(--m);margin-top:4px">&copy; 2026 Ghar Ka Budget. For informational purposes only.</div>
     </div>
     <nav class="fl">
-      <a href="construction/">Construction</a><a href="interior/">Interior</a><a href="emi/">EMI</a><a href="emi-vs-rent/">EMI vs Rent</a><a href="prepay-vs-sip/">Prepay vs SIP</a><a href="balance-transfer/">Balance Transfer</a><a href="pmay-eligibility/">PMAY 2.0</a><a href="ltcg-property/">LTCG</a><a href="rental-yield/">Rental Yield</a><a href="society-redevelopment/">Redevelopment</a><a href="quote-check/">Quotes</a><a href="stamp-duty/">Stamp Duty</a><a href="home-loan-eligibility/">Eligibility</a><a href="painting-cost/">Painting</a><a href="plot-viability/">Plot Check</a><a href="modular-kitchen/">Modular Kitchen</a><a href="bathroom-renovation/">Bathroom</a><a href="waterproofing/">Waterproofing</a><a href="articles/">Articles</a><a href="methodology/">Methodology</a><a href="ai-prompts/">AI Prompts</a><a href="about/">About</a><a href="editorial-policy/">Editorial Policy</a><a href="disclaimer/">Disclaimer</a><a href="privacy/">Privacy</a><a href="contact/">Contact</a>
+      <a href="construction/">Construction</a><a href="interior/">Interior</a><a href="emi/">EMI</a><a href="emi-vs-rent/">EMI vs Rent</a><a href="prepay-vs-sip/">Prepay vs SIP</a><a href="balance-transfer/">Balance Transfer</a><a href="pmay-eligibility/">PMAY 2.0</a><a href="ltcg-property/">LTCG</a><a href="rental-yield/">Rental Yield</a><a href="society-redevelopment/">Redevelopment</a><a href="quote-check/">Quotes</a><a href="stamp-duty/">Stamp Duty</a><a href="home-loan-eligibility/">Eligibility</a><a href="painting-cost/">Painting</a><a href="plot-viability/">Plot Check</a><a href="modular-kitchen/">Modular Kitchen</a><a href="bathroom-renovation/">Bathroom</a><a href="waterproofing/">Waterproofing</a><a href="articles/">Articles</a><a href="methodology/">Methodology</a><a href="ai-prompts/">AI Prompts</a><a href="ask/">Ask GKB</a><a href="about/">About</a><a href="editorial-policy/">Editorial Policy</a><a href="disclaimer/">Disclaimer</a><a href="privacy/">Privacy</a><a href="contact/">Contact</a>
     </nav>
   </div></div>
 </footer>
@@ -488,4 +499,5 @@ function tmenu(b){var m=document.getElementById('mnav');var o=m.classList.toggle
 document.addEventListener('click',function(e){var m=document.getElementById('mnav');var b=document.querySelector('.hbg');if(m&&b&&m.classList.contains('open')&&!m.contains(e.target)&&!b.contains(e.target)){m.classList.remove('open');document.body.style.overflow='';}});
 </script>
 <script defer src="site-consistency.js"></script>
+  <script src="/ask-gkb.js" defer></script>
 </body></html>

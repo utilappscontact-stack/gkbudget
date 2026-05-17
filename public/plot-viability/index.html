@@ -23,7 +23,30 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Plot Purchase Viability Calculator India","url":"https://gharkabudget.com/plot-viability/","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Free calculator that computes the all-in cost of buying a plot in India and benchmarks the deal against alternative investments. Accounts for stamp duty, registration, brokerage, legal fees and annual holding cost.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Plot Purchase Viability Calculator India",
+  "url": "https://gharkabudget.com/plot-viability/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "description": "Free calculator that computes the all-in cost of buying a plot in India and benchmarks the deal against alternative investments. Accounts for stamp duty, registration, brokerage, legal fees and annual holding cost.",
+  "featureList": [
+    "All-in plot cost including stamp duty and registration",
+    "Break-even appreciation requirement to beat alternative investments",
+    "FD and SIP opportunity-cost comparison",
+    "Plot type adjustments (RERA, NA, Agricultural)",
+    "State-wise stamp duty integration covering 13 Indian states",
+    "Verdict: VIABLE, MARGINAL, or POOR"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I know if a plot is worth the asking price?","acceptedAnswer":{"@type":"Answer","text":"Compare three numbers. First, the all-in cost: plot price + 5–9% stamp duty + 1–2% brokerage + ₹15–30K legal. Second, the break-even appreciation rate — what the plot must grow at annually to match a fixed deposit or mutual fund over your holding period. Third, the per-sqft acquisition cost vs the locality's recent registered transactions (available on state IGR portals). If your break-even rate is above 9–10%, the deal is hard to justify against passive alternatives."}},{"@type":"Question","name":"What hidden costs do plot buyers usually miss?","acceptedAnswer":{"@type":"Answer","text":"The big four: stamp duty + registration (5–9% of price), brokerage (1–2%), title-search and legal due diligence (₹15–30K), and ongoing holding cost — property tax, perimeter maintenance, mutation charges, sometimes society dues. Holding cost typically runs 0.3–0.8% of plot value per year. Over a 7-year hold, that's another 2–5% added to the all-in cost."}},{"@type":"Question","name":"Plot vs apartment — which appreciates faster?","acceptedAnswer":{"@type":"Answer","text":"Plots in genuinely growing peripheral corridors (Tier-1 outer ring road, Tier-2 expansion zones) historically outpace apartments in the same city by 2–4% per year over 7+ year horizons, because there is no depreciation on the structure. But the variance is huge: plots in stagnant areas can underperform FDs. Apartments depreciate at 1–1.5% per year on the structure component, but generate rental yield of 2.5–3.5%. For pure capital appreciation, well-chosen plots win; for total return including yield, apartments are competitive."}},{"@type":"Question","name":"Is buying a plot to build later a good strategy?","acceptedAnswer":{"@type":"Answer","text":"Mathematically, yes — if you actually build within 3–5 years. The land component appreciates, you skip apartment-society constraints, and you control the build quality. But if construction is pushed beyond 7 years, ongoing holding cost compounds and you lose the time value of capital. Also: vacant plots attract encroachment, illegal occupation and disputed claims more than built properties. Boundary walls and a watchman become a recurring expense."}},{"@type":"Question","name":"Should the calculator's break-even rate decide my purchase?","acceptedAnswer":{"@type":"Answer","text":"It is a financial filter, not a final answer. If the break-even rate is above 10% per year, the plot must significantly outperform passive investments to be worth it — that should make you cautious. If it is below 6–7%, the deal looks reasonable on paper. But financial viability is one input among several: location quality, title clarity, planned use (building vs holding), and your liquidity position matter equally. The calculator helps you avoid emotional overpayment, not pick winners."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gharkabudget.com/"},{"@type":"ListItem","position":2,"name":"Plot Viability Calculator","item":"https://gharkabudget.com/plot-viability/"}]}</script>
 <style>
@@ -135,6 +158,7 @@ nav.bar{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px soli
 @media(max-width:760px){.nl{display:none}.hbg{display:flex}.radios{grid-template-columns:repeat(2,1fr)}.field-grid{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="/calc-enhance.css"/>
+  <link rel="stylesheet" href="/ask-gkb.css"/>
 </head>
 <body>
 
@@ -717,5 +741,6 @@ function toggleFaq(el){
 }
 </script>
 <script defer src="/calc-enhance.js"></script>
+  <script src="/ask-gkb.js" defer></script>
 </body>
 </html>

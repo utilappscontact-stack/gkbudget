@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E02EQTPXKE"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-E02EQTPXKE');</script>
+
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Ask GKB — Free AI-style Search for Indian Home Costs &amp; Loans 2026</title>
+<meta name="description" content="Ask GKB is a free chat-style search over Ghar Ka Budget's own FAQ data. Searches GKB's data, no generic AI answers, sourced and dated for India 2026. Get answers on construction cost, stamp duty, home loans, PMAY, renovation, and more."/>
+<link rel="canonical" href="https://gharkabudget.com/ask/"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+<link rel="stylesheet" href="/ask-gkb.css"/>
+<link rel="stylesheet" href="/site-consistency.css"/>
+
+<style>
+  :root {
+    --p: #2D3A4A; --a: #E87722; --s: #F5F5F3;
+    --ok: #22A06B; --warn: #D97706; --bad: #cc1f1a;
+    --border: #E5E7EB; --muted: #6B7280;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: 'Inter', system-ui, sans-serif;
+    color: var(--p); background: #fff; line-height: 1.55;
+  }
+  a { color: var(--a); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Header (matches site convention) */
+  .nav { background: var(--p); color: #fff; }
+  .nav__inner { max-width: 1180px; margin: 0 auto; padding: 14px 22px; display: flex; align-items: center; justify-content: space-between; }
+  .nav__brand { display: inline-flex; align-items: baseline; gap: 8px; color: #fff; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.15rem; }
+  .nav__brand b { color: var(--a); }
+  .nav__links { display: flex; gap: 22px; }
+  .nav__links a { color: #fff; font-size: 0.92rem; font-weight: 500; }
+  .nav__links a:hover { color: var(--a); }
+  @media (max-width: 720px) { .nav__links { display: none; } }
+  .mobile-nav { display: none; background: var(--p); border-top: 1px solid rgba(255,255,255,.1); padding: 8px 22px; flex-wrap: wrap; gap: 8px 14px; }
+  .mobile-nav a { color: #fff; font-size: 0.86rem; }
+  @media (max-width: 720px) { .mobile-nav { display: flex; } }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(180deg, var(--s) 0%, #fff 100%);
+    padding: 40px 22px 24px;
+  }
+  .hero__inner { max-width: 880px; margin: 0 auto; }
+  .hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.7rem, 4vw, 2.3rem);
+    margin: 0 0 12px;
+    line-height: 1.2;
+  }
+  .hero h1 .accent { color: var(--a); }
+  .hero p { font-size: 1.02rem; color: var(--muted); max-width: 720px; margin: 0 0 12px; }
+  .hero .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; font-size: 0.85rem; }
+  .hero .pill-row span { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 4px 10px; color: var(--muted); }
+  .hero .pill-row b { color: var(--p); }
+
+  /* Suggested questions */
+  .suggest {
+    max-width: 880px; margin: 0 auto; padding: 0 22px 8px;
+  }
+  .suggest h2 {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    font-size: 1rem; color: var(--muted); margin: 0 0 10px;
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .suggest-grid {
+    display: grid; gap: 8px;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    margin-bottom: 18px;
+  }
+  .suggest-chip {
+    background: #fff; border: 1.5px solid var(--border);
+    border-radius: 10px; padding: 10px 12px;
+    text-align: left; cursor: pointer;
+    font-family: inherit; font-size: 0.88rem; color: var(--p);
+    transition: border-color .15s ease, transform .12s ease;
+    line-height: 1.4;
+  }
+  .suggest-chip:hover { border-color: var(--a); transform: translateY(-1px); }
+
+  /* Chat container */
+  .chat-shell {
+    max-width: 880px; margin: 0 auto; padding: 0 22px 40px;
+  }
+  .askg-form-inline { padding: 12px 14px; }
+
+  /* Notes section below */
+  .notes {
+    max-width: 880px; margin: 0 auto; padding: 24px 22px 60px;
+    color: var(--muted); font-size: 0.92rem;
+  }
+  .notes h3 {
+    color: var(--p); font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700; font-size: 1.1rem; margin: 24px 0 8px;
+  }
+  .notes ul { margin: 8px 0 16px; padding-left: 22px; }
+  .notes li { margin: 4px 0; }
+
+  /* Footer (matches site convention) */
+  footer { background: var(--p); color: #fff; padding: 28px 22px; }
+  .footer__inner { max-width: 1180px; margin: 0 auto; }
+  .footer__inner a { color: #fff; opacity: 0.85; font-size: 0.88rem; }
+  .footer__inner a:hover { opacity: 1; color: var(--a); text-decoration: none; }
+  .footer__links { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 12px; }
+  .footer__small { font-size: 0.82rem; opacity: 0.7; }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Ask GKB — Indian home cost and loan question search",
+  "url": "https://gharkabudget.com/ask/",
+  "description": "Ask GKB is a chat-style search over Ghar Ka Budget's 290+ FAQ entries covering construction cost, loans, stamp duty, PMAY, renovation, plot purchase, and more. Searches GKB's own data, not generic AI knowledge.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Ghar Ka Budget",
+    "url": "https://gharkabudget.com/"
+  },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://gharkabudget.com/og-image.jpg"
+  },
+  "datePublished": "2026-05-17",
+  "dateModified": "2026-05-17"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gharkabudget.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Ask GKB", "item": "https://gharkabudget.com/ask/" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Ghar Ka Budget",
+  "url": "https://gharkabudget.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://gharkabudget.com/ask/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="/"><b>Ghar</b>KaBudget</a>
+    <div class="nav__links">
+      <a href="/">Calculators</a>
+      <a href="/articles/">Articles</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/ai-prompts/">AI Prompts</a>
+      <a href="/ask/" style="color:var(--a)">Ask GKB</a>
+    </div>
+  </div>
+  <div class="mobile-nav">
+    <a href="/">Calculators</a>
+    <a href="/articles/">Articles</a>
+    <a href="/methodology/">Methodology</a>
+    <a href="/ai-prompts/">AI Prompts</a>
+    <a href="/ask/">Ask GKB</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero__inner">
+    <h1>Ask GKB <span class="accent">anything about Indian home costs</span></h1>
+    <p>This is a chat-style search over <b>Ghar Ka Budget's own data</b> — 290+ vetted Q&amp;A pairs covering construction cost, home loans, stamp duty, PMAY, renovation, plot purchase, and more. No generic AI guessing. Every answer is sourced and dated for India 2026.</p>
+    <div class="pill-row">
+      <span><b>290+</b> Q&amp;A entries</span>
+      <span><b>18</b> calculators referenced</span>
+      <span><b>18</b> city pages indexed</span>
+      <span>Quarterly refresh, last <b>Q2 2026</b></span>
+    </div>
+  </div>
+</section>
+
+<section class="suggest">
+  <h2>Try one of these</h2>
+  <div class="suggest-grid">
+    <button class="suggest-chip" data-askg-suggest="How much does it cost to build a 3BHK in Pune?">How much does it cost to build a 3BHK in Pune?</button>
+    <button class="suggest-chip" data-askg-suggest="What's the stamp duty in Maharashtra for a female buyer?">What's the stamp duty in Maharashtra for a female buyer?</button>
+    <button class="suggest-chip" data-askg-suggest="Should I prepay my home loan or invest in SIP?">Should I prepay my home loan or invest in SIP?</button>
+    <button class="suggest-chip" data-askg-suggest="Should I buy a flat or build a house?">Should I buy a flat or build a house?</button>
+    <button class="suggest-chip" data-askg-suggest="What's the PMAY 2.0 income limit?">What's the PMAY 2.0 income limit?</button>
+    <button class="suggest-chip" data-askg-suggest="When is a home loan balance transfer worth it?">When is a home loan balance transfer worth it?</button>
+    <button class="suggest-chip" data-askg-suggest="What is rental yield in Mumbai?">What is rental yield in Mumbai?</button>
+    <button class="suggest-chip" data-askg-suggest="How much does a modular kitchen cost in Bangalore?">How much does a modular kitchen cost in Bangalore?</button>
+    <button class="suggest-chip" data-askg-suggest="What is LTCG on property sale after Budget 2024?">What is LTCG on property sale after Budget 2024?</button>
+    <button class="suggest-chip" data-askg-suggest="Bathroom renovation cost in Delhi NCR?">Bathroom renovation cost in Delhi NCR?</button>
+    <button class="suggest-chip" data-askg-suggest="Ghar banane mein kitna kharcha aata hai?">Ghar banane mein kitna kharcha aata hai?</button>
+    <button class="suggest-chip" data-askg-suggest="What are red flags in a contractor's quote?">What are red flags in a contractor's quote?</button>
+  </div>
+</section>
+
+<div class="chat-shell">
+  <div class="askg-inline" id="askg-inline-root">
+    <div class="askg-log" id="askg-log"></div>
+    <form class="askg-form askg-form-inline" data-askg-form>
+      <input type="text" class="askg-input" placeholder="Ask about construction cost, loans, stamp duty…" autocomplete="off" aria-label="Your question"/>
+      <button type="submit" class="askg-send" aria-label="Send">Send</button>
+    </form>
+  </div>
+</div>
+
+<section class="notes">
+  <h3>How Ask GKB works</h3>
+  <ul>
+    <li><b>Deterministic search, not LLM inference.</b> Every answer comes from one of 290+ FAQ entries on Ghar Ka Budget — verbatim, with a citation. No AI fabrication.</li>
+    <li><b>Sourced and dated.</b> Each answer links back to the calculator or article where the data lives. Data is refreshed quarterly.</li>
+    <li><b>Hinglish supported.</b> Ask in English or in Hinglish ("ghar banane mein kitna kharcha?"). The index includes both.</li>
+    <li><b>When we don't know, we say so.</b> If your question isn't covered, you'll get related pages instead of a fabricated answer.</li>
+  </ul>
+  <h3>Not covered yet?</h3>
+  <p>If your question doesn't return a confident answer, <a href="/contact/">drop us a note</a> — we use these gaps directly to plan new articles and calculators.</p>
+</section>
+
+<footer>
+  <div class="footer__inner">
+    <div class="footer__links">
+      <a href="/">Calculators</a>
+      <a href="/articles/">Articles</a>
+      <a href="/methodology/">Methodology</a>
+      <a href="/ai-prompts/">AI Prompts</a>
+      <a href="/ask/">Ask GKB</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/disclaimer/">Disclaimer</a>
+    </div>
+    <p class="footer__small">© 2026 Ghar Ka Budget · Free Indian home cost calculators · No login, no spam</p>
+  </div>
+</footer>
+
+<script src="/ask-gkb.js" defer></script>
+<script>
+  (function () {
+    function go() {
+      if (window.AskGKB && window.AskGKB.mountInline) {
+        window.AskGKB.mountInline("#askg-inline-root");
+      } else {
+        setTimeout(go, 60);
+      }
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", go);
+    } else { go(); }
+  })();
+</script>
+
+</body>
+</html>

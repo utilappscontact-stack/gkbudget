@@ -1,0 +1,339 @@
+/* Ask GKB — launcher button + modal + chat bubble styles. */
+:root {
+  --askg-p: #2D3A4A;
+  --askg-a: #E87722;
+  --askg-s: #F5F5F3;
+  --askg-border: #E5E7EB;
+  --askg-muted: #6B7280;
+}
+
+/* ------------------------------------------------------------------ *
+ * Launcher button (floating)
+ * ------------------------------------------------------------------ */
+.askg-launch {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--askg-p);
+  color: #fff;
+  cursor: pointer;
+  z-index: 90;
+  box-shadow: 0 8px 24px rgba(45, 58, 74, .25), 0 2px 6px rgba(45, 58, 74, .15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .18s ease, box-shadow .18s ease, outline-color .18s ease;
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+  font-family: inherit;
+}
+.askg-launch:hover {
+  transform: translateY(-2px);
+  outline-color: var(--askg-a);
+  box-shadow: 0 12px 32px rgba(45, 58, 74, .30), 0 2px 8px rgba(45, 58, 74, .18);
+}
+.askg-launch:focus-visible {
+  outline-color: var(--askg-a);
+}
+.askg-launch--pulse::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--askg-a);
+  animation: askgPulse 1.4s ease-out 2;
+  pointer-events: none;
+  opacity: 0;
+}
+@keyframes askgPulse {
+  0%   { transform: scale(1);    opacity: 0.7; }
+  100% { transform: scale(1.45); opacity: 0;   }
+}
+
+/* ------------------------------------------------------------------ *
+ * Modal
+ * ------------------------------------------------------------------ */
+.askg-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  pointer-events: none;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+.askg-modal--open { pointer-events: auto; }
+
+.askg-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 32, 0);
+  transition: background .2s ease;
+}
+.askg-modal--open .askg-modal-backdrop {
+  background: rgba(15, 23, 32, .35);
+}
+
+.askg-modal-panel {
+  position: relative;
+  width: 420px;
+  max-width: 100%;
+  height: 90vh;
+  max-height: 720px;
+  margin: 0 24px 24px 0;
+  background: #fff;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(15, 23, 32, .35);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform .22s ease, opacity .22s ease;
+  overflow: hidden;
+}
+.askg-modal--open .askg-modal-panel {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.askg-modal-head {
+  background: var(--askg-p);
+  color: #fff;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.askg-modal-head h2 {
+  margin: 0;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: .2px;
+}
+.askg-modal-head .askg-sub {
+  margin: 2px 0 0;
+  font-size: 0.78rem;
+  opacity: 0.85;
+}
+.askg-close {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+}
+.askg-close:hover { opacity: 0.8; }
+
+.askg-log {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 14px 14px 4px;
+  background: var(--askg-s);
+}
+
+.askg-form {
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px 12px;
+  background: #fff;
+  border-top: 1px solid var(--askg-border);
+}
+.askg-input {
+  flex: 1 1 auto;
+  border: 1.5px solid var(--askg-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: inherit;
+  font-size: 0.92rem;
+  background: #fff;
+  color: var(--askg-p);
+  outline: none;
+  transition: border-color .15s ease;
+}
+.askg-input:focus { border-color: var(--askg-a); }
+.askg-send {
+  background: var(--askg-a);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-weight: 600;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background .15s ease;
+}
+.askg-send:hover { background: #cf671b; }
+
+/* ------------------------------------------------------------------ *
+ * Chat rows + bubbles
+ * ------------------------------------------------------------------ */
+.askg-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+.askg-row--user { justify-content: flex-end; }
+.askg-row--ai   { justify-content: flex-start; }
+
+.askg-bubble {
+  max-width: 92%;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  word-wrap: break-word;
+}
+.askg-bubble--user {
+  background: var(--askg-p);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+  max-width: 80%;
+}
+.askg-bubble--ai {
+  background: #fff;
+  color: var(--askg-p);
+  border: 1px solid var(--askg-border);
+  border-bottom-left-radius: 4px;
+  width: 100%;
+}
+.askg-bubble p { margin: 0 0 6px; }
+.askg-bubble p:last-child { margin-bottom: 0; }
+
+.askg-bubble--ai a {
+  color: var(--askg-a);
+  text-decoration: none;
+}
+.askg-bubble--ai a:hover { text-decoration: underline; }
+
+.askg-prefix {
+  font-weight: 600;
+  color: var(--askg-p);
+}
+.askg-q {
+  font-size: 0.82rem;
+  color: var(--askg-muted);
+  font-style: italic;
+}
+.askg-a {
+  white-space: pre-wrap;
+  min-height: 1.45em;
+}
+.askg-divider {
+  height: 1px;
+  background: var(--askg-border);
+  margin: 8px 0;
+}
+.askg-source {
+  font-size: 0.84rem;
+  color: var(--askg-muted);
+}
+.askg-source a {
+  font-weight: 600;
+}
+.askg-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.askg-pill {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1.5px solid var(--askg-a);
+  border-radius: 18px;
+  color: var(--askg-p) !important;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  background: #fff;
+  transition: background .15s ease, color .15s ease;
+}
+.askg-pill:hover {
+  background: var(--askg-a);
+  color: #fff !important;
+}
+
+.askg-related {
+  margin: 4px 0 0;
+  padding-left: 18px;
+}
+.askg-related li { margin: 4px 0; }
+.askg-nomatch-hint {
+  margin-top: 8px;
+  font-size: 0.84rem;
+  color: var(--askg-muted);
+}
+
+/* Thinking state — animated dots + text */
+.askg-thinking {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.askg-thinking-text {
+  font-size: 0.86rem;
+  color: var(--askg-muted);
+}
+.askg-dots {
+  display: inline-flex;
+  gap: 3px;
+}
+.askg-dots span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--askg-a);
+  animation: askgDot 1.1s infinite ease-in-out;
+}
+.askg-dots span:nth-child(2) { animation-delay: 0.15s; }
+.askg-dots span:nth-child(3) { animation-delay: 0.3s; }
+@keyframes askgDot {
+  0%, 80%, 100% { opacity: 0.25; transform: translateY(0); }
+  40%           { opacity: 1;    transform: translateY(-3px); }
+}
+
+/* ------------------------------------------------------------------ *
+ * Inline mode (used on /ask/ page) — replaces modal panel chrome
+ * ------------------------------------------------------------------ */
+.askg-inline {
+  background: var(--askg-s);
+  border-radius: 14px;
+  border: 1px solid var(--askg-border);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 540px;
+}
+.askg-inline .askg-log {
+  min-height: 380px;
+  max-height: 60vh;
+}
+
+/* ------------------------------------------------------------------ *
+ * Mobile
+ * ------------------------------------------------------------------ */
+@media (max-width: 600px) {
+  .askg-launch {
+    right: 16px;
+    bottom: 16px;
+    width: 52px;
+    height: 52px;
+  }
+  .askg-modal-panel {
+    width: 100vw;
+    margin: 0;
+    height: 90vh;
+    border-radius: 14px 14px 0 0;
+  }
+  .askg-bubble { max-width: 95%; }
+}

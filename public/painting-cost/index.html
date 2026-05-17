@@ -23,7 +23,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Painting Cost Calculator India","url":"https://gharkabudget.com/painting-cost/","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Free home painting cost calculator. Calculates per-sqft labour + material rates for distemper, emulsion, and premium emulsion paints in India.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Painting Cost Calculator India",
+  "url": "https://gharkabudget.com/painting-cost/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "description": "Free home painting cost calculator. Calculates per-sqft labour + material rates for distemper, emulsion, and premium emulsion paints in India.",
+  "featureList": [
+    "Room-wise or sqft-wise calculation",
+    "4 brand tiers (Economy, Mid, Premium, Luxury) with named brand examples",
+    "Interior vs exterior rate differentiation",
+    "Putty, primer, and finish coat breakdown",
+    "Wall-area auto-calculation from room dimensions"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
+</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the cost of painting per sqft in India 2026?","acceptedAnswer":{"@type":"Answer","text":"Painting cost in India 2026: Distemper (interior basic) ₹6–10/sqft, Acrylic Emulsion (Asian Paints Tractor Emulsion / Berger Bison) ₹12–20/sqft, Premium Emulsion (Royale, Imperia, Pearl) ₹20–32/sqft, Luxury Emulsion (Royale Aspira, Berger Silk) ₹35–55/sqft. Adding wall putty + primer adds ₹14–22/sqft. Exterior weathercoat is ₹18–32/sqft."}},{"@type":"Question","name":"How much area to paint in a 2BHK?","acceptedAnswer":{"@type":"Answer","text":"For a typical 2BHK (carpet area 700–900 sqft), the wall surface area to paint is roughly 3× the carpet area = 2,100–2,700 sqft. This includes ceilings (1× carpet area), walls (2× carpet area), and minor structures. For a 1BHK (450–600 sqft), expect 1,400–1,800 sqft of paintable surface."}},{"@type":"Question","name":"Should I include wall putty cost separately?","acceptedAnswer":{"@type":"Answer","text":"Yes, putty is always a separate line item from paint. Wall putty (Birla White / JK White / Asian Paints TruCare) costs ₹10–16/sqft. It's recommended for fresh new walls and any wall with hairline cracks. For repainting smooth, well-maintained walls, you can skip putty and apply primer directly. Skipping putty saves about ₹10–14/sqft but reduces durability."}},{"@type":"Question","name":"What is the difference between 1-coat and 2-coat painting?","acceptedAnswer":{"@type":"Answer","text":"2-coat application is the industry standard in India and what every paint manufacturer's warranty assumes. Single-coat looks visibly streaky and uneven, especially on darker shades or rough walls. The labour difference between 1-coat and 2-coat is ~₹3–5/sqft; the paint quantity needed roughly doubles. Always insist on 2-coat in your contractor agreement — it's a common short-cut."}},{"@type":"Question","name":"Is Asian Paints really the most expensive?","acceptedAnswer":{"@type":"Answer","text":"Within the same product tier (e.g., premium emulsion), Asian Paints is typically 5–12% more expensive than Berger, which is in turn 3–8% more than Nerolac and Dulux. For colour fastness on Indian walls (10+ year humidity, monsoon), Asian Paints and Berger are roughly equal in independent testing. Nerolac / Dulux are good for 5–7 years. The premium tier difference is real; the basic tier difference is mostly marketing."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gharkabudget.com/"},{"@type":"ListItem","position":2,"name":"Painting Cost Calculator","item":"https://gharkabudget.com/painting-cost/"}]}</script>
 <style>
@@ -119,6 +141,7 @@ nav.bar{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px soli
 @media(max-width:760px){.nl{display:none}.hbg{display:flex}}
 </style>
 <link rel="stylesheet" href="/calc-enhance.css"/>
+  <link rel="stylesheet" href="/ask-gkb.css"/>
 </head>
 <body>
 
@@ -502,5 +525,6 @@ function toggleFaq(el){
 }
 </script>
 <script defer src="/calc-enhance.js"></script>
+  <script src="/ask-gkb.js" defer></script>
 </body>
 </html>

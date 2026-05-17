@@ -443,6 +443,10 @@
       +     '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>'
       +     '<span>Verify with AI</span>'
       +   '</button>'
+      +   '<button type="button" class="gkb-act gkb-act-askgkb" onclick="window.gkbAskGKB()" aria-label="Ask GKB about this topic — searches our own data">'
+      +     '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>'
+      +     '<span>Ask GKB</span>'
+      +   '</button>'
       + '</div>'
       + '<div class="gkb-actions-foot">'
       +   '<a href="/methodology/#'+INFO.methodSec+'" target="_blank" rel="noopener">'
@@ -737,6 +741,46 @@
   }
 
   window.gkbAI = openAIModal;
+
+  // Ask GKB modal — searches GKB's own FAQ corpus, no external AI.
+  // Pre-fills a context-aware question using the calc name + primary input.
+  window.gkbAskGKB = function(){
+    var INFO = CALCS[SLUG] || {};
+    var name = INFO.name || 'this topic';
+    var prefill = 'Tell me more about ' + name.toLowerCase();
+    // Try to grab a primary input value to enrich the prompt
+    try {
+      var state = gatherCalcState ? gatherCalcState() : null;
+      if (state && state.inputs && state.inputs.length) {
+        // Use the first non-trivial input value
+        for (var i = 0; i < state.inputs.length; i++) {
+          var v = state.inputs[i].value;
+          if (v && v.length > 0 && v.length < 30) {
+            prefill = 'Tell me more about ' + name.toLowerCase() + ' for ' + state.inputs[i].label + ' ' + v;
+            break;
+          }
+        }
+      }
+    } catch(e) { /* fallback to plain prefill */ }
+
+    function openWithPrefill(){
+      if (window.AskGKB && window.AskGKB.open) {
+        window.AskGKB.open('calc_button');
+        // Pre-fill input after modal opens
+        setTimeout(function(){
+          var inp = document.querySelector('.askg-modal .askg-input');
+          if (inp) {
+            inp.value = prefill;
+            inp.focus();
+          }
+        }, 250);
+      } else {
+        // Script not loaded yet — go to /ask/ with prefilled query
+        window.location.href = '/ask/?q=' + encodeURIComponent(prefill);
+      }
+    }
+    openWithPrefill();
+  };
 
   window.gkbCloseAIModal = function(){
     var m = document.getElementById('gkb-ai-modal');

@@ -25,7 +25,27 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"Home Construction Cost Calculator India","url":"https://gharkabudget.com/construction/","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Free house construction cost calculator for India. Estimates by city tier, quality grade, and number of floors.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Home Construction Cost Calculator India",
+  "url": "https://gharkabudget.com/construction/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "description": "Free house construction cost calculator for India. Estimates by city tier, quality grade, and number of floors.",
+  "featureList": [
+    "Per-sqft construction cost by city tier and quality grade",
+    "4 quality grades: Economy, Standard, Premium, Luxury",
+    "Floor-wise multipliers for G+1, G+2, and G+3 builds",
+    "Material-vs-labour split visualisation",
+    "Pie-chart breakdown by line item (foundation, structure, finishes, electricals, plumbing)"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the average construction cost per sqft in India in 2026?","acceptedAnswer":{"@type":"Answer","text":"In 2026, construction cost per sqft in India ranges from ₹850 (Economy, Tier-3 cities) to ₹2,800 (Premium, Metro cities). Standard quality construction in a metro city typically costs around ₹1,900 per sqft."}},{"@type":"Question","name":"How is house construction cost calculated?","acceptedAnswer":{"@type":"Answer","text":"House construction cost is calculated by multiplying the built-up area (plot area × number of floors) by the construction rate per sqft. The rate varies based on city, quality grade, and materials chosen."}},{"@type":"Question","name":"Does construction cost include interior work?","acceptedAnswer":{"@type":"Answer","text":"Typically, the basic construction cost covers structural work, basic flooring, plastering, and standard electrical and plumbing. Premium interior finishes like modular kitchens, false ceilings, and designer tiles are usually separate."}},{"@type":"Question","name":"Why should I add a contingency amount to my construction budget?","acceptedAnswer":{"@type":"Answer","text":"Construction projects almost always encounter unexpected costs — soil issues, material price increases, design changes, or weather delays. A 10–15% contingency buffer ensures your project isn't stalled by surprise expenses."}},{"@type":"Question","name":"How can I reduce my house construction cost?","acceptedAnswer":{"@type":"Answer","text":"Key savings strategies include: getting at least 3 contractor quotes, buying materials directly from dealers (not through the contractor), building in stages, choosing a simple floor plan, and locking material prices in advance."}},{"@type":"Question","name":"What is the difference between Economy, Standard, and Premium construction?","acceptedAnswer":{"@type":"Answer","text":"Economy uses basic materials like local bricks, standard cement, basic tiles and simple electrical fittings. Standard uses branded materials, good quality tiles, modular switches and better finishes. Premium uses high-end materials, designer tiles, imported fittings and superior finishing throughout."}}]}
@@ -315,6 +335,7 @@ ul{list-style:none}
 </style>
 <link rel="stylesheet" href="../site-consistency.css"/>
 <link rel="stylesheet" href="/calc-enhance.css"/>
+  <link rel="stylesheet" href="/ask-gkb.css"/>
 </head>
 <body>
 
@@ -977,5 +998,6 @@ function toggleFaq(el){
 </script>
 <script defer src="../site-consistency.js"></script>
 <script defer src="/calc-enhance.js"></script>
+  <script src="/ask-gkb.js" defer></script>
 </body>
 </html>
