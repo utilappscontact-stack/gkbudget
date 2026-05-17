@@ -23,30 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Home Loan Prepay vs SIP Calculator India",
-  "url": "https://gharkabudget.com/prepay-vs-sip/",
-  "applicationCategory": "FinanceApplication",
-  "operatingSystem": "Any",
-  "description": "Free calculator that simulates both paths — prepaying home loan principal vs investing the surplus in equity SIP — month-by-month over the loan's remaining tenure. Reports net wealth at horizon for each path and a verdict.",
-  "featureList": [
-    "Compares prepaying home loan with surplus vs investing surplus in SIP",
-    "Year-by-year net-worth tracking for both paths",
-    "Break-even crossover identification",
-    "Configurable SIP return rate and prepayment frequency",
-    "Tax-adjusted comparison (Section 24 + 80C)",
-    "Verdict: PREPAY, KEEP-INVESTING, or TOO-CLOSE-TO-CALL"
-  ],
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "INR"
-  }
-}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Home Loan Prepay vs SIP Calculator India","url":"https://gharkabudget.com/prepay-vs-sip/","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Free calculator that simulates both paths — prepaying home loan principal vs investing the surplus in equity SIP — month-by-month over the loan's remaining tenure. Reports net wealth at horizon for each path and a verdict.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should I prepay my home loan or invest in SIP?","acceptedAnswer":{"@type":"Answer","text":"It depends on the gap between your loan rate and your alternative investment return — adjusted for tax. If your home loan rate (after Section 24 tax benefit) is higher than your expected SIP return, prepay. If your alt-return is meaningfully higher, keep investing. The threshold flips dramatically based on tax regime: under the new tax regime (default since FY24-25) self-occupied home loan interest gets no deduction, so the gross loan rate stands. Under the old regime with Section 24, the effective rate drops by your slab times the deductible portion. The calculator simulates both paths month-by-month and gives you the actual wealth difference at the end of your loan tenure."}},{"@type":"Question","name":"What does Section 24 tax benefit do to the math?","acceptedAnswer":{"@type":"Answer","text":"Section 24(b) of the Income Tax Act allows a deduction of up to Rs 2 lakh per year on home loan interest for self-occupied properties under the old tax regime. For let-out properties the deduction is uncapped. For someone in the 30% slab paying Rs 2L+ interest annually on a self-occupied property, the benefit is Rs 60,000 per year — effectively reducing the loan rate by 1.0–1.5%. This makes 'keep investing' more attractive. Under the new tax regime (the default since FY 2024-25), this deduction is not available for self-occupied properties, so the loan's gross rate is the rate you actually pay — making 'prepay' more attractive in most cases."}},{"@type":"Question","name":"What alt-return rate should I assume?","acceptedAnswer":{"@type":"Answer","text":"For 7-15 year horizons, equity mutual fund SIPs (Nifty 50/Sensex/index funds) have historically delivered 11-13% CAGR over rolling 10-year windows. Hybrid balanced advantage funds: 9-10%. Pure debt or fixed deposits: 7-7.5% pre-tax (less after debt-fund LTCG taxation post-2023). If you are not actually disciplined enough to maintain SIP through a full bear market, your real return will be lower. Use 10-11% if you would actually invest in equity, 7-8% if you prefer FD/debt. The verdict in this calculator is highly sensitive to this number — try both endpoints to see how much it matters."}},{"@type":"Question","name":"Is partial prepayment allowed on Indian home loans?","acceptedAnswer":{"@type":"Answer","text":"Yes. RBI guidelines mandate that floating-rate home loans cannot have a prepayment penalty for individual borrowers. You can prepay any amount, any month, any number of times — most banks allow prepayment online, by cheque, or at the branch. Two options on prepayment: (1) reduce tenure (keep EMI same, finish loan earlier) or (2) reduce EMI (keep tenure same, lower monthly outflow). For maximum interest saving, always choose 'reduce tenure'. Fixed-rate loans may have a 2-3% prepayment penalty — read your loan agreement before assuming."}},{"@type":"Question","name":"What is the break-even calculation in this calculator?","acceptedAnswer":{"@type":"Answer","text":"The calculator simulates two parallel paths over the loan's remaining tenure. Path A (KEEP-INVESTING): pay EMI normally, invest the monthly surplus in SIP at alt-return. Path B (PREPAY): use the surplus as additional monthly principal payment, finishing the loan early; once the loan is paid off, redirect the freed cash flow (full EMI + original surplus) into SIP for the remaining months. Both paths end with a fully paid home and a SIP corpus — the calculator compares the corpus values. The verdict is PREPAY if Path B's corpus exceeds Path A's by more than 5%, KEEP-INVESTING if Path A exceeds Path B by more than 5%, and TOO-CLOSE-TO-CALL otherwise."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gharkabudget.com/"},{"@type":"ListItem","position":2,"name":"Prepay vs SIP Calculator","item":"https://gharkabudget.com/prepay-vs-sip/"}]}</script>
 <style>
@@ -187,7 +164,6 @@ nav.bar{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px soli
   .radios.r2{grid-template-columns:1fr 1fr}
 }
 </style>
-  <link rel="stylesheet" href="/ask-gkb.css"/>
 </head>
 <body>
 
@@ -848,6 +824,5 @@ function drawChart(a, b){
 }
 </script>
 <script defer src="/calc-enhance.js"></script>
-  <script src="/ask-gkb.js" defer></script>
 </body>
 </html>

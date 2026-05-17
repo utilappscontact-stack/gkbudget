@@ -23,30 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "EMI vs Rent Break-Even Calculator India",
-  "url": "https://gharkabudget.com/emi-vs-rent/",
-  "applicationCategory": "FinanceApplication",
-  "operatingSystem": "Any",
-  "description": "Free calculator that simulates wealth year-by-year in BUY vs RENT scenarios for Indian residential property purchase. Identifies the break-even year and compares net wealth at horizon.",
-  "featureList": [
-    "Full lifecycle simulation: buying vs renting over 10-30 years",
-    "Down payment opportunity-cost modelling (alternative investment returns)",
-    "Rent escalation and property appreciation projections",
-    "Property tax, maintenance, and transaction cost inclusion",
-    "Break-even year identification",
-    "Verdict: BUY, MARGINAL, or RENT"
-  ],
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "INR"
-  }
-}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"EMI vs Rent Break-Even Calculator India","url":"https://gharkabudget.com/emi-vs-rent/","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Free calculator that simulates wealth year-by-year in BUY vs RENT scenarios for Indian residential property purchase. Identifies the break-even year and compares net wealth at horizon.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is comparing monthly EMI to monthly rent the wrong way to decide?","acceptedAnswer":{"@type":"Answer","text":"It ignores three big factors. First, the opportunity cost of your down payment — if you didn't lock that money in property, it could be earning 10–12% in equity mutual funds. Second, rent escalation — your rent will roughly double in 12 years at 6% annual escalation. Third, property appreciation — your property's value also compounds. A proper rent vs buy decision requires simulating wealth year-by-year in both scenarios with the same monthly cash budget. That's what this calculator does."}},{"@type":"Question","name":"What is the break-even year and how is it calculated?","acceptedAnswer":{"@type":"Answer","text":"The break-even year is the year at which your net wealth in the BUY scenario (property equity = property value minus remaining loan balance) first equals or exceeds your net wealth in the RENT scenario (compounded value of your invested down payment plus the monthly EMI-vs-rent differential). Before that year, renting and investing wins; after that year, buying wins. The calculator computes this month-by-month and reports the first year buying overtakes."}},{"@type":"Question","name":"What property appreciation rate should I assume for India?","acceptedAnswer":{"@type":"Answer","text":"For Tier-1 cities (Mumbai, Bangalore, Delhi NCR, Pune, Hyderabad, Chennai), assume 5–8% annual appreciation in established neighbourhoods over a 7-year+ horizon. Peripheral and Outer Ring Road corridors have outpaced 8–10% in many cases. Tier-2 cities range 4–7%. Cap the assumption at 8% for a base-case scenario; anything above 10% is optimistic and the deal becomes very sensitive to that assumption. The calculator lets you stress-test by changing the appreciation rate."}},{"@type":"Question","name":"Should I include rental yield in the buying scenario?","acceptedAnswer":{"@type":"Answer","text":"This calculator assumes you live in the property if you buy — so no rental income. If you intend to buy and rent it out (i.e. it's an investment property, not a primary residence), the analysis changes: you would add 2.5–3.5% gross rental yield (typical Indian metro yields) minus 30–35% costs (vacancy, repairs, society dues, taxes) to the BUY scenario's wealth growth. For a primary-residence decision, the calculator's current setup is correct."}},{"@type":"Question","name":"What is a realistic alternative investment return to assume?","acceptedAnswer":{"@type":"Answer","text":"For a 7–15 year horizon: equity mutual funds (Nifty 50 / Sensex SIP) have delivered 11–13% CAGR over rolling 10-year windows. Hybrid funds: 9–10%. Pure debt or FD: 7–7.5%. Use 10–11% if you would actually invest in equity, 7–8% if you're risk-averse. The calculator's verdict is sensitive to this — try both endpoints to see how much your assumption matters."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gharkabudget.com/"},{"@type":"ListItem","position":2,"name":"EMI vs Rent Calculator","item":"https://gharkabudget.com/emi-vs-rent/"}]}</script>
 <style>
@@ -181,7 +158,6 @@ nav.bar{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px soli
   .radios{grid-template-columns:1fr 1fr 1fr}
 }
 </style>
-  <link rel="stylesheet" href="/ask-gkb.css"/>
 </head>
 <body>
 
@@ -793,6 +769,5 @@ function drawChart(years){
 }
 </script>
 <script defer src="/calc-enhance.js"></script>
-  <script src="/ask-gkb.js" defer></script>
 </body>
 </html>

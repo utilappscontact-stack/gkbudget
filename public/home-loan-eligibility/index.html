@@ -23,29 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Home Loan Eligibility Calculator India",
-  "url": "https://gharkabudget.com/home-loan-eligibility/",
-  "applicationCategory": "FinanceApplication",
-  "operatingSystem": "Any",
-  "description": "Free home loan eligibility calculator using the FOIR formula Indian banks actually use. Accounts for age, tenure, existing EMIs, co-applicant income.",
-  "featureList": [
-    "FOIR-based eligibility using the formula Indian banks actually use",
-    "State-specific lender margin assumptions",
-    "Multi-applicant joint loan handling",
-    "Existing EMI obligation deduction",
-    "Maximum sanctionable loan amount with EMI breakdown"
-  ],
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "INR"
-  }
-}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Home Loan Eligibility Calculator India","url":"https://gharkabudget.com/home-loan-eligibility/","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Free home loan eligibility calculator using the FOIR formula Indian banks actually use. Accounts for age, tenure, existing EMIs, co-applicant income.","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is home loan eligibility calculated in India?","acceptedAnswer":{"@type":"Answer","text":"Indian banks use the FOIR (Fixed Obligation to Income Ratio) formula: max EMI = (Net Monthly Income – Existing EMIs) × FOIR%. The FOIR limit varies by income — typically 50% for incomes below ₹50K/month, 55–60% for ₹50K–1L/month, and up to 65% for high-income earners. The maximum loan amount is then derived from this max EMI using the loan rate and tenure."}},{"@type":"Question","name":"What is FOIR and why does it matter?","acceptedAnswer":{"@type":"Answer","text":"FOIR (Fixed Obligation to Income Ratio) is the percentage of your monthly income that banks allow to go toward all loan EMIs combined — including the proposed home loan. SBI typically caps FOIR at 50–65% depending on income; HDFC and ICICI use similar bands. If you have a car loan, personal loan, or credit card EMI, those reduce your remaining FOIR available for the home loan."}},{"@type":"Question","name":"Does my co-applicant's salary increase my eligibility?","acceptedAnswer":{"@type":"Answer","text":"Yes, when you add a working co-applicant (typically spouse), their income is added to yours for FOIR calculation, often increasing eligibility by 60–90%. Both incomes must be documented (salary slips, ITR). Co-applicants can also lower interest rates in some banks if she is female (women borrowers get a 0.05–0.10% rate concession at most lenders)."}},{"@type":"Question","name":"What is the maximum tenure for a home loan in India?","acceptedAnswer":{"@type":"Answer","text":"Most Indian banks offer maximum 30-year home loan tenure for salaried borrowers, but with an age cap — the loan must be fully paid off before retirement age (60 for most banks, 65 for select). So a 35-year-old can typically get 25 years; a 50-year-old gets 10 years. Longer tenure means lower EMI and higher eligibility, but more total interest paid."}},{"@type":"Question","name":"Why do different banks show different eligibility for the same income?","acceptedAnswer":{"@type":"Answer","text":"Three reasons: (1) FOIR varies — SBI is conservative at 50–55%, HDFC up to 65% for high earners. (2) Income weights — some banks discount variable pay (bonus, incentives) to 50%. (3) Co-applicant rules — some banks count 100% of co-applicant income, others only 50% if the co-applicant is unemployed but has assets. Always get pre-approval from at least 3 banks before finalising."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gharkabudget.com/"},{"@type":"ListItem","position":2,"name":"Home Loan Eligibility","item":"https://gharkabudget.com/home-loan-eligibility/"}]}</script>
 <style>
@@ -141,7 +119,6 @@ nav.bar{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px soli
 @media(max-width:760px){.nl{display:none}.hbg{display:flex}.row-2{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="/calc-enhance.css"/>
-  <link rel="stylesheet" href="/ask-gkb.css"/>
 </head>
 <body>
 
@@ -540,6 +517,5 @@ function toggleFaq(el){
 }
 </script>
 <script defer src="/calc-enhance.js"></script>
-  <script src="/ask-gkb.js" defer></script>
 </body>
 </html>
