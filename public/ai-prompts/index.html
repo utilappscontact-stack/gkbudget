@@ -368,8 +368,89 @@ Be specific to PMAY-U 2.0 (active Sep 2024 - Aug 2029) and current 2026 PLI prac
   <a class="ap-cta" href="/pmay-eligibility/">Run the PMAY 2.0 Eligibility & Subsidy Verifier calculator &rarr;</a>
 </article>
 
-<article class="ap-card" id="p-home-loan-eligibility">
+<article class="ap-card" id="p-ltcg-property">
   <div class="ap-num">08</div>
+  <h2 class="ap-h">LTCG on Property Sale Tax Verifier</h2>
+  <div class="ap-role"><span class="ap-role-label">AI persona:</span> an Indian Chartered Accountant specialising in capital gains tax planning for property sales under the Budget 2024 dual-regime in 2026</div>
+  <div class="ap-catches"><strong>What this catches.</strong> Catches: which date counts as "acquisition" for the 23-July-2024 dual-regime cutoff if you bought via builder allotment letter or under-construction property, edge cases with multiple improvements / inheritance / co-owners, the right order to think about exemption planning (CGAS parking vs immediate house purchase vs 54EC bonds), and the surcharge layer on top of the 12.5%/20% + 4% cess that the calc deliberately omits.</div>
+  <details class="ap-prompt">
+    <summary>Show full prompt template</summary>
+    <pre class="ap-prompt-body">I used Ghar Ka Budget&#x27;s LTCG on Property Sale calculator to estimate tax on my property sale under the Budget 2024 dual-regime.
+
+MY INPUTS:
+{INPUTS}
+
+CALCULATED RESULT:
+{RESULT}
+
+Acting as {ROLE}, please:
+1. Did the calculator correctly identify whether my property qualifies for the dual-regime choice (acquired before 23 July 2024)? If I bought via builder allotment letter / under-construction property, what&#x27;s the relevant acquisition date for the cutoff - the date of the allotment letter, possession, or registered sale deed?
+2. The calc picked Method A (12.5% no indexation) or Method B (20% with indexation). Are there cases where this comparison gets more complex - e.g. property bought partially through inheritance, multiple improvements over the years, or co-owner with different acquisition dates? What should I sanity-check?
+3. For exemption planning - if I haven&#x27;t yet decided whether to invest in a new house (Sec 54/54F) or 54EC bonds, what&#x27;s the order I should think about it? Is parking in Capital Gains Account Scheme (CGAS) before ITR due date a good interim move, and which nationalised banks actually offer it smoothly in 2026?
+4. Surcharge layer: my LTCG plus salary may push my total income past Rs 50L / Rs 1Cr. The calc shows tax + 4% cess but not surcharge. What surcharge percentage applies in my income band, and is the 15% cap on LTCG surcharge per Budget 2022 still in force for May 2026?
+
+Be specific to Indian Income Tax Act 1961 provisions (Sec 45, 48, 54, 54F, 54EC) and current 2026 ITR filing practice. Concise.</pre>
+    <div class="ap-prompt-note">Placeholders <code>{INPUTS}</code>, <code>{RESULT}</code>, <code>{ROLE}</code> are filled automatically when you click <em>Verify with AI</em> on the calculator.</div>
+  </details>
+  <a class="ap-cta" href="/ltcg-property/">Run the LTCG on Property Sale Tax Verifier calculator &rarr;</a>
+</article>
+
+<article class="ap-card" id="p-rental-yield">
+  <div class="ap-num">09</div>
+  <h2 class="ap-h">Rental Yield &amp; Investment Return Verifier</h2>
+  <div class="ap-role"><span class="ap-role-label">AI persona:</span> an Indian property investment analyst familiar with rental economics across tier-1, tier-2 and tier-3 cities in 2026</div>
+  <div class="ap-catches"><strong>What this catches.</strong> Catches: whether your assumed rent is achievable in the specific locality, what local factors (metro/IT/oversupply) should sway your capital-appreciation assumption, restructuring options to improve poor yields (co-living, short-stay, commercial conversion, student housing), and the exit framework around 24-month LTCG threshold + Sec 54 rollover.</div>
+  <details class="ap-prompt">
+    <summary>Show full prompt template</summary>
+    <pre class="ap-prompt-body">I used Ghar Ka Budget&#x27;s Rental Yield calculator to evaluate a rental property investment.
+
+MY INPUTS:
+{INPUTS}
+
+CALCULATED RESULT:
+{RESULT}
+
+Acting as {ROLE}, please:
+1. The calculator showed my gross/net/after-tax yields and a 10-year benchmark vs FD/Debt MF/Equity MF. For my specific city and locality (mentioned in inputs), is the rent I&#x27;m assuming actually achievable, or is there a market gap (e.g. builder marketing rents higher than what tenants actually pay, or society maintenance creeping above my estimate)? What 3 real-world rent-suppressing factors should I budget for that the calculator might miss?
+2. The capital appreciation assumption is the single biggest swing factor in the 10-year return. For my city/locality in 2026, what&#x27;s a realistic appreciation range, and what specific local factors (infrastructure projects, new metro lines, IT corridor demand, oversupply of new launches) should make me bullish or bearish on this assumption?
+3. If the rental yield is poor (1-2% after-tax), is there a way to restructure the deal to improve economics? Options: (a) co-living / shared accommodation (3-4 tenants instead of family), (b) Airbnb / short-stay rentals, (c) commercial conversion if zoning permits, (d) student housing near colleges. What works in my locality?
+4. For exit planning: if this property doesn&#x27;t work out, when should I sell? Should I plan around the 24-month LTCG threshold, time it with a market peak, or use Sec 54/54F to roll into a better property without tax leakage? What&#x27;s the right exit framework given the math you saw?
+
+Be specific to Indian residential rental economics in 2026, with concrete local intel where possible. Concise.</pre>
+    <div class="ap-prompt-note">Placeholders <code>{INPUTS}</code>, <code>{RESULT}</code>, <code>{ROLE}</code> are filled automatically when you click <em>Verify with AI</em> on the calculator.</div>
+  </details>
+  <a class="ap-cta" href="/rental-yield/">Run the Rental Yield &amp; Investment Return Verifier calculator &rarr;</a>
+</article>
+
+<article class="ap-card" id="p-society-redevelopment">
+  <div class="ap-num">10</div>
+  <h2 class="ap-h">Mumbai Society Redevelopment Verifier (DCPR 2034)</h2>
+  <div class="ap-role"><span class="ap-role-label">AI persona:</span> a Mumbai real estate advisor and society redevelopment specialist with deep DCPR 2034 knowledge across Reg 33(7), 33(7A), 33(7B), 33(9), 33(10), and 33(20A) in 2026</div>
+  <div class="ap-catches"><strong>What this catches.</strong> Catches: TDR-zone / coastal / airport-funnel / heritage-precinct factors that swing real margins ±10% from the calc, the prioritised list of negotiation asks based on margin band, immediate pre-DA next steps (RERA verification, bank guarantee structure, jurisdiction clause), and the 3 most common Mumbai redev failure modes + protective clauses.</div>
+  <details class="ap-prompt">
+    <summary>Show full prompt template</summary>
+    <pre class="ap-prompt-body">I used Ghar Ka Budget&#x27;s Mumbai Society Redevelopment calculator to evaluate a developer&#x27;s redev proposal for our cooperative housing society.
+
+MY INPUTS:
+{INPUTS}
+
+CALCULATED RESULT:
+{RESULT}
+
+Acting as {ROLE}, please:
+1. The calculator&#x27;s margin estimate is rough (deliberately so - real DCPR 2034 redev involves TDR loading, road-widening setbacks, height restrictions in heritage/CRZ/airport-funnel zones, and IOD/OC cycle delays that swing real margins +/- 10%). For my specific plot location (mentioned in inputs) in Mumbai, what local factors should I sanity-check that could materially change this number? Specifically: am I in a TDR-receiving zone, a coastal-regulation zone, near a DP Road earmarked for widening, or in an airport-funnel/heritage precinct?
+2. The developer is offering a specific carpet + corpus + rent package. Based on my margin calculation, is this proposal under-paying, fairly priced, or generous? What are 3-5 specific negotiation asks I should table at the next society meeting, prioritized by what&#x27;s most achievable given the margin?
+3. We have 75% member majority resolution at our society. What are the immediate next steps before signing the Development Agreement - structural audit by which licensed engineer, RERA registration verification of the developer (track record on past redev projects), bank guarantee structure (which scheduled bank, what percentage of rehab cost), penalty clauses for delay, and Bombay High Court vs arbitration jurisdiction clause?
+4. What are the 3 most common ways Mumbai redev projects fail or get stuck mid-execution (developer bankruptcy, FSI dispute with BMC, member faction blocking IOD, contractor walking off site), and what protective clauses in the DA prevent each one?
+
+Be specific to Mumbai DCPR 2034 redev practice in 2026, with concrete clause-level language where possible. Concise.</pre>
+    <div class="ap-prompt-note">Placeholders <code>{INPUTS}</code>, <code>{RESULT}</code>, <code>{ROLE}</code> are filled automatically when you click <em>Verify with AI</em> on the calculator.</div>
+  </details>
+  <a class="ap-cta" href="/society-redevelopment/">Run the Mumbai Society Redevelopment Verifier (DCPR 2034) calculator &rarr;</a>
+</article>
+
+<article class="ap-card" id="p-home-loan-eligibility">
+  <div class="ap-num">11</div>
   <h2 class="ap-h">Home Loan Eligibility Verifier</h2>
   <div class="ap-role"><span class="ap-role-label">AI persona:</span> an Indian banking advisor specialising in home loan eligibility</div>
   <div class="ap-catches"><strong>What this catches.</strong> Catches: how FOIR rules differ across PSU/private/NBFC lenders, what the 4 main loan-amount-killers are for someone with your profile, what bumps eligibility 15–25% if relevant (joint application, longer tenure, salary credit account switch).</div>
@@ -396,7 +477,7 @@ Be specific to Indian banking practice in 2026. Concise.</pre>
 </article>
 
 <article class="ap-card" id="p-plot-viability">
-  <div class="ap-num">09</div>
+  <div class="ap-num">12</div>
   <h2 class="ap-h">Plot Purchase Viability Second Opinion</h2>
   <div class="ap-role"><span class="ap-role-label">AI persona:</span> a real estate analyst with experience in Indian land markets in 2026</div>
   <div class="ap-catches"><strong>What this catches.</strong> Catches: red-flag overpayment relative to circle-rate vs market-rate, holding-cost reality check, plot vs apartment comparison for your horizon, and the title/encumbrance checks specific to plot purchases that flat purchases don't face.</div>
@@ -423,7 +504,7 @@ Be specific to Indian land market dynamics in 2026. Concise.</pre>
 </article>
 
 <article class="ap-card" id="p-stamp-duty">
-  <div class="ap-num">10</div>
+  <div class="ap-num">13</div>
   <h2 class="ap-h">Stamp Duty + Registration Verifier</h2>
   <div class="ap-role"><span class="ap-role-label">AI persona:</span> a property lawyer practising in India in 2026</div>
   <div class="ap-catches"><strong>What this catches.</strong> Catches: applicable concessions for women buyers and joint registration, when the circle/ready-reckoner rate matters more than agreement value, and post-2024 state rule changes that might affect your specific state.</div>
@@ -450,7 +531,7 @@ Be specific to the state mentioned. Concise.</pre>
 </article>
 
 <article class="ap-card" id="p-quote-check">
-  <div class="ap-num">11</div>
+  <div class="ap-num">14</div>
   <h2 class="ap-h">Contractor Quote Reality Check</h2>
   <div class="ap-role"><span class="ap-role-label">AI persona:</span> a construction project manager working in India in 2026</div>
   <div class="ap-catches"><strong>What this catches.</strong> Catches: what the 5 most-inflated line items in Indian contractor BOQs look like, escalation clauses to watch for, what an honest payment milestone schedule looks like, and city-specific quote norms for your project size.</div>
@@ -477,7 +558,7 @@ Be specific to Indian residential construction practice. Concise.</pre>
 </article>
 
 <article class="ap-card" id="p-modular-kitchen">
-  <div class="ap-num">12</div>
+  <div class="ap-num">15</div>
   <h2 class="ap-h">Modular Kitchen Quote Sanity Check</h2>
   <div class="ap-role"><span class="ap-role-label">AI persona:</span> an Indian modular kitchen designer</div>
   <div class="ap-catches"><strong>What this catches.</strong> Catches: shutter-finish brand-vs-unbranded substitution risks, hardware (hinges, channels) tier mismatches that show up after 18 months, layout choices that drive cost more than finishes, and what 60K vs 1.5L per running foot really differ in.</div>
@@ -504,7 +585,7 @@ Be Indian-context specific. Concise.</pre>
 </article>
 
 <article class="ap-card" id="p-bathroom-renovation">
-  <div class="ap-num">13</div>
+  <div class="ap-num">16</div>
   <h2 class="ap-h">Bathroom Renovation Quote Verifier</h2>
   <div class="ap-role"><span class="ap-role-label">AI persona:</span> an Indian residential plumber and bathroom contractor in 2026</div>
   <div class="ap-catches"><strong>What this catches.</strong> Catches: waterproofing scope and warranty norms (most contractors skim here), tile-cost-per-sqft vs sanitaryware-cost reality, plumbing rough-in scope often missing from quote, and exhaust-fan/ventilation specs people regret.</div>
@@ -531,7 +612,7 @@ Be Indian-context specific. Concise.</pre>
 </article>
 
 <article class="ap-card" id="p-painting-cost">
-  <div class="ap-num">14</div>
+  <div class="ap-num">17</div>
   <h2 class="ap-h">Painting Cost Estimate Verifier</h2>
   <div class="ap-role"><span class="ap-role-label">AI persona:</span> an Indian painting contractor with 10+ years experience</div>
   <div class="ap-catches"><strong>What this catches.</strong> Catches: putty + primer scope (usually undercharged), distemper vs emulsion vs textured implications for actual lifespan, exterior weatherproofing premium logic, and warranty norms that are realistic vs marketing claims.</div>
@@ -558,7 +639,7 @@ Be Indian-context specific. Concise.</pre>
 </article>
 
 <article class="ap-card" id="p-waterproofing">
-  <div class="ap-num">15</div>
+  <div class="ap-num">18</div>
   <h2 class="ap-h">Waterproofing Cost & Method Verifier</h2>
   <div class="ap-role"><span class="ap-role-label">AI persona:</span> an Indian waterproofing applicator with experience in monsoon zones</div>
   <div class="ap-catches"><strong>What this catches.</strong> Catches: method-mismatch for your specific failure mode (terrace vs bathroom vs basement vs external wall need different chemistry), warranty terms that are realistic for India's monsoon zones, and what realistic 5–10 year revisit cycles look like.</div>

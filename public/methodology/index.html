@@ -187,6 +187,9 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0;margin-top:4
     <a href="#prepay-vs-sip">Prepay vs SIP</a>
     <a href="#balance-transfer">Balance Transfer</a>
     <a href="#pmay-eligibility">PMAY 2.0 Eligibility</a>
+    <a href="#ltcg-property">LTCG on Property Sale</a>
+    <a href="#rental-yield">Rental Yield</a>
+    <a href="#society-redevelopment">Society Redevelopment (Mumbai)</a>
     <a href="#quote-check">Quote Checker</a>
     <a href="#stamp-duty">Stamp Duty</a>
     <a href="#home-loan-eligibility">Loan Eligibility</a>
@@ -609,6 +612,214 @@ Step 5: Effective EMI on full loan
 </ul>
 
 <a class="calc-link" href="/pmay-eligibility/">Open calculator &rarr;</a>
+</div>
+<div class="calc-block" id="ltcg-property">
+<h3>LTCG on Property Sale Calculator <span class="pill">May 2026</span></h3>
+<div class="meta-row">
+<span><strong>Calculator:</strong> <a href="/ltcg-property/">/ltcg-property/</a></span>
+<span><strong>Output:</strong> Method-A vs Method-B comparison + final tax with exemptions</span>
+<span><strong>Last rules review:</strong> 14 May 2026 (CII FY 2025-26 = 376 per CBDT Notification 70/2025)</span>
+</div>
+
+<h4>What it computes</h4>
+<p>For a property sale, applies the Finance Act 2024 dual-regime to compute LTCG tax: 12.5% without indexation (Method A) vs 20% with indexation (Method B, only for properties acquired before 23 July 2024), picks the lower tax, then applies Section 54 / 54F / 54EC exemptions and the 4% Health &amp; Education Cess.</p>
+
+<h4>Core method</h4>
+<div class="formula">Step 1: Holding period check
+  IF months_held &lt; 24: STCG (slab rate, calc not provided)
+  ELSE: LTCG path below
+
+Step 2: Method A (always available)
+  gainA = (sale &minus; transfer_costs) &minus; (purchase + improvement)
+  taxA  = 12.5% &times; max(gainA, 0)
+
+Step 3: Method B (only if purchase_date &lt; 23 July 2024)
+  indexed_purchase    = purchase   &times; CII[sale_FY] / CII[purchase_FY]
+  indexed_improvement = improvement &times; CII[sale_FY] / CII[improvement_FY]
+  gainB = (sale &minus; transfer_costs) &minus; indexed_purchase &minus; indexed_improvement
+  taxB  = 20% &times; max(gainB, 0)
+
+Step 4: Choose lower tax
+  chosen = (taxB &lt; taxA) ? Method B : Method A
+
+Step 5: Apply exemptions (on chosen gain)
+  IF residential sale + new house: Sec 54 = min(gain, new_invest, &#8377;10Cr)
+  IF other sale + new house:        Sec 54F = min(gain &times; new_invest/net_sale, &#8377;10Cr)
+  IF 54EC bonds:                    Sec 54EC = min(gain, bonds, &#8377;50L)
+
+Step 6: Final tax
+  taxable_LTCG = max(chosen_gain &minus; total_exemption, 0)
+  tax          = taxable_LTCG &times; chosen_rate (12.5% or 20%)
+  cess         = tax &times; 4%
+  all_in       = tax + cess</div>
+
+<h4>CII table (CBDT-notified)</h4>
+<p>Base year FY 2001-02 = 100. Values for FY 2001-02 through FY 2025-26 (376) per CBDT Notification 70/2025 dated 1 July 2025. FY 2026-27 not yet notified as of May 2026 (typically released June-July).</p>
+
+<h4>Known limitations</h4>
+<ul class="src-list">
+<li>Surcharge layer (10-37% on total income above &#8377;50L) not modelled. LTCG surcharge capped at 15% per Budget 2022.</li>
+<li>Multiple improvements at different dates: calc handles one improvement entry; sum manually for multiple.</li>
+<li>Joint ownership: run calc separately for each owner with their pro-rata share.</li>
+<li>Inherited / gifted property: calc accepts the original owner's purchase price + year but doesn't enforce the rule.</li>
+<li>Pre-1-April-2001 property: substitute the FMV value (higher of actual cost or FMV as on 1-Apr-2001) in the purchase price field; CII for 2001-02 = 100.</li>
+<li>CGAS (Capital Gains Account Scheme) parking before ITR due date is not modelled &mdash; treats reinvestment as completed.</li>
+</ul>
+
+<a class="calc-link" href="/ltcg-property/">Open calculator &rarr;</a>
+</div>
+<div class="calc-block" id="rental-yield">
+<h3>Rental Yield Calculator <span class="pill">May 2026</span></h3>
+<div class="meta-row">
+<span><strong>Calculator:</strong> <a href="/rental-yield/">/rental-yield/</a></span>
+<span><strong>Output:</strong> Gross / Net / After-tax yield + 10-year total return vs alt-investments</span>
+<span><strong>Last benchmarks review:</strong> 14 May 2026</span>
+</div>
+
+<h4>What it computes</h4>
+<p>For a rental property, computes three yield levels (gross, net after operating costs, after income tax) plus a year-by-year 10-year simulation comparing total return (rent + capital appreciation, post-LTCG) against FD, debt MF, and equity MF benchmarks. The verdict reflects how the property holds up as a pure financial investment.</p>
+
+<h4>Core method</h4>
+<div class="formula">Gross Yield = annual_rent / property_value &times; 100
+
+Operating Costs (annual):
+  property_tax     = prop_tax_pct &times; value     (typically 0.3-0.5%)
+  maintenance      = monthly_maint &times; 12        (society + own)
+  vacancy          = monthly_rent &times; vac_months (typically 1 month/yr)
+  brokerage        = monthly_rent &times; brk_months (typically 1 month/yr)
+  repairs_reserve  = repairs_pct &times; value      (0.5% typical)
+  insurance        = annual_insurance
+  total_op_costs   = sum of above
+
+Net Yield = (annual_rent &minus; total_op_costs) / property_value &times; 100
+
+Income tax computation (Section 24):
+  GAV  = annual_rent                            (assumes actual = fair rent)
+  NAV  = GAV &minus; property_tax
+  std_deduction = 30% &times; NAV                    (Section 24(a))
+  taxable_rent  = MAX(NAV &minus; std_deduction &minus; loan_interest, 0)
+  tax_on_rent   = taxable_rent &times; slab_pct &times; 1.04 (cess)
+
+After-Tax Yield = (net_op_income &minus; tax_on_rent) / property_value &times; 100
+
+10-year total return (year-by-year simulation):
+  loop yr 1..10:
+    rent escalates by rent_escalation%
+    property value appreciates by appreciation%
+    operating costs recomputed each year on new values
+    after-tax rental added to cumulative
+  capital_gain = year-10 value &minus; purchase_value
+  ltcg_tax     = capital_gain &times; 12.5% &times; 1.04
+  total_return = cumulative_rent_after_tax + capital_gain &minus; ltcg_tax
+  annualised   = ((total_return + purchase) / purchase)^(1/10) &minus; 1</div>
+
+<h4>Verdict bands (on after-tax yield)</h4>
+<ul class="src-list">
+<li>EXCELLENT: &ge; 3% after-tax (rare for Indian residential; commercial territory)</li>
+<li>GOOD: 1.5% &ndash; 3% after-tax (above metro average)</li>
+<li>AVERAGE: 0.5% &ndash; 1.5% (typical Tier-1 metro)</li>
+<li>POOR: &lt; 0.5% or negative (rent doesn't cover costs)</li>
+</ul>
+
+<h4>Benchmark return calculations</h4>
+<ul class="src-list">
+<li>FD: 6.5% p.a. compounded; interest taxed at slab rate annually (TDS).</li>
+<li>Debt MF: 7.5% p.a. CAGR; gain taxed at 12.5% LTCG &times; 1.04 cess (Budget 2024 post-July-23-2024 rule).</li>
+<li>Equity MF: 12% p.a. CAGR; gain less &#8377;1.25L LTCG exemption, then 12.5% &times; 1.04 cess.</li>
+</ul>
+
+<h4>Known limitations</h4>
+<ul class="src-list">
+<li>Loan EMI cash flow drag not modelled &mdash; only Section 24 interest deduction is captured for tax purposes.</li>
+<li>Property selling costs (brokerage, legal, stamp duty on next purchase) not subtracted from 10-year total return.</li>
+<li>Major repair/renovation cycles (bathroom every 8-10yr, painting every 4-5yr) lumped into the 0.5% repairs reserve &mdash; reality has lumpy spikes.</li>
+<li>Maintenance default risk (tenant skipping payment) not modelled; calc assumes timely payment.</li>
+<li>State-specific rental laws (rent control, escalation caps, eviction rules) not modelled.</li>
+<li>Year-by-year simulation assumes constant escalation rates &mdash; in reality rents and prices move in cycles.</li>
+</ul>
+
+<a class="calc-link" href="/rental-yield/">Open calculator &rarr;</a>
+</div>
+<div class="calc-block" id="society-redevelopment">
+<h3>Mumbai Society Redevelopment Calculator <span class="pill">May 2026</span></h3>
+<div class="meta-row">
+<span><strong>Calculator:</strong> <a href="/society-redevelopment/">/society-redevelopment/</a></span>
+<span><strong>Output:</strong> Per-member benefit + developer margin under DCPR 2034 Reg 33(7)/(7A)/(7B)/(9)/(10)/(20A)</span>
+<span><strong>Last regulation review:</strong> 14 May 2026 (DCPR 2034 amendments through Feb 2026)</span>
+</div>
+
+<h4>What it computes</h4>
+<p>For a Mumbai cooperative housing society considering redevelopment, computes the FSI math under the applicable DCPR 2034 regulation, the per-member benefit package (new carpet + corpus + rent during construction), and the developer's expected margin. The margin output is the single most actionable number: above 25% means society can negotiate harder; below 5% means project is commercially inviable and won't proceed cleanly.</p>
+
+<h4>Carpet entitlement matrix (DCPR 2034)</h4>
+<div class="formula">Regulation | Single plot   | 2-5 plots     | 6+ plots
+33(7)      | +5% rehab     | +8% rehab     | +15% rehab
+33(7A)     | +5% rehab     | +8% rehab     | +15% rehab
+33(7B)     | +15% incentive FSI applied to permissible BUA, or
+           | +108 sqft (10 sqm) per member, whichever is higher
+33(9)      | +15% rehab (cluster, min 4000 sqm)
+33(10)     | Min 300 sqft (no percentage bonus formula)
+33(20A)    | +15% incentive FSI on authorized BUA
+
+Min carpet 300 sqft, Max cap 1292 sqft, all regulations.</div>
+
+<h4>FSI computation</h4>
+<div class="formula">For 33(7), 33(7A) — cessed/dilapidated:
+  base_fsi_bua  = 3.0 &times; plot_sqft
+  rehab_bua     = total_rehab_carpet / 0.65
+  with_incentive = rehab_bua &times; (1 + incentive_pct)
+  net_bua_pre_fungible = max(base_fsi_bua, with_incentive)
+
+For 33(9) — cluster:
+  base_fsi_bua = 4.0 &times; plot_sqft (min 4000 sqm plot)
+  + 15% cluster incentive on rehab
+
+For 33(10) — SRA:
+  net_bua_pre_fungible = rehab_bua &times; 2.33
+  (rehab + 1.33x saleable, simplified; real formula tied to land-rate/construction-rate ratio)
+
+For 33(7B), 33(20A):
+  net_bua_pre_fungible = rehab_bua &times; 1.15 (15% incentive)
+
+All regulations:
+  total_bua = net_bua_pre_fungible &times; 1.35 (35% fungible FSI)
+  saleable_bua = total_bua &minus; rehab_bua
+  saleable_carpet = saleable_bua &times; 0.65</div>
+
+<h4>Developer P&amp;L</h4>
+<div class="formula">Revenue = saleable_carpet &times; market_rate
+
+Costs:
+  construction = total_bua &times; construction_rate (₹3000-4000/sqft)
+  premium_FSI  = saleable_bua &times; premium_rate &times; 0.5 (saleable portion)
+  rent         = members &times; rent_per_month &times; construction_months
+  corpus       = members &times; corpus_per_member
+  GST          = construction &times; 5%
+  stamp_duty   = revenue &times; 5% &times; 40% (developer portion)
+  soft_costs   = revenue &times; 12% (legal, finance, marketing, RERA, brokerage)
+
+Profit = Revenue &minus; sum(costs)
+Margin = Profit / Revenue &times; 100</div>
+
+<h4>Verdict bands</h4>
+<ul class="src-list">
+<li>STRONG: margin &ge; 25% (society can negotiate more carpet/corpus)</li>
+<li>FAIR: 15-25% margin (accept basic terms, lock down guarantees)</li>
+<li>MARGINAL: 5-15% margin (developer likely to delay/cut quality)</li>
+<li>INVIABLE: &lt; 5% or negative (developer won't take project cleanly)</li>
+</ul>
+
+<h4>Known limitations</h4>
+<ul class="src-list">
+<li>TDR (Transferable Development Rights) loading not modelled &mdash; can add 0.5-1.0 FSI beyond shown base case.</li>
+<li>Road-widening setbacks not deducted; affects plots near WEH, EEH, S V Road, L B S Marg.</li>
+<li>Height restrictions in CRZ, airport-funnel, heritage zones not enforced.</li>
+<li>IOD/OC delays (typically 18-30 months) not added to construction timeline.</li>
+<li>Cluster premium for 33(9) is variable &mdash; calc uses a flat baseline.</li>
+<li>Real margin swing typically &plusmn;10% from this calculator's output.</li>
+</ul>
+
+<a class="calc-link" href="/society-redevelopment/">Open calculator &rarr;</a>
 </div>
 <div class="calc-block" id="quote-check">
 <h3>Contractor Quote Checker <span class="pill">Q2 2026</span></h3>

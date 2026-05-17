@@ -72,17 +72,22 @@ nav.bar{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px soli
 .sec-eye{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--a);margin-bottom:10px}
 .sec-h{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.75rem;color:var(--p);margin-bottom:6px}
 .sec-sub{font-size:.9rem;color:var(--m);margin-bottom:32px}
-.cgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.cc{background:#fff;border:1px solid var(--b);border-radius:var(--r);padding:28px 28px 24px;display:block;position:relative;transition:box-shadow .2s,transform .2s,border-color .2s;box-shadow:0 1px 3px rgba(0,0,0,.07);overflow:hidden}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cc{background:#fff;border:1px solid var(--b);border-radius:var(--r);padding:20px 20px 18px;display:block;position:relative;transition:box-shadow .2s,transform .2s,border-color .2s;box-shadow:0 1px 3px rgba(0,0,0,.07);overflow:hidden}
 .cc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:transparent;transition:background .2s}
 .cc:hover{box-shadow:0 8px 32px rgba(0,0,0,.12);transform:translateY(-3px);border-color:rgba(232,119,34,.3)}
 .cc:hover::before{background:var(--a)}
-.ci{width:44px;height:44px;background:var(--s);border:1.5px solid var(--b);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:1.3rem}
-.cc h3{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;color:var(--p);margin-bottom:6px}
-.cc p{font-size:.875rem;color:var(--m);line-height:1.55;margin-bottom:14px}
-.cc span{font-size:.8rem;font-weight:600;color:var(--a)}
+.ci{width:36px;height:36px;background:var(--s);border:1.5px solid var(--b);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;font-size:1.1rem}
+.cc h3{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;color:var(--p);margin-bottom:5px;line-height:1.25}
+.cc p{font-size:.82rem;color:var(--m);line-height:1.5;margin-bottom:10px}
+.cc span{font-size:.75rem;font-weight:600;color:var(--a)}
 /* CITY */
 .city-bar{background:#fff;border-top:1px solid var(--b);border-bottom:1px solid var(--b);padding:16px 0}
+.city-bar--top{background:linear-gradient(180deg,#fff 0%,#fafaf8 100%);padding:18px 0;border-top:none;border-bottom:1px solid var(--b);position:relative}
+.city-bar--top .city-lbl{color:var(--a);font-weight:700}
+.city-bar--top .city-i{overflow-x:auto;flex-wrap:wrap;scrollbar-width:thin}
+.cp--more{background:transparent!important;border-color:var(--a)!important;color:var(--a)!important;font-weight:600!important}
+.cp--more:hover{background:var(--a)!important;color:#fff!important}
 .city-i{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .city-lbl{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--m);margin-right:4px}
 .cp{display:inline-flex;align-items:center;font-size:.8rem;font-weight:500;color:var(--p);background:var(--s);border:1px solid var(--b);border-radius:99px;padding:5px 14px;transition:background .15s,border-color .15s,color .15s}
@@ -124,6 +129,7 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
 .fl{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .fl a{font-size:.8rem;color:var(--m);transition:color .15s}.fl a:hover{color:var(--p)}
 /* RESPONSIVE */
+@media(max-width:1024px){.cgrid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){.agrid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){#hfaq-grid{grid-template-columns:1fr!important  /* Mobile overflow fixes */
   html,body{overflow-x:hidden;max-width:100vw}
@@ -220,6 +226,9 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
   <a href="prepay-vs-sip/">Prepay vs SIP</a>
   <a href="balance-transfer/">Balance Transfer</a>
   <a href="pmay-eligibility/">PMAY 2.0 Eligibility</a>
+  <a href="ltcg-property/">LTCG on Property Sale</a>
+  <a href="rental-yield/">Rental Yield</a>
+  <a href="society-redevelopment/">Society Redevelopment</a>
   <a href="quote-check/">Quote Checker</a>
   <a href="stamp-duty/">Stamp Duty</a>
   <a href="home-loan-eligibility/">Loan Eligibility</a>
@@ -251,9 +260,34 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
 <div class="stats">
   <div class="w"><div class="stats-i">
     <div class="si"><div class="sv">Free</div><div class="sl">No signup needed</div></div>
-    <div class="si"><div class="sv">15 tools</div><div class="sl">Free calculators</div></div>
+    <div class="si"><div class="sv">18 tools</div><div class="sl">Free calculators</div></div>
     <div class="si"><div class="sv">18 cities</div><div class="sl">City-specific rates</div></div>
     <div class="si"><div class="sv">May 2026</div><div class="sl">Last rate update</div></div>
+  </div></div>
+</div>
+
+<div class="city-bar city-bar--top" id="cities">
+  <div class="w"><div class="city-i">
+    <span class="city-lbl">Pick your city</span>
+    <a href="articles/construction-cost-mumbai-2026/" class="cp">&#128205; Mumbai</a>
+    <a href="articles/construction-cost-bangalore-2026/" class="cp">&#128205; Bangalore</a>
+    <a href="articles/construction-cost-delhi-ncr-2026/" class="cp">&#128205; Delhi NCR</a>
+    <a href="articles/construction-cost-pune-2026/" class="cp">&#128205; Pune</a>
+    <a href="articles/construction-cost-hyderabad-2026/" class="cp">&#128205; Hyderabad</a>
+    <a href="articles/construction-cost-chennai-2026/" class="cp">&#128205; Chennai</a>
+    <a href="articles/construction-cost-ahmedabad-2026/" class="cp">&#128205; Ahmedabad</a>
+    <a href="articles/construction-cost-kolkata-2026/" class="cp">&#128205; Kolkata</a>
+    <a href="articles/construction-cost-jaipur-2026/" class="cp">&#128205; Jaipur</a>
+    <a href="articles/construction-cost-kochi-2026/" class="cp">&#128205; Kochi</a>
+    <a href="articles/construction-cost-lucknow-2026/" class="cp">&#128205; Lucknow</a>
+    <a href="articles/construction-cost-indore-2026/" class="cp">&#128205; Indore</a>
+    <a href="articles/construction-cost-surat-2026/" class="cp">&#128205; Surat</a>
+    <a href="articles/construction-cost-nagpur-2026/" class="cp">&#128205; Nagpur</a>
+    <a href="articles/construction-cost-coimbatore-2026/" class="cp">&#128205; Coimbatore</a>
+    <a href="articles/construction-cost-bhopal-2026/" class="cp">&#128205; Bhopal</a>
+    <a href="articles/construction-cost-patna-2026/" class="cp">&#128205; Patna</a>
+    <a href="articles/construction-cost-ranchi-2026/" class="cp">&#128205; Ranchi</a>
+    <a href="#city-guides-rich" class="cp cp--more">&rarr; Rates &amp; guides</a>
   </div></div>
 </div>
 
@@ -261,7 +295,7 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
   <div class="w">
     <div class="sec-eye">Free Tools</div>
     <h2 class="sec-h">Calculate Your Home Costs</h2>
-    <p class="sec-sub">Fifteen independent calculators &mdash; use them before talking to any contractor or bank.</p>
+    <p class="sec-sub">Eighteen independent calculators &mdash; use them before talking to any contractor or bank.</p>
     <div class="cgrid">
       <a href="construction/" class="cc"><div class="ci">&#127959;</div><h3>Construction Cost</h3><p>Plot area, floors, city tier, quality grade. Uses May&nbsp;2026 rates.</p><span>Calculate now &rarr;</span></a>
       <a href="interior/" class="cc"><div class="ci">&#128715;</div><h3>Interior Estimator</h3><p>Room-by-room cost for BHK type, finish level and city. Kitchen, wardrobes, ceiling, painting.</p><span>Get estimate &rarr;</span></a>
@@ -270,6 +304,9 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
       <a href="prepay-vs-sip/" class="cc"><div class="ci">&#128176;</div><h3>Prepay vs SIP</h3><p>Got an active home loan and monthly surplus? Should you prepay or invest in SIP? Models both paths with Section 24 tax benefit. Verdict in numbers.</p><span>Compare paths &rarr;</span></a>
       <a href="balance-transfer/" class="cc"><div class="ci">&#128260;</div><h3>Balance Transfer</h3><p>Post-RBI-rate-cut, is it worth refinancing your old loan to a lower-rate lender? Nets EMI savings vs all switching costs. Clear breakeven + verdict.</p><span>Run analysis &rarr;</span></a>
       <a href="pmay-eligibility/" class="cc"><div class="ci">&#127968;</div><h3>PMAY 2.0 Eligibility</h3><p>₹1.80L government subsidy on home loans. Runs all 6 disqualifiers + computes exact subsidy + monthly EMI reduction. By the book.</p><span>Check eligibility &rarr;</span></a>
+      <a href="ltcg-property/" class="cc"><div class="ci">&#128202;</div><h3>LTCG on Property Sale</h3><p>Budget 2024 dual-regime: 12.5% no-indexation vs 20% with-indexation, whichever is lower. Plus Section 54 / 54F / 54EC exemption planning.</p><span>Calculate tax &rarr;</span></a>
+      <a href="rental-yield/" class="cc"><div class="ci">&#128181;</div><h3>Rental Yield</h3><p>Gross, net, after-tax yield + 10-year total return vs FD, debt MF, equity MF. The honest number most calculators hide.</p><span>Calculate yield &rarr;</span></a>
+      <a href="society-redevelopment/" class="cc"><div class="ci">&#127959;</div><h3>Society Redevelopment</h3><p>Mumbai DCPR 2034 — Reg 33(7)/(7A)/(7B)/(9)/(10)/(20A). Computes member entitlements + developer margin to tell you if the offer is fair.</p><span>Check redev math &rarr;</span></a>
       <a href="quote-check/" class="cc"><div class="ci">&#128269;</div><h3>Quote Checker</h3><p>Enter your contractor&rsquo;s quoted rate per sqft. Get a fair&nbsp;/ unfair verdict instantly.</p><span>Check your quote &rarr;</span></a>
       <a href="stamp-duty/" class="cc"><div class="ci">&#128181;</div><h3>Stamp Duty &amp; Registration</h3><p>State-wise stamp duty + registration. Includes the female-buyer concession most calculators miss.</p><span>Calculate now &rarr;</span></a>
       <a href="home-loan-eligibility/" class="cc"><div class="ci">&#127974;</div><h3>Home Loan Eligibility</h3><p>Real FOIR formula banks use. Salary, EMIs, age, co-applicant — instant max loan amount.</p><span>Check eligibility &rarr;</span></a>
@@ -318,31 +355,7 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
   </div>
 </section>
 
-<div class="city-bar" id="cities">
-  <div class="w"><div class="city-i">
-    <span class="city-lbl">City Guides</span>
-    <a href="articles/construction-cost-mumbai-2026/" class="cp">&#128205; Mumbai</a>
-    <a href="articles/construction-cost-bangalore-2026/" class="cp">&#128205; Bangalore</a>
-    <a href="articles/construction-cost-delhi-ncr-2026/" class="cp">&#128205; Delhi NCR</a>
-    <a href="articles/construction-cost-pune-2026/" class="cp">&#128205; Pune</a>
-    <a href="articles/construction-cost-hyderabad-2026/" class="cp">&#128205; Hyderabad</a>
-    <a href="articles/construction-cost-chennai-2026/" class="cp">&#128205; Chennai</a>
-    <a href="articles/construction-cost-ahmedabad-2026/" class="cp">&#128205; Ahmedabad</a>
-    <a href="articles/construction-cost-kolkata-2026/" class="cp">&#128205; Kolkata</a>
-    <a href="articles/construction-cost-jaipur-2026/" class="cp">&#128205; Jaipur</a>
-    <a href="articles/construction-cost-kochi-2026/" class="cp">&#128205; Kochi</a>
-    <a href="articles/construction-cost-lucknow-2026/" class="cp">&#128205; Lucknow</a>
-    <a href="articles/construction-cost-indore-2026/" class="cp">&#128205; Indore</a>
-    <a href="articles/construction-cost-surat-2026/" class="cp">&#128205; Surat</a>
-    <a href="articles/construction-cost-nagpur-2026/" class="cp">&#128205; Nagpur</a>
-    <a href="articles/construction-cost-coimbatore-2026/" class="cp">&#128205; Coimbatore</a>
-    <a href="articles/construction-cost-bhopal-2026/" class="cp">&#128205; Bhopal</a>
-    <a href="articles/construction-cost-patna-2026/" class="cp">&#128205; Patna</a>
-    <a href="articles/construction-cost-ranchi-2026/" class="cp">&#128205; Ranchi</a>
-  </div></div>
-</div>
-
-<section class="city-guides-sec">
+<section class="city-guides-sec" id="city-guides-rich">
   <div class="w">
     <div class="sec-row"><h2>City Construction Guides 2026</h2><a href="articles/">All city guides &rarr;</a></div>
     <div class="city-guides-grid">
@@ -466,7 +479,7 @@ footer{background:#fff;border-top:1px solid var(--b);padding:32px 0}
       <div style="font-size:.75rem;color:var(--m);margin-top:4px">&copy; 2026 Ghar Ka Budget. For informational purposes only.</div>
     </div>
     <nav class="fl">
-      <a href="construction/">Construction</a><a href="interior/">Interior</a><a href="emi/">EMI</a><a href="emi-vs-rent/">EMI vs Rent</a><a href="prepay-vs-sip/">Prepay vs SIP</a><a href="balance-transfer/">Balance Transfer</a><a href="pmay-eligibility/">PMAY 2.0</a><a href="quote-check/">Quotes</a><a href="stamp-duty/">Stamp Duty</a><a href="home-loan-eligibility/">Eligibility</a><a href="painting-cost/">Painting</a><a href="plot-viability/">Plot Check</a><a href="modular-kitchen/">Modular Kitchen</a><a href="bathroom-renovation/">Bathroom</a><a href="waterproofing/">Waterproofing</a><a href="articles/">Articles</a><a href="methodology/">Methodology</a><a href="ai-prompts/">AI Prompts</a><a href="about/">About</a><a href="editorial-policy/">Editorial Policy</a><a href="disclaimer/">Disclaimer</a><a href="privacy/">Privacy</a><a href="contact/">Contact</a>
+      <a href="construction/">Construction</a><a href="interior/">Interior</a><a href="emi/">EMI</a><a href="emi-vs-rent/">EMI vs Rent</a><a href="prepay-vs-sip/">Prepay vs SIP</a><a href="balance-transfer/">Balance Transfer</a><a href="pmay-eligibility/">PMAY 2.0</a><a href="ltcg-property/">LTCG</a><a href="rental-yield/">Rental Yield</a><a href="society-redevelopment/">Redevelopment</a><a href="quote-check/">Quotes</a><a href="stamp-duty/">Stamp Duty</a><a href="home-loan-eligibility/">Eligibility</a><a href="painting-cost/">Painting</a><a href="plot-viability/">Plot Check</a><a href="modular-kitchen/">Modular Kitchen</a><a href="bathroom-renovation/">Bathroom</a><a href="waterproofing/">Waterproofing</a><a href="articles/">Articles</a><a href="methodology/">Methodology</a><a href="ai-prompts/">AI Prompts</a><a href="about/">About</a><a href="editorial-policy/">Editorial Policy</a><a href="disclaimer/">Disclaimer</a><a href="privacy/">Privacy</a><a href="contact/">Contact</a>
     </nav>
   </div></div>
 </footer>

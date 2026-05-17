@@ -21,6 +21,9 @@
     'prepay-vs-sip':         {name:'Home Loan Prepay vs SIP Analysis',    short:'Prepay vs SIP',    methodSec:'prepay-vs-sip',         resultSel:'#resultPanel',   resultHeadline:'#verdictH,#rDelta',             aiRole:'an Indian personal finance advisor specialising in home loans, tax planning and equity SIP decisions in 2026'},
     'balance-transfer':      {name:'Home Loan Balance Transfer Analysis', short:'Balance Transfer', methodSec:'balance-transfer',      resultSel:'#resultPanel',   resultHeadline:'#verdictH,#rNetSavings,#rBreakeven', aiRole:'an Indian personal finance advisor specialising in home loans and refinancing decisions in 2026'},
     'pmay-eligibility':      {name:'PMAY 2.0 Eligibility Report',         short:'PMAY 2.0',         methodSec:'pmay-eligibility',      resultSel:'#resultPanel',   resultHeadline:'#verdictH,#rPayout,#rNPV',           aiRole:'an Indian banking advisor and PMAY-U 2.0 scheme expert familiar with all six eligibility filters and PLI claim procedures in 2026'},
+    'ltcg-property':         {name:'LTCG on Property Sale Analysis',       short:'LTCG on Sale',     methodSec:'ltcg-property',         resultSel:'#resultPanel',   resultHeadline:'#verdictH,#rTotalTax,#rTaxableLTCG',  aiRole:'an Indian Chartered Accountant specialising in capital gains tax planning for property sales under the Budget 2024 dual-regime in 2026'},
+    'rental-yield':          {name:'Rental Yield &amp; ROI Analysis',           short:'Rental Yield',     methodSec:'rental-yield',          resultSel:'#resultPanel',   resultHeadline:'#verdictH,#rAfterTaxYield,#rPropertyAnnualised',  aiRole:'an Indian property investment analyst familiar with rental economics across tier-1, tier-2 and tier-3 cities in 2026'},
+    'society-redevelopment': {name:'Mumbai Society Redevelopment Analysis',short:'Redevelopment',    methodSec:'society-redevelopment', resultSel:'#resultPanel',   resultHeadline:'#verdictH,#rMargin,#rPerMemberValue',             aiRole:'a Mumbai real estate advisor and society redevelopment specialist with deep DCPR 2034 knowledge across Reg 33(7), 33(7A), 33(7B), 33(9), 33(10), and 33(20A) in 2026'},
     'quote-check':           {name:'Contractor Quote Check',              short:'Quote Check',      methodSec:'quote-check',           resultSel:'#verdictPanel',  resultHeadline:'#verdictTitle',                 aiRole:'a construction project manager working in India in 2026'},
     'stamp-duty':            {name:'Stamp Duty & Registration Estimate',  short:'Stamp Duty',       methodSec:'stamp-duty',            resultSel:'#resultPanel',   resultHeadline:'.tot,#totDuty',                 aiRole:'a property lawyer practising in India in 2026'},
     'home-loan-eligibility': {name:'Home Loan Eligibility Estimate',      short:'Loan Eligibility', methodSec:'home-loan-eligibility', resultSel:'#resultPanel',   resultHeadline:'.tot,#maxLoan',                 aiRole:'an Indian banking advisor specialising in home loan eligibility'},
@@ -104,6 +107,36 @@
       + "3. PLIs (banks/HFCs) are required to file the subsidy claim within 30 days of disbursement, but many miss this. What 3 specific operational steps should I take during loan processing to ensure my PLI actually files the claim on time, and what's my recourse if they miss the deadline?\n"
       + "4. Beyond PMAY 2.0 ISS, what other government schemes (state housing boards, MIG-segment subsidies in specific states, women-only schemes, Stamp Duty concessions) should I check that often go untapped for buyers in my profile? Some states have parallel benefits that stack with PMAY.\n\n"
       + "Be specific to PMAY-U 2.0 (active Sep 2024 - Aug 2029) and current 2026 PLI practice. Concise.",
+
+    'ltcg-property':
+      "I used Ghar Ka Budget's LTCG on Property Sale calculator to estimate tax on my property sale under the Budget 2024 dual-regime.\n\n"
+      + "MY INPUTS:\n{INPUTS}\n\nCALCULATED RESULT:\n{RESULT}\n\n"
+      + "Acting as {ROLE}, please:\n"
+      + "1. Did the calculator correctly identify whether my property qualifies for the dual-regime choice (acquired before 23 July 2024)? If I bought via builder allotment letter / under-construction property, what's the relevant acquisition date for the cutoff - the date of the allotment letter, possession, or registered sale deed?\n"
+      + "2. The calc picked Method A (12.5% no indexation) or Method B (20% with indexation). Are there cases where this comparison gets more complex - e.g. property bought partially through inheritance, multiple improvements over the years, or co-owner with different acquisition dates? What should I sanity-check?\n"
+      + "3. For exemption planning - if I haven't yet decided whether to invest in a new house (Sec 54/54F) or 54EC bonds, what's the order I should think about it? Is parking in Capital Gains Account Scheme (CGAS) before ITR due date a good interim move, and which nationalised banks actually offer it smoothly in 2026?\n"
+      + "4. Surcharge layer: my LTCG plus salary may push my total income past Rs 50L / Rs 1Cr. The calc shows tax + 4% cess but not surcharge. What surcharge percentage applies in my income band, and is the 15% cap on LTCG surcharge per Budget 2022 still in force for May 2026?\n\n"
+      + "Be specific to Indian Income Tax Act 1961 provisions (Sec 45, 48, 54, 54F, 54EC) and current 2026 ITR filing practice. Concise.",
+
+    'rental-yield':
+      "I used Ghar Ka Budget's Rental Yield calculator to evaluate a rental property investment.\n\n"
+      + "MY INPUTS:\n{INPUTS}\n\nCALCULATED RESULT:\n{RESULT}\n\n"
+      + "Acting as {ROLE}, please:\n"
+      + "1. The calculator showed my gross/net/after-tax yields and a 10-year benchmark vs FD/Debt MF/Equity MF. For my specific city and locality (mentioned in inputs), is the rent I'm assuming actually achievable, or is there a market gap (e.g. builder marketing rents higher than what tenants actually pay, or society maintenance creeping above my estimate)? What 3 real-world rent-suppressing factors should I budget for that the calculator might miss?\n"
+      + "2. The capital appreciation assumption is the single biggest swing factor in the 10-year return. For my city/locality in 2026, what's a realistic appreciation range, and what specific local factors (infrastructure projects, new metro lines, IT corridor demand, oversupply of new launches) should make me bullish or bearish on this assumption?\n"
+      + "3. If the rental yield is poor (1-2% after-tax), is there a way to restructure the deal to improve economics? Options: (a) co-living / shared accommodation (3-4 tenants instead of family), (b) Airbnb / short-stay rentals, (c) commercial conversion if zoning permits, (d) student housing near colleges. What works in my locality?\n"
+      + "4. For exit planning: if this property doesn't work out, when should I sell? Should I plan around the 24-month LTCG threshold, time it with a market peak, or use Sec 54/54F to roll into a better property without tax leakage? What's the right exit framework given the math you saw?\n\n"
+      + "Be specific to Indian residential rental economics in 2026, with concrete local intel where possible. Concise.",
+
+    'society-redevelopment':
+      "I used Ghar Ka Budget's Mumbai Society Redevelopment calculator to evaluate a developer's redev proposal for our cooperative housing society.\n\n"
+      + "MY INPUTS:\n{INPUTS}\n\nCALCULATED RESULT:\n{RESULT}\n\n"
+      + "Acting as {ROLE}, please:\n"
+      + "1. The calculator's margin estimate is rough (deliberately so - real DCPR 2034 redev involves TDR loading, road-widening setbacks, height restrictions in heritage/CRZ/airport-funnel zones, and IOD/OC cycle delays that swing real margins +/- 10%). For my specific plot location (mentioned in inputs) in Mumbai, what local factors should I sanity-check that could materially change this number? Specifically: am I in a TDR-receiving zone, a coastal-regulation zone, near a DP Road earmarked for widening, or in an airport-funnel/heritage precinct?\n"
+      + "2. The developer is offering a specific carpet + corpus + rent package. Based on my margin calculation, is this proposal under-paying, fairly priced, or generous? What are 3-5 specific negotiation asks I should table at the next society meeting, prioritized by what's most achievable given the margin?\n"
+      + "3. We have 75% member majority resolution at our society. What are the immediate next steps before signing the Development Agreement - structural audit by which licensed engineer, RERA registration verification of the developer (track record on past redev projects), bank guarantee structure (which scheduled bank, what percentage of rehab cost), penalty clauses for delay, and Bombay High Court vs arbitration jurisdiction clause?\n"
+      + "4. What are the 3 most common ways Mumbai redev projects fail or get stuck mid-execution (developer bankruptcy, FSI dispute with BMC, member faction blocking IOD, contractor walking off site), and what protective clauses in the DA prevent each one?\n\n"
+      + "Be specific to Mumbai DCPR 2034 redev practice in 2026, with concrete clause-level language where possible. Concise.",
 
     'quote-check':
       "I used Ghar Ka Budget's contractor quote checker.\n\n"
