@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gharkabudget.com/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -14,25 +14,25 @@
   </url>
   <url>
     <loc>https://gharkabudget.com/methodology/</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/ai-prompts/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/construction/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -104,7 +104,7 @@
   </url>
   <url>
     <loc>https://gharkabudget.com/ltcg-property/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.92</priority>
   </url>
@@ -128,19 +128,19 @@
   </url>
   <url>
     <loc>https://gharkabudget.com/bathroom-renovation/</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/waterproofing/</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/get-quotes/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -160,67 +160,163 @@
   <!-- Evergreen guides -->
   <url>
     <loc>https://gharkabudget.com/articles/how-to-check-contractor-quote/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/house-construction-hidden-costs-india/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/gst-on-construction-materials-2026/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/labour-code-impact-construction-cost-2026/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/new-fy-2026-27-construction-costs/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/union-budget-2026-home-construction/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
+    <loc>https://gharkabudget.com/articles/construction-cost-nashik-2026/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gharkabudget.com/articles/construction-cost-vadodara-2026/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gharkabudget.com/articles/construction-cost-visakhapatnam-2026/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gharkabudget.com/articles/construction-cost-rajkot-2026/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gharkabudget.com/articles/construction-cost-chandigarh-2026/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gharkabudget.com/articles/electrical-wiring-cost-2bhk-3bhk-2026/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gharkabudget.com/articles/tile-laying-cost-per-sqft-2026/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gharkabudget.com/articles/boundary-wall-cost-per-running-foot-2026/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gharkabudget.com/articles/flat-renovation-cost-mumbai-2026/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gharkabudget.com/articles/flat-renovation-cost-pune-2026/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gharkabudget.com/articles/1bhk-interior-cost-mumbai-2026/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gharkabudget.com/articles/1bhk-interior-cost-pune-2026/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gharkabudget.com/articles/g-plus-1-construction-cost-2026/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gharkabudget.com/articles/cost-to-add-floor-existing-house/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gharkabudget.com/articles/terrace-waterproofing-cost-india/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gharkabudget.com/articles/wall-seepage-repair-cost-india/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://gharkabudget.com/articles/false-ceiling-cost-india/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/vitrified-tiles-vs-marble/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.78</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/carpet-vs-builtup-vs-super-builtup-area/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/how-to-read-contractor-boq/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.92</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/home-loan-rejection-reasons-2026/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.92</priority>
   </url>
@@ -228,25 +324,25 @@
   <!-- Interior cost guides (Mumbai + Pune were missing) -->
   <url>
     <loc>https://gharkabudget.com/articles/2bhk-interior-cost-bangalore-2026/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/2bhk-interior-cost-mumbai-2026/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/2bhk-interior-cost-pune-2026/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/modular-kitchen-price-india-2026/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.78</priority>
   </url>
@@ -254,133 +350,133 @@
   <!-- City construction guides (Jaipur, Kochi, Kolkata were missing) -->
   <url>
     <loc>https://gharkabudget.com/articles/construction-cost-mumbai-2026/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/construction-cost-bangalore-2026/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/construction-cost-delhi-ncr-2026/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/construction-cost-pune-2026/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/construction-cost-hyderabad-2026/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/construction-cost-chennai-2026/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/construction-cost-ahmedabad-2026/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/construction-cost-kolkata-2026/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/construction-cost-jaipur-2026/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/construction-cost-kochi-2026/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/construction-cost-lucknow-2026/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/construction-cost-indore-2026/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/construction-cost-surat-2026/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/construction-cost-nagpur-2026/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/construction-cost-coimbatore-2026/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/construction-cost-bhopal-2026/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/construction-cost-patna-2026/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/construction-cost-ranchi-2026/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/plot-vs-flat-2026/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/1000-sqft-house-construction-cost-2026/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/ghar-banane-ka-kharcha-2026/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://gharkabudget.com/articles/contractor-quote-red-flags/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
